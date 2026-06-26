@@ -1,257 +1,202 @@
 import { db } from "../src/lib/db"
 
+// Simple mock hash (NOT for production — demo only)
+function mockHash(s: string) {
+  return "pl$" + Buffer.from(s).reverse().toString("base64")
+}
+
 async function main() {
-  // Clean existing data
   await db.post.deleteMany()
-  await db.project.deleteMany()
+  await db.user.deleteMany()
 
-  // Seed Projects (portfolio case studies)
-  const projects = [
-    {
-      title: "Tidefield",
-      slug: "tidefield",
-      summary: "A meditative daily journaling app built around the rhythm of the ocean.",
-      description:
-        "Tidefield reimagines the journaling app as a quiet ritual. Instead of blank pages and streak counters, it surfaces gentle prompts tied to the local tide cycle, turning reflection into something that feels less like a task and more like watching the water. I led product design end-to-end — from the typographic system and motion language to the onboarding flow that teaches the metaphor without ever naming it.",
-      year: "2025",
-      role: "Product Design Lead",
-      client: "Tidefield Labs",
-      category: "Digital Product",
-      url: "",
-      accent: "#b45309",
-      featured: true,
-      order: 1,
+  const writer = await db.user.create({
+    data: {
+      username: "writer",
+      displayName: "Jin-ah Park",
+      passwordHash: mockHash("writer123"),
+      role: "writer",
+      bio: "Writes about bridges — between disciplines, languages, and people.",
     },
-    {
-      title: "Halcyon Press",
-      slug: "halcyon-press",
-      summary: "Editorial identity for an independent publishing house focused on slow journalism.",
-      description:
-        "Halcyon Press needed a visual language that felt as unhurried as the stories it tells. The wordmark draws on mid-century newspaper mastheads, set tight and confident. A flexible grid system carries long-form essays, photo essays, and a quarterly print issue — the same columns, re-arranged. The palette is paper, ink, and a single muted ochre that anchors the masthead.",
-      year: "2024",
-      role: "Brand & Editorial Design",
-      client: "Halcyon Press",
-      category: "Brand Identity",
-      url: "",
-      accent: "#3f6212",
-      featured: true,
-      order: 2,
-    },
-    {
-      title: "Field Notes Atlas",
-      slug: "field-notes-atlas",
-      summary: "An interactive cartography tool for naturalists recording seasonal change.",
-      description:
-        "Field Notes Atlas gives amateur naturalists a way to log phenology observations and watch a personal map of the seasons accumulate over years. I designed the data-entry flow to feel like writing in a notebook — typed entries, a soft paper texture, a hand-drawn pin for every sighting. The map underneath is deliberately understated, so the observations stay the protagonist.",
-      year: "2024",
-      role: "Lead Designer",
-      client: "Mycelia Collective",
-      category: "Digital Product",
-      url: "",
-      accent: "#0f766e",
-      featured: true,
-      order: 3,
-    },
-    {
-      title: "Slow Cinema Club",
-      slug: "slow-cinema-club",
-      summary: "Identity and poster system for a community cinema focused on long-form film.",
-      description:
-        "Slow Cinema Club programs films that ask you to sit with them. The identity is built on a single rule: every poster holds one still, one line, and a lot of air. The typeface is a custom revival of a 1970s cinema marquee, drawn loose enough to feel hand-cut. Posters are screen-printed in two passes — ink, then a translucent fog.",
-      year: "2023",
-      role: "Creative Direction",
-      client: "Slow Cinema Club",
-      category: "Brand Identity",
-      url: "",
-      accent: "#7c2d12",
-      featured: true,
-      order: 4,
-    },
-    {
-      title: "Greenhouse OS",
-      slug: "greenhouse-os",
-      summary: "Operating dashboard for a network of urban community greenhouses.",
-      description:
-        "Greenhouse OS lets volunteer teams monitor climate, water, and harvest logs across a dozen rooftop sites from one calm screen. I designed the dashboard around a single principle: a first-time volunteer should understand the whole system in under a minute. Sensors, alerts, and tasks share one visual grammar, and the colour for 'needs attention' is the only saturated thing on the page.",
-      year: "2023",
-      role: "Product Designer",
-      client: "Common Soil",
-      category: "Digital Product",
-      url: "",
-      accent: "#a16207",
-      featured: false,
-      order: 5,
-    },
-  ]
+  })
 
-  for (const p of projects) {
-    await db.project.create({ data: p })
-  }
+  const editor = await db.user.create({
+    data: {
+      username: "editor",
+      displayName: "Marco Lee",
+      passwordHash: mockHash("editor123"),
+      role: "writer",
+      bio: "Editor at PonsLink. Slow internet, fast keyboard.",
+    },
+  })
 
-  // Seed Posts (blog / writing)
   const posts = [
     {
-      slug: "designing-for-quiet",
-      title: "Designing for quiet",
+      slug: "bridges-between-disciplines",
+      title: "Bridges between disciplines",
       excerpt:
-        "Most interfaces shout. What would it take to make software that whispers — and still gets the job done?",
-      category: "Essay",
-      tags: "design,attention,craft",
-      coverColor: "#1c1917",
-      readingTime: 6,
-      publishedAt: new Date("2025-09-12T09:00:00Z"),
-      content: `# Designing for quiet
-
-Most interfaces shout. Buttons beg for clicks, badges count upward, red dots bloom in the corner of your eye. The dominant assumption is that attention is something to be captured — and once captured, held.
-
-I have been trying to design the opposite. Not minimalist for its own sake, but **quiet**: software that waits for you, that speaks once, that trusts you to come back.
-
-## What quiet is not
-
-Quiet is not emptiness. A blank screen is loud in its own way — it demands that you decide what to do next, with nothing to hold onto. Quiet interfaces have plenty of content; they just don't compete for it.
-
-Quiet is also not slow. A well-designed quiet app responds instantly. The calm is in the hierarchy, not the latency.
-
-## Three small rules
-
-After a few years of trying, I keep coming back to three rules:
-
-1. **One thing asks for attention at a time.** If two elements both want the eye, one of them has to lose. Decide which, and make it lose gracefully.
-2. **Colour is a promise, not a decoration.** A saturated colour means "this matters." Use it once per screen, and mean it.
-3. **Motion explains, it doesn't perform.** Animations should clarify where something came from or where it went. If an animation exists only to be admired, cut it.
-
-## The hard part
-
-The hard part isn't the rules. It's the discipline of applying them when a stakeholder asks for "just one more badge" or "a little more pop." Quiet design is a series of small refusals, strung together until the thing finally breathes.
-
-When it works, nobody notices. That is, more or less, the point.`,
-    },
-    {
-      slug: "the-grid-is-a-feeling",
-      title: "The grid is a feeling",
-      excerpt:
-        "A grid system is less a set of measurements than it is a mood. A note on why I start every layout with rhythm, not columns.",
-      category: "Essay",
-      tags: "typography,layout,craft",
-      coverColor: "#3f6212",
-      readingTime: 5,
-      publishedAt: new Date("2025-07-30T09:00:00Z"),
-      content: `# The grid is a feeling
-
-When designers talk about grids, they usually talk about columns. Twelve of them, eight of them, sometimes a cheeky five. But the grid that matters — the one a reader actually feels — is made of rhythm, not columns.
-
-## Rhythm before columns
-
-Before I open a layout tool, I pick a baseline. Usually 8px. Everything vertical is a multiple of that baseline: line-height, padding, margins, the gap between a headline and its deck. The eye doesn't count columns. The eye reads down the page, and down the page, rhythm is everything.
-
-Columns are the easy part. You can snap anything to a column. Rhythm is harder because it has to hold across every component, every state, every breakpoint.
-
-## The feeling
-
-A page with good rhythm feels *settled*. You can't point to why. A page with bad rhythm feels restless, slightly off, like a song drifting from the beat. Readers won't name it. They'll just stay longer on the settled one.
-
-That is the feeling I'm chasing. Not the grid you can draw, but the grid you can feel.`,
-    },
-    {
-      slug: "notes-on-restraint",
-      title: "Notes on restraint",
-      excerpt:
-        "Restraint is the most misunderstood design value. It's not about doing less — it's about doing only what the work needs.",
-      category: "Notes",
-      tags: "design,process",
+        "The most interesting work happens at the seams. A note on why I keep crossing them.",
+      category: "Essays",
+      tags: "craft,interdisciplinary,thinking",
       coverColor: "#b45309",
-      readingTime: 4,
-      publishedAt: new Date("2025-05-18T09:00:00Z"),
-      content: `# Notes on restraint
-
-Restraint gets a bad reputation. It sounds like deprivation — like a diet for designers. But restraint, as I mean it, isn't about doing less. It's about doing only what the work needs, and nothing it doesn't.
-
-## The wrong kind of restraint
-
-A common failure mode: a designer "restrains" themselves by removing everything interesting, then calls the result elegant. But a blank page isn't restrained. It's just blank. Restraint without intention is just timidity.
-
-## The right kind
-
-Real restraint sounds like this: "This screen needs a headline, a single action, and a way out. Anything else is noise." Then you build exactly that — and the headline can be enormous, the action can be a saturated colour, the way out can be a hand-drawn arrow. Restraint didn't make it smaller. It made it *legible*.
-
-Restraint is editing, not erasure.`,
-    },
-    {
-      slug: "on-working-by-hand",
-      title: "On working by hand",
-      excerpt:
-        "Why I still sketch every interface in a notebook before I touch a pixel. A defence of the slow first draft.",
-      category: "Process",
-      tags: "process,sketching,craft",
-      coverColor: "#0f766e",
-      readingTime: 5,
-      publishedAt: new Date("2025-03-04T09:00:00Z"),
-      content: `# On working by hand
-
-Every interface I design starts in a dot-grid notebook, with a cheap fountain pen, on a page I will throw away.
-
-## Why paper first
-
-Paper is slow, and that is the point. When I draw in Figma, the software rewards me for finishing — components snap, colours fill, the screen looks "real" before the idea is ready. Paper refuses to flatter me. A bad idea looks bad on paper, and it looks bad quickly, which means I throw it away before I've invested in it.
-
-## The first draft is for throwing away
-
-I tell myself the first page is allowed to be wrong. I sketch the obvious version first — the one everyone would draw — just to get it out of my system. The second page is where the actual idea starts, now that the obvious one isn't hovering over my shoulder.
-
-By the time I open Figma, I know what the screen is for. The software becomes a tool for finishing the thought, not for having it.`,
-    },
-    {
-      slug: "the-case-for-boring-tools",
-      title: "The case for boring tools",
-      excerpt:
-        "The most creative years of my career began when I stopped chasing new software and learned three tools deeply.",
-      category: "Essay",
-      tags: "tools,process,craft",
-      coverColor: "#7c2d12",
+      status: "published",
       readingTime: 6,
-      publishedAt: new Date("2024-11-21T09:00:00Z"),
-      content: `# The case for boring tools
+      authorId: writer.id,
+      authorName: writer.displayName,
+      publishedAt: new Date("2025-10-12T09:00:00Z"),
+      content: `# Bridges between disciplines
 
-For a few years I chased tools. New design apps, new prototypers, new note systems — each one promised to unlock some latent creativity. None of them did. The work stayed roughly the same; only the file extensions changed.
+The most interesting work I've done happened at the seams between fields — where a designer learns enough engineering to ask a better question, where a programmer reads enough poetry to name a function well.
 
-## Fluency beats novelty
+## Why the seams matter
 
-The breakthrough came when I stopped. I picked three tools — a notebook, a vector editor, and a code editor — and decided to learn them *deeply*. Not to master them, exactly. Just to stop having to think about them.
+Disciplines are efficient. They let us go deep without re-deriving first principles every morning. But efficiency is not the same as insight. Insight tends to live where one field's assumption is another field's open question.
 
-The strange thing about deep fluency is that the tool disappears. When you don't have to remember where the button is, you can think about the thing you're actually making. Boring tools, learned well, become invisible — and invisible tools are the only kind that lets the work come through.
+When I cross a seam, I usually feel stupid for a while. That's the signal. It means I've left the place where my training protects me.
 
-## What I kept
+## A small practice
 
-I still try new things. But I no longer expect them to change the work. New tools are for new *capabilities*, not for new motivation. If a tool won't let me do something I literally couldn't do before, I leave it alone.`,
+I keep a rule: once a month, read something outside my field, slowly, until I can explain one idea from it to a friend. Not to become an expert. Just to stay in the habit of crossing.
+
+The bridges are not the disciplines. The bridges are the people willing to walk between them.`,
     },
     {
-      slug: "reading-list-2025",
-      title: "Reading list, 2025",
+      slug: "writing-as-thinking",
+      title: "Writing is thinking, not recording",
       excerpt:
-        "Six books that shaped how I think about design, attention, and making things this year — with the one idea I took from each.",
-      category: "Reading",
-      tags: "books,reading,2025",
-      coverColor: "#a16207",
+        "I don't write to remember what I thought. I write to find out what I think.",
+      category: "Essays",
+      tags: "writing,process",
+      coverColor: "#3f6212",
+      status: "published",
+      readingTime: 4,
+      authorId: writer.id,
+      authorName: writer.displayName,
+      publishedAt: new Date("2025-09-28T09:00:00Z"),
+      content: `# Writing is thinking, not recording
+
+For years I believed writing was the last step — the tidy record of a thought already finished in my head. I was wrong. The thought isn't finished until I've wrestled it into a sentence.
+
+## The draft that teaches you
+
+Every first draft surprises me. I sit down sure of what I want to say, and by the third paragraph I've discovered I was sure of something else entirely. The sentence I struggled over was never the sentence I planned. It was the sentence I needed.
+
+## Implications
+
+If writing is thinking, then the people who say "I'll write it up once I've figured it out" have the order backwards. You figure it out *by* writing it up. The messy draft isn't a failure of process. It is the process.
+
+Keep the draft. Trust the struggle. The clarity comes after, not before.`,
+    },
+    {
+      slug: "small-tools-long-projects",
+      title: "Small tools, long projects",
+      excerpt:
+        "The tools that lasted me a decade are the boring ones. A defence of the unsexy spreadsheet.",
+      category: "Notes",
+      tags: "tools,process",
+      coverColor: "#0f766e",
+      status: "published",
+      readingTime: 5,
+      authorId: editor.id,
+      authorName: editor.displayName,
+      publishedAt: new Date("2025-09-14T09:00:00Z"),
+      content: `# Small tools, long projects
+
+The tools that have lasted me a decade are the boring ones. A plain text editor. A spreadsheet. A notebook. The flashy app I bought in 2019 is gone; the spreadsheet is still here, and it still does exactly what I ask.
+
+## What boring tools give you
+
+Boring tools are legible. In five years you'll still be able to open the file. The data is yours. The workflow is yours. Nobody is going to ship a redesign that moves your buttons.
+
+## When to reach for more
+
+Sometimes a project genuinely needs more — a database, a script, a real editor. The test I use: will this tool still exist, and will my work still open, in ten years? If yes, use it. If no, ask whether the extra power is worth the fragility.
+
+Most of the time, for most projects, it isn't.`,
+    },
+    {
+      slug: "a-week-of-slow-internet",
+      title: "A week of slow internet",
+      excerpt:
+        "I throttled my connection for a week to see what my habits actually were. Here's what I learned.",
+      category: "Field Notes",
+      tags: "attention,experiment",
+      coverColor: "#7c2d12",
+      status: "published",
       readingTime: 7,
-      publishedAt: new Date("2025-10-02T09:00:00Z"),
-      content: `# Reading list, 2025
+      authorId: writer.id,
+      authorName: writer.displayName,
+      publishedAt: new Date("2025-08-30T09:00:00Z"),
+      content: `# A week of slow internet
 
-A running list of the books that stuck this year. I won't review them — I'll just give you the one idea I carried out of each.
+I throttled my connection to 1 Mbps for a week. I wanted to see what my habits looked like when every page cost a few seconds of patience.
 
-## The Timeless Way of Building — Christopher Alexander
-That places have a "quality without a name," and that you know it when you're in it. Design is the search for that quality, not for novelty.
+## Day one: withdrawal
 
-## How to Do Nothing — Jenny Odell
-That attention is the most basic form of love, and that a culture which monetises attention is, structurally, anti-love. I think about this every time I add a notification.
+The first day was embarrassing. I reached for my phone the way you reach for a light switch — automatically, dozens of times. Half the time the page didn't load before I'd already lost interest and closed it. That was the lesson, in miniature: most of my reaching wasn't for anything I actually wanted.
 
-## The Shape of Design — Frank Chimero
-That craft is a relationship between the maker and the made, and that the relationship matters more than the artefact.
+## Day three: selection
 
-## The Prisoner of Gender — ... no, scratch that. Let me give you the real ones.
+By the third day I'd stopped opening things reflexively. When a page took ten seconds, I asked myself whether I'd meant to open it at all. Often the answer was no.
 
-A short, honest list is better than a long, performative one. The three above are the ones that actually changed how I work this year. The rest were good, but these are the ones I keep returning to.
+## Day seven: what stayed
 
-If you read one, read *How to Do Nothing*. Then go outside.`,
+What survived the week was the small set of things I genuinely read — a long article, a friend's post, a chapter of a book. The rest had been filler, served fast enough that I'd never noticed it was empty.
+
+I'm back on fast internet now. But I still ask, before I open a tab: is this reaching, or wanting?`,
+    },
+    {
+      slug: "on-naming-things",
+      title: "On naming things",
+      excerpt:
+        "A name is a promise. Most names are promises the thing can't keep. A short field guide.",
+      category: "Essays",
+      tags: "craft,language",
+      coverColor: "#a16207",
+      status: "published",
+      readingTime: 4,
+      authorId: editor.id,
+      authorName: editor.displayName,
+      publishedAt: new Date("2025-08-11T09:00:00Z"),
+      content: `# On naming things
+
+A name is a promise. Most names are promises the thing can't keep — "smart", "ultimate", "pro". The best names are modest. They describe what the thing does, and then they get out of the way.
+
+## Three rules
+
+1. **Name the verb, not the virtue.** A thing called "Sync" tells you what it does. A thing called "Harmony" tells you how to feel about it. One of those ages well.
+2. **Shorter is almost always better**, but never at the cost of clarity. "Docs" beats "Documentation". "Docs" does not beat "Dox".
+3. **Say it out loud.** If you can't say it in a sentence without wincing, the name is wrong, not the sentence.
+
+## The test
+
+The test is simple: would a stranger, hearing the name once, guess roughly what the thing is? If yes, good. If they'd guess something else entirely, the name is lying. Fix the name, not the stranger.`,
+    },
+    {
+      slug: "the-quiet-protocol",
+      title: "The quiet protocol",
+      excerpt:
+        "What if a chat app had a 'quiet' mode by default, and 'loud' was the opt-in? A design thought experiment.",
+      category: "Field Notes",
+      tags: "design,attention",
+      coverColor: "#1c1917",
+      status: "draft",
+      readingTime: 5,
+      authorId: writer.id,
+      authorName: writer.displayName,
+      publishedAt: new Date("2025-10-20T09:00:00Z"),
+      content: `# The quiet protocol
+
+A thought experiment: what if a chat app were quiet by default, and loud was the opt-in?
+
+## The default
+
+Notifications off. Read receipts off. The badge doesn't count. To make a message push, you hold a "this matters" button for two seconds — long enough to mean it.
+
+## What changes
+
+Most messages would wait until you opened the app. That's the point. The messages that truly mattered would arrive with the weight they deserve, and the rest would sit patiently in a list, the way email used to.
+
+This is a draft. I'm still thinking.`,
     },
   ]
 
@@ -259,7 +204,13 @@ If you read one, read *How to Do Nothing*. Then go outside.`,
     await db.post.create({ data: p })
   }
 
-  console.log("Seed complete:", projects.length, "projects,", posts.length, "posts")
+  console.log(
+    "Seed complete:",
+    2,
+    "users,",
+    posts.length,
+    "posts (writer/“writer” password: writer123)"
+  )
 }
 
 main()

@@ -3,7 +3,7 @@
 import * as React from "react"
 import { createPortal } from "react-dom"
 import { motion, AnimatePresence } from "framer-motion"
-import { X, ArrowUpRight } from "lucide-react"
+import { X, ArrowUpRight, Eye } from "lucide-react"
 import ReactMarkdown from "react-markdown"
 import type { Post } from "@/lib/types"
 
@@ -62,7 +62,6 @@ export function PostReader({ post, onClose }: PostReaderProps) {
             exit={{ y: 24, opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
-            {/* Accent header bar */}
             <div
               className="h-2 w-full"
               style={{ backgroundColor: post.coverColor }}
@@ -80,6 +79,16 @@ export function PostReader({ post, onClose }: PostReaderProps) {
               </button>
             </div>
 
+            {post.featuredImage ? (
+              <div className="aspect-[16/8] w-full overflow-hidden bg-muted">
+                <img
+                  src={post.featuredImage}
+                  alt={post.title}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            ) : null}
+
             <article className="px-6 py-12 md:px-10 md:py-16">
               <h1 className="font-serif-display text-4xl leading-[1.05] md:text-5xl">
                 {post.title}
@@ -88,29 +97,34 @@ export function PostReader({ post, onClose }: PostReaderProps) {
                 {post.excerpt}
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
+                <span>By {post.authorName}</span>
+                <span className="text-border">·</span>
                 <span>{formatDate(post.publishedAt)}</span>
                 <span className="text-border">·</span>
                 <span>{post.readingTime} min read</span>
-                {post.tags && (
-                  <>
-                    <span className="text-border">·</span>
-                    <span className="flex flex-wrap gap-2">
-                      {post.tags
-                        .split(",")
-                        .map((t) => t.trim())
-                        .filter(Boolean)
-                        .map((t) => (
-                          <span
-                            key={t}
-                            className="rounded-full bg-muted px-2.5 py-0.5 text-xs"
-                          >
-                            {t}
-                          </span>
-                        ))}
-                    </span>
-                  </>
-                )}
+                <span className="text-border">·</span>
+                <span className="inline-flex items-center gap-1">
+                  <Eye className="h-3.5 w-3.5" />
+                  {post.views}
+                </span>
               </div>
+
+              {post.tags && (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {post.tags
+                    .split(",")
+                    .map((t) => t.trim())
+                    .filter(Boolean)
+                    .map((t) => (
+                      <span
+                        key={t}
+                        className="rounded-full bg-muted px-2.5 py-0.5 text-xs"
+                      >
+                        #{t}
+                      </span>
+                    ))}
+                </div>
+              )}
 
               <div className="mt-10 h-px w-full bg-border" />
 
@@ -120,7 +134,7 @@ export function PostReader({ post, onClose }: PostReaderProps) {
 
               <div className="mt-16 flex items-center justify-between border-t border-border pt-6">
                 <span className="label-tracked-sm text-muted-foreground">
-                  © Wren Halloway
+                  PonsLink
                 </span>
                 <button
                   onClick={onClose}

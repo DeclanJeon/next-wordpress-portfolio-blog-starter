@@ -1,28 +1,29 @@
+export interface User {
+  id: string
+  username: string
+  displayName: string
+  role: string
+  bio: string
+}
+
 export interface Post {
   id: string
   slug: string
   title: string
   excerpt: string
+  content: string
   category: string
   tags: string
   coverColor: string
+  featuredImage: string
+  status: string
   readingTime: number
+  views: number
+  authorId: string
+  authorName: string
   publishedAt: string
-  content?: string
+  createdAt: string
+  updatedAt: string
 }
 
-export interface Project {
-  id: string
-  slug: string
-  title: string
-  summary: string
-  description: string
-  year: string
-  role: string
-  category: string
-  client: string
-  url: string
-  accent: string
-  featured: boolean
-  order: number
-}
+export type PostStatus = "published" | "draft" | "trash"

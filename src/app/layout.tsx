@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ConfirmProvider } from "@/components/site/confirm-dialog";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,34 +23,33 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Wren Halloway — Designer & Writer",
+  title: "PonsLink — A blog about bridges between disciplines",
   description:
-    "Wren Halloway is a designer and writer based in Lisbon, working on branding, digital products, and quiet interfaces that ease and beautify the small moments.",
+    "PonsLink is a writer-driven publication about the bridges between disciplines, languages, and people. Essays, field notes, and slow thinking.",
   keywords: [
-    "Wren Halloway",
-    "designer",
-    "writer",
-    "portfolio",
-    "brand identity",
-    "digital product design",
-    "editorial design",
+    "PonsLink",
+    "blog",
+    "writing",
+    "essays",
+    "field notes",
+    "writer experience",
   ],
-  authors: [{ name: "Wren Halloway" }],
+  authors: [{ name: "PonsLink" }],
   icons: {
     icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
   },
   openGraph: {
-    title: "Wren Halloway — Designer & Writer",
+    title: "PonsLink — A blog about bridges between disciplines",
     description:
-      "Designer and writer based in Lisbon. Branding, digital products, and quiet interfaces.",
-    siteName: "Wren Halloway",
+      "A writer-driven publication about the bridges between disciplines, languages, and people.",
+    siteName: "PonsLink",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wren Halloway — Designer & Writer",
+    title: "PonsLink",
     description:
-      "Designer and writer based in Lisbon. Branding, digital products, and quiet interfaces.",
+      "A writer-driven publication about the bridges between disciplines, languages, and people.",
   },
 };
 
@@ -69,8 +69,10 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          {children}
-          <Toaster />
+          <ConfirmProvider>
+            {children}
+            <Toaster />
+          </ConfirmProvider>
         </ThemeProvider>
       </body>
     </html>
