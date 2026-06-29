@@ -42,7 +42,7 @@ function wordpressPhase(ctx: SetupContext): Phase {
       {
         kind: "command",
         label: "Install WP-CLI if missing",
-        command: "command -v wp >/dev/null || { curl -fsSL -o /usr/local/bin/wp https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && chmod +x /usr/local/bin/wp; }",
+        command: "command -v wp >/dev/null || { curl -fsSL --retry 5 --retry-delay 2 --retry-all-errors -o /usr/local/bin/wp https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar || curl -fsSL --retry 5 --retry-delay 2 --retry-all-errors -o /usr/local/bin/wp https://github.com/wp-cli/builds/raw/gh-pages/phar/wp-cli.phar; chmod +x /usr/local/bin/wp; }",
       },
       { kind: "command", label: "Create WordPress database", command: `mysql -e ${shellQuote(wordpressSql(ctx))}` },
       { kind: "command", label: "Download WordPress", command: `[ -f ${shellQuote(join(ctx.wordpressDir, "wp-load.php"))} ] || WP_CLI_CACHE_DIR=/tmp/wp-cli-cache runuser -u www-data -- wp core download --path=${shellQuote(ctx.wordpressDir)} --locale=ko_KR` },

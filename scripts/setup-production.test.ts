@@ -98,4 +98,13 @@ describe("setup-production CLI", () => {
     }
   })
 
+  it("retries WP-CLI download with a fallback URL", () => {
+    const ctx = createContext(parseArgs(["--domain", "local.test", "--email", "admin@example.com", "--skip-certbot"]))
+    const plan = buildPlan(ctx)
+    const serialized = JSON.stringify(plan)
+
+    expect(serialized).toContain("--retry 5")
+    expect(serialized).toContain("github.com/wp-cli/builds/raw/gh-pages/phar/wp-cli.phar")
+  })
+
 })
