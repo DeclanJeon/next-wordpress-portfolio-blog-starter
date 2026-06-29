@@ -24,7 +24,18 @@ else
   BUN="${BUN_BIN}"
 fi
 
-ln -sfn "${BUN}" /usr/local/bin/bun
+if [[ "${BUN}" == "/usr/local/bin/bun" && -L "${BUN}" ]]; then
+  RESOLVED_BUN="$(readlink -f "${BUN}" 2>/dev/null || true)"
+  if [[ -n "${RESOLVED_BUN}" && -x "${RESOLVED_BUN}" ]]; then
+    BUN="${RESOLVED_BUN}"
+  elif [[ -x "${BUN_BIN}" ]]; then
+    BUN="${BUN_BIN}"
+  fi
+fi
+
+if [[ "${BUN}" != "/usr/local/bin/bun" ]]; then
+  ln -sfn "${BUN}" /usr/local/bin/bun
+fi
 
 run_bun_install() {
   if "${BUN}" install --frozen-lockfile; then
