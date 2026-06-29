@@ -24,6 +24,8 @@ else
   BUN="${BUN_BIN}"
 fi
 
+ln -sfn "${BUN}" /usr/local/bin/bun
+
 run_bun_install() {
   if "${BUN}" install --frozen-lockfile; then
     return 0

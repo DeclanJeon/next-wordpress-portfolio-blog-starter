@@ -8,7 +8,7 @@ WorkingDirectory={{workingDirectory}}
 EnvironmentFile={{envFile}}
 Environment=PORT={{appPort}}
 Environment=HOSTNAME=127.0.0.1
-ExecStart=/usr/bin/env node server.js --hostname 127.0.0.1 --port {{appPort}}
+ExecStart=/usr/bin/env bun server.js --hostname 127.0.0.1 --port {{appPort}}
 Restart=always
 RestartSec=5
 

@@ -85,4 +85,17 @@ describe("setup-production CLI", () => {
     expect(serialized).toContain("bun pm cache rm")
   })
 
+  it("runs the standalone service with Bun", () => {
+    const ctx = createContext(parseArgs(["--domain", "local.test", "--email", "admin@example.com", "--skip-certbot"]))
+    const plan = buildPlan(ctx)
+    const systemdPhase = plan.find((phase) => phase.name === "systemd-and-nginx")
+    const serviceWrite = systemdPhase?.operations.find((operation) => operation.kind === "write" && operation.label === "Write systemd service")
+
+    expect(serviceWrite?.kind).toBe("write")
+    if (serviceWrite?.kind === "write") {
+      expect(serviceWrite.content).toContain("ExecStart=/usr/bin/env bun server.js")
+      expect(serviceWrite.content).not.toContain("/usr/bin/env node")
+    }
+  })
+
 })
