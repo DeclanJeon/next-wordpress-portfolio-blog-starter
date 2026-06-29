@@ -77,4 +77,12 @@ describe("setup-production CLI", () => {
     expect(serialized).toContain("WP_CLI_CACHE_DIR=/tmp/wp-cli-cache")
   })
 
+  it("retries Bun installs after clearing cache", () => {
+    const ctx = createContext(parseArgs(["--domain", "local.test", "--email", "admin@example.com", "--skip-certbot"]))
+    const plan = buildPlan(ctx)
+    const serialized = JSON.stringify(plan)
+
+    expect(serialized).toContain("bun pm cache rm")
+  })
+
 })

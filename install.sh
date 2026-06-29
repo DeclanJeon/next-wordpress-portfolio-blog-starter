@@ -24,6 +24,15 @@ else
   BUN="${BUN_BIN}"
 fi
 
+run_bun_install() {
+  if "${BUN}" install --frozen-lockfile; then
+    return 0
+  fi
+  echo "bun install failed; clearing Bun cache and retrying once..." >&2
+  "${BUN}" pm cache rm || true
+  "${BUN}" install --frozen-lockfile
+}
+
 mkdir -p "$(dirname "${SOURCE_DIR}")"
 if [[ -d "${SOURCE_DIR}/.git" ]]; then
   git -C "${SOURCE_DIR}" pull --ff-only
@@ -32,5 +41,5 @@ else
 fi
 
 cd "${SOURCE_DIR}"
-"${BUN}" install --frozen-lockfile
+run_bun_install
 "${BUN}" run setup:production -- "$@"
