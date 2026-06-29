@@ -107,4 +107,15 @@ describe("setup-production CLI", () => {
     expect(serialized).toContain("github.com/wp-cli/builds/raw/gh-pages/phar/wp-cli.phar")
   })
 
+  it("waits for HTTP readiness during health checks", () => {
+    const ctx = createContext(parseArgs(["--domain", "local.test", "--email", "admin@example.com", "--skip-certbot"]))
+    const plan = buildPlan(ctx)
+    const healthPhase = plan.find((phase) => phase.name === "health-check")
+    const serialized = JSON.stringify(healthPhase)
+
+    expect(serialized).toContain("seq 1 30")
+    expect(serialized).toContain("http://127.0.0.1:3011/")
+    expect(serialized).toContain("/wp-json/")
+  })
+
 })
