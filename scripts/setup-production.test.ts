@@ -48,4 +48,21 @@ describe("setup-production CLI", () => {
 
     expect(plan.map((phase) => phase.name)).toEqual(["preflight", "health-check"])
   })
+
+  it("quotes env values and prepares sqlite before building", () => {
+    const ctx = createContext(parseArgs(["--domain", "local.test", "--email", "admin@example.com", "--skip-certbot"]))
+    const plan = buildPlan(ctx)
+    const secretPhase = plan.find((phase) => phase.name === "secrets-and-directories")
+    const nextPhase = plan.find((phase) => phase.name === "next-standalone")
+
+    const envWrite = secretPhase?.operations.find((operation) => operation.kind === "write" && operation.label === "Write app environment")
+    const labels = nextPhase?.operations.map((operation) => operation.label) ?? []
+
+    expect(envWrite?.kind).toBe("write")
+    if (envWrite?.kind === "write") {
+      expect(envWrite.content).toContain('NEXT_PUBLIC_SITE_TOPICS="Product retrospective,Portfolio,Technical writing,Operations notes"')
+    }
+    expect(labels.indexOf("Initialize Prisma schema")).toBeLessThan(labels.indexOf("Build Next standalone"))
+  })
+
 })
