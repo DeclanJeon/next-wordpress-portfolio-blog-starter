@@ -65,4 +65,16 @@ describe("setup-production CLI", () => {
     expect(labels.indexOf("Initialize Prisma schema")).toBeLessThan(labels.indexOf("Build Next standalone"))
   })
 
+  it("uses bun x and starts nginx during production setup", () => {
+    const ctx = createContext(parseArgs(["--domain", "local.test", "--email", "admin@example.com", "--skip-certbot"]))
+    const plan = buildPlan(ctx)
+    const serialized = JSON.stringify(plan)
+
+    expect(serialized).toContain("bun x prisma db push")
+    expect(serialized).not.toContain("bunx prisma")
+    expect(serialized).toContain("systemctl enable --now mariadb php8.3-fpm nginx")
+    expect(serialized).toContain("systemctl reload-or-restart nginx")
+    expect(serialized).toContain("WP_CLI_CACHE_DIR=/tmp/wp-cli-cache")
+  })
+
 })
