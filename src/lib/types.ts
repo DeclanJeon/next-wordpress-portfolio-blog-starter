@@ -1,0 +1,63 @@
+export interface User {
+  id: string
+  username: string
+  displayName: string
+  role: string
+  bio: string
+}
+
+export interface Post {
+  id: string
+  slug: string
+  title: string
+  excerpt: string
+  content: string
+  category: string
+  tags: string
+  coverColor: string
+  featuredImage: string
+  status: string
+  readingTime: number
+  views: number
+  authorId: string
+  authorName: string
+  publishedAt: string
+  createdAt: string
+  updatedAt: string
+}
+
+export interface ArticleNavigationItem {
+  slug: string
+  title: string
+  excerpt: string
+  category: string
+  publishedAt: string
+  readingTime: number
+}
+
+export interface ArticleNavigationSummary {
+  totalPublished: number
+  categoryPublished: number
+}
+
+export interface ArticleNavigation {
+  previous: ArticleNavigationItem | null
+  next: ArticleNavigationItem | null
+  related: ArticleNavigationItem[]
+  more: ArticleNavigationItem[]
+  summary: ArticleNavigationSummary
+}
+
+export type PostStatus = "published" | "draft" | "trash"
+
+export interface Project {
+  title: string
+  summary: string
+  description: string
+  category: string
+  year: string
+  role: string
+  accent: string
+  client?: string
+  url?: string
+}

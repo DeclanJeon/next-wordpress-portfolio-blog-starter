@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-label="P2P 파일 전송 흐름 제어">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2ff"/></linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 z" fill="#334155"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.16"/></filter>
+  </defs>
+  <rect width="1200" height="520" rx="34" fill="url(#bg)"/>
+  <text x="70" y="78" font-size="38" font-weight="800" fill="#0f172a" font-family="Noto Sans CJK KR, Apple SD Gothic Neo, sans-serif">P2P 파일 전송 흐름 제어</text>
+  <text x="70" y="122" font-size="22" fill="#475569" font-family="Noto Sans CJK KR, Apple SD Gothic Neo, sans-serif">파일을 조각내고 속도를 조절해 통화 흐름과 충돌을 줄이는 구조</text>
+  <g filter="url(#shadow)">
+    <path d="M 257 250 C 310 250, 275 250, 328 250" stroke="#334155" stroke-width="7" fill="none" marker-end="url(#arrow)"/><path d="M 532 250 C 585 250, 550 250, 603 250" stroke="#334155" stroke-width="7" fill="none" marker-end="url(#arrow)"/><path d="M 807 250 C 860 250, 825 250, 878 250" stroke="#334155" stroke-width="7" fill="none" marker-end="url(#arrow)"/>
+    <rect x="65" y="206" width="180" height="88" rx="22" fill="#2563eb"/><text x="155" y="258" text-anchor="middle" font-size="28" font-weight="700" fill="white">파일 조각</text><rect x="340" y="206" width="180" height="88" rx="22" fill="#0f766e"/><text x="430" y="258" text-anchor="middle" font-size="28" font-weight="700" fill="white">속도 조절</text><rect x="615" y="206" width="180" height="88" rx="22" fill="#c2410c"/><text x="705" y="258" text-anchor="middle" font-size="28" font-weight="700" fill="white">전송 채널</text><rect x="890" y="206" width="180" height="88" rx="22" fill="#6d28d9"/><text x="980" y="258" text-anchor="middle" font-size="28" font-weight="700" fill="white">로컬 저장</text>
+  </g>
+  <rect x="70" y="400" width="1060" height="64" rx="22" fill="#0f172a" opacity="0.9"/>
+  <text x="100" y="441" font-size="24" font-weight="700" fill="white" font-family="Noto Sans CJK KR, Apple SD Gothic Neo, sans-serif">본문에서 확인할 핵심 흐름만 압축한 보조 다이어그램</text>
+</svg>

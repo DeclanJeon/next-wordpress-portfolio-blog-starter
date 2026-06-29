@@ -1,0 +1,58 @@
+# dependencies
+node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# tests and coverage
+/coverage
+
+# Next.js
+/.next/
+/out/
+/build
+next-env.d.ts
+*.tsbuildinfo
+
+# local env and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.credentials
+
+# local databases and backups
+/db/*.db
+/db/*.db-*
+/db/*.sqlite
+/db/*.sqlite3
+/db/backups/
+*.db
+*.sqlite
+*.sqlite3
+*.bak
+
+# logs and local runtime artifacts
+*.log
+dev.log
+server.log
+dev.out.log
+local-*
+.claude
+.z-ai-config
+tool-results/
+output/
+
+# misc
+.DS_Store
+test
+prompt
+
+# generated or local-only skills
+/skills/
