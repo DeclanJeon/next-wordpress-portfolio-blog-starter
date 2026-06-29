@@ -68,7 +68,7 @@ function installPhases(ctx: SetupContext): Phase[] {
   })
   const phases: Phase[] = [
     preflightPhase(ctx),
-    { name: "system-packages", operations: [{ kind: "command", label: "Update apt index", command: "apt-get update" }, { kind: "command", label: "Install packages", command: `DEBIAN_FRONTEND=noninteractive apt-get install -y ${DEFAULT_PACKAGES.join(" ")}` }] },
+    { name: "system-packages", operations: [{ kind: "command", label: "Update apt index", command: "apt-get update" }, { kind: "command", label: "Install packages", command: `DEBIAN_FRONTEND=noninteractive apt-get install -y ${DEFAULT_PACKAGES.join(" ")}` }, { kind: "command", label: "Start package services", command: "systemctl enable --now mariadb && systemctl enable --now php8.3-fpm" }] },
     { name: "secrets-and-directories", operations: [{ kind: "mkdir", label: "Create install dir", path: ctx.installDir }, { kind: "mkdir", label: "Create releases dir", path: ctx.releasesDir }, { kind: "mkdir", label: "Create shared DB dir", path: dirname(ctx.sqlitePath) }, { kind: "mkdir", label: "Create env dir", path: ctx.envDir }, { kind: "write", label: "Write app environment", path: ctx.envFile, content: envContent(ctx), mode: "0600" }, { kind: "write", label: "Write generated credentials", path: ctx.credentialsFile, content: credentialsContent(ctx), mode: "0600" }] },
   ]
   if (!ctx.noWordpress) phases.push(wordpressPhase(ctx))
