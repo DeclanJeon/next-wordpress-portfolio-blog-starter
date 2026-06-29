@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server"
 import { db } from "@/lib/db"
-import { getCurrentUser, slugify, calcReadingTime } from "@/lib/auth"
+import { getCurrentUser, slugify } from "@/lib/auth"
+import { estimateReadingTime } from "@/lib/reading-time"
 import type { PostStatus } from "@/lib/types"
 
 export async function GET(request: Request) {
@@ -32,7 +33,7 @@ export async function GET(request: Request) {
 
     let posts = await db.post.findMany({
       where,
-      orderBy: { publishedAt: "desc" },
+      orderBy: [{ publishedAt: "desc" }, { id: "desc" }],
     })
 
     // tag filter (stored as comma string)
@@ -96,7 +97,7 @@ export async function POST(request: Request) {
         coverColor,
         featuredImage,
         status: "published", // publish immediately per spec
-        readingTime: calcReadingTime(content),
+        readingTime: estimateReadingTime(content),
         authorId: user.id,
         authorName: user.displayName,
         publishedAt: new Date(),

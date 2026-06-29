@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="360" viewBox="0 0 980 360">
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7c2d12"/></marker></defs>
+  <rect width="980" height="360" rx="28" fill="#f8fafc"/>
+  <text x="40" y="58" font-size="24" font-weight="800" font-family="Inter, Arial, sans-serif" fill="#111827">PonsWarp의 기본 경계</text>
+  <text x="40" y="92" font-size="17" font-family="Inter, Arial, sans-serif" fill="#64748b">signaling은 연결만 돕고 파일 데이터는 브라우저끼리 이동한다.</text>
+  <path d="M 158 166 L 275.3333333333333 166" stroke="#7c2d12" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 431.3333333333333 166 L 548.6666666666666 166" stroke="#7c2d12" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 704.6666666666666 166 L 822 166" stroke="#7c2d12" stroke-width="3" marker-end="url(#arrow)"/>
+  <g><rect x="8" y="130" width="144" height="72" rx="18" fill="#fff" stroke="#ea580c" stroke-width="2"/><text x="80" y="172" text-anchor="middle" font-size="18" font-family="Inter, Arial, sans-serif" fill="#1f2937">Sender</text></g>
+<g><rect x="281.3333333333333" y="130" width="144" height="72" rx="18" fill="#fff" stroke="#ea580c" stroke-width="2"/><text x="353.3333333333333" y="172" text-anchor="middle" font-size="18" font-family="Inter, Arial, sans-serif" fill="#1f2937">Signaling</text></g>
+<g><rect x="554.6666666666666" y="130" width="144" height="72" rx="18" fill="#fff" stroke="#ea580c" stroke-width="2"/><text x="626.6666666666666" y="172" text-anchor="middle" font-size="18" font-family="Inter, Arial, sans-serif" fill="#1f2937">DataChannel</text></g>
+<g><rect x="828" y="130" width="144" height="72" rx="18" fill="#fff" stroke="#ea580c" stroke-width="2"/><text x="900" y="172" text-anchor="middle" font-size="18" font-family="Inter, Arial, sans-serif" fill="#1f2937">Receiver</text></g>
+</svg>

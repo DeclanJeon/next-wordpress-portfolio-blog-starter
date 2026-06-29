@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="390" viewBox="0 0 1040 390">
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#0f172a"/></marker></defs>
+  <rect width="1040" height="390" rx="30" fill="#f8fafc"/>
+  <rect x="18" y="18" width="1004" height="354" rx="24" fill="none" stroke="#e2e8f0"/>
+  <text x="42" y="64" font-size="25" font-weight="850" fill="#111827" font-family="Inter, Arial, sans-serif">처음 원했던 연결 방식</text>
+  <text x="42" y="100" font-size="17" fill="#64748b" font-family="Inter, Arial, sans-serif">계정과 프로필보다 링크와 방을 먼저 두는 흐름이었다.</text>
+  <path d="M 167.0 192 L 291.0 192" stroke="#0f172a" stroke-width="3" marker-end="url(#arrow)"/><path d="M 457.0 192 L 581.0 192" stroke="#0f172a" stroke-width="3" marker-end="url(#arrow)"/><path d="M 747.0 192 L 871.0 192" stroke="#0f172a" stroke-width="3" marker-end="url(#arrow)"/>
+  <g><rect x="9.0" y="154" width="152" height="76" rx="18" fill="#fff" stroke="#1d4ed8" stroke-width="2"/><text x="85.0" y="197" text-anchor="middle" font-size="18" font-weight="720" fill="#111827" font-family="Inter, Arial, sans-serif">링크 공유</text></g><g><rect x="299.0" y="154" width="152" height="76" rx="18" fill="#fff" stroke="#1d4ed8" stroke-width="2"/><text x="375.0" y="197" text-anchor="middle" font-size="18" font-weight="720" fill="#111827" font-family="Inter, Arial, sans-serif">닉네임</text></g><g><rect x="589.0" y="154" width="152" height="76" rx="18" fill="#fff" stroke="#1d4ed8" stroke-width="2"/><text x="665.0" y="197" text-anchor="middle" font-size="18" font-weight="720" fill="#111827" font-family="Inter, Arial, sans-serif">로비</text></g><g><rect x="879.0" y="154" width="152" height="76" rx="18" fill="#fff" stroke="#1d4ed8" stroke-width="2"/><text x="955.0" y="197" text-anchor="middle" font-size="18" font-weight="720" fill="#111827" font-family="Inter, Arial, sans-serif">룸</text></g>
+</svg>

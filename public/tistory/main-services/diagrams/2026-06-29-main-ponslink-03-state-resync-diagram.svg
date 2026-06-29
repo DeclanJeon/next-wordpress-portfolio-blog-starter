@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="360" viewBox="0 0 980 360">
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#312e81"/></marker></defs>
+  <rect width="980" height="360" rx="28" fill="#f8fafc"/>
+  <text x="40" y="58" font-size="24" font-weight="800" font-family="Inter, Arial, sans-serif" fill="#111827">실시간 방의 복구 흐름</text>
+  <text x="40" y="92" font-size="17" font-family="Inter, Arial, sans-serif" fill="#64748b">입장보다 중요한 것은 끊긴 뒤 다시 같은 상태로 돌아오는 과정이다.</text>
+  <path d="M 158 166 L 207 166" stroke="#312e81" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 363 166 L 412 166" stroke="#312e81" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 568 166 L 617 166" stroke="#312e81" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 773 166 L 822 166" stroke="#312e81" stroke-width="3" marker-end="url(#arrow)"/>
+  <g><rect x="8" y="130" width="144" height="72" rx="18" fill="#fff" stroke="#7c3aed" stroke-width="2"/><text x="80" y="172" text-anchor="middle" font-size="18" font-family="Inter, Arial, sans-serif" fill="#1f2937">Join</text></g>
+<g><rect x="213" y="130" width="144" height="72" rx="18" fill="#fff" stroke="#7c3aed" stroke-width="2"/><text x="285" y="172" text-anchor="middle" font-size="18" font-family="Inter, Arial, sans-serif" fill="#1f2937">Snapshot</text></g>
+<g><rect x="418" y="130" width="144" height="72" rx="18" fill="#fff" stroke="#7c3aed" stroke-width="2"/><text x="490" y="172" text-anchor="middle" font-size="18" font-family="Inter, Arial, sans-serif" fill="#1f2937">Updates</text></g>
+<g><rect x="623" y="130" width="144" height="72" rx="18" fill="#fff" stroke="#7c3aed" stroke-width="2"/><text x="695" y="172" text-anchor="middle" font-size="18" font-family="Inter, Arial, sans-serif" fill="#1f2937">Disconnect</text></g>
+<g><rect x="828" y="130" width="144" height="72" rx="18" fill="#fff" stroke="#7c3aed" stroke-width="2"/><text x="900" y="172" text-anchor="middle" font-size="18" font-family="Inter, Arial, sans-serif" fill="#1f2937">Resync</text></g>
+</svg>

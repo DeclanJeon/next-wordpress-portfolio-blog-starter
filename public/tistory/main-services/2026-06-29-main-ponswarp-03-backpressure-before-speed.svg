@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f59e0b"/><stop offset="1" stop-color="#422006"/></linearGradient>
+    <radialGradient id="glow" cx="75%" cy="20%" r="70%"><stop offset="0" stop-color="rgba(255,255,255,0.34)"/><stop offset="1" stop-color="rgba(255,255,255,0)"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" rx="42" fill="url(#bg)"/>
+  <rect width="1200" height="630" rx="42" fill="url(#glow)"/>
+  <path d="M0 535 C240 470 355 620 590 548 C790 486 929 435 1200 510 L1200 630 L0 630 Z" fill="rgba(0,0,0,0.18)"/>
+  <text x="72" y="96" font-size="24" fill="rgba(255,255,255,0.72)" font-family="Inter, Arial, sans-serif">Pons Field Notes · Main Services 06</text>
+  <text x="72" y="168" font-size="56" font-weight="800" fill="#fff" font-family="Inter, Arial, sans-serif">Flow before speed</text>
+  <text x="72" y="220" font-size="28" fill="rgba(255,255,255,0.82)" font-family="Inter, Arial, sans-serif">대용량 파일은 밀어붙이면 먼저 깨진다</text>
+  <path d="M 193 300 C 253 220, 232 535, 292 455" fill="none" stroke="rgba(255,255,255,0.38)" stroke-width="4" stroke-linecap="round"/>
+<path d="M 408 455 C 468 375, 447 380, 507 300" fill="none" stroke="rgba(255,255,255,0.38)" stroke-width="4" stroke-linecap="round"/>
+<path d="M 623 300 C 683 220, 662 535, 722 455" fill="none" stroke="rgba(255,255,255,0.38)" stroke-width="4" stroke-linecap="round"/>
+  <g><circle cx="135" cy="300" r="54" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.5)"/><text x="135" y="306" text-anchor="middle" font-size="22" fill="#fff" font-family="Inter, Arial, sans-serif">Chunk</text></g>
+<g><circle cx="350" cy="455" r="54" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.5)"/><text x="350" y="461" text-anchor="middle" font-size="22" fill="#fff" font-family="Inter, Arial, sans-serif">Queue</text></g>
+<g><circle cx="565" cy="300" r="54" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.5)"/><text x="565" y="306" text-anchor="middle" font-size="22" fill="#fff" font-family="Inter, Arial, sans-serif">Buffer</text></g>
+<g><circle cx="780" cy="455" r="54" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.5)"/><text x="780" y="461" text-anchor="middle" font-size="22" fill="#fff" font-family="Inter, Arial, sans-serif">Write</text></g>
+</svg>

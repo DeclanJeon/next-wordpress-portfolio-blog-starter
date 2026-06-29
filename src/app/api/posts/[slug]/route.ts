@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server"
 import { db } from "@/lib/db"
-import { getCurrentUser, calcReadingTime } from "@/lib/auth"
+import { getCurrentUser } from "@/lib/auth"
+import { estimateReadingTime } from "@/lib/reading-time"
 
 export async function GET(
   _request: Request,
@@ -53,7 +54,7 @@ export async function PUT(
     if (typeof body.excerpt === "string") data.excerpt = body.excerpt.trim()
     if (typeof body.content === "string") {
       data.content = body.content
-      data.readingTime = calcReadingTime(body.content)
+      data.readingTime = estimateReadingTime(body.content)
     }
     if (typeof body.category === "string") data.category = body.category
     if (typeof body.tags === "string") data.tags = body.tags

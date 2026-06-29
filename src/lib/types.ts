@@ -26,4 +26,57 @@ export interface Post {
   updatedAt: string
 }
 
+export interface ArticleNavigationItem {
+  slug: string
+  title: string
+  excerpt: string
+  category: string
+  publishedAt: string
+  readingTime: number
+}
+
+export interface ArticleTaxonomyBreadcrumb {
+  slug: string
+  name: string
+  href: string
+}
+
+export interface ArticleSeriesNavigation {
+  slug: string
+  title: string
+  position: number
+  total: number
+  href: string
+  previous: ArticleNavigationItem | null
+  next: ArticleNavigationItem | null
+}
+
+export interface ArticleNavigationSummary {
+  totalPublished: number
+  categoryPublished: number
+}
+
+export interface ArticleNavigation {
+  breadcrumbs: ArticleTaxonomyBreadcrumb[]
+  secondary: ArticleTaxonomyBreadcrumb[]
+  series: ArticleSeriesNavigation | null
+  previous: ArticleNavigationItem | null
+  next: ArticleNavigationItem | null
+  related: ArticleNavigationItem[]
+  more: ArticleNavigationItem[]
+  summary: ArticleNavigationSummary
+}
+
 export type PostStatus = "published" | "draft" | "trash"
+
+export interface Project {
+  title: string
+  summary: string
+  description: string
+  category: string
+  year: string
+  role: string
+  accent: string
+  client?: string
+  url?: string
+}

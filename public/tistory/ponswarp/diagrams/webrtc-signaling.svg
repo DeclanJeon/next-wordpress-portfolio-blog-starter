@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+<title id="title">WebRTC signaling opens a data path</title>
+<desc id="desc">The signaling server helps peers exchange connection information, then the data channel carries file chunks directly.</desc>
+<rect width="1200" height="560" rx="32" fill="#101826"/>
+<g font-family="ui-sans-serif, system-ui" fill="#f8f3ea">
+  <text x="170" y="95" text-anchor="middle" font-size="30" font-weight="800">Browser A</text>
+  <text x="600" y="95" text-anchor="middle" font-size="30" font-weight="800">Signaling</text>
+  <text x="1030" y="95" text-anchor="middle" font-size="30" font-weight="800">Browser B</text>
+</g>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="80" y="130" width="180" height="110" rx="20" fill="#172235" stroke="#8bd3dd" stroke-width="4"/>
+  <rect x="510" y="130" width="180" height="110" rx="20" fill="#172235" stroke="#d98555" stroke-width="4"/>
+  <rect x="940" y="130" width="180" height="110" rx="20" fill="#172235" stroke="#8bd3dd" stroke-width="4"/>
+  <path d="M270 170 H500" stroke="#d98555" stroke-width="5" stroke-dasharray="12 12"/>
+  <path d="M700 170 H930" stroke="#d98555" stroke-width="5" stroke-dasharray="12 12"/>
+  <path d="M260 365 C420 275 780 275 940 365" stroke="#8bd3dd" stroke-width="10"/>
+  <path d="M570 365 h60" stroke="#8bd3dd" stroke-width="10"/>
+</g>
+<g font-family="ui-sans-serif, system-ui" fill="#f8f3ea" font-size="24" font-weight="700">
+  <text x="600" y="310" text-anchor="middle">connection info first</text>
+  <text x="600" y="430" text-anchor="middle">file chunks after the path opens</text>
+</g>
+</svg>

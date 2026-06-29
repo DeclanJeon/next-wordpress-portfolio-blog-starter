@@ -20,7 +20,7 @@ function decode(token: string): { userId: string; username: string } | null {
 }
 
 export function mockVerify(password: string, hash: string): boolean {
-  // Mirror of seed.ts mockHash
+  // Legacy local hash verifier; locked seed accounts use a non-matching hash.
   const expected = "pl$" + Buffer.from(password).reverse().toString("base64")
   return expected === hash
 }
@@ -67,12 +67,4 @@ export function slugify(s: string): string {
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-")
     .slice(0, 80)
-}
-
-export function calcReadingTime(content: string): number {
-  const words = content
-    .replace(/[#>*_`~\-\[\]\(\)!]/g, " ")
-    .split(/\s+/)
-    .filter(Boolean).length
-  return Math.max(1, Math.round(words / 200))
 }

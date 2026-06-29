@@ -22,6 +22,7 @@ model User {
   posts        Post[]
 }
 
+
 model Post {
   id             String   @id @default(cuid())
   slug           String   @unique
@@ -38,10 +39,76 @@ model Post {
   authorId       String
   authorName     String
   author         User     @relation(fields: [authorId], references: [id])
+  taxonomies     PostTaxonomy[]
+  seriesEntries  PostSeries[]
   publishedAt    DateTime @default(now())
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
 
   @@index([status])
   @@index([authorId])
+}
+model TaxonomyNode {
+  id          String         @id @default(cuid())
+  slug        String         @unique
+  name        String
+  kind        String         // category | project | topic
+  parentId    String?
+  description String         @default("")
+  sortOrder   Int            @default(0)
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  parent      TaxonomyNode?  @relation("TaxonomyTree", fields: [parentId], references: [id])
+  children    TaxonomyNode[] @relation("TaxonomyTree")
+  posts       PostTaxonomy[]
+
+  @@index([parentId, sortOrder])
+  @@index([kind, sortOrder])
+}
+
+model PostTaxonomy {
+  id        String       @id @default(cuid())
+  postId    String
+  nodeId    String
+  role      String       @default("primary") // primary | secondary | topic
+  sortOrder Int          @default(0)
+
+  post      Post         @relation(fields: [postId], references: [id], onDelete: Cascade)
+  node      TaxonomyNode @relation(fields: [nodeId], references: [id], onDelete: Cascade)
+
+  @@unique([postId, nodeId, role])
+  @@index([postId, role])
+  @@index([nodeId, role])
+}
+
+model Series {
+  id          String       @id @default(cuid())
+  slug        String       @unique
+  title       String
+  description String       @default("")
+  projectSlug String       @default("")
+  sortOrder   Int          @default(0)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  posts       PostSeries[]
+
+  @@index([projectSlug, sortOrder])
+}
+
+model PostSeries {
+  id        String  @id @default(cuid())
+  postId    String
+  seriesId  String
+  sortOrder Int
+  isPinned  Boolean @default(false)
+
+  post      Post    @relation(fields: [postId], references: [id], onDelete: Cascade)
+  series    Series  @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+
+  @@unique([postId, seriesId])
+  @@unique([seriesId, sortOrder])
+  @@index([postId])
+  @@index([seriesId, sortOrder])
 }

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" role="img" aria-labelledby="title desc">
+<title id="title">ZIP64 streaming archive</title>
+<desc id="desc">Many source files become a streaming ZIP64 archive without loading the entire folder into memory.</desc>
+<rect width="1200" height="540" rx="32" fill="#f8f3ea"/>
+<g fill="none" stroke="#2f2a25" stroke-width="4" stroke-linejoin="round">
+  <rect x="80" y="115" width="160" height="88" rx="16" fill="#fffaf2"/>
+  <rect x="80" y="225" width="160" height="88" rx="16" fill="#fffaf2"/>
+  <rect x="80" y="335" width="160" height="88" rx="16" fill="#fffaf2"/>
+  <path d="M270 160 H430 M270 270 H430 M270 380 H430" stroke="#0f9ca8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M430 160 C500 160 500 270 570 270 C500 270 500 380 430 380" stroke="#0f9ca8" stroke-width="8"/>
+  <rect x="590" y="215" width="520" height="110" rx="18" fill="#f4dfcf"/>
+  <path d="M620 215 v110 M700 215 v110 M810 215 v110 M910 215 v110 M1030 215 v110" stroke="#9c4f24" stroke-width="5"/>
+</g>
+<g font-family="ui-sans-serif, system-ui" fill="#2f2a25" font-weight="800">
+  <text x="160" y="72" text-anchor="middle" font-size="28">source files</text>
+  <text x="850" y="178" text-anchor="middle" font-size="28">bounded ZIP64 stream</text>
+  <text x="850" y="372" text-anchor="middle" font-size="23" fill="#6f6258">small memory window, long archive</text>
+</g>
+</svg>

@@ -5,6 +5,7 @@ import { createPortal } from "react-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import { X, ArrowUpRight, Eye } from "lucide-react"
 import ReactMarkdown from "react-markdown"
+import { formatReadingTime } from "@/lib/reading-time"
 import type { Post } from "@/lib/types"
 
 interface PostReaderProps {
@@ -101,7 +102,7 @@ export function PostReader({ post, onClose }: PostReaderProps) {
                 <span className="text-border">·</span>
                 <span>{formatDate(post.publishedAt)}</span>
                 <span className="text-border">·</span>
-                <span>{post.readingTime} min read</span>
+                <span>{formatReadingTime(post.readingTime, "meta")}</span>
                 <span className="text-border">·</span>
                 <span className="inline-flex items-center gap-1">
                   <Eye className="h-3.5 w-3.5" />

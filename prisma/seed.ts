@@ -1,31 +1,18 @@
 import { db } from "../src/lib/db"
 
-// Simple mock hash (NOT for production — demo only)
-function mockHash(s: string) {
-  return "pl$" + Buffer.from(s).reverse().toString("base64")
-}
+const LOCKED_PASSWORD_HASH = "disabled"
 
 async function main() {
   await db.post.deleteMany()
   await db.user.deleteMany()
 
-  const writer = await db.user.create({
+  const contentAuthor = await db.user.create({
     data: {
-      username: "writer",
-      displayName: "Jin-ah Park",
-      passwordHash: mockHash("writer123"),
+      username: "ponslink",
+      displayName: "PonsLink",
+      passwordHash: LOCKED_PASSWORD_HASH,
       role: "writer",
-      bio: "Writes about bridges — between disciplines, languages, and people.",
-    },
-  })
-
-  const editor = await db.user.create({
-    data: {
-      username: "editor",
-      displayName: "Marco Lee",
-      passwordHash: mockHash("editor123"),
-      role: "writer",
-      bio: "Editor at PonsLink. Slow internet, fast keyboard.",
+      bio: "PonsLink editorial account. Local password login is intentionally disabled.",
     },
   })
 
@@ -40,8 +27,8 @@ async function main() {
       coverColor: "#b45309",
       status: "published",
       readingTime: 6,
-      authorId: writer.id,
-      authorName: writer.displayName,
+      authorId: contentAuthor.id,
+      authorName: contentAuthor.displayName,
       publishedAt: new Date("2025-10-12T09:00:00Z"),
       content: `# Bridges between disciplines
 
@@ -69,8 +56,8 @@ The bridges are not the disciplines. The bridges are the people willing to walk 
       coverColor: "#3f6212",
       status: "published",
       readingTime: 4,
-      authorId: writer.id,
-      authorName: writer.displayName,
+      authorId: contentAuthor.id,
+      authorName: contentAuthor.displayName,
       publishedAt: new Date("2025-09-28T09:00:00Z"),
       content: `# Writing is thinking, not recording
 
@@ -96,8 +83,8 @@ Keep the draft. Trust the struggle. The clarity comes after, not before.`,
       coverColor: "#0f766e",
       status: "published",
       readingTime: 5,
-      authorId: editor.id,
-      authorName: editor.displayName,
+      authorId: contentAuthor.id,
+      authorName: contentAuthor.displayName,
       publishedAt: new Date("2025-09-14T09:00:00Z"),
       content: `# Small tools, long projects
 
@@ -123,8 +110,8 @@ Most of the time, for most projects, it isn't.`,
       coverColor: "#7c2d12",
       status: "published",
       readingTime: 7,
-      authorId: writer.id,
-      authorName: writer.displayName,
+      authorId: contentAuthor.id,
+      authorName: contentAuthor.displayName,
       publishedAt: new Date("2025-08-30T09:00:00Z"),
       content: `# A week of slow internet
 
@@ -154,8 +141,8 @@ I'm back on fast internet now. But I still ask, before I open a tab: is this rea
       coverColor: "#a16207",
       status: "published",
       readingTime: 4,
-      authorId: editor.id,
-      authorName: editor.displayName,
+      authorId: contentAuthor.id,
+      authorName: contentAuthor.displayName,
       publishedAt: new Date("2025-08-11T09:00:00Z"),
       content: `# On naming things
 
@@ -181,8 +168,8 @@ The test is simple: would a stranger, hearing the name once, guess roughly what 
       coverColor: "#1c1917",
       status: "draft",
       readingTime: 5,
-      authorId: writer.id,
-      authorName: writer.displayName,
+      authorId: contentAuthor.id,
+      authorName: contentAuthor.displayName,
       publishedAt: new Date("2025-10-20T09:00:00Z"),
       content: `# The quiet protocol
 
@@ -204,13 +191,7 @@ This is a draft. I'm still thinking.`,
     await db.post.create({ data: p })
   }
 
-  console.log(
-    "Seed complete:",
-    2,
-    "users,",
-    posts.length,
-    "posts (writer/“writer” password: writer123)"
-  )
+  console.log("Seed complete:", 1, "locked content account,", posts.length, "posts")
 }
 
 main()
