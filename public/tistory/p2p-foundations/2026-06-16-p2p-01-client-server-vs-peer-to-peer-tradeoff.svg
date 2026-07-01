@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="840" viewBox="0 0 1400 840">
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#7c5f43"/></marker></defs>
+<rect width="1400" height="840" fill="#f7f3ea"/><rect x="48" y="48" width="1304" height="744" rx="34" fill="#fffdf8" stroke="#d8c9b4"/>
+<text x="92" y="118" font-size="34" font-weight="700" fill="#2f2720" font-family="sans-serif">서버-클라이언트와 피어 투 피어는 무엇이 다른가 · tradeoff</text>
+<text x="92" y="158" font-size="16" fill="#8a725a" font-family="monospace">TRADEOFF · PonsLink visual note</text>
+<line x1="180" y1="640" x2="1220" y2="640" stroke="#aa967b" stroke-width="3"/>
+<line x1="180" y1="640" x2="180" y2="220" stroke="#aa967b" stroke-width="3"/>
+<circle cx="260" cy="560" r="28" fill="#d7b98b" stroke="#7c5f43" stroke-width="3"/><text x="260" y="622" text-anchor="middle" font-size="18" fill="#3c3128" font-family="sans-serif">클라이언트</text>
+<circle cx="480" cy="470" r="28" fill="#d7b98b" stroke="#7c5f43" stroke-width="3"/><text x="480" y="532" text-anchor="middle" font-size="18" fill="#3c3128" font-family="sans-serif">중앙 서버</text>
+<circle cx="700" cy="390" r="28" fill="#d7b98b" stroke="#7c5f43" stroke-width="3"/><text x="700" y="452" text-anchor="middle" font-size="18" fill="#3c3128" font-family="sans-serif">피어 A</text>
+<circle cx="920" cy="310" r="28" fill="#d7b98b" stroke="#7c5f43" stroke-width="3"/><text x="920" y="372" text-anchor="middle" font-size="18" fill="#3c3128" font-family="sans-serif">피어 B</text>
+<circle cx="1140" cy="250" r="28" fill="#d7b98b" stroke="#7c5f43" stroke-width="3"/><text x="1140" y="312" text-anchor="middle" font-size="18" fill="#3c3128" font-family="sans-serif">제어면</text>
+<text x="700" y="710" text-anchor="middle" font-size="20" fill="#735f4a" font-family="sans-serif">복잡도 / 비용 / 제어권의 균형점</text>
+</svg>

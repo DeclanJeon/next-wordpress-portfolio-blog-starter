@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="840" viewBox="0 0 1400 840">
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#7c5f43"/></marker></defs>
+<rect width="1400" height="840" fill="#f7f3ea"/><rect x="48" y="48" width="1304" height="744" rx="34" fill="#fffdf8" stroke="#d8c9b4"/>
+<text x="92" y="118" font-size="34" font-weight="700" fill="#2f2720" font-family="sans-serif">Mesh, SFU, MCU는 연결을 어디서 합칠지의 선택이다 · overview</text>
+<text x="92" y="158" font-size="16" fill="#8a725a" font-family="monospace">OVERVIEW · PonsLink visual note</text>
+<rect x="120" y="250" width="230" height="96" rx="18" fill="#fbf4e8" stroke="#b8a489" stroke-width="2"/><text x="235.0" y="304.0" text-anchor="middle" font-size="24" fill="#3c3128" font-family="sans-serif">Mesh</text>
+<rect x="450" y="250" width="230" height="96" rx="18" fill="#fbf4e8" stroke="#b8a489" stroke-width="2"/><text x="565.0" y="304.0" text-anchor="middle" font-size="24" fill="#3c3128" font-family="sans-serif">SFU</text>
+<rect x="780" y="250" width="230" height="96" rx="18" fill="#fbf4e8" stroke="#b8a489" stroke-width="2"/><text x="895.0" y="304.0" text-anchor="middle" font-size="24" fill="#3c3128" font-family="sans-serif">MCU</text>
+<rect x="285" y="520" width="230" height="96" rx="18" fill="#eef2f5" stroke="#b8a489" stroke-width="2"/><text x="400.0" y="574.0" text-anchor="middle" font-size="24" fill="#3c3128" font-family="sans-serif">업로드</text>
+<rect x="615" y="520" width="230" height="96" rx="18" fill="#eef2f5" stroke="#b8a489" stroke-width="2"/><text x="730.0" y="574.0" text-anchor="middle" font-size="24" fill="#3c3128" font-family="sans-serif">품질 제어</text>
+<path d="M350 298 C 400.0 298, 400.0 298, 450 298" fill="none" stroke="#7c5f43" stroke-width="3" marker-end="url(#arrow)"/><text x="400.0" y="286.0" text-anchor="middle" font-size="16" fill="#735f4a" font-family="sans-serif">control</text>
+<path d="M680 298 C 730.0 298, 730.0 298, 780 298" fill="none" stroke="#7c5f43" stroke-width="3" marker-end="url(#arrow)"/><text x="730.0" y="286.0" text-anchor="middle" font-size="16" fill="#735f4a" font-family="sans-serif">data</text>
+<path d="M565 346 C 482.5 346, 482.5 520, 400 520" fill="none" stroke="#7c5f43" stroke-width="3" marker-end="url(#arrow)"/><text x="482.5" y="421.0" text-anchor="middle" font-size="16" fill="#735f4a" font-family="sans-serif">feedback</text>
+<path d="M895 346 C 812.5 346, 812.5 520, 730 520" fill="none" stroke="#7c5f43" stroke-width="3" marker-end="url(#arrow)"/><text x="812.5" y="421.0" text-anchor="middle" font-size="16" fill="#735f4a" font-family="sans-serif">retry</text>
+</svg>

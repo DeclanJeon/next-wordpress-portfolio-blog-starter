@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="840" viewBox="0 0 1400 840">
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#7c5f43"/></marker></defs>
+<rect width="1400" height="840" fill="#f7f3ea"/><rect x="48" y="48" width="1304" height="744" rx="34" fill="#fffdf8" stroke="#d8c9b4"/>
+<text x="92" y="118" font-size="34" font-weight="700" fill="#2f2720" font-family="sans-serif">WebRTC 이전에 Signaling, STUN, TURN, ICE를 먼저 이해해야 한다 · checklist</text>
+<text x="92" y="158" font-size="16" fill="#8a725a" font-family="monospace">CHECKLIST · PonsLink visual note</text>
+<rect x="130" y="235" width="1140" height="96" rx="20" fill="#fbf8f1" stroke="#c8b697"/><text x="180" y="293" font-size="25" fill="#3c3128" font-family="sans-serif">1. SDP와 candidate 교환은 어떤 채널로 기록되는가</text>
+<rect x="130" y="370" width="1140" height="96" rx="20" fill="#fbf8f1" stroke="#c8b697"/><text x="180" y="428" font-size="25" fill="#3c3128" font-family="sans-serif">2. TURN 사용률은 어떤 지표로 감시할 것인가</text>
+<rect x="130" y="505" width="1140" height="96" rx="20" fill="#fbf8f1" stroke="#c8b697"/><text x="180" y="563" font-size="25" fill="#3c3128" font-family="sans-serif">3. 연결 실패와 릴레이 전환을 사용자에게 어떻게 설명할 것인가</text>
+<text x="700" y="705" text-anchor="middle" font-size="20" fill="#735f4a" font-family="sans-serif">이 질문에 답하지 못하면 아직 설계가 아니라 희망사항이다.</text>
+</svg>
