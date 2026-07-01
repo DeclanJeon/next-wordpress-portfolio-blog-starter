@@ -387,7 +387,7 @@ def render_decision_matrix(topic: Topic, assets: list[Asset]) -> str:
     for i, heading in enumerate(sections):
         parts.append(f"## {heading}\n\n" + paragraph(topic, "의사결정 매트릭스에서는", f"{heading}에서 달라지는 업로드·서버·품질 비용", "방 크기와 녹화 요구에 따라 전환 기준을 남긴다"))
         if i in (2, 4, 5):
-            parts.append(image_markdown(assets[min(3, i-1)]))
+            parts.append(image_markdown(assets[{2: 1, 4: 2, 5: 3}[i]]))
     ensure_long(parts, topic)
     return "\n".join(parts)
 
@@ -409,7 +409,7 @@ def render_foundation_architecture(topic: Topic, assets: list[Asset]) -> str:
     for i, heading in enumerate(sections):
         parts.append(f"## {heading}\n\n" + paragraph(topic, "파운데이션 아키텍처에서는", f"{heading}를 독립 컴포넌트로 보는 방식", "구성 요소를 느슨하게 묶고 지표를 먼저 붙인다"))
         if i in (1, 4, 5):
-            parts.append(image_markdown(assets[min(3, i//2 + 1)]))
+            parts.append(image_markdown(assets[{1: 1, 4: 2, 5: 3}[i]]))
     ensure_long(parts, topic)
     return "\n".join(parts)
 
@@ -454,7 +454,7 @@ def render_failure_catalog(topic: Topic, assets: list[Asset]) -> str:
     for i, heading in enumerate(sections):
         parts.append(f"## {heading}\n\n" + paragraph(topic, "실패 카탈로그에서는", f"{heading}가 사용자와 운영자에게 보이는 방식", "감지 지표와 회복 행동을 같은 표에 둔다"))
         if i in (1, 4, 5):
-            parts.append(image_markdown(assets[min(3, i//2 + 1)]))
+            parts.append(image_markdown(assets[{1: 1, 4: 2, 5: 3}[i]]))
     ensure_long(parts, topic)
     return "\n".join(parts)
 
@@ -578,6 +578,9 @@ def validate(rendered: dict[str, tuple[Topic, str, list[Asset]]]) -> None:
             raise RuntimeError(f"{slug} under 10000 chars")
         if not (3 <= body_images <= 4):
             raise RuntimeError(f"{slug} body image count invalid: {body_images}")
+        image_paths = re.findall(r"!\[[^\]]*\]\(([^)]+)\)", content)
+        if len(set(image_paths)) != len(image_paths):
+            raise RuntimeError(f"{slug} has duplicate body image paths")
         sig = section_signature(content)
         if sig in signatures:
             raise RuntimeError(f"section signature duplicated: {slug} and {signatures[sig]}")
