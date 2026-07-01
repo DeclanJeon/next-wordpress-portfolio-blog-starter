@@ -37,6 +37,7 @@ next-env.d.ts
 *.sqlite
 *.sqlite3
 *.bak
+/db/*.db.bak*
 
 # logs and local runtime artifacts
 *.log
@@ -48,6 +49,11 @@ local-*
 .z-ai-config
 tool-results/
 output/
+/tmp/
+/artifacts/
+/.gjc/
+/.omx/
+/scripts/__pycache__/
 
 # misc
 .DS_Store
