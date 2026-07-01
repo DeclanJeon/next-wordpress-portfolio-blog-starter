@@ -55,6 +55,10 @@ output/
 /.omx/
 /scripts/__pycache__/
 
+# generated story-image scratch assets
+/public/tistory/story-handdrawn/
+/public/tistory/p2p-foundations/diagrams/
+/public/tistory/p2p-foundations/2026-06-16-p2p-00-grid-computing-first-step.svg
 # misc
 .DS_Store
 test
