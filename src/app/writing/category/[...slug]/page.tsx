@@ -2,10 +2,12 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { getPostIdsForTaxonomySlug, getTaxonomyNode, getTaxonomyPath } from "@/lib/blog-taxonomy"
+import { getArchiveSeriesMetadataForPosts } from "@/lib/archive-series-metadata"
+import { decorateArchivePosts, postSelect } from "@/lib/archive-post-decoration"
 import { db } from "@/lib/db"
 import { pageMetadata } from "@/lib/seo"
 import { WritingArchiveList } from "@/components/site/writing-archive-list"
-import { archiveHref, decorateArchivePosts, monthFormatter, postSelect, type ArchivePost, type TimelineGroup } from "@/components/site/writing-archive-utils"
+import { archiveHref, monthFormatter, type ArchivePost, type TimelineGroup } from "@/components/site/writing-archive-utils"
 import { notFound } from "next/navigation"
 
 export const dynamic = "force-dynamic"
@@ -56,7 +58,9 @@ export default async function WritingCategoryPage({ params }: PageProps) {
     orderBy: [{ publishedAt: "desc" }, { id: "desc" }],
     select: postSelect,
   })
-  const posts = await decorateArchivePosts(postRecords)
+  const decoratedPosts = await decorateArchivePosts(postRecords)
+  const seriesByPost = await getArchiveSeriesMetadataForPosts(decoratedPosts.map((post) => post.id))
+  const posts = decoratedPosts.map((post) => ({ ...post, ...seriesByPost.get(post.id) }))
 
   return (
     <main className="min-h-screen bg-background paper-grain">

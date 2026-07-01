@@ -1,6 +1,3 @@
-import type { Prisma } from "@prisma/client"
-import { getPrimaryTaxonomyLabelsForPosts } from "@/lib/archive-taxonomy-labels"
-
 export type ArchiveView = "grid" | "board" | "timeline" | "compact"
 
 export type ArchivePostRecord = {
@@ -19,6 +16,9 @@ export type ArchivePostRecord = {
 
 export type ArchivePost = ArchivePostRecord & {
   taxonomyLabel: string
+  seriesLabel?: string
+  seriesPosition?: number
+  seriesTotal?: number
 }
 
 export type TimelineGroup = {
@@ -26,19 +26,6 @@ export type TimelineGroup = {
   posts: ArchivePost[]
 }
 
-export const postSelect = {
-  id: true,
-  slug: true,
-  title: true,
-  excerpt: true,
-  category: true,
-  tags: true,
-  coverColor: true,
-  featuredImage: true,
-  readingTime: true,
-  authorName: true,
-  publishedAt: true,
-} satisfies Record<keyof ArchivePostRecord, true>
 
 export const archiveViews: Array<{ id: ArchiveView; label: string; description: string }> = [
   { id: "grid", label: "Grid", description: "카드로 천천히 둘러보기" },
@@ -97,12 +84,3 @@ export function archiveHref({
   return query ? `/writing?${query}` : "/writing"
 }
 
-export type PostWhereInput = Prisma.PostWhereInput
-
-export async function decorateArchivePosts(posts: readonly ArchivePostRecord[]): Promise<ArchivePost[]> {
-  const labels = await getPrimaryTaxonomyLabelsForPosts(posts.map((post) => post.id))
-  return posts.map((post) => ({
-    ...post,
-    taxonomyLabel: labels.get(post.id) ?? post.category,
-  }))
-}

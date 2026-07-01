@@ -56,7 +56,8 @@ function EmptyArchive({ view }: { view: ArchiveView }) {
 function BoardArchive({ posts }: { posts: ArchivePost[] }) {
   return (
     <div className="overflow-hidden rounded-2xl border border-border bg-background">
-      <div className="hidden grid-cols-[6rem_7rem_1fr_9rem_5rem] border-b border-border bg-muted/40 px-5 py-3 text-xs text-muted-foreground md:grid">
+      <div className="hidden grid-cols-[4rem_6rem_7rem_1fr_9rem_5rem] border-b border-border bg-muted/40 px-5 py-3 text-xs text-muted-foreground md:grid">
+        <span className="text-right">번호</span>
         <span>이미지</span>
         <span>분류</span>
         <span>제목</span>
@@ -64,8 +65,9 @@ function BoardArchive({ posts }: { posts: ArchivePost[] }) {
         <span className="text-right">읽기</span>
       </div>
       <div className="divide-y divide-border">
-        {posts.map((post) => (
-          <Link key={post.id} href={`/writing/${post.slug}`} className="group grid gap-3 px-5 py-4 transition-colors hover:bg-muted/40 md:grid-cols-[6rem_7rem_1fr_9rem_5rem] md:items-center">
+        {posts.map((post, index) => (
+          <Link key={post.id} href={`/writing/${post.slug}`} className="group grid gap-3 px-5 py-4 transition-colors hover:bg-muted/40 md:grid-cols-[4rem_6rem_7rem_1fr_9rem_5rem] md:items-center">
+            <span className="font-mono text-xs text-muted-foreground md:text-right" aria-label={`게시글 번호 ${posts.length - index}`}>{String(posts.length - index).padStart(3, "0")}</span>
             <ArchiveThumbnail post={post} className="hidden h-16 w-24 md:block md:h-12 md:w-20" />
             <span className="hidden label-tracked-sm text-muted-foreground md:block">{post.taxonomyLabel}</span>
             <span>
@@ -136,9 +138,8 @@ function CompactArchive({ posts }: { posts: ArchivePost[] }) {
   return (
     <div className="rounded-2xl border border-border bg-background px-4 py-3 md:px-5">
       <div className="divide-y divide-border">
-        {posts.map((post, index) => (
-          <Link key={post.id} href={`/writing/${post.slug}`} className="group grid gap-2 py-3 text-sm transition-colors hover:text-clay md:grid-cols-[3rem_1fr_auto] md:items-center">
-            <span className="font-mono text-xs text-muted-foreground">{String(index + 1).padStart(2, "0")}</span>
+        {posts.map((post) => (
+          <Link key={post.id} href={`/writing/${post.slug}`} className="group grid gap-2 py-3 text-sm transition-colors hover:text-clay md:grid-cols-[1fr_auto] md:items-center">
             <span>
               <span className="font-medium">{post.title}</span>
               <span className="ml-2 hidden text-xs text-muted-foreground md:inline">{post.taxonomyLabel}</span>
