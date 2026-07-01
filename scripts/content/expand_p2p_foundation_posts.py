@@ -490,8 +490,28 @@ def pick_by_slug(slug: str, items: list[str], count: int) -> list[str]:
     return rng.sample(items, count)
 
 
+def render_featured(topic: Topic) -> str:
+    chips = "".join(
+        f'<rect x="{150+i*230}" y="570" width="190" height="52" rx="20" fill="#fff8ed" stroke="#d7b98b"/>'
+        f'<text x="{245+i*230}" y="603" text-anchor="middle" font-size="20" fill="{PALETTE["ink"]}" font-family="sans-serif">{esc(label[:12])}</text>'
+        for i, label in enumerate(topic.labels[:5])
+    )
+    concept_line = " · ".join(topic.image_concepts)
+    body = (
+        f'<text x="150" y="285" font-size="54" font-weight="800" fill="{PALETTE["ink"]}" font-family="sans-serif">{esc(clean_title(topic)[:28])}</text>'
+        f'<text x="150" y="350" font-size="26" fill="{PALETTE["muted"]}" font-family="sans-serif">{esc(TEMPLATES[topic.template_id].name)}</text>'
+        f'<rect x="150" y="410" width="1100" height="86" rx="26" fill="#eef4ef" stroke="#9bb69f"/>'
+        f'<text x="700" y="462" text-anchor="middle" font-size="25" fill="{PALETTE["ink"]}" font-family="sans-serif">{esc(topic.principle[:54])}</text>'
+        f'{chips}'
+        f'<text x="700" y="700" text-anchor="middle" font-size="18" fill="{PALETTE["muted"]}" font-family="monospace">{esc(topic.template_id)} · {esc(concept_line)}</text>'
+    )
+    return svg_base(clean_title(topic), "Featured editorial cover", body)
+
 def write_assets(topic: Topic) -> tuple[str, list[Asset]]:
     ASSET_DIR.mkdir(parents=True, exist_ok=True)
+    featured_filename = f"{topic.slug}-featured-editorial-cover.svg"
+    featured_path = f"/tistory/p2p-foundations/varied/{featured_filename}"
+    (ASSET_DIR / featured_filename).write_text(render_featured(topic), encoding="utf-8")
     assets: list[Asset] = []
     for idx, concept_id in enumerate(topic.image_concepts):
         concept = IMAGE_CONCEPTS[concept_id]
@@ -507,7 +527,7 @@ def write_assets(topic: Topic) -> tuple[str, list[Asset]]:
             f"마지막 의사결정 전에 남겨둘 운영·검증 관점의 요약 그림.",
         ]
         assets.append(Asset(concept_id, rel, f"{clean_title(topic)} {concept.name}", captions[idx]))
-    return assets[0].path, assets
+    return featured_path, assets
 
 
 def post_id_for(slug: str) -> str:
