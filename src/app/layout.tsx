@@ -11,6 +11,7 @@ import {
   SITE_DESCRIPTION,
   SITE_LOCALE,
   SITE_NAME,
+  PROFILE_IMAGE,
   SITE_TITLE,
   SITE_TOPICS,
   SITE_URL,
@@ -55,12 +56,12 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
     ],
     apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
-    shortcut: ["/favicon.svg"],
+    shortcut: ["/favicon-32x32.png"],
   },
   robots: {
     index: true,
@@ -96,10 +97,21 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [absoluteUrl(DEFAULT_TWITTER_IMAGE)],
   },
+  appleWebApp: {
+    capable: true,
+    title: SITE_NAME,
+    statusBarStyle: "default",
+  },
   other: {
     "ai-content-declaration": "human-authored product and engineering field notes with implementation evidence",
     "answer-engine-summary": SITE_DESCRIPTION,
     "content-language": "ko-KR",
+    "profile-image": absoluteUrl(PROFILE_IMAGE),
+    "thumbnail": absoluteUrl(DEFAULT_OG_IMAGE),
+    "geo.region": "KR",
+    "geo.placename": "South Korea",
+    "classification": "Portfolio, Product engineering, Technical writing",
+    "llms-topic": "PonsLink, document automation, domain AI, local-first tools, product retrospectives",
   },
   verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
     ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }

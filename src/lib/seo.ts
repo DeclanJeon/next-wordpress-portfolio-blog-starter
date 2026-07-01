@@ -15,26 +15,29 @@ function envList(name: string, fallback: readonly string[]): readonly string[] {
   return entries.length > 0 ? entries : fallback
 }
 
-export const SITE_URL = env("NEXT_PUBLIC_SITE_URL", "https://example.com")
+export const SITE_URL = env("NEXT_PUBLIC_SITE_URL", "https://blog.ponslink.com")
 export const SITE_NAME = env("NEXT_PUBLIC_SITE_NAME", "Field Notes")
 export const SITE_TITLE = env("NEXT_PUBLIC_SITE_TITLE", `${SITE_NAME} — Portfolio Blog`)
 export const SITE_DESCRIPTION = env(
   "NEXT_PUBLIC_SITE_DESCRIPTION",
-  "제품 회고, 구현 노트, 운영 문서를 함께 담는 Next.js + WordPress 포트폴리오 블로그.",
+  "PonsLink, 문서 자동화, 도메인 AI, 로컬 도구처럼 사람이 실제로 겪는 불편을 운영 가능한 작은 서비스로 바꾸는 개발자 포트폴리오 블로그.",
 )
 export const SITE_LOCALE = env("NEXT_PUBLIC_SITE_LOCALE", "ko_KR")
-export const SITE_AUTHOR = env("NEXT_PUBLIC_SITE_AUTHOR", "Site Owner")
-export const ORGANIZATION_NAME = env("NEXT_PUBLIC_ORGANIZATION_NAME", SITE_NAME)
+export const SITE_AUTHOR = env("NEXT_PUBLIC_SITE_AUTHOR", "Declan Jeon")
+export const ORGANIZATION_NAME = env("NEXT_PUBLIC_ORGANIZATION_NAME", "Pons Lab")
 export const SITE_SAME_AS = envList("NEXT_PUBLIC_SITE_SAME_AS", [])
 export const SITE_TOPICS = envList("NEXT_PUBLIC_SITE_TOPICS", [
-  "Product retrospective",
-  "Portfolio",
+  "PonsLink",
+  "Document automation",
+  "Domain AI",
+  "Local-first tools",
+  "Product retrospectives",
   "Technical writing",
-  "Operations notes",
 ])
-export const DEFAULT_OG_IMAGE = env("NEXT_PUBLIC_OG_IMAGE", "/brand/pons-field-notes-og.png")
-export const DEFAULT_TWITTER_IMAGE = env("NEXT_PUBLIC_TWITTER_IMAGE", "/brand/pons-field-notes-twitter.png")
-export const SQUARE_IMAGE = env("NEXT_PUBLIC_SQUARE_IMAGE", "/brand/pons-field-notes-square.png")
+export const DEFAULT_OG_IMAGE = env("NEXT_PUBLIC_OG_IMAGE", "/brand/profileforge-og.webp")
+export const DEFAULT_TWITTER_IMAGE = env("NEXT_PUBLIC_TWITTER_IMAGE", "/brand/profileforge-twitter.webp")
+export const SQUARE_IMAGE = env("NEXT_PUBLIC_SQUARE_IMAGE", "/brand/profileforge-square.png")
+export const PROFILE_IMAGE = env("NEXT_PUBLIC_PROFILE_IMAGE", "/brand/profileforge-header.webp")
 
 export function absoluteUrl(path: string): string {
   if (path.startsWith("http://") || path.startsWith("https://")) {
@@ -114,10 +117,22 @@ export const siteJsonLd = {
       "@type": "Organization",
       "@id": `${SITE_URL}/#organization`,
       name: ORGANIZATION_NAME,
-      alternateName: SITE_NAME,
       url: SITE_URL,
       logo: absoluteUrl(SQUARE_IMAGE),
       sameAs: SITE_SAME_AS,
+    },
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#person`,
+      name: SITE_AUTHOR,
+      alternateName: ORGANIZATION_NAME,
+      url: SITE_URL,
+      image: absoluteUrl(PROFILE_IMAGE),
+      sameAs: SITE_SAME_AS,
+      jobTitle: "Product-minded software developer",
+      description: SITE_DESCRIPTION,
+      knowsAbout: SITE_TOPICS,
+      worksFor: { "@id": `${SITE_URL}/#organization` },
     },
     {
       "@type": "WebSite",
@@ -126,7 +141,7 @@ export const siteJsonLd = {
       url: SITE_URL,
       inLanguage: "ko-KR",
       description: SITE_DESCRIPTION,
-      publisher: { "@id": `${SITE_URL}/#organization` },
+      publisher: { "@id": `${SITE_URL}/#person` },
       potentialAction: {
         "@type": "SearchAction",
         target: `${SITE_URL}/writing?q={search_term_string}`,
@@ -140,7 +155,7 @@ export const siteJsonLd = {
       url: `${SITE_URL}/writing`,
       inLanguage: "ko-KR",
       description: SITE_DESCRIPTION,
-      publisher: { "@id": `${SITE_URL}/#organization` },
+      publisher: { "@id": `${SITE_URL}/#person` },
       about: SITE_TOPICS,
     },
   ],
