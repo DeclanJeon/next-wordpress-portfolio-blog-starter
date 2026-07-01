@@ -5,6 +5,7 @@ import { ArrowLeft, Search, X } from "lucide-react"
 import { pageMetadata } from "@/lib/seo"
 import { WritingArchiveList } from "@/components/site/writing-archive-list"
 import { TaxonomyTreeFilter } from "@/components/site/taxonomy-tree-filter"
+import { TagShowMoreButton } from "@/components/site/tag-show-more-button"
 import { getArchiveData } from "@/lib/writing-archive-data"
 import { archiveFilterCanonicalHref, normalizeArchiveFilter } from "@/lib/archive-filter"
 import {
@@ -53,7 +54,7 @@ export default async function WritingPage({ searchParams }: PageProps) {
 
   const filter = normalizeArchiveFilter({ category, taxonomy, tag, q })
   const viewLabel = archiveViews.find((option) => option.id === view)?.label ?? "Board"
-  const { posts, categories, tags, totalPublished, taxonomyTree, taxonomyPath } = await getArchiveData(filter)
+  const { posts, tags, totalPublished, taxonomyTree, taxonomyPath } = await getArchiveData(filter)
   const hasFilter = Boolean(filter.category || filter.taxonomy || filter.tag || filter.q)
   const timelineGroups: Array<{ month: string; posts: ArchivePost[] }> = []
 
@@ -84,7 +85,7 @@ export default async function WritingPage({ searchParams }: PageProps) {
       <section className="mx-auto max-w-6xl px-5 pb-10 pt-16 md:px-8 md:pb-14 md:pt-24">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-end">
           <div>
-            <span className="label-tracked text-muted-foreground">P&nbsp;o&nbsp;n&nbsp;s&nbsp;&nbsp;F&nbsp;i&nbsp;e&nbsp;l&nbsp;d&nbsp;&nbsp;N&nbsp;o&nbsp;t&nbsp;e&nbsp;s</span>
+            <span className="label-tracked text-muted-foreground">P o n s  F i e l d  N o t e s</span>
             <h1 className="mt-6 max-w-5xl font-serif-display text-5xl leading-[0.95] tracking-tight md:text-7xl">
               만들고, 고치고,
               <br />
@@ -97,7 +98,7 @@ export default async function WritingPage({ searchParams }: PageProps) {
           </div>
           <div className="rounded-3xl border border-border bg-background/75 p-5 text-sm text-muted-foreground shadow-sm">
             <p className="label-tracked-sm text-muted-foreground">작업 노트</p>
-            <p className="mt-3 font-serif-display text-5xl leading-none text-foreground">{totalPublished}</p>
+            <p className="mt-3 font-serif-display text-4xl leading-none text-foreground">{totalPublished}</p>
             <p className="mt-1">공개된 기록</p>
             <div className="mt-6 space-y-3 border-t border-border pt-4">
               <p>문제를 발견하고</p>
@@ -110,32 +111,18 @@ export default async function WritingPage({ searchParams }: PageProps) {
 
       <section className="border-y border-border/70 bg-background/70">
         <div className="mx-auto grid max-w-6xl gap-6 px-5 py-6 md:px-8">
-          <div className="flex flex-wrap items-center gap-2">
-            <Link
-              href={archiveHref({ q: filter.q, view })}
-              className={`rounded-full border px-3.5 py-1.5 text-xs transition-colors ${
-                !filter.category && !filter.taxonomy && !filter.tag && !filter.q
-                  ? "border-foreground bg-foreground text-background"
-                  : "border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground"
-              }`}
-            >
-              All <span className="ml-1.5 opacity-60">{totalPublished}</span>
-            </Link>
-            {categories.map((item) => (
-              <Link
-                key={item.name}
-                href={archiveHref({ category: item.name, q: filter.q, view })}
-                className={`rounded-full border px-3.5 py-1.5 text-xs transition-colors ${
-                  filter.category === item.name
-                    ? "border-foreground bg-foreground text-background"
-                    : "border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground"
-                }`}
-              >
-                {item.name}
-                <span className="ml-1.5 opacity-60">{item.count}</span>
-              </Link>
-            ))}
-          </div>
+          <form action="/writing" className="relative w-full max-w-sm">
+            {filter.taxonomy ? <input type="hidden" name="taxonomy" value={filter.taxonomy} /> : null}
+            {filter.tag ? <input type="hidden" name="tag" value={filter.tag} /> : null}
+            {view !== "board" ? <input type="hidden" name="view" value={view} /> : null}
+            <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+            <input
+              name="q"
+              defaultValue={filter.q}
+              placeholder="제목, 내용으로 검색"
+              className="h-10 w-full rounded-full border border-border bg-background pl-9 pr-4 text-sm outline-none transition-colors focus:border-foreground/40"
+            />
+          </form>
 
           <TaxonomyTreeFilter
             nodes={taxonomyTree}
@@ -148,7 +135,7 @@ export default async function WritingPage({ searchParams }: PageProps) {
           <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
             <div className="flex flex-wrap items-center gap-1.5">
               <span className="label-tracked-sm mr-1 text-muted-foreground">Tags</span>
-              {tags.map((item) => (
+              {tags.slice(0, 8).map((item) => (
                 <Link
                   key={item.name}
                   href={archiveHref({ taxonomy: filter.taxonomy, tag: item.name, q: filter.q, view })}
@@ -162,21 +149,10 @@ export default async function WritingPage({ searchParams }: PageProps) {
                   <span className="ml-1 opacity-60">{item.count}</span>
                 </Link>
               ))}
+              {tags.length > 8 ? (
+                <TagShowMoreButton tags={tags} activeTaxonomy={filter.taxonomy} activeTag={filter.tag} q={filter.q} view={view} />
+              ) : null}
             </div>
-
-            <form action="/writing" className="relative w-full max-w-sm shrink-0">
-              {filter.category ? <input type="hidden" name="category" value={filter.category} /> : null}
-              {filter.taxonomy ? <input type="hidden" name="taxonomy" value={filter.taxonomy} /> : null}
-              {filter.tag ? <input type="hidden" name="tag" value={filter.tag} /> : null}
-              {view !== "board" ? <input type="hidden" name="view" value={view} /> : null}
-              <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-              <input
-                name="q"
-                defaultValue={filter.q}
-                placeholder="글 검색…"
-                className="h-10 w-full rounded-full border border-border bg-background pl-9 pr-4 text-sm outline-none transition-colors focus:border-foreground/40"
-              />
-            </form>
           </div>
         </div>
       </section>

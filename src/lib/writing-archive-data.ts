@@ -69,11 +69,35 @@ export async function getArchiveData(inputFilter: ArchiveFilter): Promise<Archiv
 
   if (filter.tag) postRecords = postRecords.filter((post) => splitTags(post.tags).includes(filter.tag))
 
+  const decoratedPosts = await decorateArchivePosts(postRecords)
+  const postIds = decoratedPosts.map((post) => post.id)
+  const seriesEntries = postIds.length
+    ? await db.postSeries.findMany({
+        where: { postId: { in: postIds } },
+        orderBy: [{ series: { sortOrder: "asc" } }, { sortOrder: "asc" }],
+        include: { series: { select: { title: true } } },
+      })
+    : []
+  const totalsBySeries = new Map<string, number>()
+  for (const entry of await db.postSeries.findMany({ select: { seriesId: true } })) {
+    totalsBySeries.set(entry.seriesId, (totalsBySeries.get(entry.seriesId) ?? 0) + 1)
+  }
+  const seriesByPost = new Map<string, { readonly seriesLabel: string; readonly seriesPosition: number; readonly seriesTotal?: number }>()
+  for (const entry of seriesEntries) {
+    if (!seriesByPost.has(entry.postId)) {
+      seriesByPost.set(entry.postId, {
+        seriesLabel: entry.series.title,
+        seriesPosition: entry.sortOrder,
+        seriesTotal: totalsBySeries.get(entry.seriesId) ?? undefined,
+      })
+    }
+  }
+
   return {
-    posts: await decorateArchivePosts(postRecords),
+    posts: decoratedPosts.map((post) => ({ ...post, ...seriesByPost.get(post.id) })),
     totalPublished: taxonomyPosts.length,
     categories: countedLabels(categoryCounts),
-    tags: countedLabels(tagCounts).slice(0, 28),
+    tags: countedLabels(tagCounts).slice(0, 12),
     taxonomyTree: await getTaxonomyTree(),
     taxonomyPath: filter.taxonomy ? await getTaxonomyPath(filter.taxonomy) : [],
   }
