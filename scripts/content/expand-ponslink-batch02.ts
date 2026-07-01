@@ -1,13 +1,14 @@
 #!/usr/bin/env bun
 import { mkdirSync } from "node:fs"
-import { basename, dirname, join } from "node:path"
+import { basename, dirname, join, resolve } from "node:path"
 import { Database } from "bun:sqlite"
 import sharp from "sharp"
 
 const ROOT = process.cwd()
 const DB_PATH = join(ROOT, "db", "custom.db")
-const FRONTEND_ROOT = "/home/declan/Documents/Develop/Project/pons_p2p/ponslink-room-frontend"
-const API_ROOT = "/home/declan/Documents/Develop/Project/pons_p2p/ponslink-api-infra"
+const FRONTEND_ROOT =
+  process.env.PONSLINK_FRONTEND_ROOT ?? resolve(ROOT, "..", "..", "pons_p2p", "ponslink-room-frontend")
+const API_ROOT = process.env.PONSLINK_API_ROOT ?? resolve(ROOT, "..", "..", "pons_p2p", "ponslink-api-infra")
 
 type ImageSpec = {
   readonly file: string
