@@ -33,7 +33,7 @@ const navigationOrderAsc = [
   { id: "asc" },
 ] satisfies Prisma.PostOrderByWithRelationInput[]
 
-function toNavigationItem(post: NavigationRecord): ArticleNavigationItem {
+function toNavigationItem(post: NavigationRecord, reason?: string): ArticleNavigationItem {
   return {
     slug: post.slug,
     title: post.title,
@@ -41,10 +41,11 @@ function toNavigationItem(post: NavigationRecord): ArticleNavigationItem {
     category: post.category,
     publishedAt: post.publishedAt.toISOString(),
     readingTime: post.readingTime,
+    ...(reason ? { reason } : {}),
   }
 }
 
-function toNavigationItemFromSeries(post: SeriesPostItem): ArticleNavigationItem {
+function toNavigationItemFromSeries(post: SeriesPostItem, reason?: string): ArticleNavigationItem {
   return {
     slug: post.slug,
     title: post.title,
@@ -52,6 +53,7 @@ function toNavigationItemFromSeries(post: SeriesPostItem): ArticleNavigationItem
     category: post.category,
     publishedAt: post.publishedAt,
     readingTime: post.readingTime,
+    ...(reason ? { reason } : {}),
   }
 }
 
@@ -63,9 +65,14 @@ function toArticleSeriesNavigation(series: Awaited<ReturnType<typeof getArticleT
     position: series.position,
     total: series.total,
     href: series.href,
-    previous: series.previous ? toNavigationItemFromSeries(series.previous) : null,
-    next: series.next ? toNavigationItemFromSeries(series.next) : null,
+    previous: series.previous ? toNavigationItemFromSeries(series.previous, "같은 시리즈에서 바로 앞선 질문") : null,
+    next: series.next ? toNavigationItemFromSeries(series.next, "같은 시리즈에서 바로 이어지는 질문") : null,
   }
+}
+
+function sameTopicReason(taxonomyContext: Awaited<ReturnType<typeof getArticleTaxonomyContext>>) {
+  const topic = taxonomyContext.secondary[0] ?? taxonomyContext.breadcrumbs.at(-1)
+  return topic ? `${topic.name} 흐름에서 같이 보면 좋은 글` : "같은 주제에서 같이 읽을 글"
 }
 
 function taxonomyScopeSlug(navigation: Awaited<ReturnType<typeof getArticleTaxonomyContext>>): string | null {
@@ -102,11 +109,17 @@ export async function getArticleNavigation(post: PrismaPost): Promise<ArticleNav
     status: "published",
     ...scopedWhere(scope),
   } satisfies Prisma.PostWhereInput
+  const seriesNavigation = toArticleSeriesNavigation(taxonomyContext.series)
+  const seriesAdjacentSlugs = [
+    taxonomyContext.series?.previous?.slug,
+    taxonomyContext.series?.next?.slug,
+  ].filter((slug): slug is string => Boolean(slug))
 
   const [newerInArchive, olderInArchive, totalPublished] = await Promise.all([
     db.post.findFirst({
       where: {
         ...baseWhere,
+        slug: { notIn: seriesAdjacentSlugs },
         OR: [
           { publishedAt: { gt: post.publishedAt } },
           { publishedAt: post.publishedAt, id: { gt: post.id } },
@@ -118,6 +131,7 @@ export async function getArticleNavigation(post: PrismaPost): Promise<ArticleNav
     db.post.findFirst({
       where: {
         ...baseWhere,
+        slug: { notIn: seriesAdjacentSlugs },
         OR: [
           { publishedAt: { lt: post.publishedAt } },
           { publishedAt: post.publishedAt, id: { lt: post.id } },
@@ -129,18 +143,27 @@ export async function getArticleNavigation(post: PrismaPost): Promise<ArticleNav
     db.post.count({ where: { status: "published" } }),
   ])
 
-  const excludedIds = [post.id, newerInArchive?.id, olderInArchive?.id].filter((id): id is string => Boolean(id))
-  const related = await db.post.findMany({
-    where: { ...baseWhere, id: { notIn: excludedIds } },
+  const archivePrevious = newerInArchive ? toNavigationItem(newerInArchive, "최신순 아카이브에서 바로 앞선 글") : null
+  const archiveNext = olderInArchive ? toNavigationItem(olderInArchive, "최신순 아카이브에서 바로 다음 글") : null
+
+  const excludedIds = [
+    post.id,
+    newerInArchive?.id,
+    olderInArchive?.id,
+  ].filter((id): id is string => Boolean(id))
+
+  const sameTopic = await db.post.findMany({
+    where: { AND: [baseWhere, { id: { notIn: excludedIds }, slug: { notIn: seriesAdjacentSlugs } }] },
     orderBy: navigationOrderDesc,
     take: 4,
     select: navigationSelect,
   })
-  const relatedIds = related.map((item) => item.id)
+  const related = sameTopic.map((item) => toNavigationItem(item, sameTopicReason(taxonomyContext)))
+  const relatedSlugs = related.map((item) => item.slug)
   const moreSlots = Math.max(0, 6 - related.length)
   const more = moreSlots
     ? await db.post.findMany({
-        where: { ...baseWhere, id: { notIn: [...excludedIds, ...relatedIds] } },
+        where: { AND: [baseWhere, { id: { notIn: excludedIds }, slug: { notIn: [...seriesAdjacentSlugs, ...relatedSlugs] } }] },
         orderBy: navigationOrderDesc,
         take: moreSlots,
         select: navigationSelect,
@@ -150,11 +173,13 @@ export async function getArticleNavigation(post: PrismaPost): Promise<ArticleNav
   return {
     breadcrumbs: [...taxonomyContext.breadcrumbs],
     secondary: [...taxonomyContext.secondary],
-    series: toArticleSeriesNavigation(taxonomyContext.series),
-    previous: newerInArchive ? toNavigationItem(newerInArchive) : null,
-    next: olderInArchive ? toNavigationItem(olderInArchive) : null,
-    related: related.map(toNavigationItem),
-    more: more.map(toNavigationItem),
+    series: seriesNavigation,
+    previous: archivePrevious,
+    next: archiveNext,
+    archivePrevious,
+    archiveNext,
+    related,
+    more: more.map((item) => toNavigationItem(item, "같은 흐름에서 더 볼 만한 글")),
     summary: {
       totalPublished,
       categoryPublished: scope.categoryPublished,

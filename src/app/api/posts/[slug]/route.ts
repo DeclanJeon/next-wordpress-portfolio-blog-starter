@@ -2,6 +2,7 @@ import { NextResponse } from "next/server"
 import { db } from "@/lib/db"
 import { getCurrentUser } from "@/lib/auth"
 import { estimateReadingTime } from "@/lib/reading-time"
+import { incrementPostViews } from "@/lib/post-views"
 
 export async function GET(
   _request: Request,
@@ -15,12 +16,9 @@ export async function GET(
       return NextResponse.json({ error: "Post not found" }, { status: 404 })
     }
 
-    // increment views (fire and forget)
-    db.post
-      .update({ where: { id: post.id }, data: { views: post.views + 1 } })
-      .catch(() => {})
+    const updatedViews = await incrementPostViews(post.id)
 
-    return NextResponse.json({ post })
+    return NextResponse.json({ post: { ...post, views: updatedViews } })
   } catch (error) {
     console.error("Failed to fetch post:", error)
     return NextResponse.json({ error: "Failed to fetch post" }, { status: 500 })

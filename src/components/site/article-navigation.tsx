@@ -17,7 +17,16 @@ function formatShortDate(d: string | Date) {
 export function keepReadingItems(navigation?: ArticleNavigation, limit = 6) {
   if (!navigation) return []
 
-  const seen = new Set<string>()
+  const seen = new Set(
+    [
+      navigation.previous?.slug,
+      navigation.next?.slug,
+      navigation.archivePrevious?.slug,
+      navigation.archiveNext?.slug,
+      navigation.series?.previous?.slug,
+      navigation.series?.next?.slug,
+    ].filter((slug): slug is string => Boolean(slug)),
+  )
   return [...navigation.related, ...navigation.more].filter((item) => {
     if (seen.has(item.slug)) return false
     seen.add(item.slug)
@@ -59,6 +68,7 @@ function RailPostLink({
       <span className="mt-2 block text-xs leading-relaxed text-muted-foreground">
         {formatShortDate(item.publishedAt)} · {formatReadingTime(item.readingTime)}
       </span>
+      {item.reason ? <span className="mt-2 block text-xs leading-relaxed text-clay">{item.reason}</span> : null}
     </Link>
   )
 }
@@ -75,6 +85,7 @@ function CompactRailLink({ item }: { item: ArticleNavigationItem }) {
       <span className="mt-1 block text-xs text-muted-foreground">
         {item.category} · {formatReadingTime(item.readingTime)}
       </span>
+      {item.reason ? <span className="mt-1 block text-xs leading-relaxed text-clay">{item.reason}</span> : null}
     </Link>
   )
 }
@@ -106,6 +117,7 @@ export function BottomNavigationCard({
       <span className="mt-4 text-xs text-muted-foreground">
         {item.category} · {formatReadingTime(item.readingTime)}
       </span>
+      {item.reason ? <span className="mt-2 text-xs leading-relaxed text-clay">{item.reason}</span> : null}
     </Link>
   )
 }

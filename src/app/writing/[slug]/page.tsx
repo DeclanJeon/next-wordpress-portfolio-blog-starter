@@ -16,6 +16,7 @@ import {
 import type { Post } from "@/lib/types"
 import { PostArticle } from "@/components/site/post-article"
 import { getArticleNavigation } from "@/lib/article-navigation-data"
+import { incrementPostViews } from "@/lib/post-views"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 export const dynamic = "force-dynamic"
@@ -47,7 +48,8 @@ async function getPublishedPostPage(slug: string) {
 
   const navigation = await getArticleNavigation(post)
 
-  const viewedPost = await db.post.update({ where: { id: post.id }, data: { views: { increment: 1 } } })
+  const updatedViews = await incrementPostViews(post.id)
+  const viewedPost = { ...post, views: updatedViews }
 
   return {
     post: toPostViewModel(viewedPost),
@@ -178,7 +180,7 @@ export default async function WritingPostPage({ params }: PageProps) {
       />
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
-          <Link href="/#writing-archive" className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground">
+          <Link href="/writing" className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground">
             <ArrowLeft className="h-4 w-4" />
             Writing archive
           </Link>

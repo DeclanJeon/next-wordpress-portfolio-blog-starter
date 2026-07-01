@@ -57,6 +57,7 @@ export function ArticleBottomNavigation({ navigation }: { navigation?: ArticleNa
                   <span className="mt-2 block text-xs text-muted-foreground">
                     {item.category} · {formatReadingTime(item.readingTime)}
                   </span>
+                  {item.reason ? <span className="mt-2 block text-xs leading-relaxed text-clay">{item.reason}</span> : null}
                 </Link>
               ))}
             </div>

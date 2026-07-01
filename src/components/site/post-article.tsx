@@ -30,7 +30,7 @@ function tagList(tags: string) {
 export function PostArticle({
   post,
   navigation,
-  backHref = "/#writing-archive",
+  backHref = "/writing",
   backLabel = "Writing archive",
 }: PostArticleProps) {
   const tags = tagList(post.tags)

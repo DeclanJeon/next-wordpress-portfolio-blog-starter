@@ -33,6 +33,7 @@ export interface ArticleNavigationItem {
   category: string
   publishedAt: string
   readingTime: number
+  reason?: string
 }
 
 export interface ArticleTaxonomyBreadcrumb {
@@ -62,6 +63,8 @@ export interface ArticleNavigation {
   series: ArticleSeriesNavigation | null
   previous: ArticleNavigationItem | null
   next: ArticleNavigationItem | null
+  archivePrevious: ArticleNavigationItem | null
+  archiveNext: ArticleNavigationItem | null
   related: ArticleNavigationItem[]
   more: ArticleNavigationItem[]
   summary: ArticleNavigationSummary
