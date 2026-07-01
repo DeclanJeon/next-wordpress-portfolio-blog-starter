@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="840" viewBox="0 0 1400 840" role="img" aria-label="피어 투 피어로 실제 무엇을 만들 수 있는가 · Decision Matrix Card">
+<defs>
+  <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#496a86"/></marker>
+  <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#b8a489" flood-opacity="0.25"/></filter>
+</defs>
+<rect width="1400" height="840" fill="#f7f3ea"/>
+<rect x="46" y="46" width="1308" height="748" rx="34" fill="#fffdf8" stroke="#d8c9b4"/>
+<text x="92" y="112" font-size="32" font-weight="700" fill="#2f2720" font-family="sans-serif">피어 투 피어로 실제 무엇을 만들 수 있는가 · Decision Matrix C</text>
+<text x="92" y="150" font-size="16" fill="#8a725a" font-family="monospace">I04 Decision Matrix Card</text>
+<line x1="700" y1="220" x2="700" y2="690" stroke="#aa967b" stroke-width="3"/><line x1="210" y1="455" x2="1190" y2="455" stroke="#aa967b" stroke-width="3"/><rect x="140" y="260" width="320" height="118" rx="20" fill="#fff8ed" stroke="#d7b98b"/><text x="300" y="330" text-anchor="middle" font-size="26" fill="#2f2720" font-family="sans-serif">파일 전송</text><rect x="710" y="260" width="320" height="118" rx="20" fill="#fff8ed" stroke="#d7b98b"/><text x="870" y="330" text-anchor="middle" font-size="26" fill="#2f2720" font-family="sans-serif">협업</text><rect x="140" y="515" width="320" height="118" rx="20" fill="#fff8ed" stroke="#d7b98b"/><text x="300" y="585" text-anchor="middle" font-size="26" fill="#2f2720" font-family="sans-serif">로컬 우선</text><rect x="710" y="515" width="320" height="118" rx="20" fill="#fff8ed" stroke="#d7b98b"/><text x="870" y="585" text-anchor="middle" font-size="26" fill="#2f2720" font-family="sans-serif">엣지 연산</text><text x="700" y="735" text-anchor="middle" font-size="22" fill="#735f4a" font-family="sans-serif">choose by cost, control, failure recovery</text>
+</svg>

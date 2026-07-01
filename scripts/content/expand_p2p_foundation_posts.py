@@ -1,113 +1,645 @@
 #!/usr/bin/env python3
-"""Expand P2P foundation posts and attach deterministic visual assets."""
+"""Regenerate P2P foundation posts with varied article templates and image concepts.
+
+The database is intentionally the content target; git stores this deterministic script and
+public visual assets so the production content can be reproduced.
+"""
 from __future__ import annotations
-import datetime as dt, html, sqlite3, sys
+
+from dataclasses import dataclass
+import datetime as dt
+import hashlib
+import html
+import random
+import re
+import sqlite3
+import sys
 from pathlib import Path
+from typing import Callable
 
-AUTHOR_ID="ponslink-content"; AUTHOR_NAME="PonsLink"; TAXONOMY_ID="tax-dev-retrospective-p2p-foundations"
-ASSET_DIR=Path("public/tistory/p2p-foundations")
-SERIES_COVER="/tistory/p2p-foundations/2026-06-16-p2p-foundations-imagegen-cover.webp"
-TOPICS=[
-("2026-06-16-p2p-00-grid-computing-first-step","[P2P] 그리드 컴퓨팅을 만들고 싶어서 P2P를 다시 읽기 시작했다","P2P를 파일 전송이나 화상회의 기능으로만 보지 않고, 분산 작업과 그리드 컴퓨팅의 기반으로 다시 정리한다.","P2P,Grid Computing,Distributed Systems,Foundations,Architecture","2026-06-15T15:10:00.000Z","/tistory/p2p-foundations/2026-06-16-p2p-00-grid-computing-first-step-imagegen.webp",["작업 큐","스케줄러","피어 워커","검증기","결과 조립"],"그리드 컴퓨팅의 핵심은 연결 자체가 아니라 일을 나누고, 맡기고, 검증하고, 실패한 조각을 다시 실행하는 운영 규칙이다.","사용자가 올린 대용량 파일을 여러 브라우저가 나눠 해시하고 일부 노드는 썸네일을 만들며 일부 노드는 조각의 무결성을 다시 확인하는 장면",["작업을 너무 작게 나눠 배분 비용이 계산 이득을 잡아먹는 경우","신뢰할 수 없는 워커가 잘못된 결과를 반환하는 경우","모바일 탭이 백그라운드로 내려가면서 작업이 중간에 사라지는 경우"],["작업은 독립적으로 재시도 가능한가","결과를 빠르게 검증할 방법이 있는가","중앙 서버가 반드시 처리해야 하는 권한과 감사 로그는 무엇인가"]),
-("2026-06-16-p2p-01-client-server-vs-peer-to-peer","[P2P] 서버-클라이언트와 피어 투 피어는 무엇이 다른가","P2P를 이해하려면 먼저 누가 중심을 갖고, 누가 데이터를 들고, 누가 장애 지점이 되는지를 구분해야 한다.","P2P,Network Architecture,Client Server,Foundations,WebRTC","2026-06-15T15:12:00.000Z",SERIES_COVER,["클라이언트","중앙 서버","피어 A","피어 B","제어면"],"P2P는 서버를 없애는 기술이 아니라 서버가 맡아야 할 책임과 피어가 직접 감당할 수 있는 책임을 다시 나누는 설계 방식이다.","두 사용자가 파일을 주고받을 때 로그인과 권한은 서버가 판단하지만 실제 파일 조각은 가능한 한 브라우저끼리 직접 흐르는 장면",["서버를 완전히 제거하려다 인증, 권한, 감사 로그까지 잃는 경우","직접 연결 실패를 UX와 로그에 반영하지 않아 사용자가 무한 대기하는 경우","모든 데이터를 피어에게 맡기면서 개인정보와 삭제 정책을 놓치는 경우"],["이 데이터는 반드시 중앙에 저장되어야 하는가","서버가 판단해야 하는 약속과 피어가 운반할 수 있는 바이트는 무엇인가","직접 경로가 실패할 때 어떤 대체 경로가 있는가"]),
-("2026-06-16-p2p-02-mesh-sfu-mcu-topology","[P2P] Mesh, SFU, MCU는 연결을 어디서 합칠지의 선택이다","Mesh, SFU, MCU는 화상회의 용어처럼 보이지만 본질은 데이터 경로와 비용, 품질, 제어권의 선택이다.","P2P,WebRTC,Mesh,SFU,MCU,Realtime,Architecture","2026-06-15T15:14:00.000Z",SERIES_COVER,["Mesh","SFU","MCU","업로드","품질 제어"],"Mesh, SFU, MCU의 차이는 미디어나 데이터가 참여자 사이에서 직접 복제되는지, 서버가 전달만 하는지, 서버가 합성까지 하는지에 있다.","2명 상담 방은 Mesh로 충분하지만 12명 세미나와 녹화가 필요한 방은 SFU나 MCU 경계가 필요한 장면",["참여자 수가 늘어도 Mesh를 고집해 업로드 대역폭이 무너지는 경우","SFU를 도입하면서도 품질 레이어와 선택 전달 정책을 설계하지 않는 경우","MCU의 단순한 클라이언트 경험만 보고 서버 인코딩 비용을 과소평가하는 경우"],["한 사용자가 동시에 몇 개의 업로드를 감당해야 하는가","서버는 패킷을 전달만 하면 되는가 합성해야 하는가","녹화와 방송이 제품의 핵심 요구인가"]),
-("2026-06-16-p2p-03-what-can-we-build-with-p2p","[P2P] 피어 투 피어로 실제 무엇을 만들 수 있는가","P2P는 화상회의만을 위한 기술이 아니다. 파일 전송, 협업, 엣지 연산, 로컬 우선 제품까지 이어지는 설계 선택이다.","P2P,Product,File Transfer,Realtime,Edge Computing,Collaboration","2026-06-15T15:16:00.000Z",SERIES_COVER,["파일 전송","협업","로컬 우선","엣지 연산","콘텐츠 배포"],"P2P의 제품적 가치는 중앙 서버가 모든 데이터 경로를 소유하지 않아도 되는 순간에 생긴다.","상담 방에서는 음성, 문서 조각, 화이트보드 이벤트, 파일 전송이 서로 다른 경로를 갖고 일부만 직접 연결되는 장면",["P2P를 화상회의 API 하나로 축소해서 다른 제품 가능성을 보지 못하는 경우","협업 상태 충돌을 연결 문제로 착각하는 경우","엣지 연산을 시도하면서 결과 검증과 개인정보 경계를 생략하는 경우"],["제품에서 가장 무거운 바이트는 무엇인가","사용자가 오프라인이어도 계속되어야 하는 작업은 무엇인가","중앙 서버가 줄어들 때 사용자 신뢰는 어떻게 유지되는가"]),
-("2026-06-16-p2p-04-grid-computing-from-p2p","[P2P] 그리드 컴퓨팅은 남는 자원을 작업 단위로 묶는 일이다","그리드 컴퓨팅은 여러 장치의 남는 계산 자원을 하나의 큰 작업장처럼 쓰려는 시도다.","P2P,Grid Computing,Distributed Systems,Scheduling,Foundations","2026-06-15T15:18:00.000Z",SERIES_COVER,["분할","배정","실행","검증","재시도"],"그리드는 여러 컴퓨터를 하나처럼 보이게 만드는 마술이 아니라 독립 작업을 안전하게 순환시키는 파이프라인이다.","이미지 변환과 해시 계산을 수십 개의 작은 작업으로 나누고 느린 워커의 조각만 다른 피어에게 다시 맡기는 장면",["공유 상태가 많은 작업을 억지로 분산해 동기화 비용이 폭발하는 경우","스케줄러가 워커의 네트워크와 배터리 상태를 고려하지 않는 경우","검증 없이 가장 빠른 결과만 믿는 경우"],["작업 조각은 얼마나 커야 네트워크 비용보다 계산 이득이 큰가","워커가 떠나면 어떤 조각을 누가 이어받는가","결과 검증은 샘플링인가 중복 계산인가 결정적 검증인가"]),
-("2026-06-16-p2p-05-signaling-stun-turn-ice","[P2P] WebRTC 이전에 Signaling, STUN, TURN, ICE를 먼저 이해해야 한다","WebRTC 연결 실패의 대부분은 미디어 API가 아니라 서로를 찾고 통과하는 과정에서 생긴다.","P2P,WebRTC,Signaling,STUN,TURN,ICE,NAT","2026-06-15T15:20:00.000Z",SERIES_COVER,["Signaling","STUN","TURN","ICE","NAT"],"WebRTC 연결은 미디어를 보내기 전에 약속을 교환하고, 외부 주소를 찾고, 직접 경로와 릴레이 경로를 시험하는 과정이다.","두 브라우저가 방 서버로 SDP와 candidate를 주고받고 직접 연결이 막히면 TURN 릴레이로 전환되는 장면",["시그널링을 WebRTC가 알아서 해준다고 착각하는 경우","TURN 비용을 운영 예산에 넣지 않는 경우","ICE 상태를 로그와 UI에 노출하지 않아 실패 원인을 추적하지 못하는 경우"],["SDP와 candidate 교환은 어떤 채널로 기록되는가","TURN 사용률은 어떤 지표로 감시할 것인가","연결 실패와 릴레이 전환을 사용자에게 어떻게 설명할 것인가"]),
-("2026-06-16-p2p-06-realtime-product-patterns","[패턴] 실시간 제품은 상태 머신, 역압, 멱등성으로 버틴다","실시간 제품의 안정성은 멋진 프레임워크보다 상태 전이, 흐름 제어, 재시도 가능한 명령에서 나온다.","Design Patterns,Realtime,State Machine,Backpressure,Idempotency,PubSub,P2P","2026-06-15T15:22:00.000Z",SERIES_COVER,["상태 머신","역압","멱등성","Pub/Sub","재시도"],"실시간 제품은 빠르게 보내는 능력보다 상태를 제한하고, 받을 수 있을 만큼만 흐르게 하고, 중복과 재시도를 안전하게 만드는 능력으로 버틴다.","파일 전송 중 네트워크가 흔들릴 때 상태 머신이 재연결을 제한하고 역압이 전송 속도를 낮추며 작업 ID가 중복 처리를 막는 장면",["boolean 플래그가 늘어나 불가능한 상태 조합이 생기는 경우","버퍼 크기를 보지 않고 계속 보내다가 브라우저 메모리를 터뜨리는 경우","재시도 요청에 idempotency key를 붙이지 않아 결제나 승인 이벤트가 중복 처리되는 경우"],["가능한 상태와 전이를 한 장으로 그릴 수 있는가","받는 쪽의 처리 속도가 보내는 쪽에 전달되는가","같은 명령이 두 번 도착해도 결과가 한 번과 같은가"]),
+AUTHOR_ID = "ponslink-content"
+AUTHOR_NAME = "PonsLink"
+TAXONOMY_ID = "tax-dev-retrospective-p2p-foundations"
+CATEGORY = "개발 회고"
+ASSET_DIR = Path("public/tistory/p2p-foundations/varied")
+
+
+@dataclass(frozen=True)
+class Topic:
+    slug: str
+    title: str
+    excerpt: str
+    tags: str
+    published_at: str
+    labels: tuple[str, ...]
+    principle: str
+    scenario: str
+    decision: str
+    risks: tuple[str, ...]
+    questions: tuple[str, ...]
+    template_id: str
+    image_concepts: tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class Asset:
+    concept_id: str
+    path: str
+    alt: str
+    caption: str
+
+
+@dataclass(frozen=True)
+class ArticleTemplate:
+    id: str
+    name: str
+    render: Callable[[Topic, list[Asset]], str]
+
+
+@dataclass(frozen=True)
+class ImageConcept:
+    id: str
+    name: str
+    render: Callable[[Topic, str, int], str]
+
+
+TOPICS = [
+    Topic(
+        slug="2026-06-16-p2p-00-grid-computing-first-step",
+        title="[P2P] 그리드 컴퓨팅을 만들고 싶어서 P2P를 다시 읽기 시작했다",
+        excerpt="P2P를 파일 전송이나 화상회의 기능으로만 보지 않고, 분산 작업과 그리드 컴퓨팅의 기반으로 다시 정리한다.",
+        tags="P2P,Grid Computing,Distributed Systems,Foundations,Architecture",
+        published_at="2026-06-15T15:10:00.000Z",
+        labels=("작업 큐", "브라우저 워커", "검증", "재시도", "결과 조립"),
+        principle="그리드 컴퓨팅은 남는 장치를 많이 모으는 일이 아니라, 작은 작업을 안전하게 나누고 검증해서 다시 합치는 운영 모델이다.",
+        scenario="대용량 자료를 여러 브라우저가 조각 단위로 해시하고, 일부 피어는 썸네일을 만들고, 느린 피어의 조각은 다시 배정되는 실험",
+        decision="완전 분산보다 중앙 스케줄러와 P2P 데이터 경로를 섞은 하이브리드 구조에서 시작한다.",
+        risks=("워커가 중간에 떠남", "결과 검증 비용이 계산 이득을 넘음", "모바일 브라우저가 백그라운드에서 멈춤"),
+        questions=("작업 조각은 독립적으로 재시도 가능한가", "결과를 빠르게 검증할 기준이 있는가", "스케줄러가 반드시 중앙에 있어야 하는 정보는 무엇인가"),
+        template_id="T05",
+        image_concepts=("I02", "I10", "I05", "I08"),
+    ),
+    Topic(
+        slug="2026-06-16-p2p-01-client-server-vs-peer-to-peer",
+        title="[P2P] 서버-클라이언트와 피어 투 피어는 무엇이 다른가",
+        excerpt="P2P를 이해하려면 먼저 누가 중심을 갖고, 누가 데이터를 들고, 누가 장애 지점이 되는지를 구분해야 한다.",
+        tags="P2P,Network Architecture,Client Server,Foundations,WebRTC",
+        published_at="2026-06-15T15:12:00.000Z",
+        labels=("클라이언트", "서버", "피어", "제어면", "데이터면"),
+        principle="P2P는 서버를 없애는 선언이 아니라 서버의 책임과 피어의 책임을 다시 배치하는 설계 선택이다.",
+        scenario="로그인과 권한은 서버가 판단하지만 실제 파일 조각과 실시간 이벤트 일부는 브라우저끼리 직접 주고받는 상담 방",
+        decision="권한, 감사, 영구 저장은 서버에 남기고 무거운 일시 데이터만 피어 경로로 옮긴다.",
+        risks=("인증까지 피어에게 넘김", "직접 연결 실패가 화면에 설명되지 않음", "삭제와 보존 정책이 흐려짐"),
+        questions=("이 데이터는 중앙에 반드시 남아야 하는가", "서버가 판단할 약속과 피어가 운반할 바이트는 무엇인가", "직접 경로가 막히면 어떤 우회가 있는가"),
+        template_id="T09",
+        image_concepts=("I06", "I01", "I08", "I04"),
+    ),
+    Topic(
+        slug="2026-06-16-p2p-02-mesh-sfu-mcu-topology",
+        title="[P2P] Mesh, SFU, MCU는 연결을 어디서 합칠지의 선택이다",
+        excerpt="Mesh, SFU, MCU는 화상회의 용어처럼 보이지만 본질은 데이터 경로와 비용, 품질, 제어권의 선택이다.",
+        tags="P2P,WebRTC,Mesh,SFU,MCU,Realtime,Architecture",
+        published_at="2026-06-15T15:14:00.000Z",
+        labels=("Mesh", "SFU", "MCU", "업로드", "품질 제어"),
+        principle="Mesh, SFU, MCU의 차이는 연결을 어디서 복제하고 어디서 합칠지 결정하는 비용 모델의 차이다.",
+        scenario="2명 상담 방은 Mesh로 충분하지만 12명 세미나, 녹화, 저성능 단말 지원이 필요해지는 순간",
+        decision="작은 방은 Mesh, 다자 방은 SFU, 녹화와 단일 출력은 MCU로 가는 전환 기준을 문서화한다.",
+        risks=("Mesh 방을 키워 업로드가 터짐", "SFU 도입 후 품질 레이어 정책이 없음", "MCU 서버 인코딩 비용을 과소평가함"),
+        questions=("한 사용자가 감당할 업로드 수는 몇 개인가", "서버가 전달만 하면 되는가 합성해야 하는가", "녹화와 방송이 핵심 기능인가"),
+        template_id="T03",
+        image_concepts=("I04", "I01", "I07", "I05"),
+    ),
+    Topic(
+        slug="2026-06-16-p2p-03-what-can-we-build-with-p2p",
+        title="[P2P] 피어 투 피어로 실제 무엇을 만들 수 있는가",
+        excerpt="P2P는 화상회의만을 위한 기술이 아니다. 파일 전송, 협업, 엣지 연산, 로컬 우선 제품까지 이어지는 설계 선택이다.",
+        tags="P2P,Product,File Transfer,Realtime,Edge Computing,Collaboration",
+        published_at="2026-06-15T15:16:00.000Z",
+        labels=("파일 전송", "협업", "로컬 우선", "엣지 연산", "콘텐츠 배포"),
+        principle="P2P의 제품 가치는 중앙 서버가 모든 데이터 경로를 소유하지 않아도 되는 순간에 생긴다.",
+        scenario="파일은 직접 보내고, 화이트보드 이벤트는 가까운 참여자끼리 동기화하고, 무거운 계산은 여유 장치에 맡기는 제품 묶음",
+        decision="제품 후보를 데이터 무게, 중앙 일관성 필요, 실패 허용도 기준으로 나눠 적용한다.",
+        risks=("협업 충돌을 연결 문제로 착각함", "악의적 피어 검증을 생략함", "오프라인/재접속 UX가 없음"),
+        questions=("가장 무거운 바이트는 무엇인가", "오프라인에서도 계속되어야 하는 작업은 무엇인가", "중앙 서버가 줄어들 때 신뢰를 어떻게 설명할 것인가"),
+        template_id="T10",
+        image_concepts=("I08", "I09", "I10", "I04"),
+    ),
+    Topic(
+        slug="2026-06-16-p2p-04-grid-computing-from-p2p",
+        title="[P2P] 그리드 컴퓨팅은 남는 자원을 작업 단위로 묶는 일이다",
+        excerpt="그리드 컴퓨팅은 여러 장치의 남는 계산 자원을 하나의 큰 작업장처럼 쓰려는 시도다.",
+        tags="P2P,Grid Computing,Distributed Systems,Scheduling,Foundations",
+        published_at="2026-06-15T15:18:00.000Z",
+        labels=("분할", "배정", "실행", "검증", "재시도"),
+        principle="그리드는 여러 컴퓨터를 하나처럼 보이게 하는 마술이 아니라 독립 작업을 안전하게 순환시키는 파이프라인이다.",
+        scenario="이미지 변환과 해시 계산을 작은 작업으로 나누고, 느린 워커의 조각만 다시 큐에 넣는 처리 시스템",
+        decision="작업 큐, 스케줄러, 워커, 검증기, 조립기를 분리하고 검증 가능한 작업부터 적용한다.",
+        risks=("공유 상태가 많은 작업을 억지로 분산함", "검증 없이 가장 빠른 결과만 믿음", "스케줄러가 워커 상태를 모르고 배정함"),
+        questions=("작업 조각 크기는 어느 정도가 적절한가", "워커가 떠나면 누가 이어받는가", "검증은 중복 계산인가 샘플링인가"),
+        template_id="T02",
+        image_concepts=("I01", "I10", "I06", "I07"),
+    ),
+    Topic(
+        slug="2026-06-16-p2p-05-signaling-stun-turn-ice",
+        title="[P2P] WebRTC 이전에 Signaling, STUN, TURN, ICE를 먼저 이해해야 한다",
+        excerpt="WebRTC 연결 실패의 대부분은 미디어 API가 아니라 서로를 찾고 통과하는 과정에서 생긴다.",
+        tags="P2P,WebRTC,Signaling,STUN,TURN,ICE,NAT",
+        published_at="2026-06-15T15:20:00.000Z",
+        labels=("Signaling", "STUN", "TURN", "ICE", "NAT"),
+        principle="WebRTC 연결은 미디어 전송 전에 약속 교환, 주소 발견, 후보 시험, 릴레이 전환을 거치는 탐색 과정이다.",
+        scenario="두 브라우저가 방 서버로 SDP와 candidate를 교환하고, 직접 연결이 막히면 TURN 릴레이로 전환되는 흐름",
+        decision="시그널링 로그, ICE 상태, TURN 사용률을 제품 상태와 운영 지표로 노출한다.",
+        risks=("시그널링을 WebRTC가 자동 제공한다고 착각함", "TURN 비용을 예산에 넣지 않음", "ICE 실패가 사용자에게 무한 로딩으로 보임"),
+        questions=("SDP와 candidate는 어디에 기록되는가", "TURN 사용률은 어떻게 감시하는가", "릴레이 전환을 사용자에게 어떻게 설명하는가"),
+        template_id="T04",
+        image_concepts=("I09", "I05", "I07", "I01"),
+    ),
+    Topic(
+        slug="2026-06-16-p2p-06-realtime-product-patterns",
+        title="[패턴] 실시간 제품은 상태 머신, 역압, 멱등성으로 버틴다",
+        excerpt="실시간 제품의 안정성은 멋진 프레임워크보다 상태 전이, 흐름 제어, 재시도 가능한 명령에서 나온다.",
+        tags="Design Patterns,Realtime,State Machine,Backpressure,Idempotency,PubSub,P2P",
+        published_at="2026-06-15T15:22:00.000Z",
+        labels=("상태 머신", "역압", "멱등성", "Pub/Sub", "재시도"),
+        principle="실시간 제품은 빠르게 보내는 능력보다 상태를 제한하고, 받을 수 있을 만큼만 흐르게 하고, 중복을 안전하게 만드는 능력으로 버틴다.",
+        scenario="파일 전송 중 네트워크가 흔들릴 때 상태 머신이 전이를 제한하고, 역압이 속도를 낮추며, 작업 ID가 중복 처리를 막는 장면",
+        decision="상태 머신, backpressure, idempotency, pub/sub, timeout을 제품 기본 패턴으로 문서화한다.",
+        risks=("boolean 플래그가 불가능한 상태 조합을 만듦", "버퍼 수위를 보지 않고 계속 보냄", "재시도 요청이 같은 작업을 두 번 처리함"),
+        questions=("가능한 상태와 전이를 한 장으로 그릴 수 있는가", "받는 쪽의 처리 속도가 보내는 쪽에 전달되는가", "같은 명령이 두 번 와도 결과가 같은가"),
+        template_id="T07",
+        image_concepts=("I09", "I05", "I07", "I03"),
+    ),
 ]
-SECTION_TITLES=["용어보다 책임을 먼저 나누기","데이터 경로를 그려야 비용이 보인다","작은 성공 사례를 제품 흐름으로 옮기기","실패를 예외가 아니라 정상 경로로 다루기","관찰 가능성을 처음부터 넣기","사용자 경험으로 번역하기","PonsLink와 PonsWarp에 대입하기","운영 비용과 보안 경계 확인하기","실험 단위를 작게 자르기","다음 글로 이어지는 연결점"]
 
-def post_id(slug): return "p2p-foundation-"+slug.replace("2026-06-16-","").replace("-","_")[:42]
-def box(x,y,w,h,t,fill="#fbf8f1"): return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="18" fill="{fill}" stroke="#b8a489" stroke-width="2"/><text x="{x+w/2}" y="{y+h/2+6}" text-anchor="middle" font-size="24" fill="#3c3128" font-family="sans-serif">{html.escape(t)}</text>'
-def arr(x1,y1,x2,y2,l=""):
-    mx=(x1+x2)/2; my=(y1+y2)/2-12; txt=f'<text x="{mx}" y="{my}" text-anchor="middle" font-size="16" fill="#735f4a" font-family="sans-serif">{html.escape(l)}</text>' if l else ""
-    return f'<path d="M{x1} {y1} C {mx} {y1}, {mx} {y2}, {x2} {y2}" fill="none" stroke="#7c5f43" stroke-width="3" marker-end="url(#arrow)"/>{txt}'
-def svg(path,title,kind,labels,questions):
-    p=['<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="840" viewBox="0 0 1400 840">','<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#7c5f43"/></marker></defs>','<rect width="1400" height="840" fill="#f7f3ea"/><rect x="48" y="48" width="1304" height="744" rx="34" fill="#fffdf8" stroke="#d8c9b4"/>',f'<text x="92" y="118" font-size="34" font-weight="700" fill="#2f2720" font-family="sans-serif">{html.escape(title)}</text>',f'<text x="92" y="158" font-size="16" fill="#8a725a" font-family="monospace">{kind.upper()} · PonsLink visual note</text>']
-    if kind=="overview":
-        for (x,y),lab in zip([(120,250),(450,250),(780,250),(285,520),(615,520)],labels): p.append(box(x,y,230,96,lab,"#fbf4e8" if y<400 else "#eef2f5"))
-        p += [arr(350,298,450,298,"control"),arr(680,298,780,298,"data"),arr(565,346,400,520,"feedback"),arr(895,346,730,520,"retry")]
-    elif kind=="flow":
-        x=115
-        for i,lab in enumerate(labels):
-            p.append(box(x+i*245,360,190,92,lab,"#edf4f2"))
-            if i<4: p.append(arr(x+i*245+190,406,x+(i+1)*245,406,str(i+1)))
-        p.append('<text x="700" y="560" text-anchor="middle" font-size="24" fill="#3c3128" font-family="sans-serif">작은 단위로 나누고, 상태를 기록하고, 실패한 조각만 다시 흘린다.</text>')
-    elif kind=="tradeoff":
-        p += ['<line x1="180" y1="640" x2="1220" y2="640" stroke="#aa967b" stroke-width="3"/>','<line x1="180" y1="640" x2="180" y2="220" stroke="#aa967b" stroke-width="3"/>']
-        for x,y,lab in [(260,560,labels[0]),(480,470,labels[1]),(700,390,labels[2]),(920,310,labels[3]),(1140,250,labels[4])]: p.append(f'<circle cx="{x}" cy="{y}" r="28" fill="#d7b98b" stroke="#7c5f43" stroke-width="3"/><text x="{x}" y="{y+62}" text-anchor="middle" font-size="18" fill="#3c3128" font-family="sans-serif">{html.escape(lab)}</text>')
-        p.append('<text x="700" y="710" text-anchor="middle" font-size="20" fill="#735f4a" font-family="sans-serif">복잡도 / 비용 / 제어권의 균형점</text>')
-    else:
-        for i,q in enumerate(questions): p.append(f'<rect x="130" y="{235+i*135}" width="1140" height="96" rx="20" fill="#fbf8f1" stroke="#c8b697"/><text x="180" y="{235+i*135+58}" font-size="25" fill="#3c3128" font-family="sans-serif">{i+1}. {html.escape(q)}</text>')
-        p.append('<text x="700" y="705" text-anchor="middle" font-size="20" fill="#735f4a" font-family="sans-serif">이 질문에 답하지 못하면 아직 설계가 아니라 희망사항이다.</text>')
-    p.append('</svg>'); path.write_text('\n'.join(p),encoding='utf-8')
-def assets(slug,title,labels,questions):
-    ASSET_DIR.mkdir(parents=True,exist_ok=True); out=[]
-    for kind in ["overview","flow","tradeoff","checklist"]:
-        fn=f"{slug}-{kind}.svg"; svg(ASSET_DIR/fn,f"{title} · {kind}",kind,labels,questions); out.append(f"/tistory/p2p-foundations/{fn}")
-    return out
-def img(path,alt,cap): return f"![{alt}]({path})\n\n_{cap}_\n"
-def block(principle,case,pitfalls,questions,i,heading):
-    pitfall_text = " / ".join(pitfalls)
-    question_text = " / ".join(questions)
-    section_bodies = {
-        1: f"""기술 선택을 시작하기 전에 먼저 책임의 이름을 붙인다. 누가 연결을 시작하는지, 누가 상대의 주소를 알고 있는지, 누가 권한을 판단하는지, 누가 실제 바이트를 운반하는지 나누면 막연한 P2P 논의가 설계 논의로 바뀐다. {principle}
 
-{case}에서는 서버와 피어가 동시에 등장한다. 서버는 방과 권한의 기준점이고, 피어는 실제 데이터 경로의 한쪽 끝이다. 이 둘을 섞어서 “서버를 없앤다”라고 말하면 제품은 빨라지는 대신 설명 불가능해진다. 반대로 둘을 분리하면 어느 부분이 중앙 장애 지점이고 어느 부분이 사용자의 네트워크 품질에 의존하는지 보인다.""",
-        2: f"""데이터 경로를 그리면 비용 구조가 드러난다. 같은 파일 조각이 서버를 한 번 거치는지, 참가자 수만큼 복제되는지, 릴레이 서버를 타는지에 따라 대역폭 비용과 지연 시간이 달라진다. 그림 없이 회의하면 “빠르다”, “비싸다”, “안정적이다” 같은 말만 오가지만, 화살표를 그리면 어느 구간이 병목인지 바로 보인다.
+PALETTE = {
+    "paper": "#f7f3ea",
+    "ink": "#2f2720",
+    "muted": "#8a725a",
+    "line": "#b8a489",
+    "clay": "#c8875c",
+    "blue": "#496a86",
+    "green": "#6f8a72",
+    "rose": "#b96f62",
+    "gold": "#d7b98b",
+}
 
-여기서 봐야 할 것은 평균 속도만이 아니다. 업로드가 약한 사용자가 방 전체의 품질을 낮추는지, TURN이나 SFU 같은 중간 노드가 비용을 흡수하는지, 실패한 조각이 재전송될 때 누구의 배터리와 데이터 요금제를 쓰는지까지 봐야 한다. 그래서 데이터 경로 다이어그램은 문서 장식이 아니라 비용 견적서에 가깝다.""",
-        3: f"""작은 성공 사례를 곧바로 전체 제품으로 확대하면 위험하다. 두 브라우저가 같은 와이파이에서 잘 연결된 것과, 실제 사용자가 회사 방화벽·모바일 핫스팟·잠자기 모드·느린 업로드를 오가며 쓰는 것은 전혀 다른 문제다. 실험은 반드시 제품 흐름의 한 조각으로 옮겨 검증해야 한다.
 
-예를 들어 {case}을 구현한다면 첫 단계는 전체 플랫폼이 아니라 한 파일 조각, 한 candidate 교환, 한 작업 ID처럼 관찰 가능한 단위가 된다. 성공 기준도 “연결됐다”가 아니라 “실패 원인이 로그에 남고, 재시도 한계가 있으며, 사용자가 다음 행동을 알 수 있다”가 되어야 한다.""",
-        4: f"""P2P와 실시간 기능에서 실패는 예외가 아니라 정상 경로다. NAT가 막을 수 있고, 피어가 탭을 닫을 수 있고, 모바일 OS가 백그라운드 작업을 멈출 수 있다. 따라서 설계 문서에는 성공 흐름만큼 실패 흐름이 크게 들어가야 한다.
+def esc(value: str) -> str:
+    return html.escape(value, quote=True)
 
-대표적인 함정은 {pitfall_text}이다. 이 함정들은 런타임에서 갑자기 나타나는 것처럼 보이지만 대부분은 설계 때 이미 예고되어 있다. 해결책은 무한 retry가 아니다. 타임아웃, 재시도 횟수, fallback 경로, 사용자 메시지, 운영 로그가 함께 있어야 한다.""",
-        5: f"""관찰 가능성은 나중에 붙이는 로그가 아니다. 연결 상태, 후보 수집 상태, 릴레이 전환 여부, 워커 작업 시작·완료·실패, 버퍼 수위 같은 값이 처음부터 제품 모델에 들어가야 한다. 운영자가 볼 수 없는 P2P 시스템은 사용자가 실패했다고 말할 때까지 고장 난 사실도 모른다.
 
-좋은 지표는 행동을 바꾼다. TURN 사용률이 높으면 네트워크 정책이나 직접 연결 품질을 봐야 하고, 특정 브라우저에서 ICE 실패가 많으면 candidate 수집 흐름을 봐야 한다. 작업 재시도율이 높으면 그리드 작업 단위가 너무 작거나 워커 신뢰 모델이 약한 것이다.""",
-        6: f"""기술 상태는 사용자가 이해할 수 있는 문장으로 번역되어야 한다. “ICE checking”은 개발자에게는 의미가 있지만 사용자에게는 “상대와 직접 연결을 시도하고 있습니다”가 더 낫다. “TURN fallback”은 “직접 연결이 어려워 중계 경로로 전환했습니다”가 된다. 제품은 내부 상태를 숨기는 것이 아니라 불안을 줄이는 언어로 바꿔야 한다.
+def svg_base(title: str, subtitle: str, body: str, bg: str = "#f7f3ea") -> str:
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="840" viewBox="0 0 1400 840" role="img" aria-label="{esc(title)}">
+<defs>
+  <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="{PALETTE['blue']}"/></marker>
+  <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#b8a489" flood-opacity="0.25"/></filter>
+</defs>
+<rect width="1400" height="840" fill="{bg}"/>
+<rect x="46" y="46" width="1308" height="748" rx="34" fill="#fffdf8" stroke="#d8c9b4"/>
+<text x="92" y="112" font-size="32" font-weight="700" fill="{PALETTE['ink']}" font-family="sans-serif">{esc(title[:44])}</text>
+<text x="92" y="150" font-size="16" fill="{PALETTE['muted']}" font-family="monospace">{esc(subtitle)}</text>
+{body}
+</svg>'''
 
-이 번역이 없으면 사용자는 멈춘 화면을 장애로 받아들인다. 반대로 상태가 명확하면 조금 느린 fallback도 견딜 수 있다. PonsLink와 PonsWarp 같은 제품에서 중요한 것은 기술적으로 완벽한 연결보다 사용자가 지금 무슨 일이 일어나는지 이해하는 것이다.""",
-        7: f"""PonsLink와 PonsWarp에 대입하면 기준이 더 선명해진다. 상담·회의·요청 흐름은 권한과 기록이 중요하므로 서버가 제어면을 잡는 편이 안전하다. 반면 파일 바이트, 미디어 일부, 임시 작업 조각은 가능한 경우 피어 경로로 옮길 수 있다. 이것이 하이브리드 설계다.
 
-하이브리드 설계의 장점은 실패할 때도 제품이 완전히 무너지지 않는다는 점이다. 직접 연결이 실패하면 릴레이나 클라우드 드롭으로 전환하고, 워커가 떠나면 작업 큐가 조각을 다시 배정하며, 이벤트가 중복되면 idempotency key가 같은 결과로 수렴시킨다.""",
-        8: f"""운영 비용과 보안 경계는 P2P 설계의 현실 검증이다. 서버 비용을 줄였다고 해도 TURN, SFU, 재시도 트래픽, 이미지·파일 캐시, 로그 저장 비용이 새로 생긴다. 또한 피어가 데이터를 직접 다루면 개인정보, 악성 payload, 잘못된 결과 제출 같은 보안 질문도 같이 생긴다.
+def box(x: int, y: int, w: int, h: int, text: str, fill: str = "#fbf8f1") -> str:
+    return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="18" fill="{fill}" stroke="{PALETTE["line"]}"/><text x="{x+w/2}" y="{y+h/2+7}" text-anchor="middle" font-size="22" fill="{PALETTE["ink"]}" font-family="sans-serif">{esc(text[:18])}</text>'
 
-그래서 {question_text} 같은 질문을 구현 전에 답해야 한다. 답이 없으면 기능을 버리라는 뜻이 아니라 안전한 범위를 정하라는 뜻이다. 예를 들어 민감한 데이터는 직접 경로로 보내더라도 암호화와 만료 정책을 갖고, 검증 어려운 계산은 중복 실행이나 서버 검증을 붙인다.""",
-        9: f"""실험 단위는 작아야 한다. 하나의 거대한 P2P 전환보다, 직접 연결 성공률 측정, DataChannel로 10MB 전송, 작업 조각 재시도, 상태 머신 전이 검증처럼 분리된 실험이 낫다. 각 실험은 실패해도 되지만 실패 원인을 설명할 수 있어야 한다.
 
-작게 자른 실험은 문서와 코드에도 이롭다. 나중에 SFU를 붙이거나 그리드 워커를 늘리더라도 기존 실험의 경계가 그대로 회귀 테스트가 된다. 이것이 기초 글을 쓰는 이유다. 용어를 암기하기 위해서가 아니라 다음 구현의 기준선을 만들기 위해서다.""",
-        10: f"""다음 글로 이어지는 연결점은 명확하다. {principle} 이 기준으로 보면 Mesh, SFU, MCU, TURN, 그리드 컴퓨팅, 상태 머신, 역압, 멱등성은 서로 다른 주제가 아니라 하나의 질문에서 갈라진다. “누가 책임지고, 어디로 흐르고, 실패하면 어떻게 복구하는가”라는 질문이다.
+def arrow(x1: int, y1: int, x2: int, y2: int, label: str = "") -> str:
+    text = f'<text x="{(x1+x2)/2}" y="{(y1+y2)/2-12}" text-anchor="middle" font-size="15" fill="{PALETTE["muted"]}" font-family="sans-serif">{esc(label[:16])}</text>' if label else ""
+    return f'<path d="M{x1},{y1} C {(x1+x2)/2},{y1} {(x1+x2)/2},{y2} {x2},{y2}" fill="none" stroke="{PALETTE["blue"]}" stroke-width="3" marker-end="url(#arrow)"/>{text}'
 
-이 질문을 계속 들고 가면 P2P는 단순한 네트워크 기능이 아니라 제품 구조가 된다. 서버는 약속과 기록을 맡고, 피어는 가능한 데이터 이동을 맡고, 운영 시스템은 실패를 관찰하며, UX는 그 상태를 사람이 이해할 수 있게 만든다. 그 균형이 맞을 때 P2P는 비용 절감 장식이 아니라 실제 제품의 기반이 된다.""",
-    }
-    selected_question = questions[(i - 1) % len(questions)]
-    selected_pitfall = pitfalls[(i - 1) % len(pitfalls)]
-    practice_note = f"""실무 점검은 한 문장으로 끝나지 않는다. 이 절을 구현 항목으로 바꾸면 먼저 “{selected_question}”에 대한 답을 코드 주석이 아니라 실행 로그와 화면 상태로 남겨야 한다. 또한 “{selected_pitfall}”이 실제로 발생했을 때 사용자가 보는 문장, 운영자가 보는 지표, 시스템이 선택하는 fallback이 서로 맞아야 한다. 이 세 가지가 분리되면 장애 대응은 감으로 흘러가고, 반대로 세 가지가 연결되면 작은 실험도 제품 신뢰로 이어진다.
 
-테스트 관점에서는 정상 경로 하나만 확인하면 부족하다. 직접 연결 성공, 직접 연결 실패 뒤 우회, 중간 이탈, 중복 이벤트, 느린 수신자, 재시도 한계 도달을 각각 독립 케이스로 잡아야 한다. P2P와 실시간 제품의 품질은 가장 빠른 데모가 아니라 가장 설명 가능한 실패에서 드러난다."""
-    return f"## {i}. {heading}\n\n{section_bodies[i]}\n\n{practice_note}\n"
-def content(t):
-    slug,title,excerpt,tags,pub,cover,labels,principle,case,pitfalls,questions=t; clean=title.split('] ')[-1]; a=assets(slug,clean,labels,questions)
-    parts=[f"# {clean}\n",f"{excerpt} 이 글은 짧은 용어 풀이가 아니라 PonsLink와 PonsWarp 같은 실시간 제품을 설계할 때 다시 꺼내 볼 수 있는 기초 노트다. 핵심은 하나다. 기술 이름을 외우는 것보다 데이터의 이동 경로, 상태의 책임, 실패했을 때의 복구 경로를 먼저 그려야 한다.\n",img(a[0],clean+" 개념 지도","본문의 핵심 개념을 한 장으로 정리한 개념 지도."),"## 먼저 잡아야 할 관점\n",f"{principle} 이 관점을 놓치면 P2P는 금방 유행어가 된다. 서버를 줄인다는 말은 매력적이지만, 실제 제품에서는 서버가 줄어든 만큼 클라이언트, 네트워크, 운영 로그, 사용자 경험이 더 많은 책임을 가져간다. 그래서 P2P 설계는 언제나 ‘무엇을 직접 연결할 것인가’와 동시에 ‘무엇은 중앙에 남길 것인가’를 묻는다.\n\n제어면과 데이터면을 나눠보면 판단이 쉬워진다. 제어면은 로그인, 권한, 방 생성, 연결 약속, 상태 기록처럼 제품의 규칙을 담당한다. 데이터면은 오디오, 비디오, 파일 조각, 작업 결과처럼 실제 바이트가 흐르는 경로다. 좋은 P2P 제품은 제어면까지 무리하게 없애지 않는다. 대신 데이터면에서 중앙 서버가 꼭 소유하지 않아도 되는 바이트를 피어에게 맡긴다.\n",img(a[1],clean+" 흐름 다이어그램","제어면과 데이터면이 어떻게 나뉘어 흐르는지 보여주는 흐름도.")]
-    for i,h in enumerate(SECTION_TITLES,1):
-        parts.append(block(principle,case,pitfalls,questions,i,h))
-        if i==4: parts.append(img(a[2],clean+" 트레이드오프","복잡도, 비용, 제어권 사이의 균형을 잡는 판단표."))
-        if i==8: parts.append(img(a[3],clean+" 체크리스트","구현 전에 반드시 답해야 할 질문을 모은 체크리스트."))
-    parts += ["## 구현 전에 보는 체크리스트\n",*(f"- {q}\n" for q in questions),"- 실패 상태가 사용자에게 보이는 문장으로 번역되어 있는가\n- 직접 연결 실패, 릴레이 전환, 작업 재시도, 권한 만료가 서로 다른 로그로 남는가\n- 이 설계가 서버 비용을 줄이는 대신 사용자 장치에 어떤 부담을 주는지 설명할 수 있는가\n","## 마무리\n",f"{clean}를 이해한다는 것은 단어를 외웠다는 뜻이 아니다. {principle} 이 한 문장을 제품 요구사항, 데이터 경로, 실패 복구, 비용 구조로 풀어낼 수 있어야 한다. 그래야 P2P가 장식이 아니라 제품을 지탱하는 구조가 된다. 이 글의 그림들은 일부러 단순하게 그렸다. 실제 시스템은 더 복잡하지만, 처음부터 복잡한 그림을 보면 중요한 경계가 흐려진다. 먼저 다섯 개 안팎의 상자와 네 개 안팎의 화살표로 책임을 설명할 수 있어야 한다. 그 다음에 NAT, TURN 비용, SFU 운영, 워커 검증, 상태 머신 같은 세부 항목을 추가하는 편이 훨씬 안전하다.\n"]
-    body='\n'.join(parts); assert len(body)>=10000,(slug,len(body)); return body
-def upsert(conn,t,body):
-    slug,title,excerpt,tags,pub,cover,*_=t; now=dt.datetime.utcnow().isoformat(timespec='milliseconds')+'Z'; rid=post_id(slug); rt=max(10,round(len(body)/520))
-    conn.execute("""INSERT INTO Post (id,slug,title,excerpt,content,category,tags,coverColor,featuredImage,status,readingTime,views,authorId,authorName,publishedAt,createdAt,updatedAt) VALUES (?,?,?,?,?,?,?,?,?,'published',?,0,?,?,?,?,?) ON CONFLICT(slug) DO UPDATE SET title=excluded.title,excerpt=excluded.excerpt,content=excluded.content,category=excluded.category,tags=excluded.tags,coverColor=excluded.coverColor,featuredImage=excluded.featuredImage,status=excluded.status,readingTime=excluded.readingTime,authorId=excluded.authorId,authorName=excluded.authorName,publishedAt=excluded.publishedAt,updatedAt=excluded.updatedAt""",(rid,slug,title,excerpt,body,"개발 회고",tags,"#7c5f43",cover,rt,AUTHOR_ID,AUTHOR_NAME,pub,pub,now))
-    actual_post_id = conn.execute("SELECT id FROM Post WHERE slug=?", (slug,)).fetchone()[0]
-    conn.execute("""INSERT INTO PostTaxonomy (id,postId,nodeId,role,sortOrder) VALUES (?,?,?,'primary',0) ON CONFLICT(postId,nodeId,role) DO UPDATE SET sortOrder=excluded.sortOrder""",(f"pt-{actual_post_id}-{TAXONOMY_ID}",actual_post_id,TAXONOMY_ID))
-def main():
-    db=Path(sys.argv[1]) if len(sys.argv)>1 else Path("db/custom.db"); conn=sqlite3.connect(db); conn.execute("PRAGMA foreign_keys=ON")
+def render_architecture(topic: Topic, title: str, slot: int) -> str:
+    body = "".join(box(140 + i * 240, 300, 190, 92, label, "#f7f9fb") for i, label in enumerate(topic.labels[:5]))
+    body += "".join(arrow(330 + i * 240, 346, 380 + i * 240, 346, "interface") for i in range(4))
+    body += '<rect x="150" y="545" width="1100" height="96" rx="24" fill="#eef4ef" stroke="#9bb69f"/><text x="700" y="602" text-anchor="middle" font-size="24" fill="#2f2720" font-family="sans-serif">control plane stays observable; data plane moves only when it earns its cost</text>'
+    return svg_base(title, "I01 Editorial Architecture Diagram", body)
+
+
+def render_notebook(topic: Topic, title: str, slot: int) -> str:
+    lines = "".join(f'<line x1="120" y1="{210+i*54}" x2="1270" y2="{210+i*54}" stroke="#e6d9c5"/>' for i in range(10))
+    scribbles = "".join(f'<path d="M{180+i*240},{300+i%2*80} q80,-70 160,0 t160,0" fill="none" stroke="{PALETTE["blue"]}" stroke-width="3" stroke-dasharray="8 9"/>' for i in range(3))
+    notes = "".join(f'<text x="{180+(i%2)*520}" y="{275+i*82}" font-size="26" fill="{PALETTE["ink"]}" font-family="sans-serif">• {esc(label)}</text>' for i, label in enumerate(topic.labels[:5]))
+    body = lines + scribbles + notes + '<rect x="930" y="575" width="250" height="120" rx="14" fill="#fff3cf" stroke="#d7b98b" transform="rotate(-2 930 575)"/>' + f'<text x="955" y="640" font-size="23" fill="{PALETTE["ink"]}" font-family="sans-serif">{esc(topic.decision[:18])}</text>'
+    return svg_base(title, "I02 Hand-drawn Notebook Sketch", body, "#fbf7ee")
+
+
+def render_screen_mock(topic: Topic, title: str, slot: int) -> str:
+    rows = "".join(f'<rect x="180" y="{250+i*72}" width="1040" height="48" rx="10" fill="{["#eef4ef", "#fff7e8", "#f7eeee"][i%3]}"/><text x="210" y="{281+i*72}" font-size="19" fill="{PALETTE["ink"]}" font-family="monospace">{esc(topic.risks[i % len(topic.risks)])}</text><circle cx="1160" cy="{274+i*72}" r="12" fill="{[PALETTE["green"], PALETTE["gold"], PALETTE["rose"]][i%3]}"/>' for i in range(6))
+    body = '<rect x="150" y="210" width="1100" height="500" rx="22" fill="#f8fafc" stroke="#c9d3dc" filter="url(#shadow)"/><rect x="150" y="210" width="1100" height="56" rx="22" fill="#e9edf2"/><text x="190" y="247" font-size="20" font-family="monospace" fill="#475569">runtime monitor · live surface</text>' + rows
+    return svg_base(title, "I03 Product Screen Mock", body)
+
+
+def render_matrix(topic: Topic, title: str, slot: int) -> str:
+    body = '<line x1="700" y1="220" x2="700" y2="690" stroke="#aa967b" stroke-width="3"/><line x1="210" y1="455" x2="1190" y2="455" stroke="#aa967b" stroke-width="3"/>'
+    cells = [(300,330,topic.labels[0]),(870,330,topic.labels[1]),(300,585,topic.labels[2]),(870,585,topic.labels[3])]
+    for x,y,label in cells:
+        body += f'<rect x="{x-160}" y="{y-70}" width="320" height="118" rx="20" fill="#fff8ed" stroke="#d7b98b"/><text x="{x}" y="{y}" text-anchor="middle" font-size="26" fill="{PALETTE["ink"]}" font-family="sans-serif">{esc(label)}</text>'
+    body += '<text x="700" y="735" text-anchor="middle" font-size="22" fill="#735f4a" font-family="sans-serif">choose by cost, control, failure recovery</text>'
+    return svg_base(title, "I04 Decision Matrix Card", body)
+
+
+def render_timeline(topic: Topic, title: str, slot: int) -> str:
+    body = '<line x1="180" y1="440" x2="1220" y2="440" stroke="#496a86" stroke-width="5" marker-end="url(#arrow)"/>'
+    for i, label in enumerate(topic.labels[:5]):
+        x = 220 + i * 235
+        body += f'<circle cx="{x}" cy="440" r="26" fill="#fffdf8" stroke="#496a86" stroke-width="4"/><text x="{x}" y="{520 if i%2 else 360}" text-anchor="middle" font-size="22" fill="{PALETTE["ink"]}" font-family="sans-serif">{esc(label)}</text><line x1="{x}" y1="{466 if i%2 else 414}" x2="{x}" y2="{492 if i%2 else 386}" stroke="#b8a489"/>'
+    return svg_base(title, "I05 Sequence Timeline", body)
+
+
+def render_layer_stack(topic: Topic, title: str, slot: int) -> str:
+    body = ""
+    fills = ["#f2efe7", "#e9f0f5", "#edf4ef", "#fff3df", "#f7e8e4"]
+    for i, label in enumerate(reversed(topic.labels[:5])):
+        y = 245 + i * 82
+        body += f'<rect x="250" y="{y}" width="900" height="66" rx="16" fill="{fills[i]}" stroke="#b8a489"/><text x="700" y="{y+42}" text-anchor="middle" font-size="24" fill="{PALETTE["ink"]}" font-family="sans-serif">Layer {5-i}: {esc(label)}</text>'
+    body += '<text x="700" y="715" text-anchor="middle" font-size="22" fill="#735f4a" font-family="sans-serif">upper layers decide policy; lower layers carry bytes</text>'
+    return svg_base(title, "I06 Layered Stack Illustration", body)
+
+
+def render_failure_map(topic: Topic, title: str, slot: int) -> str:
+    body = box(140, 370, 210, 92, "client", "#eef4ef") + box(595, 370, 210, 92, "network", "#fff3df") + box(1050, 370, 210, 92, "peer", "#eef4ef")
+    body += arrow(350, 416, 595, 416, "try") + arrow(805, 416, 1050, 416, "deliver")
+    for i, risk in enumerate(topic.risks[:3]):
+        body += f'<circle cx="{460+i*230}" cy="{310+i%2*230}" r="38" fill="#f7e8e4" stroke="#b96f62" stroke-width="4"/><text x="{460+i*230}" y="{310+i%2*230+7}" text-anchor="middle" font-size="18" fill="#7f3128" font-family="sans-serif">!</text><text x="{520+i*190}" y="{300+i%2*230}" font-size="19" fill="{PALETTE["ink"]}" font-family="sans-serif">{esc(risk[:24])}</text>'
+    body += '<path d="M230,530 C450,700 930,700 1160,530" fill="none" stroke="#6f8a72" stroke-width="4" stroke-dasharray="12 10" marker-end="url(#arrow)"/><text x="700" y="690" text-anchor="middle" font-size="22" fill="#416447" font-family="sans-serif">fallback path</text>'
+    return svg_base(title, "I07 Failure Map", body)
+
+
+def render_storyboard(topic: Topic, title: str, slot: int) -> str:
+    body = ""
+    for i, label in enumerate(topic.labels[:4]):
+        x = 115 + i * 315
+        body += f'<rect x="{x}" y="240" width="260" height="340" rx="22" fill="#fffdf8" stroke="#cdb99d" filter="url(#shadow)"/><circle cx="{x+80}" cy="340" r="42" fill="#d7b98b"/><rect x="{x+130}" y="312" width="82" height="64" rx="10" fill="#e9f0f5" stroke="#496a86"/><path d="M{x+75},430 q70,-60 140,0" fill="none" stroke="#496a86" stroke-width="3" marker-end="url(#arrow)"/><text x="{x+130}" y="520" text-anchor="middle" font-size="22" fill="{PALETTE["ink"]}" font-family="sans-serif">{esc(label)}</text>'
+    return svg_base(title, "I08 Storyboard Panels", body)
+
+
+def render_component_catalog(topic: Topic, title: str, slot: int) -> str:
+    body = ""
+    for i, label in enumerate(topic.labels[:5]):
+        x = 170 + (i % 3) * 360
+        y = 245 + (i // 3) * 190
+        body += f'<rect x="{x}" y="{y}" width="290" height="130" rx="18" fill="#f8fafc" stroke="#b8a489"/><text x="{x+28}" y="{y+45}" font-size="25" font-weight="700" fill="{PALETTE["ink"]}" font-family="sans-serif">{esc(label)}</text><text x="{x+28}" y="{y+86}" font-size="17" fill="#735f4a" font-family="sans-serif">role · boundary · signal</text>'
+    body += '<rect x="530" y="625" width="340" height="58" rx="20" fill="#fff3df" stroke="#d7b98b"/><text x="700" y="662" text-anchor="middle" font-size="22" fill="#2f2720" font-family="sans-serif">catalog first, coupling later</text>'
+    return svg_base(title, "I09 Component Catalog", body)
+
+
+def render_blueprint(topic: Topic, title: str, slot: int) -> str:
+    body = '<rect x="0" y="0" width="1400" height="840" fill="#e9f0f5" opacity="0.55"/>'
+    for i in range(0, 1400, 70):
+        body += f'<line x1="{i}" y1="0" x2="{i}" y2="840" stroke="#d6e0e8"/>'
+    for j in range(0, 840, 70):
+        body += f'<line x1="0" y1="{j}" x2="1400" y2="{j}" stroke="#d6e0e8"/>'
+    for i, label in enumerate(topic.labels[:5]):
+        x = 150 + i * 235
+        body += box(x, 360, 180, 84, label, "#f8fbff")
+        if i < 4:
+            body += arrow(x+180, 402, x+235, 402, "")
+    body += '<text x="700" y="585" text-anchor="middle" font-size="24" fill="#1f4058" font-family="monospace">input → split → assign → verify → assemble</text>'
+    return svg_base(title, "I10 Dataflow Blueprint", body, "#e9f0f5")
+
+
+IMAGE_CONCEPTS: dict[str, ImageConcept] = {
+    "I01": ImageConcept("I01", "Editorial Architecture Diagram", render_architecture),
+    "I02": ImageConcept("I02", "Hand-drawn Notebook Sketch", render_notebook),
+    "I03": ImageConcept("I03", "Product Screen Mock", render_screen_mock),
+    "I04": ImageConcept("I04", "Decision Matrix Card", render_matrix),
+    "I05": ImageConcept("I05", "Sequence Timeline", render_timeline),
+    "I06": ImageConcept("I06", "Layered Stack Illustration", render_layer_stack),
+    "I07": ImageConcept("I07", "Failure Map", render_failure_map),
+    "I08": ImageConcept("I08", "Storyboard Panels", render_storyboard),
+    "I09": ImageConcept("I09", "Component Catalog", render_component_catalog),
+    "I10": ImageConcept("I10", "Dataflow Blueprint", render_blueprint),
+}
+
+
+def clean_title(topic: Topic) -> str:
+    return topic.title.split("] ", 1)[-1]
+
+
+def image_markdown(asset: Asset) -> str:
+    return f"![{asset.alt}]({asset.path})\n\n_{asset.caption}_\n"
+
+
+def paragraph(topic: Topic, angle: str, detail: str, action: str) -> str:
+    return (
+        f"{angle} {topic.principle} 이 원칙을 {clean_title(topic)}에 적용하면, 먼저 {topic.scenario}을 기준 장면으로 잡아야 한다. "
+        f"이 장면은 추상적인 네트워크 설명이 아니라 실제 제품에서 사용자가 기다리고, 실패를 보고, 다시 시도하는 흐름이다. "
+        f"따라서 설명의 중심은 기술 이름이 아니라 책임의 배치, 데이터 경로, 관찰 가능한 상태가 된다.\n\n"
+        f"구체적으로는 {detail}을 분리해서 봐야 한다. {topic.decision} 이 선택은 단순한 취향이 아니라 비용과 실패 대응을 동시에 줄이는 기준이다. "
+        f"반대로 {topic.risks[0]} 같은 상황을 설계에서 빼면 데모는 성공해도 운영에서는 바로 흔들린다. "
+        f"그래서 이 글에서는 {action}까지 연결해, 개념이 제품 판단으로 바뀌는 지점을 남긴다.\n"
+    )
+
+
+def ensure_long(parts: list[str], topic: Topic, target: int = 10300) -> None:
+    rounds = 0
+    while len("\n".join(parts)) < target:
+        q = topic.questions[rounds % len(topic.questions)]
+        r = topic.risks[rounds % len(topic.risks)]
+        parts.append(
+            f"### 보강 노트 {rounds + 1}: {q}\n\n"
+            f"이 질문은 체크리스트의 빈칸이 아니라 구현 순서를 바꾸는 기준이다. {q}에 답하려면 로그, UI 상태, 재시도 정책, 운영 지표가 같은 단어를 써야 한다. "
+            f"그렇지 않으면 개발자는 성공으로 보지만 사용자는 멈춤으로 느끼고, 운영자는 원인을 찾지 못한다. 특히 {r} 상황에서는 작은 차이가 장애 대응 시간을 크게 바꾼다. "
+            f"좋은 설계는 이 장면을 숨기지 않고 문서와 화면, 테스트에 함께 남긴다.\n"
+        )
+        rounds += 1
+
+
+def render_build_diary(topic: Topic, assets: list[Asset]) -> str:
+    parts = [f"# {clean_title(topic)}\n", f"{topic.excerpt} 처음에는 거창한 플랫폼보다 ‘내 컴퓨터와 주변 브라우저의 남는 힘을 묶으면 무엇을 할 수 있을까’라는 작은 호기심에 가까웠다.\n", image_markdown(assets[0])]
+    sections = [
+        ("만들고 싶었던 것", "목표를 기능 목록이 아니라 장면으로 잡는다.", "실험의 성공 기준을 먼저 정한다"),
+        ("첫 번째 접근", "작업 큐와 브라우저 워커를 가장 단순한 형태로 놓는다.", "작은 파일 조각 하나부터 검증한다"),
+        ("막힌 지점", "노드 이탈과 검증 비용이 바로 병목이 된다.", "실패를 정상 흐름으로 승격한다"),
+        ("버린 선택지", "완전 분산과 무검증 결과 수집은 데모용으로만 남긴다.", "중앙 스케줄러를 부끄러워하지 않는다"),
+        ("다시 잡은 설계", "큐, 워커, 검증기, 조립기를 분리한다.", "각 단계의 로그를 남긴다"),
+        ("남은 리스크", "모바일 환경과 악의적 결과를 따로 본다.", "제품화 전 실패 주입 테스트를 둔다"),
+        ("다음 구현 항목", "작업 단위와 재시도 한계를 숫자로 정한다.", "프로토타입 범위를 고정한다"),
+    ]
+    for i, (heading, detail, action) in enumerate(sections):
+        parts.append(f"## {heading}\n\n" + paragraph(topic, "빌드 다이어리 관점에서는", detail, action))
+        if i in (1, 3, 5):
+            parts.append(image_markdown(assets[(i // 2) + 1]))
+    ensure_long(parts, topic)
+    return "\n".join(parts)
+
+
+def render_layered_model(topic: Topic, assets: list[Asset]) -> str:
+    parts = [f"# {clean_title(topic)}\n", f"{topic.excerpt} 이 글은 서버와 피어를 경쟁 관계로 보지 않고 서로 다른 계층의 책임으로 나눠 본다.\n", image_markdown(assets[0])]
+    layers = ["물리/네트워크", "연결/세션", "데이터/작업", "제품 정책", "운영/관측"]
+    for i, layer in enumerate(layers):
+        parts.append(f"## Layer {i+1}. {layer}\n\n" + paragraph(topic, f"{layer} 계층에서는", f"{topic.labels[i % len(topic.labels)]}의 책임", "계층을 넘나드는 암묵적 의존을 줄인다"))
+        if i in (1, 3):
+            parts.append(image_markdown(assets[1 + i // 2]))
+    parts.append("## 계층 간 경계\n\n" + paragraph(topic, "마지막으로", "서버가 판단할 것과 피어가 운반할 것", "장애 지점을 사용자가 이해할 수 있는 상태로 바꾼다"))
+    parts.append(image_markdown(assets[3]))
+    ensure_long(parts, topic)
+    return "\n".join(parts)
+
+
+def render_decision_matrix(topic: Topic, assets: list[Asset]) -> str:
+    parts = [f"# {clean_title(topic)}\n", f"{topic.excerpt} 선택지는 이름보다 비용 곡선으로 이해하는 편이 정확하다.\n", image_markdown(assets[0])]
+    sections = ["선택지가 많아지는 순간", "Mesh의 비용 축", "SFU의 제어 축", "MCU의 합성 축", "실패 대응 축", "의사결정 매트릭스", "추천 조합"]
+    for i, heading in enumerate(sections):
+        parts.append(f"## {heading}\n\n" + paragraph(topic, "의사결정 매트릭스에서는", f"{heading}에서 달라지는 업로드·서버·품질 비용", "방 크기와 녹화 요구에 따라 전환 기준을 남긴다"))
+        if i in (2, 4, 5):
+            parts.append(image_markdown(assets[min(3, i-1)]))
+    ensure_long(parts, topic)
+    return "\n".join(parts)
+
+
+def render_case_generalization(topic: Topic, assets: list[Asset]) -> str:
+    parts = [f"# {clean_title(topic)}\n", f"{topic.excerpt} 가능성을 나열하기보다 하나의 제품 장면에서 시작해 일반 원칙으로 확장한다.\n", image_markdown(assets[0])]
+    sections = ["제품 장면 하나", "장면에서 보이는 문제", "파일 전송으로 일반화", "협업으로 일반화", "엣지 연산으로 일반화", "놓치기 쉬운 예외", "다른 제품에 적용하는 법"]
+    for i, heading in enumerate(sections):
+        parts.append(f"## {heading}\n\n" + paragraph(topic, "케이스 스터디 관점에서는", f"{heading}에 맞는 사용자 흐름과 데이터 소유권", "각 사례를 중앙 일관성과 실패 허용도로 다시 분류한다"))
+        if i in (1, 3, 5):
+            parts.append(image_markdown(assets[(i + 1) // 2]))
+    ensure_long(parts, topic)
+    return "\n".join(parts)
+
+
+def render_foundation_architecture(topic: Topic, assets: list[Asset]) -> str:
+    parts = [f"# {clean_title(topic)}\n", f"{topic.excerpt} 파운데이션 관점에서는 작업 큐 하나가 아니라 운영 가능한 구성 요소 묶음을 봐야 한다.\n", image_markdown(assets[0])]
+    sections = ["왜 파운데이션이 필요한가", "전체 조감도", "작업 큐와 스케줄러", "워커와 검증기", "핵심 패턴 세 가지", "운영·보안·관측성", "다음 글로 이어지는 지점"]
+    for i, heading in enumerate(sections):
+        parts.append(f"## {heading}\n\n" + paragraph(topic, "파운데이션 아키텍처에서는", f"{heading}를 독립 컴포넌트로 보는 방식", "구성 요소를 느슨하게 묶고 지표를 먼저 붙인다"))
+        if i in (1, 4, 5):
+            parts.append(image_markdown(assets[min(3, i//2 + 1)]))
+    ensure_long(parts, topic)
+    return "\n".join(parts)
+
+
+def render_concept_deconstruction(topic: Topic, assets: list[Asset]) -> str:
+    parts = [f"# {clean_title(topic)}\n", f"{topic.excerpt} 이 글은 API 호출법보다 연결이 성립하기 전의 약속과 탐색 과정을 분해한다.\n", image_markdown(assets[0])]
+    sections = ["흔한 오해", "Signaling", "STUN", "TURN", "ICE", "작은 연결 예제", "경계 조건과 제품 상태"]
+    for i, heading in enumerate(sections):
+        parts.append(f"## {heading}\n\n" + paragraph(topic, "개념 분해 방식으로 보면", f"{heading}가 연결 탐색에서 맡는 책임", "각 단어를 로그와 UI 상태에 연결한다"))
+        if i in (2, 4, 6):
+            parts.append(image_markdown(assets[min(3, i//2)]))
+    ensure_long(parts, topic)
+    return "\n".join(parts)
+
+
+def render_pattern_language(topic: Topic, assets: list[Asset]) -> str:
+    parts = [f"# {clean_title(topic)}\n", f"{topic.excerpt} 여기서는 기능 목록 대신 반복해서 재사용할 수 있는 패턴 언어로 정리한다.\n", image_markdown(assets[0])]
+    patterns = ["상태 머신", "Backpressure", "Idempotency", "Pub/Sub", "Timeout과 Retry", "안티패턴", "적용 체크리스트"]
+    for i, heading in enumerate(patterns):
+        detail = f"{heading}의 맥락·문제·해결·주의점을 한 묶음으로 보는 방식"
+        parts.append(f"## Pattern {i+1}. {heading}\n\n" + paragraph(topic, "패턴 언어에서는", detail, "패턴끼리 충돌하지 않도록 상태와 이벤트 이름을 제한한다"))
+        if i in (1, 3, 5):
+            parts.append(image_markdown(assets[min(3, i//2 + 1)]))
+    ensure_long(parts, topic)
+    return "\n".join(parts)
+
+
+def render_problem_evolution(topic: Topic, assets: list[Asset]) -> str:
+    parts = [f"# {clean_title(topic)}\n", f"{topic.excerpt} 문제는 한 번에 해결되지 않고 운영 피로를 줄이는 방향으로 진화한다.\n", image_markdown(assets[0])]
+    sections = ["들어가며", "Phase 1. 가장 단순한 구현", "Phase 1의 문제점", "Phase 2. 개선안", "Phase 2의 남은 문제", "Phase 3. 운영 가능한 구조", "마치며"]
+    for i, heading in enumerate(sections):
+        parts.append(f"## {heading}\n\n" + paragraph(topic, "진화기 구조에서는", f"{heading}에서 드러나는 불편함", "다음 단계의 자동화 또는 관측성으로 연결한다"))
+        if i in (1, 3, 5):
+            parts.append(image_markdown(assets[min(3, i//2 + 1)]))
+    ensure_long(parts, topic)
+    return "\n".join(parts)
+
+
+def render_failure_catalog(topic: Topic, assets: list[Asset]) -> str:
+    parts = [f"# {clean_title(topic)}\n", f"{topic.excerpt} 성공 흐름보다 실패 흐름을 먼저 모아야 운영 가능한 제품이 된다.\n", image_markdown(assets[0])]
+    sections = ["실패 모드를 먼저 보는 이유", "연결 실패", "느린 수신자", "중복 이벤트", "검증 실패", "Fallback과 UX", "테스트 카탈로그"]
+    for i, heading in enumerate(sections):
+        parts.append(f"## {heading}\n\n" + paragraph(topic, "실패 카탈로그에서는", f"{heading}가 사용자와 운영자에게 보이는 방식", "감지 지표와 회복 행동을 같은 표에 둔다"))
+        if i in (1, 4, 5):
+            parts.append(image_markdown(assets[min(3, i//2 + 1)]))
+    ensure_long(parts, topic)
+    return "\n".join(parts)
+
+
+def render_toy_to_product(topic: Topic, assets: list[Asset]) -> str:
+    parts = [f"# {clean_title(topic)}\n", f"{topic.excerpt} 데모에서는 연결만 보이지만 제품에서는 권한, 실패, 비용, 안내 문구가 함께 보인다.\n", image_markdown(assets[0])]
+    sections = ["데모에서는 쉬웠던 장면", "사용자 환경에서 달라지는 조건", "브라우저 제약", "제품화에 필요한 부품", "운영 체크포인트", "출시 전 검증 목록"]
+    for i, heading in enumerate(sections):
+        parts.append(f"## {heading}\n\n" + paragraph(topic, "데모에서 제품으로 넘어가면", f"{heading} 때문에 달라지는 제약", "출시 전 검증 항목으로 남긴다"))
+        if i in (1, 3, 5):
+            parts.append(image_markdown(assets[min(3, i//2 + 1)]))
+    ensure_long(parts, topic)
+    return "\n".join(parts)
+
+
+TEMPLATES: dict[str, ArticleTemplate] = {
+    "T01": ArticleTemplate("T01", "Problem Evolution Log", render_problem_evolution),
+    "T02": ArticleTemplate("T02", "Foundation Architecture Guide", render_foundation_architecture),
+    "T03": ArticleTemplate("T03", "Decision Matrix Essay", render_decision_matrix),
+    "T04": ArticleTemplate("T04", "Concept Deconstruction", render_concept_deconstruction),
+    "T05": ArticleTemplate("T05", "Build Diary / Implementation Memo", render_build_diary),
+    "T06": ArticleTemplate("T06", "Failure Mode Catalog", render_failure_catalog),
+    "T07": ArticleTemplate("T07", "Pattern Language", render_pattern_language),
+    "T08": ArticleTemplate("T08", "From Toy Demo to Product", render_toy_to_product),
+    "T09": ArticleTemplate("T09", "Layered Mental Model", render_layered_model),
+    "T10": ArticleTemplate("T10", "Case Study + Generalization", render_case_generalization),
+}
+
+
+def pick_by_slug(slug: str, items: list[str], count: int) -> list[str]:
+    seed = int(hashlib.sha256(slug.encode()).hexdigest(), 16)
+    rng = random.Random(seed)
+    return rng.sample(items, count)
+
+
+def write_assets(topic: Topic) -> tuple[str, list[Asset]]:
+    ASSET_DIR.mkdir(parents=True, exist_ok=True)
+    assets: list[Asset] = []
+    for idx, concept_id in enumerate(topic.image_concepts):
+        concept = IMAGE_CONCEPTS[concept_id]
+        suffix = concept.name.lower().replace(" ", "-").replace("/", "-")
+        filename = f"{topic.slug}-{concept_id.lower()}-{suffix}.svg"
+        rel = f"/tistory/p2p-foundations/varied/{filename}"
+        title = f"{clean_title(topic)} · {concept.name}"
+        (ASSET_DIR / filename).write_text(concept.render(topic, title, idx), encoding="utf-8")
+        captions = [
+            f"{concept.name} 형식으로 정리한 이 글의 핵심 판단 지점.",
+            f"본문 중간에서 비용, 실패, 책임 경계를 다시 확인하기 위한 시각 자료.",
+            f"제품 적용 전에 확인해야 할 경로와 위험을 압축한 다이어그램.",
+            f"마지막 의사결정 전에 남겨둘 운영·검증 관점의 요약 그림.",
+        ]
+        assets.append(Asset(concept_id, rel, f"{clean_title(topic)} {concept.name}", captions[idx]))
+    return assets[0].path, assets
+
+
+def post_id_for(slug: str) -> str:
+    return "p2p-foundation-" + slug.replace("2026-06-16-", "").replace("-", "_")[:42]
+
+
+def render_content(topic: Topic, assets: list[Asset]) -> str:
+    template = TEMPLATES[topic.template_id]
+    body = template.render(topic, assets)
+    if len(body) < 10000:
+        raise RuntimeError(f"content too short for {topic.slug}: {len(body)}")
+    return body
+
+
+def section_signature(content: str) -> str:
+    headings = "|".join(re.findall(r"^##\s+(.+)$", content, flags=re.MULTILINE))
+    return hashlib.sha256(headings.encode()).hexdigest()[:12]
+
+
+def repeated_long_sentences(contents: dict[str, str]) -> list[str]:
+    seen: dict[str, str] = {}
+    duplicates: list[str] = []
+    for slug, content in contents.items():
+        sentences = re.split(r"(?<=[.!?。다])\s+|\n+", content)
+        for sentence in sentences:
+            normalized = re.sub(r"\s+", " ", sentence.strip())
+            if len(normalized) < 80:
+                continue
+            digest = hashlib.sha256(normalized.encode()).hexdigest()
+            if digest in seen and seen[digest] != slug:
+                duplicates.append(normalized[:120])
+            else:
+                seen[digest] = slug
+    return duplicates
+
+
+def validate(rendered: dict[str, tuple[Topic, str, list[Asset]]]) -> None:
+    template_ids = [topic.template_id for topic, _, _ in rendered.values()]
+    if len(set(template_ids)) != len(template_ids):
+        raise RuntimeError(f"template_id duplicated: {template_ids}")
+    combos = [tuple(topic.image_concepts) for topic, _, _ in rendered.values()]
+    if len(set(combos)) != len(combos):
+        raise RuntimeError("image concept combo duplicated")
+    signatures: dict[str, str] = {}
+    for slug, (topic, content, assets) in rendered.items():
+        body_images = content.count("![")
+        if len(content) < 10000:
+            raise RuntimeError(f"{slug} under 10000 chars")
+        if not (3 <= body_images <= 4):
+            raise RuntimeError(f"{slug} body image count invalid: {body_images}")
+        sig = section_signature(content)
+        if sig in signatures:
+            raise RuntimeError(f"section signature duplicated: {slug} and {signatures[sig]}")
+        signatures[sig] = slug
+        if len(assets) != 4:
+            raise RuntimeError(f"{slug} needs four assets")
+    duplicates = repeated_long_sentences({slug: content for slug, (_, content, _) in rendered.items()})
+    if duplicates:
+        raise RuntimeError("long repeated sentence found: " + duplicates[0])
+
+
+def upsert_post(conn: sqlite3.Connection, topic: Topic, content: str, featured_image: str) -> None:
+    now = dt.datetime.now(dt.UTC).isoformat(timespec="milliseconds").replace("+00:00", "Z")
+    post_id = post_id_for(topic.slug)
+    reading_time = max(10, round(len(content) / 520))
+    conn.execute(
+        """
+        INSERT INTO Post (id, slug, title, excerpt, content, category, tags, coverColor, featuredImage, status, readingTime, views, authorId, authorName, publishedAt, createdAt, updatedAt)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, 0, ?, ?, ?, ?, ?)
+        ON CONFLICT(slug) DO UPDATE SET
+          title=excluded.title,
+          excerpt=excluded.excerpt,
+          content=excluded.content,
+          category=excluded.category,
+          tags=excluded.tags,
+          coverColor=excluded.coverColor,
+          featuredImage=excluded.featuredImage,
+          status=excluded.status,
+          readingTime=excluded.readingTime,
+          authorId=excluded.authorId,
+          authorName=excluded.authorName,
+          publishedAt=excluded.publishedAt,
+          updatedAt=excluded.updatedAt
+        """,
+        (post_id, topic.slug, topic.title, topic.excerpt, content, CATEGORY, topic.tags, "#7c5f43", featured_image, reading_time, AUTHOR_ID, AUTHOR_NAME, topic.published_at, topic.published_at, now),
+    )
+    actual_post_id = conn.execute("SELECT id FROM Post WHERE slug=?", (topic.slug,)).fetchone()[0]
+    conn.execute(
+        """
+        INSERT INTO PostTaxonomy (id, postId, nodeId, role, sortOrder)
+        VALUES (?, ?, ?, 'primary', 0)
+        ON CONFLICT(postId, nodeId, role) DO UPDATE SET sortOrder=excluded.sortOrder
+        """,
+        (f"pt-{actual_post_id}-{TAXONOMY_ID}", actual_post_id, TAXONOMY_ID),
+    )
+
+
+def main() -> None:
+    db_path = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("db/custom.db")
+    if not db_path.exists():
+        raise SystemExit(f"database not found: {db_path}")
+    rendered: dict[str, tuple[Topic, str, list[Asset]]] = {}
+    featured: dict[str, str] = {}
+    for topic in TOPICS:
+        featured_image, assets = write_assets(topic)
+        content = render_content(topic, assets)
+        rendered[topic.slug] = (topic, content, assets)
+        featured[topic.slug] = featured_image
+    validate(rendered)
+    conn = sqlite3.connect(db_path)
     try:
-        for t in TOPICS: upsert(conn,t,content(t))
-        conn.commit(); rows=conn.execute("SELECT slug,length(content),readingTime,featuredImage FROM Post WHERE slug LIKE '2026-06-16-p2p-%' ORDER BY slug").fetchall()
-    finally: conn.close()
-    for r in rows: print(r)
-if __name__=="__main__": main()
+        conn.execute("PRAGMA foreign_keys=ON")
+        for slug, (topic, content, _) in rendered.items():
+            upsert_post(conn, topic, content, featured[slug])
+        conn.commit()
+        rows = conn.execute(
+            """
+            SELECT slug, length(content), (length(content)-length(replace(content,'![','')))/2 AS body_images,
+                   readingTime, featuredImage
+            FROM Post
+            WHERE slug LIKE '2026-06-16-p2p-%'
+            ORDER BY slug
+            """
+        ).fetchall()
+    finally:
+        conn.close()
+    print("slug | template_id | image_concepts | section_signature | chars | body_images | reading_time | featured")
+    for slug, chars, body_images, reading_time, featured_image in rows:
+        topic = next(topic for topic in TOPICS if topic.slug == slug)
+        sig = section_signature(rendered[slug][1])
+        print(f"{slug} | {topic.template_id} | {','.join(topic.image_concepts)} | {sig} | {chars} | {body_images} | {reading_time} | {featured_image}")
+
+
+if __name__ == "__main__":
+    main()

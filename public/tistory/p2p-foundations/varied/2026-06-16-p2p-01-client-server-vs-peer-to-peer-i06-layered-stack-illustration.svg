@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="840" viewBox="0 0 1400 840" role="img" aria-label="서버-클라이언트와 피어 투 피어는 무엇이 다른가 · Layered Stack Illustration">
+<defs>
+  <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#496a86"/></marker>
+  <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#b8a489" flood-opacity="0.25"/></filter>
+</defs>
+<rect width="1400" height="840" fill="#f7f3ea"/>
+<rect x="46" y="46" width="1308" height="748" rx="34" fill="#fffdf8" stroke="#d8c9b4"/>
+<text x="92" y="112" font-size="32" font-weight="700" fill="#2f2720" font-family="sans-serif">서버-클라이언트와 피어 투 피어는 무엇이 다른가 · Layered Stack I</text>
+<text x="92" y="150" font-size="16" fill="#8a725a" font-family="monospace">I06 Layered Stack Illustration</text>
+<rect x="250" y="245" width="900" height="66" rx="16" fill="#f2efe7" stroke="#b8a489"/><text x="700" y="287" text-anchor="middle" font-size="24" fill="#2f2720" font-family="sans-serif">Layer 5: 데이터면</text><rect x="250" y="327" width="900" height="66" rx="16" fill="#e9f0f5" stroke="#b8a489"/><text x="700" y="369" text-anchor="middle" font-size="24" fill="#2f2720" font-family="sans-serif">Layer 4: 제어면</text><rect x="250" y="409" width="900" height="66" rx="16" fill="#edf4ef" stroke="#b8a489"/><text x="700" y="451" text-anchor="middle" font-size="24" fill="#2f2720" font-family="sans-serif">Layer 3: 피어</text><rect x="250" y="491" width="900" height="66" rx="16" fill="#fff3df" stroke="#b8a489"/><text x="700" y="533" text-anchor="middle" font-size="24" fill="#2f2720" font-family="sans-serif">Layer 2: 서버</text><rect x="250" y="573" width="900" height="66" rx="16" fill="#f7e8e4" stroke="#b8a489"/><text x="700" y="615" text-anchor="middle" font-size="24" fill="#2f2720" font-family="sans-serif">Layer 1: 클라이언트</text><text x="700" y="715" text-anchor="middle" font-size="22" fill="#735f4a" font-family="sans-serif">upper layers decide policy; lower layers carry bytes</text>
+</svg>
