@@ -11,10 +11,10 @@ type ProjectCardProps = {
 }
 
 const RETROSPECTIVE_ARCHIVE_HREFS: Record<RetrospectiveProject, string> = {
-  ponslink: "/writing/category/dev-retrospective/ponslink",
-  ponswarp: "/writing/category/dev-retrospective/ponswarp",
-  "document-automation-suite": "/writing?q=DocuFlow",
-  "ruminate-fatemirror": "/writing?q=Ruminate",
+  ponslink: "/writing?taxonomy=dev-retrospective%2Fponslink",
+  ponswarp: "/writing?taxonomy=dev-retrospective%2Fponswarp",
+  "document-automation-suite": "/writing/projects/dev-retrospective/document-automation",
+  "ruminate-fatemirror": "/writing/projects/dev-retrospective/domain-ai",
   "bible-companion": "/writing?q=Bible",
   "youtube-to-md": "/writing?q=Y2MD",
   "creator-local-tools": "/writing?q=Flucto",

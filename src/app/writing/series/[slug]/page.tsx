@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { ArrowLeft, ArrowRight } from "lucide-react"
-import { getSeriesDetail } from "@/lib/blog-taxonomy"
+import { getSeriesDetail, taxonomyHref } from "@/lib/blog-taxonomy"
 import { formatReadingTime } from "@/lib/reading-time"
 import { pageMetadata } from "@/lib/seo"
 
@@ -36,8 +36,8 @@ export default async function WritingSeriesPage({ params }: PageProps) {
             <ArrowLeft className="h-4 w-4" />
             Writing archive
           </Link>
-          <Link href={`/writing/category/dev-retrospective/${series.projectSlug}`} className="text-sm text-clay hover:underline">
-            Project category
+          <Link href={taxonomyHref(`dev-retrospective/${series.projectSlug}`)} className="text-sm text-clay hover:underline">
+            Project archive
           </Link>
         </nav>
       </header>

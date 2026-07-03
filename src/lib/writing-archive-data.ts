@@ -1,4 +1,4 @@
-import { getPostIdsForTaxonomySlug, getTaxonomyPath, getTaxonomyTree, type TaxonomyBreadcrumb } from "@/lib/blog-taxonomy"
+import { getPostIdsForTaxonomySlug, getPostIdsForTaxonomySlugs, getTaxonomyPath, getTaxonomyTree, type TaxonomyBreadcrumb } from "@/lib/blog-taxonomy"
 import { normalizeArchiveFilter, type ArchiveFilter } from "@/lib/archive-filter"
 import { getArchiveSeriesMetadataForPosts } from "@/lib/archive-series-metadata"
 import { decorateArchivePosts, postSelect, type PostWhereInput } from "@/lib/archive-post-decoration"
@@ -21,15 +21,24 @@ export type ArchiveData = {
   readonly taxonomyPath: readonly TaxonomyBreadcrumb[]
 }
 
+export type ArchiveDataScope = {
+  readonly rootSlugs?: readonly string[]
+}
+
+
 function countedLabels(counts: ReadonlyMap<string, number>): readonly CountedLabel[] {
   return [...counts.entries()]
     .map(([name, count]) => ({ name, count }))
     .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
 }
 
-export async function getArchiveData(inputFilter: ArchiveFilter): Promise<ArchiveData> {
+export async function getArchiveData(inputFilter: ArchiveFilter, scope: ArchiveDataScope = {}): Promise<ArchiveData> {
   const filter = normalizeArchiveFilter(inputFilter)
-  const publishedWhere = { status: "published" as const }
+  const scopedPostIds = scope.rootSlugs?.length ? await getPostIdsForTaxonomySlugs(scope.rootSlugs) : null
+  const publishedWhere: PostWhereInput = {
+    status: "published",
+    ...(scopedPostIds ? { id: { in: [...scopedPostIds] } } : {}),
+  }
   const taxonomyPosts = await db.post.findMany({
     where: publishedWhere,
     select: { category: true, tags: true },
@@ -42,11 +51,16 @@ export async function getArchiveData(inputFilter: ArchiveFilter): Promise<Archiv
     for (const item of splitTags(post.tags)) tagCounts.set(item, (tagCounts.get(item) ?? 0) + 1)
   }
 
-  const taxonomyPostIds = filter.taxonomy ? await getPostIdsForTaxonomySlug(filter.taxonomy) : null
+  const taxonomyPostIds = filter.taxonomy ? new Set(await getPostIdsForTaxonomySlug(filter.taxonomy)) : null
+  const scopedAndFilteredIds = taxonomyPostIds
+    ? [...taxonomyPostIds].filter((id) => !scopedPostIds || scopedPostIds.has(id))
+    : scopedPostIds
+      ? [...scopedPostIds]
+      : null
   const where: PostWhereInput = {
     status: "published",
     ...(filter.category ? { category: filter.category } : {}),
-    ...(taxonomyPostIds ? { id: { in: [...taxonomyPostIds] } } : {}),
+    ...(scopedAndFilteredIds ? { id: { in: scopedAndFilteredIds } } : {}),
     ...(filter.q
       ? {
           OR: [
@@ -72,7 +86,7 @@ export async function getArchiveData(inputFilter: ArchiveFilter): Promise<Archiv
     totalPublished: taxonomyPosts.length,
     categories: countedLabels(categoryCounts),
     tags: countedLabels(tagCounts).slice(0, 12),
-    taxonomyTree: await getTaxonomyTree(),
+    taxonomyTree: await getTaxonomyTree(scope.rootSlugs),
     taxonomyPath: filter.taxonomy ? await getTaxonomyPath(filter.taxonomy) : [],
   }
 }

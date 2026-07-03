@@ -8,6 +8,7 @@ import { TaxonomyTreeFilter } from "@/components/site/taxonomy-tree-filter"
 import { TagShowMoreButton } from "@/components/site/tag-show-more-button"
 import { getArchiveData } from "@/lib/writing-archive-data"
 import { archiveFilterCanonicalHref, normalizeArchiveFilter } from "@/lib/archive-filter"
+import { coreWritingProjectSlugs, isCoreWritingProjectSlug, projectWritingHref } from "@/lib/blog-taxonomy"
 import {
   archiveHref,
   archiveViews,
@@ -53,8 +54,9 @@ export default async function WritingPage({ searchParams }: PageProps) {
   if (canonicalHref) redirect(canonicalHref)
 
   const filter = normalizeArchiveFilter({ category, taxonomy, tag, q })
+  if (filter.taxonomy && !isCoreWritingProjectSlug(filter.taxonomy)) redirect(projectWritingHref(filter.taxonomy))
   const viewLabel = archiveViews.find((option) => option.id === view)?.label ?? "Board"
-  const { posts, tags, totalPublished, taxonomyTree, taxonomyPath } = await getArchiveData(filter)
+  const { posts, tags, totalPublished, taxonomyTree, taxonomyPath } = await getArchiveData(filter, { rootSlugs: coreWritingProjectSlugs })
   const hasFilter = Boolean(filter.category || filter.taxonomy || filter.tag || filter.q)
   const timelineGroups: Array<{ month: string; posts: ArchivePost[] }> = []
 
@@ -76,35 +78,43 @@ export default async function WritingPage({ searchParams }: PageProps) {
             <ArrowLeft className="h-4 w-4" />
             Pons home
           </Link>
-          <Link href="/work" className="text-sm text-clay hover:underline">
-            Selected work
-          </Link>
+          <div className="flex items-center gap-4 text-sm">
+            <Link href="/writing/projects" className="text-muted-foreground transition-colors hover:text-foreground">
+              Project pages
+            </Link>
+            <Link href="/work" className="text-clay hover:underline">
+              Selected work
+            </Link>
+          </div>
         </nav>
       </header>
 
       <section className="mx-auto max-w-6xl px-5 pb-10 pt-16 md:px-8 md:pb-14 md:pt-24">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-end">
           <div>
-            <span className="label-tracked text-muted-foreground">P o n s  F i e l d  N o t e s</span>
+            <span className="label-tracked text-muted-foreground">P o n s L i n k  /  P o n s W a r p</span>
             <h1 className="mt-6 max-w-5xl font-serif-display text-5xl leading-[0.95] tracking-tight md:text-7xl">
-              만들고, 고치고,
+              연결과 전송을
               <br />
-              <span className="italic text-clay">다시 굴린 기록.</span>
+              <span className="italic text-clay">계속 고친 기록.</span>
             </h1>
             <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-              PonsLink, 문서 자동화, 도메인 AI, 로컬 도구를 만들며 남긴 선택과 실패, 운영 메모를 모았습니다. 기술 이름보다 왜 그렇게 만들었는지,
-              어디서 막혔는지, 다음에는 무엇을 고쳤는지부터 읽을 수 있게 정리합니다.
+              이 메인 아카이브에는 PonsLink와 PonsWarp를 만들며 남긴 핵심 회고만 남겼습니다. 문서 자동화, 도메인 AI, 로컬 도구 같은 다른 글은
+              별도 프로젝트 페이지에서 맥락별로 볼 수 있습니다.
             </p>
           </div>
           <div className="rounded-3xl border border-border bg-background/75 p-5 text-sm text-muted-foreground shadow-sm">
             <p className="label-tracked-sm text-muted-foreground">작업 노트</p>
             <p className="mt-3 font-serif-display text-4xl leading-none text-foreground">{totalPublished}</p>
-            <p className="mt-1">공개된 기록</p>
+            <p className="mt-1">PonsLink / PonsWarp 기록</p>
             <div className="mt-6 space-y-3 border-t border-border pt-4">
               <p>문제를 발견하고</p>
               <p>흐름을 설계하고</p>
               <p>운영하며 고칩니다.</p>
             </div>
+            <Link href="/writing/projects" className="inline-flex text-clay hover:underline">
+              다른 프로젝트 글 보기
+            </Link>
           </div>
         </div>
       </section>
@@ -161,7 +171,7 @@ export default async function WritingPage({ searchParams }: PageProps) {
         <div className="mb-5 flex flex-col gap-4 text-sm text-muted-foreground lg:flex-row lg:items-end lg:justify-between">
           <div className="space-y-3">
             <p>
-              {hasFilter ? "Filtered archive" : "All writing"} · {posts.length} post{posts.length === 1 ? "" : "s"} · view: <span className="text-foreground">{viewLabel}</span>
+              {hasFilter ? "Filtered core archive" : "PonsLink / PonsWarp archive"} · {posts.length} post{posts.length === 1 ? "" : "s"} · view: <span className="text-foreground">{viewLabel}</span>
               {taxonomyPath.length ? <span> · taxonomy: <span className="text-foreground">{taxonomyPath.map((item) => item.name).join(" > ")}</span></span> : null}
               {filter.category ? <span> · legacy category: <span className="text-foreground">{filter.category}</span></span> : null}
               {filter.tag ? <span> · tag: <span className="text-foreground">#{filter.tag}</span></span> : null}

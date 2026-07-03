@@ -1,14 +1,7 @@
 import type { Metadata } from "next"
-import Link from "next/link"
-import { ArrowLeft } from "lucide-react"
-import { getPostIdsForTaxonomySlug, getTaxonomyNode, getTaxonomyPath } from "@/lib/blog-taxonomy"
-import { getArchiveSeriesMetadataForPosts } from "@/lib/archive-series-metadata"
-import { decorateArchivePosts, postSelect } from "@/lib/archive-post-decoration"
-import { db } from "@/lib/db"
+import { notFound, redirect } from "next/navigation"
+import { getTaxonomyNode, taxonomyHref } from "@/lib/blog-taxonomy"
 import { pageMetadata } from "@/lib/seo"
-import { WritingArchiveList } from "@/components/site/writing-archive-list"
-import { archiveHref, monthFormatter, type ArchivePost, type TimelineGroup } from "@/components/site/writing-archive-utils"
-import { notFound } from "next/navigation"
 
 export const dynamic = "force-dynamic"
 
@@ -20,17 +13,6 @@ function taxonomySlug(parts: readonly string[]): string {
   return parts.map((part) => decodeURIComponent(part)).join("/")
 }
 
-function timelineGroupsFor(posts: readonly ArchivePost[]): readonly TimelineGroup[] {
-  const groups: TimelineGroup[] = []
-  for (const post of posts) {
-    const month = monthFormatter.format(post.publishedAt)
-    const active = groups[groups.length - 1]
-    if (active?.month === month) active.posts.push(post)
-    else groups.push({ month, posts: [post] })
-  }
-  return groups
-}
-
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
   const path = taxonomySlug(slug)
@@ -39,60 +21,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return pageMetadata({
     title: `${node.name} 글`,
     description: node.description || `${node.name}에 속한 개발 회고 글 모음.`,
-    path: `/writing/category/${path}`,
+    path: taxonomyHref(path),
   })
 }
 
-export default async function WritingCategoryPage({ params }: PageProps) {
+export default async function WritingCategoryRedirectPage({ params }: PageProps) {
   const { slug } = await params
   const path = taxonomySlug(slug)
-  const [node, breadcrumbs, postIds] = await Promise.all([
-    getTaxonomyNode(path),
-    getTaxonomyPath(path),
-    getPostIdsForTaxonomySlug(path),
-  ])
+  const node = await getTaxonomyNode(path)
   if (!node) notFound()
 
-  const postRecords = await db.post.findMany({
-    where: { status: "published", id: { in: [...postIds] } },
-    orderBy: [{ publishedAt: "desc" }, { id: "desc" }],
-    select: postSelect,
-  })
-  const decoratedPosts = await decorateArchivePosts(postRecords)
-  const seriesByPost = await getArchiveSeriesMetadataForPosts(decoratedPosts.map((post) => post.id))
-  const posts = decoratedPosts.map((post) => ({ ...post, ...seriesByPost.get(post.id) }))
-
-  return (
-    <main className="min-h-screen bg-background paper-grain">
-      <header className="border-b border-border/60 bg-background/80 backdrop-blur-md">
-        <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
-          <Link href="/writing" className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground">
-            <ArrowLeft className="h-4 w-4" />
-            Writing archive
-          </Link>
-          <Link href={archiveHref({ taxonomy: path })} className="text-sm text-clay hover:underline">
-            Query view
-          </Link>
-        </nav>
-      </header>
-
-      <section className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
-        <div className="flex flex-wrap gap-2 text-xs text-muted-foreground">
-          {breadcrumbs.map((item, index) => (
-            <span key={item.slug} className="inline-flex items-center gap-2">
-              {index > 0 ? <span className="text-border">/</span> : null}
-              <Link href={item.href} className="hover:text-foreground hover:underline">{item.name}</Link>
-            </span>
-          ))}
-        </div>
-        <h1 className="mt-5 font-serif-display text-5xl leading-tight md:text-7xl">{node.name}</h1>
-        <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted-foreground">{node.description}</p>
-        <p className="mt-4 text-sm text-muted-foreground">{posts.length}편의 글</p>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-5 pb-16 md:px-8">
-        <WritingArchiveList posts={posts} timelineGroups={[...timelineGroupsFor(posts)]} view="board" />
-      </section>
-    </main>
-  )
+  redirect(taxonomyHref(path))
 }

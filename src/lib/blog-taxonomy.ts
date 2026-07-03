@@ -54,6 +54,18 @@ export type ArticleTaxonomyContext = {
   readonly series: ArticleSeriesNavigation | null
 }
 
+export const coreWritingProjectSlugs = ["dev-retrospective/ponslink", "dev-retrospective/ponswarp"] as const
+
+export type WritingProjectHub = {
+  readonly slug: string
+  readonly name: string
+  readonly kind: string
+  readonly description: string
+  readonly count: number
+  readonly href: string
+}
+
+
 type TaxonomyRecord = {
   readonly id: string
   readonly slug: string
@@ -76,8 +88,21 @@ const POST_SELECT = {
   updatedAt: true,
 } as const
 
-function taxonomyHref(slug: string): string {
-  return `/writing/category/${slug}`
+const projectIndexTaxonomySlugs = new Set(["dev-retrospective", "operation-note", "release-note"])
+
+export function taxonomyHref(slug: string): string {
+  if (projectIndexTaxonomySlugs.has(slug)) return "/writing/projects"
+  return isCoreWritingProjectSlug(slug)
+    ? `/writing?taxonomy=${encodeURIComponent(slug)}`
+    : projectWritingHref(slug)
+}
+
+export function projectWritingHref(slug: string): string {
+  return `/writing/projects/${slug.split("/").map(encodeURIComponent).join("/")}`
+}
+
+export function isCoreWritingProjectSlug(slug: string): boolean {
+  return coreWritingProjectSlugs.some((coreSlug) => slug === coreSlug || slug.startsWith(`${coreSlug}/`))
 }
 
 function seriesHref(slug: string): string {
@@ -148,7 +173,7 @@ async function taxonomyRecords(): Promise<readonly TaxonomyRecord[]> {
   return db.taxonomyNode.findMany({ orderBy: [{ sortOrder: "asc" }, { name: "asc" }] })
 }
 
-export async function getTaxonomyTree(): Promise<readonly TaxonomyTreeNode[]> {
+export async function getTaxonomyTree(rootSlugs?: readonly string[]): Promise<readonly TaxonomyTreeNode[]> {
   const [nodes, groupedCounts] = await Promise.all([
     taxonomyRecords(),
     db.postTaxonomy.groupBy({
@@ -159,7 +184,12 @@ export async function getTaxonomyTree(): Promise<readonly TaxonomyTreeNode[]> {
   ])
   const countsByNodeId = new Map<string, number>()
   for (const item of groupedCounts) countsByNodeId.set(item.nodeId, item._count._all)
-  return childRecords(nodes, null).map((node) => buildTreeNode(nodes, countsByNodeId, node))
+  const roots = rootSlugs?.length
+    ? rootSlugs
+        .map((slug) => nodes.find((node) => node.slug === slug))
+        .filter((node): node is TaxonomyRecord => Boolean(node))
+    : childRecords(nodes, null)
+  return roots.map((node) => buildTreeNode(nodes, countsByNodeId, node))
 }
 
 export async function getTaxonomyNode(slug: string): Promise<TaxonomyRecord | null> {
@@ -176,6 +206,59 @@ export async function getPostIdsForTaxonomySlug(slug: string): Promise<readonly 
     select: { postId: true },
   })
   return mappings.map((mapping) => mapping.postId)
+}
+
+export async function getPostIdsForTaxonomySlugs(slugs: readonly string[]): Promise<ReadonlySet<string>> {
+  const ids = await Promise.all(slugs.map((slug) => getPostIdsForTaxonomySlug(slug)))
+  return new Set(ids.flat())
+}
+
+export async function getWritingProjectHubs(): Promise<readonly WritingProjectHub[]> {
+  const [nodes, directCounts, primaryMappings] = await Promise.all([
+    taxonomyRecords(),
+    db.postTaxonomy.groupBy({
+      by: ["nodeId"],
+      where: { role: "primary", post: { status: "published" } },
+      _count: { _all: true },
+    }),
+    db.postTaxonomy.findMany({
+      where: { role: "primary", post: { status: "published" } },
+      select: { nodeId: true, postId: true },
+    }),
+  ])
+  const nodesById = new Map(nodes.map((node) => [node.id, node]))
+  const directCountsBySlug = new Map(
+    directCounts.map((item) => [nodesById.get(item.nodeId)?.slug, item._count._all] as const).filter((item): item is readonly [string, number] => Boolean(item[0]))
+  )
+  const postIdsByNodeId = new Map<string, Set<string>>()
+  for (const mapping of primaryMappings) {
+    const ids = postIdsByNodeId.get(mapping.nodeId) ?? new Set<string>()
+    ids.add(mapping.postId)
+    postIdsByNodeId.set(mapping.nodeId, ids)
+  }
+  const countsBySlug = new Map(
+    nodes.map((node) => {
+      const postIds = new Set<string>()
+      for (const id of descendantIds(nodes, node)) {
+        for (const postId of postIdsByNodeId.get(id) ?? []) postIds.add(postId)
+      }
+      return [node.slug, postIds.size] as const
+    })
+  )
+
+  return nodes
+    .filter((node) => !isCoreWritingProjectSlug(node.slug))
+    .filter((node) => node.kind === "project" || (node.kind === "category" && (directCountsBySlug.get(node.slug) ?? 0) > 0))
+    .map((node) => ({
+      slug: node.slug,
+      name: node.name,
+      kind: node.kind,
+      description: node.description,
+      count: countsBySlug.get(node.slug) ?? 0,
+      href: projectWritingHref(node.slug),
+    }))
+    .filter((node) => node.count > 0)
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
 }
 
 export async function getTaxonomyPath(slug: string): Promise<readonly TaxonomyBreadcrumb[]> {

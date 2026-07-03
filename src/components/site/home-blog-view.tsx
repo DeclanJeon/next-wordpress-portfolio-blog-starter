@@ -89,15 +89,23 @@ export function HomeBlogView() {
               글 목록은 메인이 아니라 archive에서 탐색한다.
             </h2>
             <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
-              홈은 포트폴리오와 방향성을 설명하고, 실제 블로그 글·카테고리·태그 탐색은 `/writing`에서 처리한다.
+              `/writing`은 PonsLink와 PonsWarp 중심의 핵심 기록으로 좁히고, 나머지 글은 `/writing/projects`에서 프로젝트별로 탐색한다.
             </p>
           </div>
-          <Link
-            href="/writing"
-            className="inline-flex h-11 items-center justify-center rounded-full bg-foreground px-5 text-sm text-background transition-transform hover:-translate-y-0.5 md:self-end"
-          >
-            전체 글 보러가기
-          </Link>
+          <div className="flex flex-col gap-2 md:self-end">
+            <Link
+              href="/writing"
+              className="inline-flex h-11 items-center justify-center rounded-full bg-foreground px-5 text-sm text-background transition-transform hover:-translate-y-0.5"
+            >
+              핵심 글 보러가기
+            </Link>
+            <Link
+              href="/writing/projects"
+              className="inline-flex h-11 items-center justify-center rounded-full border border-border px-5 text-sm text-muted-foreground transition-colors hover:border-foreground/40 hover:text-foreground"
+            >
+              프로젝트별 글 보기
+            </Link>
+          </div>
         </div>
       </section>
     </motion.div>
