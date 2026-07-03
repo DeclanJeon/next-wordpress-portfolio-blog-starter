@@ -49,7 +49,7 @@ curl -fsSL https://raw.githubusercontent.com/DeclanJeon/next-wordpress-portfolio
   | sudo bash -s -- \
     --domain blog.example.com \
     --email admin@example.com \
-    --site-name "My Field Notes" \
+    --site-name "My Portfolio Blog" \
     --admin-user admin \
     --yes
 ```
@@ -64,7 +64,7 @@ curl -fsSL https://raw.githubusercontent.com/DeclanJeon/next-wordpress-portfolio
     --dry-run \
     --domain blog.example.com \
     --email admin@example.com \
-    --site-name "My Field Notes"
+    --site-name "My Portfolio Blog"
 ```
 
 ### 🔒 로컬/테스트 환경에서 TLS 생략
@@ -112,7 +112,7 @@ curl -fsSL https://raw.githubusercontent.com/DeclanJeon/next-wordpress-portfolio
 |---|---:|---|
 | `--domain` | `example.com` | 공개 도메인. 실운영에서는 반드시 변경하세요. |
 | `--email` | `admin@example.com` | Certbot 및 WordPress 관리자 이메일 |
-| `--site-name` | `Field Notes` | 사이트 이름 |
+| `--site-name` | `Portfolio Blog` | 사이트 이름 |
 | `--admin-user` | `admin` | WordPress 및 Next 로컬 관리자 ID |
 | `--admin-password` | generated | 미지정 시 자동 생성 |
 | `--db-password` | generated | WordPress DB 비밀번호. 미지정 시 자동 생성 |

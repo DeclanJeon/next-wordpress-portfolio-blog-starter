@@ -18,8 +18,8 @@ export function envContent(ctx: SetupContext): string {
   return renderTemplate("env.production", {
     siteUrl: `https://${ctx.domain}`,
     siteName: systemdEnvValue(ctx.siteName),
-    siteTitle: systemdEnvValue(`${ctx.siteName} — Portfolio Blog`),
-    siteDescription: systemdEnvValue(`${ctx.siteName}에 기록한 제품 회고, 구현 노트, 운영 문서 모음.`),
+    siteTitle: systemdEnvValue(`${ctx.siteName} — Work and writing`),
+    siteDescription: systemdEnvValue(`${ctx.siteName}에 기록한 개발 포트폴리오, 기술 블로그, 제품 회고, 구현 노트 모음.`),
     siteAuthor: systemdEnvValue(ctx.adminUser),
     organizationName: systemdEnvValue(ctx.siteName),
     databaseUrl: `file:${ctx.sqlitePath}`,

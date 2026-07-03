@@ -52,7 +52,7 @@ export function parseArgs(argv: readonly string[]): SetupOptions {
     command,
     domain: readOption(args, "--domain") ?? "example.com",
     email: readOption(args, "--email") ?? "admin@example.com",
-    siteName: readOption(args, "--site-name") ?? "Field Notes",
+    siteName: readOption(args, "--site-name") ?? "Portfolio Blog",
     adminUser: readOption(args, "--admin-user") ?? "admin",
     adminPassword: readOption(args, "--admin-password"),
     installDir: readOption(args, "--install-dir") ?? "/opt/next-wordpress-blog",

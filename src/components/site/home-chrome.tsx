@@ -25,7 +25,7 @@ export function HomeHeader({
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-background">
             <span className="font-serif-display text-lg italic">p</span>
           </span>
-          <span className="font-serif-display text-xl tracking-tight">Pons</span>
+          <span className="font-serif-display text-xl tracking-tight">Portfolio Blog</span>
         </button>
 
         <div className="flex items-center gap-2 md:gap-4">
@@ -63,8 +63,8 @@ export function HomeFooter() {
   return (
     <footer className="border-t border-border">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-5 py-8 text-xs text-muted-foreground md:flex-row md:px-8">
-        <span>© {new Date().getFullYear()} PonsLink. Bridges, not walls.</span>
-        <span className="label-tracked-sm">Made for writers</span>
+        <span>© {new Date().getFullYear()} Portfolio Blog. Work and writing.</span>
+        <span className="label-tracked-sm">Portfolio · Blog</span>
       </div>
     </footer>
   )

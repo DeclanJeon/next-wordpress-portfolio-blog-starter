@@ -22,7 +22,7 @@ export function HomeBlogView() {
         <div>
           <Reveal>
             <span className="label-tracked text-muted-foreground">
-              P&nbsp;o&nbsp;n&nbsp;s&nbsp;&nbsp;L&nbsp;a&nbsp;b
+              P&nbsp;o&nbsp;r&nbsp;t&nbsp;f&nbsp;o&nbsp;l&nbsp;i&nbsp;o&nbsp;&nbsp;B&nbsp;l&nbsp;o&nbsp;g
             </span>
           </Reveal>
           <Reveal delay={0.05}>
@@ -34,7 +34,7 @@ export function HomeBlogView() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-              메인에는 PonsLink와 PonsWarp만 남겼습니다. 연결을 세션으로 바꾸는 흐름, 서버가 파일을 갖지 않는 전송 흐름을 중심으로 제품 선택과 운영 실패를 기록합니다. 그 외 번외 프로젝트는 별도 페이지로 분리했습니다.
+              개발 포트폴리오와 기술 블로그를 한 화면에 묶었습니다. PonsLink와 PonsWarp의 제품 선택, WebRTC 직접 전송 실험, 운영 실패와 수정 과정을 글과 작업물로 함께 정리합니다.
             </p>
           </Reveal>
           <Reveal delay={0.15}>

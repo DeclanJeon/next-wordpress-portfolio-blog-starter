@@ -6,7 +6,7 @@
   <rect width="1200" height="630" rx="42" fill="url(#bg)"/>
   <rect width="1200" height="630" rx="42" fill="url(#glow)"/>
   <path d="M0 535 C240 470 355 620 590 548 C790 486 929 435 1200 510 L1200 630 L0 630 Z" fill="rgba(0,0,0,0.18)"/>
-  <text x="72" y="96" font-size="24" fill="rgba(255,255,255,0.72)" font-family="Inter, Arial, sans-serif">Pons Field Notes · Main Services 03</text>
+  <text x="72" y="96" font-size="24" fill="rgba(255,255,255,0.72)" font-family="Inter, Arial, sans-serif">Portfolio Blog · Main Services 03</text>
   <text x="72" y="168" font-size="56" font-weight="800" fill="#fff" font-family="Inter, Arial, sans-serif">Resync matters</text>
   <text x="72" y="220" font-size="28" fill="rgba(255,255,255,0.82)" font-family="Inter, Arial, sans-serif">끊김 이후에도 같은 방으로 돌아와야 했다</text>
   <path d="M 193 300 C 253 220, 232 535, 292 455" fill="none" stroke="rgba(255,255,255,0.38)" stroke-width="4" stroke-linecap="round"/>

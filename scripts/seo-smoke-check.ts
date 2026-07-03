@@ -23,7 +23,7 @@ function withCacheBust(path: string): string {
 async function fetchText(path: string): Promise<string> {
   const response = await fetch(withCacheBust(path), {
     headers: {
-      "user-agent": "PonsLink SEO smoke check (+https://blog.ponslink.com)",
+      "user-agent": "Portfolio Blog SEO smoke check (+https://blog.ponslink.com)",
       accept: "text/html,application/xml,text/plain;q=0.9,*/*;q=0.8",
     },
   })
@@ -51,16 +51,22 @@ function titleOf(html: string): string {
 
 const checks: Check[] = [
   {
-    name: "home metadata targets PonsLink and PonsWarp",
+    name: "home metadata presents Portfolio Blog brand",
     async run() {
       const html = await fetchText("/")
-      assertIncludes(titleOf(html), "PonsLink / PonsWarp", "home title")
-      assertIncludes(html, "PonsLink와 PonsWarp를 중심으로", "home description")
+      const title = titleOf(html)
+      assertIncludes(title, "Portfolio Blog", "home title brand")
+      assertIncludes(title, "PonsLink / PonsWarp", "home title topics")
+      assertIncludes(html, "개발 포트폴리오이자 기술 블로그", "home description brand")
+      assertIncludes(html, "Portfolio Blog", "home visible brand")
       assertIncludes(html, "PonsWarp", "home body")
       assertIncludes(html, "WebRTC", "home body")
       assertIncludes(html, "href=\"/writing\"", "home writing link")
       assertIncludes(html, "href=\"/writing/projects\"", "home project link")
       assertIncludes(html, "href=\"/work\"", "home work link")
+      assertNotIncludes(html, "Pons Field Notes", "home stale brand")
+      assertNotIncludes(html, "Pons Lab", "home stale lab brand")
+      assertNotIncludes(html, "Pons Notes", "home stale manifest brand")
       assertNotIncludes(html, "PonsLink는 WordPress, 자동화, SEO, AI 도구", "home stale Google snippet")
       assertNotIncludes(html, "아직 연결된 회고가 없다", "home retrospective fallback")
       assertNotIncludes(html, "전체 <!-- -->0<!-- -->편", "home PonsWarp retrospective count")
@@ -71,6 +77,7 @@ const checks: Check[] = [
     name: "writing archive exposes structured index",
     async run() {
       const html = await fetchText("/writing")
+      assertIncludes(titleOf(html), "Portfolio Blog", "writing title brand")
       assertIncludes(titleOf(html), "PonsLink / PonsWarp 글 아카이브", "writing title")
       assertIncludes(html, "application/ld+json", "writing JSON-LD")
       assertIncludes(html, "CollectionPage", "writing collection schema")

@@ -103,7 +103,7 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
   },
   other: {
-    "ai-content-declaration": "human-authored product and engineering field notes with implementation evidence",
+    "ai-content-declaration": "human-authored developer portfolio and technical blog with implementation evidence",
     "answer-engine-summary": SITE_DESCRIPTION,
     "content-language": "ko-KR",
     "profile-image": absoluteUrl(PROFILE_IMAGE),

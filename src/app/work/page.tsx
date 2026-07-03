@@ -17,7 +17,7 @@ export default function WorkPage() {
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
           <Link href="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground">
             <ArrowLeft className="h-4 w-4" />
-            Pons home
+            Portfolio Blog
           </Link>
           <Link href="/writing" className="text-sm text-clay hover:underline">
             Writing notes

@@ -16,17 +16,19 @@ function envList(name: string, fallback: readonly string[]): readonly string[] {
 }
 
 export const SITE_URL = "https://blog.ponslink.com"
-export const SITE_NAME = "Pons Field Notes"
-export const SITE_TITLE = "PonsLink / PonsWarp — Field Notes"
-export const SITE_DESCRIPTION = env(
-  "NEXT_PUBLIC_SITE_DESCRIPTION",
-  "PonsLink와 PonsWarp를 중심으로 연결, WebRTC, 브라우저 직접 파일 전송, 제품 운영 회고를 정리하는 한국어 기술 블로그.",
-)
+export const SITE_NAME = "Portfolio Blog"
+export const SITE_TITLE = "Portfolio Blog — PonsLink / PonsWarp 작업 기록"
+export const SITE_DESCRIPTION =
+  "Declan Jeon의 개발 포트폴리오이자 기술 블로그. PonsLink와 PonsWarp를 중심으로 WebRTC, 브라우저 직접 파일 전송, 제품 운영 회고를 정리합니다."
 export const SITE_LOCALE = env("NEXT_PUBLIC_SITE_LOCALE", "ko_KR")
 export const SITE_AUTHOR = env("NEXT_PUBLIC_SITE_AUTHOR", "Declan Jeon")
-export const ORGANIZATION_NAME = env("NEXT_PUBLIC_ORGANIZATION_NAME", "Pons Lab")
+export const ORGANIZATION_NAME = "Declan Jeon Portfolio"
 export const SITE_SAME_AS = envList("NEXT_PUBLIC_SITE_SAME_AS", [])
-export const SITE_TOPICS = envList("NEXT_PUBLIC_SITE_TOPICS", [
+export const SITE_TOPICS = [
+  "Portfolio",
+  "Blog",
+  "Developer portfolio",
+  "Technical blog",
   "PonsLink",
   "PonsWarp",
   "WebRTC",
@@ -34,7 +36,7 @@ export const SITE_TOPICS = envList("NEXT_PUBLIC_SITE_TOPICS", [
   "Browser direct transfer",
   "Product retrospectives",
   "Technical writing",
-])
+] as const
 export const DEFAULT_OG_IMAGE = env("NEXT_PUBLIC_OG_IMAGE", "/brand/profileforge-og.webp")
 export const DEFAULT_TWITTER_IMAGE = env("NEXT_PUBLIC_TWITTER_IMAGE", "/brand/profileforge-twitter.webp")
 export const SQUARE_IMAGE = env("NEXT_PUBLIC_SQUARE_IMAGE", "/brand/profileforge-square.png")
