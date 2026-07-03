@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { ArrowLeft, ArrowUpRight, Eye } from "lucide-react"
 import ReactMarkdown from "react-markdown"
+import remarkGfm from "remark-gfm"
 import { formatReadingTime } from "@/lib/reading-time"
 import { ArticleBottomNavigation, LeftArticleRail, RightArticleRail } from "@/components/site/article-navigation"
 import type { ArticleNavigation, Post } from "@/lib/types"
@@ -125,7 +126,7 @@ export function PostArticle({
         <div className="mt-10 h-px w-full bg-border" />
 
         <div className="prose-editorial mt-10">
-          <ReactMarkdown>{post.content}</ReactMarkdown>
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
         </div>
 
         <ArticleBottomNavigation navigation={navigation} />
