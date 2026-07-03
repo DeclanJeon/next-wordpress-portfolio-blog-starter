@@ -5,10 +5,8 @@ import { PortfolioShowcase } from "@/components/site/portfolio-showcase"
 import { Reveal } from "@/components/site/reveal"
 
 const heroWorkMap = [
-  { label: "연결", projects: "PonsLink / PonsWarp" },
-  { label: "문서", projects: "DocuFlow / PDF마스터" },
-  { label: "해석", projects: "Ruminate / 명경" },
-  { label: "도구", projects: "Local tools / Agent workflow" },
+  { label: "PonsLink", projects: "연결을 세션으로 바꾸는 요청 흐름" },
+  { label: "PonsWarp", projects: "서버 저장 없이 직접 전송하는 파일 흐름" },
 ] as const
 
 export function HomeBlogView() {
@@ -36,7 +34,7 @@ export function HomeBlogView() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-              연락이 끊기는 순간, 문서 작업이 반복되는 순간, AI가 너무 쉽게 단정하는 순간을 작은 서비스로 다시 설계합니다. PonsLink, 문서 자동화, 도메인 AI, 로컬 도구를 만들고 운영하며 남긴 선택과 실패를 기록합니다.
+              메인에는 PonsLink와 PonsWarp만 남겼습니다. 연결을 세션으로 바꾸는 흐름, 서버가 파일을 갖지 않는 전송 흐름을 중심으로 제품 선택과 운영 실패를 기록합니다. 문서 자동화와 도메인 AI 같은 번외 프로젝트는 별도 페이지로 분리했습니다.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
@@ -57,7 +55,7 @@ export function HomeBlogView() {
             <div className="relative overflow-hidden rounded-[1.5rem] bg-background">
               <Image
                 src="/brand/profileforge-header.webp"
-                alt="PonsLink와 운영형 도구를 만드는 개발자 프로필 일러스트"
+                alt="PonsLink와 PonsWarp를 중심으로 작업을 정리하는 개발자 프로필 일러스트"
                 width={256}
                 height={256}
                 className="aspect-square w-full object-cover"

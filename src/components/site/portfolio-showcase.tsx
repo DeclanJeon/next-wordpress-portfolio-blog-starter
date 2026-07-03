@@ -53,16 +53,16 @@ function SignatureSystems() {
 function WorkArchive({ compact = false }: { compact?: boolean }) {
   const [filter, setFilter] = React.useState<"All" | PortfolioCategory>("All")
   const visible = React.useMemo(
-    () => portfolioProjects.filter((project) => filter === "All" || project.category === filter),
-    [filter]
+    () => portfolioProjects.filter((project) => compact ? project.tier === "primary" : filter === "All" || project.category === filter),
+    [compact, filter]
   )
   const primaryProjects = React.useMemo(
     () => visible.filter((project) => project.tier === "primary"),
     [visible]
   )
   const bonusProjects = React.useMemo(
-    () => visible.filter((project) => project.tier === "bonus"),
-    [visible]
+    () => compact ? [] : visible.filter((project) => project.tier === "bonus"),
+    [compact, visible]
   )
 
   return (
@@ -84,22 +84,24 @@ function WorkArchive({ compact = false }: { compact?: boolean }) {
           </a>
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-2" aria-label="Work filters">
-          {portfolioFilters.map((item) => (
-            <button
-              key={item}
-              type="button"
-              onClick={() => setFilter(item)}
-              className={`rounded-full border px-3.5 py-1.5 text-xs transition-colors ${
-                filter === item
-                  ? "border-foreground bg-foreground text-background"
-                  : "border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground"
-              }`}
-            >
-              {item}
-            </button>
-          ))}
-        </div>
+        {!compact ? (
+          <div className="mt-8 flex flex-wrap gap-2" aria-label="Work filters">
+            {portfolioFilters.map((item) => (
+              <button
+                key={item}
+                type="button"
+                onClick={() => setFilter(item)}
+                className={`rounded-full border px-3.5 py-1.5 text-xs transition-colors ${
+                  filter === item
+                    ? "border-foreground bg-foreground text-background"
+                    : "border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground"
+                }`}
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+        ) : null}
 
         {primaryProjects.length > 0 ? (
           <div className="mt-8">
