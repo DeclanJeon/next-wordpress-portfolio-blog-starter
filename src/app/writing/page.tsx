@@ -83,7 +83,7 @@ export default async function WritingPage({ searchParams }: PageProps) {
               Project pages
             </Link>
             <Link href="/work" className="text-clay hover:underline">
-              Selected work
+              Work
             </Link>
           </div>
         </nav>

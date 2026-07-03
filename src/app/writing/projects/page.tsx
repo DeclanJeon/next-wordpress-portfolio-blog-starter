@@ -25,7 +25,7 @@ export default async function WritingProjectsPage() {
             PonsLink / PonsWarp archive
           </Link>
           <Link href="/work" className="text-sm text-clay hover:underline">
-            Selected work
+            Work
           </Link>
         </nav>
       </header>

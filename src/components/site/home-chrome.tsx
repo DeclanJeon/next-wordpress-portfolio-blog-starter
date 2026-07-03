@@ -29,10 +29,10 @@ export function HomeHeader({
         </button>
 
         <div className="flex items-center gap-2 md:gap-4">
-          <Link href="/work" className="hidden text-sm text-muted-foreground transition-colors hover:text-foreground md:inline-flex">
+          <Link href="/work" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
             Work
           </Link>
-          <Link href="/writing" className="hidden text-sm text-muted-foreground transition-colors hover:text-foreground md:inline-flex">
+          <Link href="/writing" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
             Writing
           </Link>
           {view !== "blog" ? (

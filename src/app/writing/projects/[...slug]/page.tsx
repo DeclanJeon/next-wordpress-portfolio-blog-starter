@@ -72,9 +72,14 @@ export default async function WritingProjectDetailPage({ params }: PageProps) {
             <ArrowLeft className="h-4 w-4" />
             Project pages
           </Link>
-          <Link href="/writing" className="text-sm text-clay hover:underline">
-            PonsLink / PonsWarp
-          </Link>
+          <div className="flex items-center gap-4 text-sm">
+            <Link href="/writing" className="text-muted-foreground transition-colors hover:text-foreground">
+              PonsLink / PonsWarp
+            </Link>
+            <Link href="/work" className="text-clay hover:underline">
+              Work
+            </Link>
+          </div>
         </nav>
       </header>
 

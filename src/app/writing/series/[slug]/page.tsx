@@ -36,9 +36,14 @@ export default async function WritingSeriesPage({ params }: PageProps) {
             <ArrowLeft className="h-4 w-4" />
             Writing archive
           </Link>
-          <Link href={taxonomyHref(`dev-retrospective/${series.projectSlug}`)} className="text-sm text-clay hover:underline">
-            Project archive
-          </Link>
+          <div className="flex items-center gap-4 text-sm">
+            <Link href={taxonomyHref(`dev-retrospective/${series.projectSlug}`)} className="text-muted-foreground transition-colors hover:text-foreground">
+              Project archive
+            </Link>
+            <Link href="/work" className="text-clay hover:underline">
+              Work
+            </Link>
+          </div>
         </nav>
       </header>
 
