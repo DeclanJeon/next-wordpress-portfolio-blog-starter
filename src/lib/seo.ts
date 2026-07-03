@@ -15,9 +15,9 @@ function envList(name: string, fallback: readonly string[]): readonly string[] {
   return entries.length > 0 ? entries : fallback
 }
 
-export const SITE_URL = env("NEXT_PUBLIC_SITE_URL", "https://blog.ponslink.com")
-export const SITE_NAME = env("NEXT_PUBLIC_SITE_NAME", "Pons Field Notes")
-export const SITE_TITLE = env("NEXT_PUBLIC_SITE_TITLE", "PonsLink / PonsWarp — Field Notes")
+export const SITE_URL = "https://blog.ponslink.com"
+export const SITE_NAME = "Pons Field Notes"
+export const SITE_TITLE = "PonsLink / PonsWarp — Field Notes"
 export const SITE_DESCRIPTION = env(
   "NEXT_PUBLIC_SITE_DESCRIPTION",
   "PonsLink와 PonsWarp를 중심으로 연결, WebRTC, 브라우저 직접 파일 전송, 제품 운영 회고를 정리하는 한국어 기술 블로그.",

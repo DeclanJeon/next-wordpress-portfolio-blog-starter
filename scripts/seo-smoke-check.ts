@@ -64,6 +64,7 @@ const checks: Check[] = [
       assertNotIncludes(html, "PonsLink는 WordPress, 자동화, SEO, AI 도구", "home stale Google snippet")
       assertNotIncludes(html, "아직 연결된 회고가 없다", "home retrospective fallback")
       assertNotIncludes(html, "전체 <!-- -->0<!-- -->편", "home PonsWarp retrospective count")
+      assertNotIncludes(html, "https://lab.ponslink.com", "home stale canonical host")
     },
   },
   {
@@ -75,6 +76,7 @@ const checks: Check[] = [
       assertIncludes(html, "CollectionPage", "writing collection schema")
       assertIncludes(html, "BlogPosting", "writing list schema")
       assertIncludes(html, "/writing/2026-06-29-ponswarp-00-file-transfer-broke-in-ponslink", "writing PonsWarp link")
+      assertNotIncludes(html, "https://lab.ponslink.com", "writing stale canonical host")
     },
   },
   {
@@ -86,6 +88,7 @@ const checks: Check[] = [
       assertIncludes(html, "wordCount", "article word count")
       assertIncludes(html, "timeRequired", "article reading time")
       assertIncludes(html, "rel=\"canonical\" href=\"https://blog.ponslink.com/writing/2026-06-29-ponswarp-00-file-transfer-broke-in-ponslink\"", "article canonical")
+      assertNotIncludes(html, "https://lab.ponslink.com", "article stale canonical host")
     },
   },
   {
@@ -99,6 +102,8 @@ const checks: Check[] = [
       assertIncludes(titleOf(seriesHtml), "PonsWarp Origin Story", "series title")
       assertIncludes(seriesHtml, "CollectionPage", "series schema")
       assertIncludes(seriesHtml, "/writing/2026-06-29-ponswarp-00-file-transfer-broke-in-ponslink", "series first article")
+      assertNotIncludes(projectHtml, "https://lab.ponslink.com", "projects stale canonical host")
+      assertNotIncludes(seriesHtml, "https://lab.ponslink.com", "series stale canonical host")
     },
   },
   {
@@ -109,6 +114,7 @@ const checks: Check[] = [
       assertIncludes(xml, "https://blog.ponslink.com/writing/projects", "sitemap projects")
       assertIncludes(xml, "https://blog.ponslink.com/writing/series/ponswarp-origin-story", "sitemap PonsWarp series")
       assertIncludes(xml, "https://blog.ponslink.com/writing/2026-06-29-ponswarp-00-file-transfer-broke-in-ponslink", "sitemap PonsWarp article")
+      assertNotIncludes(xml, "https://lab.ponslink.com", "sitemap stale canonical host")
     },
   },
 ]
