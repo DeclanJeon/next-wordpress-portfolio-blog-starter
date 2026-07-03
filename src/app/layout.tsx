@@ -111,7 +111,7 @@ export const metadata: Metadata = {
     "geo.region": "KR",
     "geo.placename": "South Korea",
     "classification": "Portfolio, Product engineering, Technical writing",
-    "llms-topic": "PonsLink, document automation, domain AI, local-first tools, product retrospectives",
+    "llms-topic": "PonsLink, PonsWarp, WebRTC, browser direct file transfer, product retrospectives",
   },
   verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
     ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
