@@ -153,7 +153,9 @@ function WorkArchive({ compact = false }: { compact?: boolean }) {
   )
 }
 
-function WritingGateway() {
+function WritingGateway({ compact = false }: { compact?: boolean }) {
+  const visibleCaseStudies = compact ? writingCaseStudies.slice(0, 2) : writingCaseStudies
+
   return (
     <section className="border-t border-border bg-muted/25" id="writing-brief">
       <div className="mx-auto grid max-w-6xl gap-8 px-5 py-16 md:grid-cols-[0.8fr_1.2fr] md:px-8 md:py-20">
@@ -163,7 +165,7 @@ function WritingGateway() {
             글 목록을 서비스 설계 노트로 연결한다.
           </h2>
           <p className="mt-5 text-muted-foreground">
-            WordPress 글은 단순 archive가 아니라 문제정의, 운영 노트, 회고로 이어지는 evidence log다. REST/API 반영은 캐시와 revalidate 때문에 지연될 수 있음을 운영 메모로 드러낸다.
+            메인 writing 연결은 PonsLink와 PonsWarp 회고만 보여준다. 그 외 번외 프로젝트 글은 프로젝트별 글 페이지에서 분리해 탐색한다.
           </p>
           <a href="/writing" className="mt-5 inline-flex items-center gap-1 text-sm text-clay hover:underline">
             writing route 보기
@@ -171,7 +173,7 @@ function WritingGateway() {
           </a>
         </div>
         <div className="overflow-hidden rounded-xl border border-border bg-background">
-          {writingCaseStudies.map((title, index) => (
+          {visibleCaseStudies.map((title, index) => (
             <div key={title} className="flex gap-4 border-b border-border p-5 last:border-b-0">
               <span className="font-serif-display text-3xl text-clay/70">{String(index + 1).padStart(2, "0")}</span>
               <div>
@@ -226,7 +228,7 @@ export function PortfolioShowcase({ mode = "home" }: PortfolioShowcaseProps) {
     <>
       <SignatureSystems />
       <WorkArchive compact />
-      <WritingGateway />
+      <WritingGateway compact />
       <EvidenceStrip />
     </>
   )

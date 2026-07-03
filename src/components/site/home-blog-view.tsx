@@ -34,7 +34,7 @@ export function HomeBlogView() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-              메인에는 PonsLink와 PonsWarp만 남겼습니다. 연결을 세션으로 바꾸는 흐름, 서버가 파일을 갖지 않는 전송 흐름을 중심으로 제품 선택과 운영 실패를 기록합니다. 문서 자동화와 도메인 AI 같은 번외 프로젝트는 별도 페이지로 분리했습니다.
+              메인에는 PonsLink와 PonsWarp만 남겼습니다. 연결을 세션으로 바꾸는 흐름, 서버가 파일을 갖지 않는 전송 흐름을 중심으로 제품 선택과 운영 실패를 기록합니다. 그 외 번외 프로젝트는 별도 페이지로 분리했습니다.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
