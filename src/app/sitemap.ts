@@ -18,6 +18,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const projectHubs = await getWritingProjectHubs()
   const latestPostDate = latestDate(posts.flatMap((post) => [post.updatedAt, post.publishedAt]))
+  const siteBuildDate = new Date()
+  const staticLastModified = latestDate([siteBuildDate, latestPostDate])
   const series = await db.series.findMany({
     where: { posts: { some: { post: { status: "published" } } } },
     select: {
@@ -34,25 +36,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: SITE_URL,
-      lastModified: latestPostDate,
+      lastModified: staticLastModified,
       changeFrequency: "daily",
       priority: 1,
     },
     {
       url: `${SITE_URL}/writing`,
-      lastModified: latestPostDate,
+      lastModified: staticLastModified,
       changeFrequency: "daily",
       priority: 0.9,
     },
     {
       url: `${SITE_URL}/work`,
-      lastModified: new Date(),
+      lastModified: staticLastModified,
       changeFrequency: "weekly",
       priority: 0.75,
     },
     {
       url: `${SITE_URL}/writing/projects`,
-      lastModified: latestPostDate,
+      lastModified: staticLastModified,
       changeFrequency: "weekly",
       priority: 0.8,
     },
@@ -67,7 +69,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const projectRoutes: MetadataRoute.Sitemap = projectHubs.map((project) => ({
     url: `${SITE_URL}${project.href}`,
-    lastModified: new Date(),
+    lastModified: staticLastModified,
     changeFrequency: "weekly" as const,
     priority: 0.65,
   }))
