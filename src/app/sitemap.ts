@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next"
 import { db } from "@/lib/db"
+import { getWritingProjectHubs } from "@/lib/blog-taxonomy"
 import { SITE_URL } from "@/lib/seo"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -8,6 +9,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     select: { slug: true, updatedAt: true, publishedAt: true },
     orderBy: [{ publishedAt: "desc" }, { id: "desc" }],
   })
+
+  const projectHubs = await getWritingProjectHubs()
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
@@ -28,6 +31,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.75,
     },
+    {
+      url: `${SITE_URL}/writing/projects`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
   ]
 
   const postRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
@@ -37,5 +46,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }))
 
-  return [...staticRoutes, ...postRoutes]
+  const projectRoutes: MetadataRoute.Sitemap = projectHubs.map((project) => ({
+    url: `${SITE_URL}${project.href}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.65,
+  }))
+
+  return [...staticRoutes, ...projectRoutes, ...postRoutes]
 }

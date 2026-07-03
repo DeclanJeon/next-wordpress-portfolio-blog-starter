@@ -19,8 +19,8 @@ import {
 } from "@/components/site/writing-archive-utils"
 
 export const metadata: Metadata = pageMetadata({
-  title: "글 아카이브",
-  description: "PonsLink와 제품 회고, WebRTC, 문서 자동화, 도메인 AI를 만들며 남긴 설계 판단과 운영 노트 모음.",
+  title: "PonsLink / PonsWarp 글 아카이브",
+  description: "PonsLink와 PonsWarp를 만들며 남긴 WebRTC, 직접 파일 전송, 세션 운영, 제품 회고 중심의 한국어 기술 글 모음.",
   path: "/writing",
 })
 

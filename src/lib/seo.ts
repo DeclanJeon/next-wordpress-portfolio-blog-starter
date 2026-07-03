@@ -20,7 +20,7 @@ export const SITE_NAME = env("NEXT_PUBLIC_SITE_NAME", "Field Notes")
 export const SITE_TITLE = env("NEXT_PUBLIC_SITE_TITLE", `${SITE_NAME} — Portfolio Blog`)
 export const SITE_DESCRIPTION = env(
   "NEXT_PUBLIC_SITE_DESCRIPTION",
-  "PonsLink, 문서 자동화, 도메인 AI, 로컬 도구처럼 사람이 실제로 겪는 불편을 운영 가능한 작은 서비스로 바꾸는 개발자 포트폴리오 블로그.",
+  "PonsLink와 PonsWarp를 중심으로 연결, WebRTC, 브라우저 직접 파일 전송, 제품 운영 회고를 정리하는 한국어 기술 블로그.",
 )
 export const SITE_LOCALE = env("NEXT_PUBLIC_SITE_LOCALE", "ko_KR")
 export const SITE_AUTHOR = env("NEXT_PUBLIC_SITE_AUTHOR", "Declan Jeon")
@@ -28,9 +28,10 @@ export const ORGANIZATION_NAME = env("NEXT_PUBLIC_ORGANIZATION_NAME", "Pons Lab"
 export const SITE_SAME_AS = envList("NEXT_PUBLIC_SITE_SAME_AS", [])
 export const SITE_TOPICS = envList("NEXT_PUBLIC_SITE_TOPICS", [
   "PonsLink",
-  "Document automation",
-  "Domain AI",
-  "Local-first tools",
+  "PonsWarp",
+  "WebRTC",
+  "P2P file transfer",
+  "Browser direct transfer",
   "Product retrospectives",
   "Technical writing",
 ])
