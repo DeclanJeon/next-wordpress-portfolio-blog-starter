@@ -21,7 +21,8 @@
     "blog-taxonomy:seed": "bun run scripts/seed-blog-taxonomy-series.ts",
     "blog-taxonomy:audit": "bun run scripts/audit-blog-taxonomy-series.ts",
     "blog-quality:check": "bun run scripts/validate-blog-post-quality.ts",
-    "blog-quality:strict": "bun run scripts/validate-blog-post-quality.ts --strict"
+    "blog-quality:strict": "bun run scripts/validate-blog-post-quality.ts --strict",
+    "seo:check": "bun run scripts/seo-smoke-check.ts"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

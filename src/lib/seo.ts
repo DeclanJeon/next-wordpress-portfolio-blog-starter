@@ -64,6 +64,99 @@ export function publicImageUrl(src: string): string | undefined {
   }
 }
 
+export type JsonLdBreadcrumb = {
+  readonly name: string
+  readonly href: string
+}
+
+export type JsonLdListItem = {
+  readonly name: string
+  readonly href: string
+  readonly description?: string
+  readonly image?: string
+  readonly datePublished?: string | Date
+  readonly dateModified?: string | Date
+  readonly type?: string
+}
+
+function isoDate(value: string | Date | undefined): string | undefined {
+  if (!value) return undefined
+  return value instanceof Date ? value.toISOString() : value
+}
+
+export function collectionPageJsonLd({
+  name,
+  description,
+  path,
+  breadcrumbs = [],
+  items,
+  defaultItemType = "Article",
+}: {
+  readonly name: string
+  readonly description: string
+  readonly path: string
+  readonly breadcrumbs?: readonly JsonLdBreadcrumb[]
+  readonly items: readonly JsonLdListItem[]
+  readonly defaultItemType?: string
+}) {
+  const url = absoluteUrl(path)
+  const breadcrumbItems = [{ name: SITE_NAME, href: "/" }, ...breadcrumbs]
+  const graph: unknown[] = [
+    {
+      "@type": "CollectionPage",
+      "@id": `${url}#collection`,
+      url,
+      name,
+      description,
+      inLanguage: "ko-KR",
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      mainEntity: { "@id": `${url}#item-list` },
+    },
+    {
+      "@type": "ItemList",
+      "@id": `${url}#item-list`,
+      name,
+      numberOfItems: items.length,
+      itemListElement: items.map((item, index) => {
+        const itemUrl = absoluteUrl(item.href)
+        return {
+          "@type": "ListItem",
+          position: index + 1,
+          url: itemUrl,
+          item: {
+            "@type": item.type ?? defaultItemType,
+            "@id": `${itemUrl}#item`,
+            url: itemUrl,
+            name: item.name,
+            ...(item.description ? { description: item.description } : {}),
+            ...(item.image ? { image: [publicImageUrl(item.image) ?? absoluteUrl(DEFAULT_OG_IMAGE)] } : {}),
+            ...(isoDate(item.datePublished) ? { datePublished: isoDate(item.datePublished) } : {}),
+            ...(isoDate(item.dateModified) ? { dateModified: isoDate(item.dateModified) } : {}),
+          },
+        }
+      }),
+    },
+  ]
+
+  if (breadcrumbs.length > 0) {
+    graph.push({
+      "@type": "BreadcrumbList",
+      "@id": `${url}#breadcrumb`,
+      itemListElement: breadcrumbItems.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+        item: absoluteUrl(item.href),
+      })),
+    })
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": graph,
+  }
+}
+
 export function jsonLd(value: unknown): string {
   return JSON.stringify(value).replace(/</g, "\\u003c")
 }

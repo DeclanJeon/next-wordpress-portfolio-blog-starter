@@ -32,6 +32,14 @@ function splitPostTags(tags: string): readonly string[] {
     .filter(Boolean)
 }
 
+function articleWordCount(content: string): number {
+  return content
+    .replace(/[`*_>#\-[\]()!]/g, " ")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean).length
+}
+
 function toPostViewModel(post: PrismaPost): Post {
   return {
     ...post,
@@ -117,6 +125,7 @@ export default async function WritingPostPage({ params }: PageProps) {
   const articleUrl = `${SITE_URL}/writing/${page.post.slug}`
   const articleImage = publicImageUrl(page.post.featuredImage) ?? absoluteUrl(DEFAULT_OG_IMAGE)
   const articleTags = splitPostTags(page.post.tags)
+  const wordCount = articleWordCount(page.post.content)
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -124,6 +133,7 @@ export default async function WritingPostPage({ params }: PageProps) {
         "@type": "BlogPosting",
         "@id": `${articleUrl}#article`,
         mainEntityOfPage: articleUrl,
+        url: articleUrl,
         headline: page.post.title,
         description: page.post.excerpt,
         image: [articleImage],
@@ -132,13 +142,18 @@ export default async function WritingPostPage({ params }: PageProps) {
         inLanguage: "ko-KR",
         articleSection: page.post.category,
         keywords: articleTags,
+        about: [page.post.category, ...articleTags].filter(Boolean),
+        wordCount,
+        timeRequired: `PT${Math.max(1, page.post.readingTime)}M`,
+        isPartOf: { "@id": `${SITE_URL}/writing#blog` },
         author: {
           "@type": "Person",
           name: page.post.authorName || SITE_AUTHOR,
+          url: SITE_URL,
         },
         publisher: {
           "@type": "Organization",
-          name: "PonsLink",
+          name: SITE_NAME,
           logo: {
             "@type": "ImageObject",
             url: absoluteUrl("/icon-512.png"),

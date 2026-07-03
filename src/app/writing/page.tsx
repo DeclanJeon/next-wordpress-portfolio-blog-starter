@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { redirect } from "next/navigation"
 import { ArrowLeft, Search, X } from "lucide-react"
-import { pageMetadata } from "@/lib/seo"
+import { collectionPageJsonLd, jsonLd, pageMetadata } from "@/lib/seo"
 import { WritingArchiveList } from "@/components/site/writing-archive-list"
 import { TaxonomyTreeFilter } from "@/components/site/taxonomy-tree-filter"
 import { TagShowMoreButton } from "@/components/site/tag-show-more-button"
@@ -57,6 +57,21 @@ export default async function WritingPage({ searchParams }: PageProps) {
   if (filter.taxonomy && !isCoreWritingProjectSlug(filter.taxonomy)) redirect(projectWritingHref(filter.taxonomy))
   const viewLabel = archiveViews.find((option) => option.id === view)?.label ?? "Board"
   const { posts, tags, totalPublished, taxonomyTree, taxonomyPath } = await getArchiveData(filter, { rootSlugs: coreWritingProjectSlugs })
+  const archiveJsonLd = collectionPageJsonLd({
+    name: "PonsLink / PonsWarp 글 아카이브",
+    description: "PonsLink와 PonsWarp를 만들며 남긴 WebRTC, 직접 파일 전송, 세션 운영, 제품 회고 중심의 한국어 기술 글 모음.",
+    path: "/writing",
+    breadcrumbs: [{ name: "Writing", href: "/writing" }],
+    items: posts.slice(0, 30).map((post) => ({
+      name: post.title,
+      href: `/writing/${post.slug}`,
+      description: post.excerpt,
+      image: post.featuredImage,
+      datePublished: post.publishedAt,
+      dateModified: post.publishedAt,
+      type: "BlogPosting",
+    })),
+  })
   const hasFilter = Boolean(filter.category || filter.taxonomy || filter.tag || filter.q)
   const timelineGroups: Array<{ month: string; posts: ArchivePost[] }> = []
 
@@ -72,6 +87,10 @@ export default async function WritingPage({ searchParams }: PageProps) {
 
   return (
     <main className="min-h-screen bg-background paper-grain">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(archiveJsonLd) }}
+      />
       <header className="border-b border-border/60 bg-background/80 backdrop-blur-md">
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
           <Link href="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground">

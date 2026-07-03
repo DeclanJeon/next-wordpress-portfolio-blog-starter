@@ -6,7 +6,7 @@ import { getArchiveSeriesMetadataForPosts } from "@/lib/archive-series-metadata"
 import { decorateArchivePosts, postSelect } from "@/lib/archive-post-decoration"
 import { getPostIdsForTaxonomySlug, getTaxonomyNode, getTaxonomyPath, isCoreWritingProjectSlug } from "@/lib/blog-taxonomy"
 import { db } from "@/lib/db"
-import { pageMetadata } from "@/lib/seo"
+import { collectionPageJsonLd, jsonLd, pageMetadata } from "@/lib/seo"
 import { WritingArchiveList } from "@/components/site/writing-archive-list"
 import { monthFormatter, type ArchivePost, type TimelineGroup } from "@/components/site/writing-archive-utils"
 
@@ -63,9 +63,32 @@ export default async function WritingProjectDetailPage({ params }: PageProps) {
   const decoratedPosts = await decorateArchivePosts(postRecords)
   const seriesByPost = await getArchiveSeriesMetadataForPosts(decoratedPosts.map((post) => post.id))
   const posts = decoratedPosts.map((post) => ({ ...post, ...seriesByPost.get(post.id) }))
+  const projectJsonLd = collectionPageJsonLd({
+    name: `${node.name} 프로젝트 글`,
+    description: node.description || `${node.name}에 속한 프로젝트 글 모음.`,
+    path: `/writing/projects/${path}`,
+    breadcrumbs: [
+      { name: "Writing", href: "/writing" },
+      { name: "프로젝트별 글", href: "/writing/projects" },
+      ...breadcrumbs.map((item) => ({ name: item.name, href: item.href })),
+    ],
+    items: posts.slice(0, 40).map((post) => ({
+      name: post.title,
+      href: `/writing/${post.slug}`,
+      description: post.excerpt,
+      image: post.featuredImage,
+      datePublished: post.publishedAt,
+      dateModified: post.publishedAt,
+      type: "BlogPosting",
+    })),
+  })
 
   return (
     <main className="min-h-screen bg-background paper-grain">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(projectJsonLd) }}
+      />
       <header className="border-b border-border/60 bg-background/80 backdrop-blur-md">
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
           <Link href="/writing/projects" className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground">

@@ -4,7 +4,7 @@ import { notFound } from "next/navigation"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import { getSeriesDetail, taxonomyHref } from "@/lib/blog-taxonomy"
 import { formatReadingTime } from "@/lib/reading-time"
-import { pageMetadata } from "@/lib/seo"
+import { collectionPageJsonLd, jsonLd, pageMetadata } from "@/lib/seo"
 
 export const dynamic = "force-dynamic"
 
@@ -27,9 +27,31 @@ export default async function WritingSeriesPage({ params }: PageProps) {
   const { slug } = await params
   const series = await getSeriesDetail(slug)
   if (!series) notFound()
+  const seriesJsonLd = collectionPageJsonLd({
+    name: series.title,
+    description: series.description,
+    path: `/writing/series/${series.slug}`,
+    breadcrumbs: [
+      { name: "Writing", href: "/writing" },
+      { name: series.title, href: `/writing/series/${series.slug}` },
+    ],
+    items: series.posts.map((post) => ({
+      name: post.title,
+      href: post.href,
+      description: post.excerpt,
+      image: post.featuredImage,
+      datePublished: post.publishedAt,
+      dateModified: post.updatedAt,
+      type: "BlogPosting",
+    })),
+  })
 
   return (
     <main className="min-h-screen bg-background paper-grain">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(seriesJsonLd) }}
+      />
       <header className="border-b border-border/60 bg-background/80 backdrop-blur-md">
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
           <Link href="/writing" className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground">

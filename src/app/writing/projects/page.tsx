@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import { getWritingProjectHubs } from "@/lib/blog-taxonomy"
-import { pageMetadata } from "@/lib/seo"
+import { collectionPageJsonLd, jsonLd, pageMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = pageMetadata({
   title: "프로젝트별 글",
@@ -15,9 +15,29 @@ export const dynamic = "force-dynamic"
 export default async function WritingProjectsPage() {
   const projects = await getWritingProjectHubs()
   const total = projects.reduce((sum, project) => sum + project.count, 0)
+  const projectsJsonLd = collectionPageJsonLd({
+    name: "프로젝트별 글",
+    description: "PonsLink와 PonsWarp 외의 문서 자동화, 도메인 AI, 로컬 도구, 운영 노트를 프로젝트별로 모은 글 아카이브.",
+    path: "/writing/projects",
+    breadcrumbs: [
+      { name: "Writing", href: "/writing" },
+      { name: "프로젝트별 글", href: "/writing/projects" },
+    ],
+    defaultItemType: "CollectionPage",
+    items: projects.map((project) => ({
+      name: `${project.name} 프로젝트 글`,
+      href: project.href,
+      description: project.description || "프로젝트별로 분리한 글 모음.",
+      type: "CollectionPage",
+    })),
+  })
 
   return (
     <main className="min-h-screen bg-background paper-grain">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(projectsJsonLd) }}
+      />
       <header className="border-b border-border/60 bg-background/80 backdrop-blur-md">
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
           <Link href="/writing" className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground">

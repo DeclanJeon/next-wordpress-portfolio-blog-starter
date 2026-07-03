@@ -3,6 +3,12 @@ import { db } from "@/lib/db"
 import { getWritingProjectHubs } from "@/lib/blog-taxonomy"
 import { SITE_URL } from "@/lib/seo"
 
+
+function latestDate(dates: readonly Date[]): Date {
+  if (dates.length === 0) return new Date()
+  return dates.reduce((latest, date) => (date > latest ? date : latest), dates[0])
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await db.post.findMany({
     where: { status: "published" },
@@ -11,17 +17,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   })
 
   const projectHubs = await getWritingProjectHubs()
+  const latestPostDate = latestDate(posts.flatMap((post) => [post.updatedAt, post.publishedAt]))
+  const series = await db.series.findMany({
+    where: { posts: { some: { post: { status: "published" } } } },
+    select: {
+      slug: true,
+      updatedAt: true,
+      posts: {
+        where: { post: { status: "published" } },
+        select: { post: { select: { updatedAt: true, publishedAt: true } } },
+      },
+    },
+  })
+
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: SITE_URL,
-      lastModified: new Date(),
+      lastModified: latestPostDate,
       changeFrequency: "daily",
       priority: 1,
     },
     {
       url: `${SITE_URL}/writing`,
-      lastModified: new Date(),
+      lastModified: latestPostDate,
       changeFrequency: "daily",
       priority: 0.9,
     },
@@ -33,7 +52,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${SITE_URL}/writing/projects`,
-      lastModified: new Date(),
+      lastModified: latestPostDate,
       changeFrequency: "weekly",
       priority: 0.8,
     },
@@ -53,5 +72,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.65,
   }))
 
-  return [...staticRoutes, ...projectRoutes, ...postRoutes]
+  const seriesRoutes: MetadataRoute.Sitemap = series.map((entry) => ({
+    url: `${SITE_URL}/writing/series/${entry.slug}`,
+    lastModified: latestDate([
+      entry.updatedAt,
+      ...entry.posts.flatMap((item) => [item.post.updatedAt, item.post.publishedAt]),
+    ]),
+    changeFrequency: "weekly" as const,
+    priority: 0.72,
+  }))
+
+  return [...staticRoutes, ...projectRoutes, ...seriesRoutes, ...postRoutes]
 }

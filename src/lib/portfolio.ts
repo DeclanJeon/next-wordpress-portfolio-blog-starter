@@ -79,6 +79,17 @@ export const ponslinkRetrospectiveLinks = [
   { title: "[PonsLink] PonsCast가 화면 공유 대신 DataChannel을 택한 이유", href: "/writing/2026-06-18-ponslink-algorithm-10-ponscast-tradeoff" },
 ]
 
+export const ponswarpRetrospectiveLinks = [
+  { title: "[PonsWarp] 파일 전송은 PonsLink 안에서 먼저 고장났다", href: "/writing/2026-06-29-ponswarp-00-file-transfer-broke-in-ponslink" },
+  { title: "[PonsWarp] 서버가 파일을 갖지 않는 전송을 만들고 싶었다", href: "/writing/2026-06-29-main-ponswarp-01-server-does-not-own-file" },
+  { title: "[PonsWarp] 브라우저끼리 대용량 파일을 직접 보내는 길", href: "/writing/2026-06-29-ponswarp-01-browser-direct-transfer" },
+  { title: "[PonsWarp] WebRTC는 파일을 보내주지 않고 길을 열어준다", href: "/writing/2026-06-29-ponswarp-03-webrtc-opens-the-road" },
+  { title: "[PonsWarp] 백프레셔는 기다림이 아니라 전송을 살리는 장치다", href: "/writing/2026-06-29-ponswarp-04-backpressure-protects-transfer" },
+  { title: "[PonsWarp] OPFS는 만능키가 아니라 마지막 안전망이었다", href: "/writing/2026-06-29-ponswarp-05c-opfs-safety-net" },
+  { title: "[PonsWarp] 끊긴 전송에서 partial file을 어떻게 다룰까", href: "/writing/2026-06-29-ponswarp-07-incomplete-transfer-recovery" },
+  { title: "[PonsWarp] 결국 내가 만든 건 파일 전송 버튼이 아니라 실패를 견디는 흐름이었다", href: "/writing/2026-06-29-ponswarp-12b-flow-that-survives-failure" },
+]
+
 export const portfolioProjects: PortfolioProject[] = [
   {
     slug: "ponslink",
@@ -119,6 +130,7 @@ export const portfolioProjects: PortfolioProject[] = [
     screenshot: "/portfolio/warp.png",
     proofNotes: "운영 URL과 PonsWarp 회고 글 12편으로 확인한 WebRTC 파일 전송 서비스.",
     featured: true,
+    retrospectiveLinks: ponswarpRetrospectiveLinks,
   },
   {
     slug: "document-automation-suite",
