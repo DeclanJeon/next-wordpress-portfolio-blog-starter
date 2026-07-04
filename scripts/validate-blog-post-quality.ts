@@ -53,6 +53,10 @@ const AI_TELL_PHRASES = [
   "추가 메모",
 ]
 const META_OPENING_PREFIXES = ["이 글은", "이번 글은", "본 글에서는", "이번 글에서는", "목표는"]
+const KOREAN_TYPO_PATTERNS = [
+  { code: "duplicated-korean-particle", pattern: /(전에에|에게에게|에서에서|으로으로|부터부터|까지까지|처럼처럼|보다보다|은은|는는|을을|를를)(?=\s|[.,!?。！？\n]|$)/g },
+] as const
+
 
 
 const DEEP_DIVE_TEMPLATE_HEADINGS = new Set([
@@ -426,6 +430,12 @@ function validatePost(
   if (repeatedAiTellPhrases.length > 0 || aiTellPhraseTotal >= 2) {
     const details = aiTellPhraseOccurrences.map((entry) => `${entry.phrase}×${entry.count}`).join(" / ")
     findings.push({ severity: "error", code: "ai-tell-phrases", message: `AI-tell phrase repetition detected: ${details}` })
+  }
+  for (const typo of KOREAN_TYPO_PATTERNS) {
+    const matches = [...post.content.matchAll(typo.pattern)].map((match) => match[0])
+    if (matches.length > 0) {
+      findings.push({ severity: "error", code: typo.code, message: `Korean typo pattern detected: ${[...new Set(matches)].join(" / ")}` })
+    }
   }
 
   const paddingHeadings = headings.filter((heading) => /^추가 메모/.test(heading))
