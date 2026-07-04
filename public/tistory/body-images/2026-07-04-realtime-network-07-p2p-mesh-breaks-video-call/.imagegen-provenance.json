@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call",
+  "promptId": "2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 25,
+      "promptId": "2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/025-2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-flow.txt",
+      "generationId": "019f2c86-abb8-7d13-a5e1-6ecaf73b322f",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c86-abb8-7d13-a5e1-6ecaf73b322f/ig_07d5eb71df70874e016a48d6c30bc08191938bdadb24335ba9.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-flow.webp",
+      "sha256": "6611137cb5bf3d2e5fcbdfe61f7b9716dc74650558aab637dafc39b003f8f62b",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        37.434,
+        36.919,
+        33.842
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 26,
+      "promptId": "2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/026-2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-matrix.txt",
+      "generationId": "019f2c87-e779-7c73-966d-678fb9daa37c",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c87-e779-7c73-966d-678fb9daa37c/ig_034525b9d59f04e7016a48d721ad548191bbe84530b40076bc.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-matrix.webp",
+      "sha256": "4e4a88ce1cbd095898affcf7cdf15023d0b9f446e464b74c2cc47ee4ed1103fe",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        33.161,
+        30.895,
+        27.514
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 27,
+      "promptId": "2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/027-2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-failure.txt",
+      "generationId": "019f2c88-eeb4-7182-bb6f-df226cd275b9",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c88-eeb4-7182-bb6f-df226cd275b9/ig_0c790c3b20e8433c016a48d76a09d48191b48ebdc581435ecf.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-failure.webp",
+      "sha256": "73f2dfa452b5edcbb78714e21d6dd8ac29881299a2697bfc61af95b925d80f78",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        37.85,
+        35.04,
+        31.507
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 28,
+      "promptId": "2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/028-2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-checklist.txt",
+      "generationId": "019f2c89-726a-7531-aadb-e63c48bf22c5",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c89-726a-7531-aadb-e63c48bf22c5/ig_02a2a14ca2361e95016a48d779c6908191928d52ba86892983.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call/2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call-checklist.webp",
+      "sha256": "7e57f27b99d70041fd802eb0999791a6aef4193a47254fb20a9e3871792f818a",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        30.018,
+        28.708,
+        25.109
+      ]
+    }
+  ]
+}

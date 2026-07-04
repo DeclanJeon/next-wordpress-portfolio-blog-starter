@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-08-mesh-cost-by-connection-formula",
+  "promptId": "2026-07-04-realtime-network-08-mesh-cost-by-connection-formula:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-08-mesh-cost-by-connection-formula",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 29,
+      "promptId": "2026-07-04-realtime-network-08-mesh-cost-by-connection-formula:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/029-2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-flow.txt",
+      "generationId": "019f2c8a-9c3a-75c2-a78d-ee8d527de805",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c8a-9c3a-75c2-a78d-ee8d527de805/ig_0de65df36219733a016a48d7d563bc81919d334255602fdcc9.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-flow.webp",
+      "sha256": "d7de367b504b9f08aa3a4d4c569a8bec7ac04a53fe12b7f088874c4c8d66a639",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        48.239,
+        51.152,
+        49.97
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 30,
+      "promptId": "2026-07-04-realtime-network-08-mesh-cost-by-connection-formula:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/030-2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-matrix.txt",
+      "generationId": "019f2c8c-1911-7e13-8b74-1aa771dfa72c",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c8c-1911-7e13-8b74-1aa771dfa72c/ig_021744f14cbf5360016a48d83586cc81918222d0d8203923b4.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-matrix.webp",
+      "sha256": "5953d9de9f9379051c5ce9a559fa55c3a94960d5085d7d926efe2df2dbb8fddc",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        39.791,
+        40.463,
+        38.216
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 31,
+      "promptId": "2026-07-04-realtime-network-08-mesh-cost-by-connection-formula:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/031-2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-failure.txt",
+      "generationId": "019f2c8d-0604-7912-bf87-254e0811e17a",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c8d-0604-7912-bf87-254e0811e17a/ig_0a890161b1776cd8016a48d86855888191808e33a24e1d2ba9.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-failure.webp",
+      "sha256": "6a25267dfb9a377862a08da0dab27660b9a7cb6ef0781854b8025568e8994d82",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        46.88,
+        44.561,
+        41.338
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 32,
+      "promptId": "2026-07-04-realtime-network-08-mesh-cost-by-connection-formula:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/032-2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-checklist.txt",
+      "generationId": "019f2c8e-55f3-7382-813f-569330673e9e",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c8e-55f3-7382-813f-569330673e9e/ig_0d23fc4d296c6579016a48d8cfd4f08191a2cf416c040ca416.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula/2026-07-04-realtime-network-08-mesh-cost-by-connection-formula-checklist.webp",
+      "sha256": "54e1516f765e89d75a8cbea3e7d3f94773de931d0969ed10a6761244b155b997",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        49.456,
+        49.824,
+        48.682
+      ]
+    }
+  ]
+}

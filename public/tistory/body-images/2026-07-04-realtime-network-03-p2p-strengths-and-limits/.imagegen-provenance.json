@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-03-p2p-strengths-and-limits",
+  "promptId": "2026-07-04-realtime-network-03-p2p-strengths-and-limits:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-03-p2p-strengths-and-limits",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 9,
+      "promptId": "2026-07-04-realtime-network-03-p2p-strengths-and-limits:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/009-2026-07-04-realtime-network-03-p2p-strengths-and-limits-flow.txt",
+      "generationId": "019f2c7b-a3ab-73a0-85b0-8b81045a8240",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c7b-a3ab-73a0-85b0-8b81045a8240/ig_0e441ff7e1a16efe016a48d4027b208191b82a730e8d25a853.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-flow.webp",
+      "sha256": "069a1b8f78086ea7ed5cb71da32e1ad3408fbb5f8c1ab0b7e32efef3d2c3c61b",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        37.954,
+        34.314,
+        29.29
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 10,
+      "promptId": "2026-07-04-realtime-network-03-p2p-strengths-and-limits:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/010-2026-07-04-realtime-network-03-p2p-strengths-and-limits-matrix.txt",
+      "generationId": "019f2c7c-675d-7951-b17f-e0e67c6650d3",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c7c-675d-7951-b17f-e0e67c6650d3/ig_032070a85e555480016a48d425a4f88191a6c880a5984d7155.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-matrix.webp",
+      "sha256": "80b4f89e36a7fb8b935a6d3b9be35ca6812ff5714ac81af5580b5074b1a882f7",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        59.078,
+        58.741,
+        57.199
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 11,
+      "promptId": "2026-07-04-realtime-network-03-p2p-strengths-and-limits:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/011-2026-07-04-realtime-network-03-p2p-strengths-and-limits-failure.txt",
+      "generationId": "019f2c7d-2d96-7dd3-beff-3a674c6400f8",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c7d-2d96-7dd3-beff-3a674c6400f8/ig_0957f21c23c715b5016a48d452ecb081919754d3c3ada8cf53.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-failure.webp",
+      "sha256": "1b43f70a7dbe4b3352eb33bdc890f1a0a70fdab17249fab6ce465ffa671c0bcb",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        54.38,
+        55.282,
+        55.407
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 12,
+      "promptId": "2026-07-04-realtime-network-03-p2p-strengths-and-limits:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/012-2026-07-04-realtime-network-03-p2p-strengths-and-limits-checklist.txt",
+      "generationId": "019f2c7d-d385-78e2-8a3b-0a0bb5d4cd01",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c7d-d385-78e2-8a3b-0a0bb5d4cd01/ig_0c804a134d896ca9016a48d47cb33c81918c8e029326e69fd9.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-checklist.webp",
+      "sha256": "72dd077e05180d9434da88d6f72e7c262832b60b589ef190355e8542c33f9dae",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        54.779,
+        57.365,
+        56.878
+      ]
+    }
+  ]
+}

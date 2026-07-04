@@ -155,3 +155,5 @@ if (failures > 0) {
 }
 
 console.log(`SEO smoke checks passed for ${baseUrl}`)
+
+export {}

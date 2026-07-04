@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel",
+  "promptId": "2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 77,
+      "promptId": "2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/077-2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-flow.txt",
+      "generationId": "019f2cbf-ca90-7111-aaad-b66c36d307ca",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cbf-ca90-7111-aaad-b66c36d307ca/ig_006557ecd39f5031016a48e5747c108191834e10044ffeb7e8.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-flow.webp",
+      "sha256": "d20ff020be6edbe02c97fc61dd1b5e1694ed407a2319adc85c00a97708c43e78",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        47.01,
+        47.419,
+        45.393
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 78,
+      "promptId": "2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/078-2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-matrix.txt",
+      "generationId": "019f2cbf-e300-7801-912a-9a02ff7844c1",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cbf-e300-7801-912a-9a02ff7844c1/ig_0041f4752a7b1d7e016a48e565cd008191a4d47b21f48f1785.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-matrix.webp",
+      "sha256": "805688cfd597871b3cbc4e25e9ac153a77c5c48cddfe268676b63b3a4ec70c4c",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        50.148,
+        50.753,
+        47.05
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 79,
+      "promptId": "2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/079-2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-failure.txt",
+      "generationId": "019f2cc0-96dd-7e50-ba82-cbcdd8868683",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cc0-96dd-7e50-ba82-cbcdd8868683/ig_0f4eaecffb1ed1f6016a48e5969b4481919c2b64c913c0af7e.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-failure.webp",
+      "sha256": "bca8aa87715a0d4ab03ae8ad87469e0f6cf20b5241cfc40d81d86a0597103cec",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        61.562,
+        58.321,
+        51.115
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 80,
+      "promptId": "2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/080-2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-checklist.txt",
+      "generationId": "019f2cc1-3c94-7a01-ae40-f9099ae2295f",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cc1-3c94-7a01-ae40-f9099ae2295f/ig_0cf90f0ec11ec346016a48e5cbc65c8191a47bcf6adb893b81.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel/2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel-checklist.webp",
+      "sha256": "ec63d2e4fa3b82a1195187edec442be86c2a203d1f0f0fcbb90c68bca2478236",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        26.519,
+        26.133,
+        24.483
+      ]
+    }
+  ]
+}

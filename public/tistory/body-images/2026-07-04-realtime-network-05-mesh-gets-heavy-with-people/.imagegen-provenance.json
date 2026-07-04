@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-05-mesh-gets-heavy-with-people",
+  "promptId": "2026-07-04-realtime-network-05-mesh-gets-heavy-with-people:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-05-mesh-gets-heavy-with-people",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 17,
+      "promptId": "2026-07-04-realtime-network-05-mesh-gets-heavy-with-people:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/017-2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-flow.txt",
+      "generationId": "019f2c80-f961-7372-8877-f857fd767df1",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c80-f961-7372-8877-f857fd767df1/ig_0d5a3e63d4c36b10016a48d55488f8819193380b18b2ecaafc.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-flow.webp",
+      "sha256": "c53b380d7472ca62e9655c09d140597bded6fc816302096385bcef76eefb9999",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        44.313,
+        44.246,
+        41.977
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 18,
+      "promptId": "2026-07-04-realtime-network-05-mesh-gets-heavy-with-people:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/018-2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-matrix.txt",
+      "generationId": "019f2c81-6f1d-7520-962a-995322e19f8d",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c81-6f1d-7520-962a-995322e19f8d/ig_0d0a1f30cab8df02016a48d5669b848191b89a95139430b1ec.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-matrix.webp",
+      "sha256": "47c24015f5d99482754b5623d8834d3e797e06cb280f31d4e1399b7a6eaa5e5e",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        42.185,
+        41.472,
+        41.655
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 19,
+      "promptId": "2026-07-04-realtime-network-05-mesh-gets-heavy-with-people:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/019-2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-failure.txt",
+      "generationId": "019f2c82-8701-7fe0-ad28-e4eddf2e0ccb",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c82-8701-7fe0-ad28-e4eddf2e0ccb/ig_032001fb2716cc80016a48d5b6cfa88191a4827b0b197f8fd4.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-failure.webp",
+      "sha256": "2547ef53f0c75e119819b1797440eaa7a0d6d8e41e6b1e07724201c633302688",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        55.058,
+        53.31,
+        47.755
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 20,
+      "promptId": "2026-07-04-realtime-network-05-mesh-gets-heavy-with-people:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/020-2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-checklist.txt",
+      "generationId": "019f2c83-e210-77b3-8dd2-bed4543dd4f5",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c83-e210-77b3-8dd2-bed4543dd4f5/ig_047af12a5b2aa128016a48d61517a081918a5244a9ba64b1f0.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people/2026-07-04-realtime-network-05-mesh-gets-heavy-with-people-checklist.webp",
+      "sha256": "e72dfb127429b02c95c344b1bc3a3258ad21e536874b30029ff757a20661e571",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        33.677,
+        32.943,
+        30.309
+      ]
+    }
+  ]
+}

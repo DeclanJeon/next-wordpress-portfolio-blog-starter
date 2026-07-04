@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh",
+  "promptId": "2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 41,
+      "promptId": "2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/041-2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-flow.txt",
+      "generationId": "019f2c97-3543-7e80-afd1-a8e80f18c04d",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c97-3543-7e80-afd1-a8e80f18c04d/ig_0ef4225edcf6ff39016a48db02d7088191b63d8b72d1e8cd07.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-flow.webp",
+      "sha256": "50e2a7001c9cc2d10d86f938cf4d9dfd6ce7274e385a82ab489004efd89a106d",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        41.843,
+        38.638,
+        33.068
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 42,
+      "promptId": "2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/042-2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-matrix.txt",
+      "generationId": "019f2c97-4b78-7a12-995f-27eb613246fd",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c97-4b78-7a12-995f-27eb613246fd/ig_033b283463df19f4016a48db12a11c8191aca8d5884b5033dc.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-matrix.webp",
+      "sha256": "39c1df7f40cfd7c721aaeacdf4fbcd3389f0eadd68fda892a59261ee2cde82ee",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        34.966,
+        36.288,
+        36.383
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 43,
+      "promptId": "2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/043-2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-failure.txt",
+      "generationId": "019f2c98-a3db-7f53-ac8b-dfd05268843e",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c98-a3db-7f53-ac8b-dfd05268843e/ig_08faf2881d98c2fb016a48db603c288191849733ee8076cbda.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-failure.webp",
+      "sha256": "b068d9a0de1e2ec41a3e90bf7767e773dce159b5304cc08c600c2ac135dda178",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        47.214,
+        46.004,
+        43.129
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 44,
+      "promptId": "2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/044-2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-checklist.txt",
+      "generationId": "019f2c99-ebf0-7bb1-b4ca-7f13b1a7554f",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c99-ebf0-7bb1-b4ca-7f13b1a7554f/ig_07a948a5a2e2bb0e016a48dbc408f881919a214d1d12c7feb7.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh/2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh-checklist.webp",
+      "sha256": "718847559b3d83453aca2a7fcb2aa25a058c1eeab6d0b6b210133cbdb2ff3865",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        33.842,
+        32.223,
+        30.081
+      ]
+    }
+  ]
+}

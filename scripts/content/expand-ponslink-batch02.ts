@@ -205,7 +205,7 @@ function makeExpansion(topic: Topic): string {
     `${topic.redesign} 이때부터 PonsLink의 중심은 단순한 room component가 아니라 상태와 권한의 연결이 되었다. ${topic.evidence[2]}와 ${topic.evidence[3]}를 보면 이 판단이 프론트엔드 취향이 아니라 API/BFF 경계와 맞물린 결정이라는 점이 보인다.`,
     `${topic.operation} 사용자는 이 복잡도를 몰라도 된다. 대신 제품은 사용자가 보지 않는 곳에서 무엇을 허용하고 무엇을 미룰지 결정해야 한다. 그 결정을 숨기면 당장은 매끄러워 보여도 장애나 결제 지연, 네트워크 실패가 왔을 때 설명할 말이 없어진다.`,
     `${topic.judgment} 다음에 같은 문제를 다시 푼다면 먼저 기능 목록을 쓰지 않고, 방의 목적과 닫혀야 하는 실패 경로를 표로 만들 것이다. 기능은 그 뒤에 붙여도 늦지 않다.`,
-  ]
+  ].join("\n\n")
 }
 
 function specificNoteHeading(topic: Topic): string {

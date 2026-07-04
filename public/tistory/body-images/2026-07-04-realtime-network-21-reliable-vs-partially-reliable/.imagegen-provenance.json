@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-21-reliable-vs-partially-reliable",
+  "promptId": "2026-07-04-realtime-network-21-reliable-vs-partially-reliable:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-21-reliable-vs-partially-reliable",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-21-reliable-vs-partially-reliable/2026-07-04-realtime-network-21-reliable-vs-partially-reliable-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-21-reliable-vs-partially-reliable/2026-07-04-realtime-network-21-reliable-vs-partially-reliable-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-21-reliable-vs-partially-reliable/2026-07-04-realtime-network-21-reliable-vs-partially-reliable-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-21-reliable-vs-partially-reliable/2026-07-04-realtime-network-21-reliable-vs-partially-reliable-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-21-reliable-vs-partially-reliable/2026-07-04-realtime-network-21-reliable-vs-partially-reliable-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-21-reliable-vs-partially-reliable/2026-07-04-realtime-network-21-reliable-vs-partially-reliable-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-21-reliable-vs-partially-reliable/2026-07-04-realtime-network-21-reliable-vs-partially-reliable-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-21-reliable-vs-partially-reliable/2026-07-04-realtime-network-21-reliable-vs-partially-reliable-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 81,
+      "promptId": "2026-07-04-realtime-network-21-reliable-vs-partially-reliable:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/081-2026-07-04-realtime-network-21-reliable-vs-partially-reliable-flow.txt",
+      "generationId": "019f2cc1-ea44-7392-8805-cdc60b0aa35b",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cc1-ea44-7392-8805-cdc60b0aa35b/ig_0a1002a49ac558e3016a48e5ed27848191923997c244358b10.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-21-reliable-vs-partially-reliable/2026-07-04-realtime-network-21-reliable-vs-partially-reliable-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-21-reliable-vs-partially-reliable/2026-07-04-realtime-network-21-reliable-vs-partially-reliable-flow.webp",
+      "sha256": "dfa837a3d0b06ac13acd66563eafa9820ebd59d4cf4ed1dcb244f9552795394d",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        48.879,
+        50.65,
+        50.713
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 82,
+      "promptId": "2026-07-04-realtime-network-21-reliable-vs-partially-reliable:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/082-2026-07-04-realtime-network-21-reliable-vs-partially-reliable-matrix.txt",
+      "generationId": "019f2cc1-ec11-74a3-a84b-481976b45dd4",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cc1-ec11-74a3-a84b-481976b45dd4/ig_05adea2f291c4962016a48e5efd9008191ab3017c490a0c2fd.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-21-reliable-vs-partially-reliable/2026-07-04-realtime-network-21-reliable-vs-partially-reliable-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-21-reliable-vs-partially-reliable/2026-07-04-realtime-network-21-reliable-vs-partially-reliable-matrix.webp",
+      "sha256": "ffdbb4fcb9cca2d2319c585c1b38273e7f64bb1a67fc56b6f4310aa77c5e12e4",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        33.978,
+        36.567,
+        37.886
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 83,
+      "promptId": "2026-07-04-realtime-network-21-reliable-vs-partially-reliable:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/083-2026-07-04-realtime-network-21-reliable-vs-partially-reliable-failure.txt",
+      "generationId": "019f2cc2-4229-7033-a92e-a1b1d9c64fb5",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cc2-4229-7033-a92e-a1b1d9c64fb5/ig_00cfe302c355ab64016a48e6146cb4819190544c7ca2d153df.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-21-reliable-vs-partially-reliable/2026-07-04-realtime-network-21-reliable-vs-partially-reliable-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-21-reliable-vs-partially-reliable/2026-07-04-realtime-network-21-reliable-vs-partially-reliable-failure.webp",
+      "sha256": "c6869f51c23b13f903384b6fc4c11ac30b8383a18f5cc99eb5d21282d2548d4e",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        23.576,
+        22.66,
+        19.89
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 84,
+      "promptId": "2026-07-04-realtime-network-21-reliable-vs-partially-reliable:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/084-2026-07-04-realtime-network-21-reliable-vs-partially-reliable-checklist.txt",
+      "generationId": "019f2cc3-2e82-7a42-9db2-fff8a284c15d",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cc3-2e82-7a42-9db2-fff8a284c15d/ig_0013d7879343e318016a48e65083c08191b853755d4014a46e.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-21-reliable-vs-partially-reliable/2026-07-04-realtime-network-21-reliable-vs-partially-reliable-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-21-reliable-vs-partially-reliable/2026-07-04-realtime-network-21-reliable-vs-partially-reliable-checklist.webp",
+      "sha256": "db183467e2c770fb47513d94fe78dea17b6a6a84373f9c89fae697be59b4b01d",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        45.278,
+        43.244,
+        39.651
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-17-why-nat-traversal-fails",
+  "promptId": "2026-07-04-realtime-network-17-why-nat-traversal-fails:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-17-why-nat-traversal-fails",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-17-why-nat-traversal-fails/2026-07-04-realtime-network-17-why-nat-traversal-fails-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-17-why-nat-traversal-fails/2026-07-04-realtime-network-17-why-nat-traversal-fails-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-17-why-nat-traversal-fails/2026-07-04-realtime-network-17-why-nat-traversal-fails-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-17-why-nat-traversal-fails/2026-07-04-realtime-network-17-why-nat-traversal-fails-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-17-why-nat-traversal-fails/2026-07-04-realtime-network-17-why-nat-traversal-fails-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-17-why-nat-traversal-fails/2026-07-04-realtime-network-17-why-nat-traversal-fails-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-17-why-nat-traversal-fails/2026-07-04-realtime-network-17-why-nat-traversal-fails-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-17-why-nat-traversal-fails/2026-07-04-realtime-network-17-why-nat-traversal-fails-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 65,
+      "promptId": "2026-07-04-realtime-network-17-why-nat-traversal-fails:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/065-2026-07-04-realtime-network-17-why-nat-traversal-fails-flow.txt",
+      "generationId": "019f2cb4-74ee-7520-9cdd-0b62f88fc0ac",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cb4-74ee-7520-9cdd-0b62f88fc0ac/ig_00d0416f7ce590f6016a48e28943548191b55d9783aa8d32b6.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-17-why-nat-traversal-fails/2026-07-04-realtime-network-17-why-nat-traversal-fails-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-17-why-nat-traversal-fails/2026-07-04-realtime-network-17-why-nat-traversal-fails-flow.webp",
+      "sha256": "07a9b11000c6e87211f09c4cd4c4f6d867fe09bda192fbf9ad6798bddf810f49",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        21.038,
+        20.262,
+        18.31
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 66,
+      "promptId": "2026-07-04-realtime-network-17-why-nat-traversal-fails:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/066-2026-07-04-realtime-network-17-why-nat-traversal-fails-matrix.txt",
+      "generationId": "019f2cb4-750f-7543-ae03-e577437efaf6",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cb4-750f-7543-ae03-e577437efaf6/ig_0232525dc939d0fb016a48e29416008191b1a2ee582be4a3e6.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-17-why-nat-traversal-fails/2026-07-04-realtime-network-17-why-nat-traversal-fails-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-17-why-nat-traversal-fails/2026-07-04-realtime-network-17-why-nat-traversal-fails-matrix.webp",
+      "sha256": "deea8c274797b781cc118382c2be585c9774a958488564070662ba5d962d5e6a",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        23.166,
+        23.406,
+        24.35
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 67,
+      "promptId": "2026-07-04-realtime-network-17-why-nat-traversal-fails:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/067-2026-07-04-realtime-network-17-why-nat-traversal-fails-failure.txt",
+      "generationId": "019f2cb4-7593-7552-a4e0-77fb8a25d585",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cb4-7593-7552-a4e0-77fb8a25d585/ig_0be7aa23901a8e3d016a48e287a71081918679a5c02ef9b745.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-17-why-nat-traversal-fails/2026-07-04-realtime-network-17-why-nat-traversal-fails-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-17-why-nat-traversal-fails/2026-07-04-realtime-network-17-why-nat-traversal-fails-failure.webp",
+      "sha256": "12c4fea9a1f9e782fd97ac4513302d3ffdb89f73d3cb666cc97d25a746f5f8d7",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        27.062,
+        27.274,
+        26.79
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 68,
+      "promptId": "2026-07-04-realtime-network-17-why-nat-traversal-fails:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/068-2026-07-04-realtime-network-17-why-nat-traversal-fails-checklist.txt",
+      "generationId": "019f2cb5-bc87-7183-9c24-7c32751242e5",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cb5-bc87-7183-9c24-7c32751242e5/ig_04a67ed4a03b404c016a48e2d5ebf4819192b1f0571004cf70.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-17-why-nat-traversal-fails/2026-07-04-realtime-network-17-why-nat-traversal-fails-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-17-why-nat-traversal-fails/2026-07-04-realtime-network-17-why-nat-traversal-fails-checklist.webp",
+      "sha256": "11e4fb01094afd979435ef2b1e9351532ff5ed333fee33ae4730f6df2e059699",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        27.151,
+        25.161,
+        22.586
+      ]
+    }
+  ]
+}

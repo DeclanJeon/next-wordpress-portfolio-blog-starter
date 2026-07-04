@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-01-p2p-is-not-serverless",
+  "promptId": "2026-07-04-realtime-network-01-p2p-is-not-serverless:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-01-p2p-is-not-serverless",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-01-p2p-is-not-serverless/2026-07-04-realtime-network-01-p2p-is-not-serverless-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-01-p2p-is-not-serverless/2026-07-04-realtime-network-01-p2p-is-not-serverless-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-01-p2p-is-not-serverless/2026-07-04-realtime-network-01-p2p-is-not-serverless-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-01-p2p-is-not-serverless/2026-07-04-realtime-network-01-p2p-is-not-serverless-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-01-p2p-is-not-serverless/2026-07-04-realtime-network-01-p2p-is-not-serverless-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-01-p2p-is-not-serverless/2026-07-04-realtime-network-01-p2p-is-not-serverless-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-01-p2p-is-not-serverless/2026-07-04-realtime-network-01-p2p-is-not-serverless-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-01-p2p-is-not-serverless/2026-07-04-realtime-network-01-p2p-is-not-serverless-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 1,
+      "promptId": "2026-07-04-realtime-network-01-p2p-is-not-serverless:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/001-2026-07-04-realtime-network-01-p2p-is-not-serverless-flow.txt",
+      "generationId": "codex-imagegen-request-1",
+      "sourceAssetPath": "",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-01-p2p-is-not-serverless/2026-07-04-realtime-network-01-p2p-is-not-serverless-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-01-p2p-is-not-serverless/2026-07-04-realtime-network-01-p2p-is-not-serverless-flow.webp",
+      "sha256": "f9f4f3ba7f8f2f76c03c53b344228dfba85acee824305737ee3a92f6258ba35d",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        27.371,
+        24.958,
+        21.833
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 2,
+      "promptId": "2026-07-04-realtime-network-01-p2p-is-not-serverless:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/002-2026-07-04-realtime-network-01-p2p-is-not-serverless-matrix.txt",
+      "generationId": "019f2c76-2f5d-7dc1-9add-00d1b8a4493a",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c76-2f5d-7dc1-9add-00d1b8a4493a/ig_0824a8a41c6c9a17016a48d28cc08c81919d3d7e9b3983eaa4.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-01-p2p-is-not-serverless/2026-07-04-realtime-network-01-p2p-is-not-serverless-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-01-p2p-is-not-serverless/2026-07-04-realtime-network-01-p2p-is-not-serverless-matrix.webp",
+      "sha256": "e6471de690e8e49b096c7bd565cb6dc1777641e167954af0e9756d0ce2098478",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        60.229,
+        57.862,
+        51.142
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 3,
+      "promptId": "2026-07-04-realtime-network-01-p2p-is-not-serverless:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/003-2026-07-04-realtime-network-01-p2p-is-not-serverless-failure.txt",
+      "generationId": "019f2c76-2fc7-7891-9cbc-67fe87dfcca7",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c76-2fc7-7891-9cbc-67fe87dfcca7/ig_0240c7ba2248276d016a48d28c21b8819181f6fb2be62111bf.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-01-p2p-is-not-serverless/2026-07-04-realtime-network-01-p2p-is-not-serverless-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-01-p2p-is-not-serverless/2026-07-04-realtime-network-01-p2p-is-not-serverless-failure.webp",
+      "sha256": "71a166d66e396709f4b279dbd7ffc61b241366262141719563f6b92ef2bc5653",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        28.265,
+        26.986,
+        23.772
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 4,
+      "promptId": "2026-07-04-realtime-network-01-p2p-is-not-serverless:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/004-2026-07-04-realtime-network-01-p2p-is-not-serverless-checklist.txt",
+      "generationId": "019f2c77-569e-78e2-abf8-72ed451ff005",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c77-569e-78e2-abf8-72ed451ff005/ig_07b6fc668bec2764016a48d2e5a0d88191b1bd8977e8839ce1.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-01-p2p-is-not-serverless/2026-07-04-realtime-network-01-p2p-is-not-serverless-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-01-p2p-is-not-serverless/2026-07-04-realtime-network-01-p2p-is-not-serverless-checklist.webp",
+      "sha256": "4745ffc60d56ebb20ea068b24b9aee4a8ba94cf8c1ad7a83349fd65719c452e2",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        47.102,
+        44.375,
+        39.642
+      ]
+    }
+  ]
+}

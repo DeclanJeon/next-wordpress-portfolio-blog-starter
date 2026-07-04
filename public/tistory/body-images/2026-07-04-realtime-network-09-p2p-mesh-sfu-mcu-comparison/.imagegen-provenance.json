@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison",
+  "promptId": "2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 33,
+      "promptId": "2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/033-2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-flow.txt",
+      "generationId": "019f2c8e-6bdc-7b52-be62-66ffaef64ed5",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c8e-6bdc-7b52-be62-66ffaef64ed5/ig_0dbfb78894cec1de016a48d8bf80dc8191a66151ef35d09c2a.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-flow.webp",
+      "sha256": "d59469d71bb8bdfc7d5a8074f37093629588834afca0d7c0766d20dcd8ea61f6",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        44.027,
+        42.127,
+        41.203
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 34,
+      "promptId": "2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/034-2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-matrix.txt",
+      "generationId": "019f2c8f-d7b3-7c11-ba8b-bd07a90a7f0d",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c8f-d7b3-7c11-ba8b-bd07a90a7f0d/ig_0ad2b3954e1efea0016a48d91e6db481918daaa67ce725ff0b.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-matrix.webp",
+      "sha256": "69f484d5d0d1f15f365f44245f85257365fe485e517f7a04c62281354dcd4332",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        27.206,
+        26.039,
+        23.695
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 35,
+      "promptId": "2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/035-2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-failure.txt",
+      "generationId": "019f2c90-f8ed-72d0-99b7-721ade9b58de",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c90-f8ed-72d0-99b7-721ade9b58de/ig_011dd4e71cb21757016a48d9781da48191a9df8c80313b9ab9.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-failure.webp",
+      "sha256": "272f0c1108e15ba6320c79f74486f29f25e0e19a01f285b39de4ddeeee126e6a",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        52.931,
+        54.586,
+        50.06
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 36,
+      "promptId": "2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/036-2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-checklist.txt",
+      "generationId": "019f2c91-1dc4-7093-b879-b1396f71d45f",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c91-1dc4-7093-b879-b1396f71d45f/ig_0613e7886cda62bd016a48d96f847c8191a098ab5eb44ad39e.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison/2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison-checklist.webp",
+      "sha256": "e36bb5626a3561f3793f1909bc370df7c00adf50bb9100eb683d635f2856c768",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        58.12,
+        59.554,
+        58.892
+      ]
+    }
+  ]
+}

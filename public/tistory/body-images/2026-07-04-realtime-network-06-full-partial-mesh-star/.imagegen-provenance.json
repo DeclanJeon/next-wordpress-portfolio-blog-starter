@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-06-full-partial-mesh-star",
+  "promptId": "2026-07-04-realtime-network-06-full-partial-mesh-star:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-06-full-partial-mesh-star",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-06-full-partial-mesh-star/2026-07-04-realtime-network-06-full-partial-mesh-star-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-06-full-partial-mesh-star/2026-07-04-realtime-network-06-full-partial-mesh-star-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-06-full-partial-mesh-star/2026-07-04-realtime-network-06-full-partial-mesh-star-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-06-full-partial-mesh-star/2026-07-04-realtime-network-06-full-partial-mesh-star-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-06-full-partial-mesh-star/2026-07-04-realtime-network-06-full-partial-mesh-star-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-06-full-partial-mesh-star/2026-07-04-realtime-network-06-full-partial-mesh-star-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-06-full-partial-mesh-star/2026-07-04-realtime-network-06-full-partial-mesh-star-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-06-full-partial-mesh-star/2026-07-04-realtime-network-06-full-partial-mesh-star-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 21,
+      "promptId": "2026-07-04-realtime-network-06-full-partial-mesh-star:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/021-2026-07-04-realtime-network-06-full-partial-mesh-star-flow.txt",
+      "generationId": "019f2c84-1131-7fe3-8420-214fcf49f16b",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c84-1131-7fe3-8420-214fcf49f16b/ig_0af004704aa45869016a48d61ad3d88191a6462b674cc211f2.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-06-full-partial-mesh-star/2026-07-04-realtime-network-06-full-partial-mesh-star-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-06-full-partial-mesh-star/2026-07-04-realtime-network-06-full-partial-mesh-star-flow.webp",
+      "sha256": "462d0e584091ba092536b0ffd81ba3de2a301ec48d386fa51caba70e04acf5cf",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        40.557,
+        40.186,
+        38.412
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 22,
+      "promptId": "2026-07-04-realtime-network-06-full-partial-mesh-star:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/022-2026-07-04-realtime-network-06-full-partial-mesh-star-matrix.txt",
+      "generationId": "019f2c85-4606-71b1-9b49-a73af759113f",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c85-4606-71b1-9b49-a73af759113f/ig_0e75f8dde06a7027016a48d66465d88191ac019c6fb3e987f5.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-06-full-partial-mesh-star/2026-07-04-realtime-network-06-full-partial-mesh-star-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-06-full-partial-mesh-star/2026-07-04-realtime-network-06-full-partial-mesh-star-matrix.webp",
+      "sha256": "5c6fd73fab7bf25cbf22616a28ca31a59fa825434ea51ec9f51c218f501b16cd",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        36.419,
+        36.358,
+        33.201
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 23,
+      "promptId": "2026-07-04-realtime-network-06-full-partial-mesh-star:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/023-2026-07-04-realtime-network-06-full-partial-mesh-star-failure.txt",
+      "generationId": "019f2c85-45f3-7771-b82b-88b57cb18b13",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c85-45f3-7771-b82b-88b57cb18b13/ig_05d51523cadc2279016a48d679a95c8191b115215eef5fafaf.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-06-full-partial-mesh-star/2026-07-04-realtime-network-06-full-partial-mesh-star-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-06-full-partial-mesh-star/2026-07-04-realtime-network-06-full-partial-mesh-star-failure.webp",
+      "sha256": "4fd5c9704fc9bd35490591d8d06794a66ee9bae423cbeac88cc76c8ec2895440",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        27.757,
+        27.78,
+        28.147
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 24,
+      "promptId": "2026-07-04-realtime-network-06-full-partial-mesh-star:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/024-2026-07-04-realtime-network-06-full-partial-mesh-star-checklist.txt",
+      "generationId": "019f2c86-5631-7740-be5b-2f586dcc2e93",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c86-5631-7740-be5b-2f586dcc2e93/ig_03b8fd62e3288377016a48d6ba9be88191b22b183e5a3e3056.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-06-full-partial-mesh-star/2026-07-04-realtime-network-06-full-partial-mesh-star-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-06-full-partial-mesh-star/2026-07-04-realtime-network-06-full-partial-mesh-star-checklist.webp",
+      "sha256": "9ba7031cef06819b6e643f1102a661932241f811d5f808e20238ecb20aed6444",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        50.082,
+        49.077,
+        45.842
+      ]
+    }
+  ]
+}

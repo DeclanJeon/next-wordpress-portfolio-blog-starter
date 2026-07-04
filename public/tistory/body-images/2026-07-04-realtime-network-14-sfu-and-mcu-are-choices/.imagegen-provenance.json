@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-14-sfu-and-mcu-are-choices",
+  "promptId": "2026-07-04-realtime-network-14-sfu-and-mcu-are-choices:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-14-sfu-and-mcu-are-choices",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 53,
+      "promptId": "2026-07-04-realtime-network-14-sfu-and-mcu-are-choices:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/053-2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-flow.txt",
+      "generationId": "019f2ca2-3b2c-7f53-ad2d-e031cddd3604",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2ca2-3b2c-7f53-ad2d-e031cddd3604/ig_06c99331f9985526016a48ddd456808191882f3bfcf52394cc.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-flow.webp",
+      "sha256": "0acfc83a9ade4a96bb76911ed1ba7df5dda2b24139a7d067252158ecaf6d923e",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        41.492,
+        40.518,
+        36.475
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 54,
+      "promptId": "2026-07-04-realtime-network-14-sfu-and-mcu-are-choices:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/054-2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-matrix.txt",
+      "generationId": "019f2ca2-555a-7812-9155-800f44d4e190",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2ca2-555a-7812-9155-800f44d4e190/ig_0eeec26d9081313b016a48dde6a6b08191b70af4cc07d00ad3.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-matrix.webp",
+      "sha256": "2732259012ff08e5ea2b75ed876b978c64f273547434bc0078a0d44cd0441673",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        42.057,
+        41.59,
+        39.112
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 55,
+      "promptId": "2026-07-04-realtime-network-14-sfu-and-mcu-are-choices:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/055-2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-failure.txt",
+      "generationId": "019f2ca3-9cb9-75c3-9adb-0b3235af8975",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2ca3-9cb9-75c3-9adb-0b3235af8975/ig_0976a5ceb761e985016a48de4108e8819196d4345d282c30ba.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-failure.webp",
+      "sha256": "66956f0704b099768fddcc906d506331258833799297fc07186cf13d7343e4b6",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        41.764,
+        41.377,
+        40.689
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 56,
+      "promptId": "2026-07-04-realtime-network-14-sfu-and-mcu-are-choices:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/056-2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-checklist.txt",
+      "generationId": "019f2ca3-ad54-70b3-a3e4-6f7afd24a9a0",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2ca3-ad54-70b3-a3e4-6f7afd24a9a0/ig_0df304a9a7259aa8016a48de45061c81918ae55e6c70862572.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-checklist.webp",
+      "sha256": "fc98ca27f9445d573c800bd6b0295ceec2869ceea7741f9e0baf0285ee3bf22e",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        49.369,
+        48.711,
+        46.094
+      ]
+    }
+  ]
+}

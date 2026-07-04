@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-19-datachannel-is-not-file-api",
+  "promptId": "2026-07-04-realtime-network-19-datachannel-is-not-file-api:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-19-datachannel-is-not-file-api",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-19-datachannel-is-not-file-api/2026-07-04-realtime-network-19-datachannel-is-not-file-api-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-19-datachannel-is-not-file-api/2026-07-04-realtime-network-19-datachannel-is-not-file-api-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-19-datachannel-is-not-file-api/2026-07-04-realtime-network-19-datachannel-is-not-file-api-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-19-datachannel-is-not-file-api/2026-07-04-realtime-network-19-datachannel-is-not-file-api-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-19-datachannel-is-not-file-api/2026-07-04-realtime-network-19-datachannel-is-not-file-api-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-19-datachannel-is-not-file-api/2026-07-04-realtime-network-19-datachannel-is-not-file-api-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-19-datachannel-is-not-file-api/2026-07-04-realtime-network-19-datachannel-is-not-file-api-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-19-datachannel-is-not-file-api/2026-07-04-realtime-network-19-datachannel-is-not-file-api-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 73,
+      "promptId": "2026-07-04-realtime-network-19-datachannel-is-not-file-api:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/073-2026-07-04-realtime-network-19-datachannel-is-not-file-api-flow.txt",
+      "generationId": "019f2cb7-91b0-75e1-a196-7526d1b129d4",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cb7-91b0-75e1-a196-7526d1b129d4/ig_06c78a222ee28f1d016a48e48a78388191b68ab60d4c4764c6.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-19-datachannel-is-not-file-api/2026-07-04-realtime-network-19-datachannel-is-not-file-api-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-19-datachannel-is-not-file-api/2026-07-04-realtime-network-19-datachannel-is-not-file-api-flow.webp",
+      "sha256": "e845f297de535eade99612125f6d96fcbb9218c1dc0a333f84b39e8e832a014b",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        39.958,
+        39.751,
+        34.955
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 74,
+      "promptId": "2026-07-04-realtime-network-19-datachannel-is-not-file-api:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/074-2026-07-04-realtime-network-19-datachannel-is-not-file-api-matrix.txt",
+      "generationId": "019f2cb8-1228-7d30-b0a9-de972281bae0",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cb8-1228-7d30-b0a9-de972281bae0/ig_0d2b6da7e729e25f016a48e4a355708191ac1ddeefaa773211.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-19-datachannel-is-not-file-api/2026-07-04-realtime-network-19-datachannel-is-not-file-api-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-19-datachannel-is-not-file-api/2026-07-04-realtime-network-19-datachannel-is-not-file-api-matrix.webp",
+      "sha256": "f468b0d5f820bd88c78e8e74d64292ba24c81867cc8f7daa8f2be1d482cdfa99",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        34.501,
+        33.113,
+        30.182
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 75,
+      "promptId": "2026-07-04-realtime-network-19-datachannel-is-not-file-api:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/075-2026-07-04-realtime-network-19-datachannel-is-not-file-api-failure.txt",
+      "generationId": "019f2cbe-37d9-7303-888f-18fb6314bd67",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cbe-37d9-7303-888f-18fb6314bd67/ig_05b12e6ea974a2e1016a48e50926fc8191a373d6e7d37a92c4.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-19-datachannel-is-not-file-api/2026-07-04-realtime-network-19-datachannel-is-not-file-api-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-19-datachannel-is-not-file-api/2026-07-04-realtime-network-19-datachannel-is-not-file-api-failure.webp",
+      "sha256": "e51e29dea682a35792e705adfb14ef75d7f150cbe104263b698301acb3f5ed8d",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        38.655,
+        37.705,
+        34.233
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 76,
+      "promptId": "2026-07-04-realtime-network-19-datachannel-is-not-file-api:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/076-2026-07-04-realtime-network-19-datachannel-is-not-file-api-checklist.txt",
+      "generationId": "019f2cbe-5552-7eb1-889b-5131d08597f4",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cbe-5552-7eb1-889b-5131d08597f4/ig_0c35ced519761ba2016a48e50302f88191878bfccba8d51208.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-19-datachannel-is-not-file-api/2026-07-04-realtime-network-19-datachannel-is-not-file-api-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-19-datachannel-is-not-file-api/2026-07-04-realtime-network-19-datachannel-is-not-file-api-checklist.webp",
+      "sha256": "813abfacedb7a96d836be4e583d2801a8278b6db81c192f4b21dd10cca6d97cc",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        71.682,
+        70.659,
+        62.96
+      ]
+    }
+  ]
+}

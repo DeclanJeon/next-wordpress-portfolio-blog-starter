@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-16-stun-turn-ice-without-confusion",
+  "promptId": "2026-07-04-realtime-network-16-stun-turn-ice-without-confusion:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-16-stun-turn-ice-without-confusion",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 61,
+      "promptId": "2026-07-04-realtime-network-16-stun-turn-ice-without-confusion:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/061-2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-flow.txt",
+      "generationId": "019f2ca8-f608-7f21-b977-b4ef965052a9",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2ca8-f608-7f21-b977-b4ef965052a9/ig_0b488c6ff66f61dc016a48df970c9081919914543b527c157e.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-flow.webp",
+      "sha256": "36f10ae71820d519f3a0b988078a35ccdc4f88e011ba7938bf0a1965c47f8f18",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        35.764,
+        34.758,
+        32.951
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 62,
+      "promptId": "2026-07-04-realtime-network-16-stun-turn-ice-without-confusion:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/062-2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-matrix.txt",
+      "generationId": "019f2ca9-5190-7871-ba57-d636fc2419a0",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2ca9-5190-7871-ba57-d636fc2419a0/ig_06a991cba9502572016a48dfa3d0e08191983b8876781b9551.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-matrix.webp",
+      "sha256": "a408ba268d1a475ebcd58a5e6dca46adc778f490f1d02bbcc6150a9644ae4d1b",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        47.573,
+        43.543,
+        39.272
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 63,
+      "promptId": "2026-07-04-realtime-network-16-stun-turn-ice-without-confusion:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/063-2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-failure.txt",
+      "generationId": "019f2cb4-759c-7670-a50b-76361a94cbec",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cb4-759c-7670-a50b-76361a94cbec/ig_02b1f020e120019d016a48e27fdca88191ad7f428f4d2b64ff.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-failure.webp",
+      "sha256": "2c675a40c397b25c604608b89426ccb13f45907f2d77e758479f4547c6bec91e",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        56.444,
+        53.842,
+        49.039
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 64,
+      "promptId": "2026-07-04-realtime-network-16-stun-turn-ice-without-confusion:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/064-2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-checklist.txt",
+      "generationId": "019f2cab-6fa2-7400-91f8-77ad5ac8bac4",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cab-6fa2-7400-91f8-77ad5ac8bac4/ig_0ef038407342b719016a48e030389481919415607d174137ff.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion/2026-07-04-realtime-network-16-stun-turn-ice-without-confusion-checklist.webp",
+      "sha256": "ce47f55914741a2729567355086335b1c43826ca94d7dfadd11eafa100f13254",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        54.326,
+        52.738,
+        49.793
+      ]
+    }
+  ]
+}

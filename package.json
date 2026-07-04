@@ -22,6 +22,7 @@
     "blog-taxonomy:audit": "bun run scripts/audit-blog-taxonomy-series.ts",
     "blog-quality:check": "bun run scripts/validate-blog-post-quality.ts",
     "blog-quality:strict": "bun run scripts/validate-blog-post-quality.ts --strict",
+    "blog-quality:imagegen": "bun run scripts/validate-blog-post-quality.ts --strict --require-imagegen-provenance",
     "seo:check": "bun run scripts/seo-smoke-check.ts"
   },
   "dependencies": {

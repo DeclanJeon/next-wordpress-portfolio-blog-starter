@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p",
+  "promptId": "2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 69,
+      "promptId": "2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/069-2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-flow.txt",
+      "generationId": "019f2cb6-06e5-72b3-8896-782310c45b22",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cb6-06e5-72b3-8896-782310c45b22/ig_0715950f8005420f016a48e2f30b6c819ab7820cd5b270feae.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-flow.webp",
+      "sha256": "c4209b983f3eadb978d1dbbd7fec582e7c189ef5daff75b924e55893e543c567",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        29.405,
+        25.645,
+        20.348
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 70,
+      "promptId": "2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/070-2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-matrix.txt",
+      "generationId": "019f2cb6-a156-7a42-86aa-b605fcad9549",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cb6-a156-7a42-86aa-b605fcad9549/ig_08c7f2b175e26840016a48e30e172c8191abea213d1a19ce95.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-matrix.webp",
+      "sha256": "bce72669980d5963c31b09eebfd46fc2bba18f7fe521c07c82264f989f6f4b0d",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        28.8,
+        28.355,
+        26.559
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 71,
+      "promptId": "2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/071-2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-failure.txt",
+      "generationId": "019f2cb7-15f7-7342-b527-18fda57d79da",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cb7-15f7-7342-b527-18fda57d79da/ig_0d2a052836083772016a48e4736a908191a7dffc361149a486.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-failure.webp",
+      "sha256": "d500be6e3a4d4b95e3a3dc5e17b6545ce310adffc3c3083a43f608b9c0344bc9",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        39.313,
+        39.643,
+        37.842
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 72,
+      "promptId": "2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/072-2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-checklist.txt",
+      "generationId": "019f2cb7-47b6-7270-b488-7731a797a776",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cb7-47b6-7270-b488-7731a797a776/ig_03367ebdbf529db3016a48e4a78534819192b696f612f42e52.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p/2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p-checklist.webp",
+      "sha256": "ace3592a8c99330200f48bdd96a41f94d7bd99f25e0e809e9d3fc065759b2b5d",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        50.531,
+        50.749,
+        49.606
+      ]
+    }
+  ]
+}

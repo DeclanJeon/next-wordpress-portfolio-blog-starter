@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-04-why-p2p-needs-signaling",
+  "promptId": "2026-07-04-realtime-network-04-why-p2p-needs-signaling:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-04-why-p2p-needs-signaling",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-04-why-p2p-needs-signaling/2026-07-04-realtime-network-04-why-p2p-needs-signaling-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-04-why-p2p-needs-signaling/2026-07-04-realtime-network-04-why-p2p-needs-signaling-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-04-why-p2p-needs-signaling/2026-07-04-realtime-network-04-why-p2p-needs-signaling-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-04-why-p2p-needs-signaling/2026-07-04-realtime-network-04-why-p2p-needs-signaling-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-04-why-p2p-needs-signaling/2026-07-04-realtime-network-04-why-p2p-needs-signaling-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-04-why-p2p-needs-signaling/2026-07-04-realtime-network-04-why-p2p-needs-signaling-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-04-why-p2p-needs-signaling/2026-07-04-realtime-network-04-why-p2p-needs-signaling-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-04-why-p2p-needs-signaling/2026-07-04-realtime-network-04-why-p2p-needs-signaling-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 13,
+      "promptId": "2026-07-04-realtime-network-04-why-p2p-needs-signaling:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/013-2026-07-04-realtime-network-04-why-p2p-needs-signaling-flow.txt",
+      "generationId": "019f2c7e-5c0e-7d03-b9e6-8ba1c618ad10",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c7e-5c0e-7d03-b9e6-8ba1c618ad10/ig_0d74dfc125e52fb5016a48d4a405d88191bc359138e2e7b7d4.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-04-why-p2p-needs-signaling/2026-07-04-realtime-network-04-why-p2p-needs-signaling-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-04-why-p2p-needs-signaling/2026-07-04-realtime-network-04-why-p2p-needs-signaling-flow.webp",
+      "sha256": "5a9fc388a3119f6d014965ab5cafcf1860774b5b3cc19006d7ff30f3c36861bf",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        33.948,
+        31.078,
+        27.284
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 14,
+      "promptId": "2026-07-04-realtime-network-04-why-p2p-needs-signaling:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/014-2026-07-04-realtime-network-04-why-p2p-needs-signaling-matrix.txt",
+      "generationId": "019f2c7f-18c4-7c00-9e4b-40f1e6763bee",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c7f-18c4-7c00-9e4b-40f1e6763bee/ig_0e6cab89c897df17016a48d4cf12c08191b45777a0ba864b4b.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-04-why-p2p-needs-signaling/2026-07-04-realtime-network-04-why-p2p-needs-signaling-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-04-why-p2p-needs-signaling/2026-07-04-realtime-network-04-why-p2p-needs-signaling-matrix.webp",
+      "sha256": "3996320bcfcce20ba6486c35e8b4915472a33509eba396f44331e019c7080bd8",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        54.315,
+        50.294,
+        41.532
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 15,
+      "promptId": "2026-07-04-realtime-network-04-why-p2p-needs-signaling:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/015-2026-07-04-realtime-network-04-why-p2p-needs-signaling-failure.txt",
+      "generationId": "019f2c7f-adde-7df1-8e87-55fe43b7c217",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c7f-adde-7df1-8e87-55fe43b7c217/ig_04ec0b6f8f9dbeb1016a48d4fae38881919f7e6cb129666c3e.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-04-why-p2p-needs-signaling/2026-07-04-realtime-network-04-why-p2p-needs-signaling-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-04-why-p2p-needs-signaling/2026-07-04-realtime-network-04-why-p2p-needs-signaling-failure.webp",
+      "sha256": "4917f14f24f598c521899d9889950a5a831a13d5023594e9c99c74e2e64d5f07",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        40.123,
+        33.398,
+        27.363
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 16,
+      "promptId": "2026-07-04-realtime-network-04-why-p2p-needs-signaling:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/016-2026-07-04-realtime-network-04-why-p2p-needs-signaling-checklist.txt",
+      "generationId": "019f2c80-3535-7903-8c77-6d0cddb987f2",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c80-3535-7903-8c77-6d0cddb987f2/ig_0966df4e753d32b6016a48d517c1488191bea2cef843406c8d.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-04-why-p2p-needs-signaling/2026-07-04-realtime-network-04-why-p2p-needs-signaling-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-04-why-p2p-needs-signaling/2026-07-04-realtime-network-04-why-p2p-needs-signaling-checklist.webp",
+      "sha256": "7643d0fe15ee8768ebd9df3c9cd89a0292c75bdadb764a17c6adc4a99048a95e",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        50.449,
+        46.869,
+        40.211
+      ]
+    }
+  ]
+}

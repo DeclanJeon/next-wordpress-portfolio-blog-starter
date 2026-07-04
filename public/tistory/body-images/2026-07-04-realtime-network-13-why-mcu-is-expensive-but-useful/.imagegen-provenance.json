@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful",
+  "promptId": "2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 49,
+      "promptId": "2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/049-2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-flow.txt",
+      "generationId": "019f2c9e-0db4-7572-9fb3-ea8ba7a62814",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c9e-0db4-7572-9fb3-ea8ba7a62814/ig_089de5bfd12826e2016a48dcdc435c8191897925f5fd885933.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-flow.webp",
+      "sha256": "fdd5a04d7f005a785a9e36ceb8818c8cad2ccb4751826e752f55a6e44cf982ef",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        38.069,
+        36.476,
+        32.438
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 50,
+      "promptId": "2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/050-2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-matrix.txt",
+      "generationId": "019f2c9f-c1be-7830-a560-861de1094d57",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c9f-c1be-7830-a560-861de1094d57/ig_0379a8b0853d7504016a48dd2ce1f48191b17f58c915b4a7bd.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-matrix.webp",
+      "sha256": "2d42daf6b62d85c0ac8cf80a536378c365a7bf7443dabd809bc593a59ef28bd0",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        40.171,
+        40.308,
+        38.384
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 51,
+      "promptId": "2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/051-2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-failure.txt",
+      "generationId": "019f2ca0-30d2-7b91-ba82-609ee3924baa",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2ca0-30d2-7b91-ba82-609ee3924baa/ig_0588dcd1d8a0106d016a48dd57f028819186fb00759f7e20cc.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-failure.webp",
+      "sha256": "44c4a48703d7bf76fafd023b7854ec2f251379e4669acf4c2feefe6757a23681",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        47.134,
+        46.628,
+        44.141
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 52,
+      "promptId": "2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/052-2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-checklist.txt",
+      "generationId": "019f2ca0-ec9e-78c1-921a-248e12027b6d",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2ca0-ec9e-78c1-921a-248e12027b6d/ig_0c54f05a352fba45016a48dd7c0cf881919f1a9980173ab7ef.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful/2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful-checklist.webp",
+      "sha256": "7422de7644c8c6c30c0c3c826cd6875882a97babe27429711a1dea2f039ff9b1",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        44.452,
+        46.432,
+        44.763
+      ]
+    }
+  ]
+}

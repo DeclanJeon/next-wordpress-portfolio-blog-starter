@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-12-simulcast-svc-near-sfu",
+  "promptId": "2026-07-04-realtime-network-12-simulcast-svc-near-sfu:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-12-simulcast-svc-near-sfu",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-12-simulcast-svc-near-sfu/2026-07-04-realtime-network-12-simulcast-svc-near-sfu-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-12-simulcast-svc-near-sfu/2026-07-04-realtime-network-12-simulcast-svc-near-sfu-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-12-simulcast-svc-near-sfu/2026-07-04-realtime-network-12-simulcast-svc-near-sfu-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-12-simulcast-svc-near-sfu/2026-07-04-realtime-network-12-simulcast-svc-near-sfu-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-12-simulcast-svc-near-sfu/2026-07-04-realtime-network-12-simulcast-svc-near-sfu-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-12-simulcast-svc-near-sfu/2026-07-04-realtime-network-12-simulcast-svc-near-sfu-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-12-simulcast-svc-near-sfu/2026-07-04-realtime-network-12-simulcast-svc-near-sfu-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-12-simulcast-svc-near-sfu/2026-07-04-realtime-network-12-simulcast-svc-near-sfu-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 45,
+      "promptId": "2026-07-04-realtime-network-12-simulcast-svc-near-sfu:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/045-2026-07-04-realtime-network-12-simulcast-svc-near-sfu-flow.txt",
+      "generationId": "019f2c9a-2c89-7e03-98c5-b4be1201c5f8",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c9a-2c89-7e03-98c5-b4be1201c5f8/ig_0d232c3b2498d7c1016a48dbc156388191b23e23f4de982e4b.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-12-simulcast-svc-near-sfu/2026-07-04-realtime-network-12-simulcast-svc-near-sfu-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-12-simulcast-svc-near-sfu/2026-07-04-realtime-network-12-simulcast-svc-near-sfu-flow.webp",
+      "sha256": "3ec1c4a3d652577371b6a6147e661d4602ce83ab5e06585521db181e4cfef965",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        38.91,
+        36.152,
+        33.37
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 46,
+      "promptId": "2026-07-04-realtime-network-12-simulcast-svc-near-sfu:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/046-2026-07-04-realtime-network-12-simulcast-svc-near-sfu-matrix.txt",
+      "generationId": "019f2c9b-750e-7d91-87de-7e7a29f20351",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c9b-750e-7d91-87de-7e7a29f20351/ig_00276a9ee14c5e90016a48dc14bd3c8191b2775f5a29e03279.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-12-simulcast-svc-near-sfu/2026-07-04-realtime-network-12-simulcast-svc-near-sfu-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-12-simulcast-svc-near-sfu/2026-07-04-realtime-network-12-simulcast-svc-near-sfu-matrix.webp",
+      "sha256": "79ca467e1be16f3417c018f76d7d4eb7d9eb234658d6a4c7db222ee523a11145",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        21.485,
+        19.525,
+        17.228
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 47,
+      "promptId": "2026-07-04-realtime-network-12-simulcast-svc-near-sfu:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/047-2026-07-04-realtime-network-12-simulcast-svc-near-sfu-failure.txt",
+      "generationId": "019f2c9c-4ac5-7550-8f03-56f7430e1cfe",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c9c-4ac5-7550-8f03-56f7430e1cfe/ig_0c6199d86fa1898e016a48dc5bb4a0819194967a8cedbdc1ee.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-12-simulcast-svc-near-sfu/2026-07-04-realtime-network-12-simulcast-svc-near-sfu-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-12-simulcast-svc-near-sfu/2026-07-04-realtime-network-12-simulcast-svc-near-sfu-failure.webp",
+      "sha256": "90819246bb40f9a338072858670a9c5e9965d0aa8ee984e2ca95e14ce5bd06f4",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        29.231,
+        27.186,
+        22.856
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 48,
+      "promptId": "2026-07-04-realtime-network-12-simulcast-svc-near-sfu:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/048-2026-07-04-realtime-network-12-simulcast-svc-near-sfu-checklist.txt",
+      "generationId": "019f2c9c-aeb8-7a90-b4fa-298fb7d518d3",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c9c-aeb8-7a90-b4fa-298fb7d518d3/ig_0d2c51053fcca049016a48dc64d7a08191bdb83a8903bcfe60.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-12-simulcast-svc-near-sfu/2026-07-04-realtime-network-12-simulcast-svc-near-sfu-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-12-simulcast-svc-near-sfu/2026-07-04-realtime-network-12-simulcast-svc-near-sfu-checklist.webp",
+      "sha256": "27319ad97d0378233165cd86789dbc5ee42312bbe389ab874a5dafa07a5fb360",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        59.118,
+        59.209,
+        56.597
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-02-direct-connection-meaning",
+  "promptId": "2026-07-04-realtime-network-02-direct-connection-meaning:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-02-direct-connection-meaning",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-02-direct-connection-meaning/2026-07-04-realtime-network-02-direct-connection-meaning-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-02-direct-connection-meaning/2026-07-04-realtime-network-02-direct-connection-meaning-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-02-direct-connection-meaning/2026-07-04-realtime-network-02-direct-connection-meaning-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-02-direct-connection-meaning/2026-07-04-realtime-network-02-direct-connection-meaning-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-02-direct-connection-meaning/2026-07-04-realtime-network-02-direct-connection-meaning-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-02-direct-connection-meaning/2026-07-04-realtime-network-02-direct-connection-meaning-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-02-direct-connection-meaning/2026-07-04-realtime-network-02-direct-connection-meaning-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-02-direct-connection-meaning/2026-07-04-realtime-network-02-direct-connection-meaning-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 5,
+      "promptId": "2026-07-04-realtime-network-02-direct-connection-meaning:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/005-2026-07-04-realtime-network-02-direct-connection-meaning-flow.txt",
+      "generationId": "019f2c77-5927-78c1-8900-d4d0c053931f",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c77-5927-78c1-8900-d4d0c053931f/ig_00a34cfc2185b534016a48d2d9f9508191aaeedba2baa7d588.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-02-direct-connection-meaning/2026-07-04-realtime-network-02-direct-connection-meaning-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-02-direct-connection-meaning/2026-07-04-realtime-network-02-direct-connection-meaning-flow.webp",
+      "sha256": "98b679e55f01081ec989b5b5204be03e1364cd781c02d361d44e538a9cb5b969",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        29.694,
+        28.121,
+        26.95
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 6,
+      "promptId": "2026-07-04-realtime-network-02-direct-connection-meaning:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/006-2026-07-04-realtime-network-02-direct-connection-meaning-matrix.txt",
+      "generationId": "019f2c78-b6dd-7c30-9caf-f02b4a432b29",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c78-b6dd-7c30-9caf-f02b4a432b29/ig_080b95dbe36ce3ee016a48d33e2bfc81919aef4cd59131fe6d.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-02-direct-connection-meaning/2026-07-04-realtime-network-02-direct-connection-meaning-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-02-direct-connection-meaning/2026-07-04-realtime-network-02-direct-connection-meaning-matrix.webp",
+      "sha256": "70c33610288e8db8b2b5e63b1acb5957820bf554bbdbcf62733881a7ec54c045",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        24.777,
+        23.727,
+        22.17
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 7,
+      "promptId": "2026-07-04-realtime-network-02-direct-connection-meaning:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/007-2026-07-04-realtime-network-02-direct-connection-meaning-failure.txt",
+      "generationId": "019f2c79-5215-7ee1-b76c-c0fe852bf58f",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c79-5215-7ee1-b76c-c0fe852bf58f/ig_06bd2443d1db33e9016a48d3639be8819186263a8812c93baf.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-02-direct-connection-meaning/2026-07-04-realtime-network-02-direct-connection-meaning-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-02-direct-connection-meaning/2026-07-04-realtime-network-02-direct-connection-meaning-failure.webp",
+      "sha256": "042bd5024af252913c6b9c6a9ab1ff9f780d2b6e1a9252a23bc931b1bb1eaad6",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        23.877,
+        22.038,
+        18.818
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 8,
+      "promptId": "2026-07-04-realtime-network-02-direct-connection-meaning:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/008-2026-07-04-realtime-network-02-direct-connection-meaning-checklist.txt",
+      "generationId": "019f2c7a-36af-7c33-9153-372ca3664c0d",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c7a-36af-7c33-9153-372ca3664c0d/ig_0f67031c9b80f4d7016a48d3979e7c8191ae7873a919f2d56c.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-02-direct-connection-meaning/2026-07-04-realtime-network-02-direct-connection-meaning-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-02-direct-connection-meaning/2026-07-04-realtime-network-02-direct-connection-meaning-checklist.webp",
+      "sha256": "d5d3c50bb6fab6f507b4d3fc6988092c9f461441aef0a64bf93766f584846a0f",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        40.393,
+        37.388,
+        33.772
+      ]
+    }
+  ]
+}

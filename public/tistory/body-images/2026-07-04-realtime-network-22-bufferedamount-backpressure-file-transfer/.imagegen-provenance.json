@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
+  "goalId": "G003",
+  "slug": "2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer",
+  "promptId": "2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer:body-image-set",
+  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-checklist.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-matrix.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-flow.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-matrix.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-failure.webp",
+    "/tistory/body-images/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "flow",
+      "requestIndex": 85,
+      "promptId": "2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer:flow",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/085-2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-flow.txt",
+      "generationId": "019f2cc3-4fba-7be2-b036-c29a15484441",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cc3-4fba-7be2-b036-c29a15484441/ig_01a058e660129ff3016a48e65cd83c8191b6b657c51eda275a.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-flow.webp",
+      "sha256": "254b816a6c75a99d928c89a47119bb5043a7be5c978b091e4e4180627e660ece",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        34.355,
+        30.992,
+        24.822
+      ]
+    },
+    {
+      "slotId": "matrix",
+      "requestIndex": 86,
+      "promptId": "2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer:matrix",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/086-2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-matrix.txt",
+      "generationId": "019f2cc4-892f-7230-9665-d909262bc3ef",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cc4-892f-7230-9665-d909262bc3ef/ig_06c777baa7dff286016a48e69fa60081918e3360957b7c4b0a.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-matrix.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-matrix.webp",
+      "sha256": "40cb1d280ede1890c720ac970893a16b176d6c6bf74ee339db714fe21269fef6",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        30.862,
+        26.995,
+        21.093
+      ]
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 87,
+      "promptId": "2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer:failure",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/087-2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-failure.txt",
+      "generationId": "019f2cc5-1696-7d31-9074-61d32a86f5c4",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cc5-1696-7d31-9074-61d32a86f5c4/ig_0e2860ffe3c84328016a48e6cf9a04819182279a21c58403f2.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-failure.webp",
+      "sha256": "b85849dd40de4adf50b853eacde4f55f64a3043c9d1b80dd7fc886f003fa332b",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        35.799,
+        35.832,
+        35.235
+      ]
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 88,
+      "promptId": "2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer:checklist",
+      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/088-2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-checklist.txt",
+      "generationId": "019f2cc5-303c-7f90-8563-92a920b8e6ba",
+      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2cc5-303c-7f90-8563-92a920b8e6ba/ig_0feb78c74a86fb84016a48e6c766888191adf7e179e750c5b1.png",
+      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer-checklist.webp",
+      "sha256": "d6d060cca0f489403ee6ad71e065a029d766dc7c29af72d123f6a62a3fc8cfa8",
+      "width": 1672,
+      "height": 941,
+      "stddev64": [
+        41.627,
+        41.145,
+        39.375
+      ]
+    }
+  ]
+}
