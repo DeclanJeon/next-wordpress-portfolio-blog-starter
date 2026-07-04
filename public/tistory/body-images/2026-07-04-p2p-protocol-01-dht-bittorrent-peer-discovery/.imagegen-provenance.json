@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T13:52:09.497190+00:00",
+  "goalId": "p2p-protocol-followup",
+  "slug": "2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery",
+  "promptId": "2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery:body-image-set",
+  "generationId": "codex-imagegen-p2p-protocol-2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-cover.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-flow.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-failure.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-checklist.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-flow.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-failure.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "cover",
+      "requestIndex": 1,
+      "promptId": "2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery:cover",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/001-2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-cover.txt",
+      "generationId": "codex-imagegen-p2p-protocol-1",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-cover.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-cover.webp",
+      "sha256": "b6265badcd4c4b3baa2916fb50cf399f19a9046fe432812c41980078d9f95375"
+    },
+    {
+      "slotId": "flow",
+      "requestIndex": 2,
+      "promptId": "2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery:flow",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/002-2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-flow.txt",
+      "generationId": "codex-imagegen-p2p-protocol-2",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-flow.webp",
+      "sha256": "db582a878ff1fc38a5a86ead32a97e926371ab75bcd849a308e21837e4accb31"
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 3,
+      "promptId": "2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery:failure",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/003-2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-failure.txt",
+      "generationId": "codex-imagegen-p2p-protocol-3",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-failure.webp",
+      "sha256": "2d59b4fd98c988f5e504ef4b89536c379c87449de403eb0bbc4205efb570d8b8"
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 4,
+      "promptId": "2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery:checklist",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/004-2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-checklist.txt",
+      "generationId": "codex-imagegen-p2p-protocol-4",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-checklist.webp",
+      "sha256": "2e80b2999bfd9c5e053e623f2774b6055dbf427f9b376eb58a9425035320f6ab"
+    }
+  ]
+}

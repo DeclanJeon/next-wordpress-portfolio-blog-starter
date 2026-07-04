@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T13:52:09.507144+00:00",
+  "goalId": "p2p-protocol-followup",
+  "slug": "2026-07-04-p2p-protocol-06-turn-server-cost-model",
+  "promptId": "2026-07-04-p2p-protocol-06-turn-server-cost-model:body-image-set",
+  "generationId": "codex-imagegen-p2p-protocol-2026-07-04-p2p-protocol-06-turn-server-cost-model",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-cover.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-flow.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-failure.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-checklist.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-flow.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-failure.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "cover",
+      "requestIndex": 21,
+      "promptId": "2026-07-04-p2p-protocol-06-turn-server-cost-model:cover",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/021-2026-07-04-p2p-protocol-06-turn-server-cost-model-cover.txt",
+      "generationId": "codex-imagegen-p2p-protocol-21",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-cover.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-cover.webp",
+      "sha256": "48afb6d6ef118f857eb59ffe52a93b4a70222235d84bcc1157e80eea4a431727"
+    },
+    {
+      "slotId": "flow",
+      "requestIndex": 22,
+      "promptId": "2026-07-04-p2p-protocol-06-turn-server-cost-model:flow",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/022-2026-07-04-p2p-protocol-06-turn-server-cost-model-flow.txt",
+      "generationId": "codex-imagegen-p2p-protocol-22",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-flow.webp",
+      "sha256": "6fa1678b418cda5f3fb7e7af24d908963cb48e9d5471e57aa398baa056f43292"
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 23,
+      "promptId": "2026-07-04-p2p-protocol-06-turn-server-cost-model:failure",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/023-2026-07-04-p2p-protocol-06-turn-server-cost-model-failure.txt",
+      "generationId": "codex-imagegen-p2p-protocol-23",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-failure.webp",
+      "sha256": "d5b3f0ae493c2e47b37e18efd3d97b79b678f4e0db71e1d9d405126d4d14afc2"
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 24,
+      "promptId": "2026-07-04-p2p-protocol-06-turn-server-cost-model:checklist",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/024-2026-07-04-p2p-protocol-06-turn-server-cost-model-checklist.txt",
+      "generationId": "codex-imagegen-p2p-protocol-24",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-checklist.webp",
+      "sha256": "3133154ad0ff00cb020013ee822a33b6d6b5acd06779a24d5029b19ec5b603d0"
+    }
+  ]
+}

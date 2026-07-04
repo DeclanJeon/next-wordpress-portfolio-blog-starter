@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T13:52:09.511523+00:00",
+  "goalId": "p2p-protocol-followup",
+  "slug": "2026-07-04-p2p-protocol-08-mobile-browser-background-limits",
+  "promptId": "2026-07-04-p2p-protocol-08-mobile-browser-background-limits:body-image-set",
+  "generationId": "codex-imagegen-p2p-protocol-2026-07-04-p2p-protocol-08-mobile-browser-background-limits",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-cover.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-flow.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-failure.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-checklist.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-flow.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-failure.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "cover",
+      "requestIndex": 29,
+      "promptId": "2026-07-04-p2p-protocol-08-mobile-browser-background-limits:cover",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/029-2026-07-04-p2p-protocol-08-mobile-browser-background-limits-cover.txt",
+      "generationId": "codex-imagegen-p2p-protocol-29",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-cover.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-cover.webp",
+      "sha256": "42bf60794bfb08137314e42a4db03096ce84282c7d4f0cffba620c11ea07e08f"
+    },
+    {
+      "slotId": "flow",
+      "requestIndex": 30,
+      "promptId": "2026-07-04-p2p-protocol-08-mobile-browser-background-limits:flow",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/030-2026-07-04-p2p-protocol-08-mobile-browser-background-limits-flow.txt",
+      "generationId": "codex-imagegen-p2p-protocol-30",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-flow.webp",
+      "sha256": "5032ae6dc21f4c3e178779fd08dc8e54fd9c5617a1a802f5154d5f9e62deb8fc"
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 31,
+      "promptId": "2026-07-04-p2p-protocol-08-mobile-browser-background-limits:failure",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/031-2026-07-04-p2p-protocol-08-mobile-browser-background-limits-failure.txt",
+      "generationId": "codex-imagegen-p2p-protocol-31",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-failure.webp",
+      "sha256": "412dd7fa072a0e7f8c558d9488565c835a868fbc97dc34f46b7f5a598fc6c707"
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 32,
+      "promptId": "2026-07-04-p2p-protocol-08-mobile-browser-background-limits:checklist",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/032-2026-07-04-p2p-protocol-08-mobile-browser-background-limits-checklist.txt",
+      "generationId": "codex-imagegen-p2p-protocol-32",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-checklist.webp",
+      "sha256": "07912c42f84052905dfec30468f3b09267a234d50d79c0330571052ae4b3001a"
+    }
+  ]
+}

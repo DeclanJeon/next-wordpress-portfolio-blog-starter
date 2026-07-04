@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T13:52:09.499070+00:00",
+  "goalId": "p2p-protocol-followup",
+  "slug": "2026-07-04-p2p-protocol-02-libp2p-stack-boundaries",
+  "promptId": "2026-07-04-p2p-protocol-02-libp2p-stack-boundaries:body-image-set",
+  "generationId": "codex-imagegen-p2p-protocol-2026-07-04-p2p-protocol-02-libp2p-stack-boundaries",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-cover.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-flow.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-failure.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-checklist.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-flow.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-failure.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "cover",
+      "requestIndex": 5,
+      "promptId": "2026-07-04-p2p-protocol-02-libp2p-stack-boundaries:cover",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/005-2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-cover.txt",
+      "generationId": "codex-imagegen-p2p-protocol-5",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-cover.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-cover.webp",
+      "sha256": "b4a84173346aceb981875725eb66921aa29c77183eda0ef2d67b8f9f47484461"
+    },
+    {
+      "slotId": "flow",
+      "requestIndex": 6,
+      "promptId": "2026-07-04-p2p-protocol-02-libp2p-stack-boundaries:flow",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/006-2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-flow.txt",
+      "generationId": "codex-imagegen-p2p-protocol-6",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-flow.webp",
+      "sha256": "3351e8efbb0e4ede9764c9b1b2c6349c1f22bc1d3bf89310b7bf2407de287160"
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 7,
+      "promptId": "2026-07-04-p2p-protocol-02-libp2p-stack-boundaries:failure",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/007-2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-failure.txt",
+      "generationId": "codex-imagegen-p2p-protocol-7",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-failure.webp",
+      "sha256": "f7bfe71075423977736efc6714b92e1ed7e6c24417686038f4192120e309ba9a"
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 8,
+      "promptId": "2026-07-04-p2p-protocol-02-libp2p-stack-boundaries:checklist",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/008-2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-checklist.txt",
+      "generationId": "codex-imagegen-p2p-protocol-8",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-checklist.webp",
+      "sha256": "8891fcd91452af60e6abc32d479f9bb69a33ee5a4c10456e8cfa29e8eb195c26"
+    }
+  ]
+}

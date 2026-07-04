@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T13:52:09.513467+00:00",
+  "goalId": "p2p-protocol-followup",
+  "slug": "2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p",
+  "promptId": "2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p:body-image-set",
+  "generationId": "codex-imagegen-p2p-protocol-2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p-cover.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p-flow.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p-failure.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p-checklist.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p-flow.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p-failure.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "cover",
+      "requestIndex": 33,
+      "promptId": "2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p:cover",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/033-2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p-cover.txt",
+      "generationId": "codex-imagegen-p2p-protocol-33",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p-cover.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p-cover.webp",
+      "sha256": "5768f4e7f859d37a6fb012344d10a39e21b2b68b875c77ed1f87e70bc5840a9c"
+    },
+    {
+      "slotId": "flow",
+      "requestIndex": 34,
+      "promptId": "2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p:flow",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/034-2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p-flow.txt",
+      "generationId": "codex-imagegen-p2p-protocol-34",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p-flow.webp",
+      "sha256": "4c28fc5a4b4ea52d6c6acb2d0482f51881564d7b8dfda599c5da7a1b2bdaf181"
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 35,
+      "promptId": "2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p:failure",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/035-2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p-failure.txt",
+      "generationId": "codex-imagegen-p2p-protocol-35",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p-failure.webp",
+      "sha256": "08568982d9c066a9d1d69d874719e8a925369ebf03e474d6c79758f0f4a5d7d6"
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 36,
+      "promptId": "2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p:checklist",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/036-2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p-checklist.txt",
+      "generationId": "codex-imagegen-p2p-protocol-36",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p/2026-07-04-p2p-protocol-09-edge-serverless-hybrid-p2p-checklist.webp",
+      "sha256": "8a876bd5d381eb87a00a5b43b9f90eb1657135f2eedbf83c983ce2311d9587da"
+    }
+  ]
+}

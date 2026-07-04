@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T13:52:09.500960+00:00",
+  "goalId": "p2p-protocol-followup",
+  "slug": "2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc",
+  "promptId": "2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc:body-image-set",
+  "generationId": "codex-imagegen-p2p-protocol-2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-cover.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-flow.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-failure.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-checklist.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-flow.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-failure.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "cover",
+      "requestIndex": 9,
+      "promptId": "2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc:cover",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/009-2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-cover.txt",
+      "generationId": "codex-imagegen-p2p-protocol-9",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-cover.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-cover.webp",
+      "sha256": "9563aa185af0c106b88cc2abbf7971371ffa7ffe29e963e57857e10221b70f89"
+    },
+    {
+      "slotId": "flow",
+      "requestIndex": 10,
+      "promptId": "2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc:flow",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/010-2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-flow.txt",
+      "generationId": "codex-imagegen-p2p-protocol-10",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-flow.webp",
+      "sha256": "a8b1798c3d09183f7b49f5b769d844ff153bcaf45acab4a313c94a8ea6f546ee"
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 11,
+      "promptId": "2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc:failure",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/011-2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-failure.txt",
+      "generationId": "codex-imagegen-p2p-protocol-11",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-failure.webp",
+      "sha256": "709aa9be762b9c2cca7e8dfbd58104eb3238d9038eda1215c8af07c14fb9ea2b"
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 12,
+      "promptId": "2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc:checklist",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/012-2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-checklist.txt",
+      "generationId": "codex-imagegen-p2p-protocol-12",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-checklist.webp",
+      "sha256": "cd1f057f6752bbffe15a72e5538aadf90c9743c4a6b86a3e34441d18d5cdaa1c"
+    }
+  ]
+}

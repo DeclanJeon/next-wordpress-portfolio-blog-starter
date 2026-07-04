@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T13:52:09.502949+00:00",
+  "goalId": "p2p-protocol-followup",
+  "slug": "2026-07-04-p2p-protocol-04-crdt-p2p-collaboration",
+  "promptId": "2026-07-04-p2p-protocol-04-crdt-p2p-collaboration:body-image-set",
+  "generationId": "codex-imagegen-p2p-protocol-2026-07-04-p2p-protocol-04-crdt-p2p-collaboration",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-cover.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-flow.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-failure.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-checklist.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-flow.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-failure.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "cover",
+      "requestIndex": 13,
+      "promptId": "2026-07-04-p2p-protocol-04-crdt-p2p-collaboration:cover",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/013-2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-cover.txt",
+      "generationId": "codex-imagegen-p2p-protocol-13",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-cover.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-cover.webp",
+      "sha256": "1004e0d4199467ba56b29e25176e857a6d6511ed63761c945d37c9bb86a81de0"
+    },
+    {
+      "slotId": "flow",
+      "requestIndex": 14,
+      "promptId": "2026-07-04-p2p-protocol-04-crdt-p2p-collaboration:flow",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/014-2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-flow.txt",
+      "generationId": "codex-imagegen-p2p-protocol-14",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-flow.webp",
+      "sha256": "7bbf18065ef08a8ab28bc22df471e16b518c8cfd19e6ef62a7695c83eb25b972"
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 15,
+      "promptId": "2026-07-04-p2p-protocol-04-crdt-p2p-collaboration:failure",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/015-2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-failure.txt",
+      "generationId": "codex-imagegen-p2p-protocol-15",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-failure.webp",
+      "sha256": "2c3ca434573862d447f03353eafe6154eb2bb996b84f6f3435208f1d6e51a822"
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 16,
+      "promptId": "2026-07-04-p2p-protocol-04-crdt-p2p-collaboration:checklist",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/016-2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-checklist.txt",
+      "generationId": "codex-imagegen-p2p-protocol-16",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-checklist.webp",
+      "sha256": "0fe234873e7b3ca4627863714fc4ce63a0ffc3ce165a14a96043ea2f6ddf44f9"
+    }
+  ]
+}

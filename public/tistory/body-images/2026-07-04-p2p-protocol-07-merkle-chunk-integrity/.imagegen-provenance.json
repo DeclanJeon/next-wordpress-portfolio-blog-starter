@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T13:52:09.509430+00:00",
+  "goalId": "p2p-protocol-followup",
+  "slug": "2026-07-04-p2p-protocol-07-merkle-chunk-integrity",
+  "promptId": "2026-07-04-p2p-protocol-07-merkle-chunk-integrity:body-image-set",
+  "generationId": "codex-imagegen-p2p-protocol-2026-07-04-p2p-protocol-07-merkle-chunk-integrity",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-cover.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-flow.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-failure.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-checklist.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-flow.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-failure.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "cover",
+      "requestIndex": 25,
+      "promptId": "2026-07-04-p2p-protocol-07-merkle-chunk-integrity:cover",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/025-2026-07-04-p2p-protocol-07-merkle-chunk-integrity-cover.txt",
+      "generationId": "codex-imagegen-p2p-protocol-25",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-cover.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-cover.webp",
+      "sha256": "c77d6d3f45a7312a3de3b2fb663742790d9887bf63ffba07167d00f80a1d1f5d"
+    },
+    {
+      "slotId": "flow",
+      "requestIndex": 26,
+      "promptId": "2026-07-04-p2p-protocol-07-merkle-chunk-integrity:flow",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/026-2026-07-04-p2p-protocol-07-merkle-chunk-integrity-flow.txt",
+      "generationId": "codex-imagegen-p2p-protocol-26",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-flow.webp",
+      "sha256": "ada356951fe0bc473c18707f4be52ed84678de758fc014641ce5bc2c5ae151f6"
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 27,
+      "promptId": "2026-07-04-p2p-protocol-07-merkle-chunk-integrity:failure",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/027-2026-07-04-p2p-protocol-07-merkle-chunk-integrity-failure.txt",
+      "generationId": "codex-imagegen-p2p-protocol-27",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-failure.webp",
+      "sha256": "069fe10c9a366fbd81612f8d40bf62211e05214626f25c82b99cb45d8aac6c42"
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 28,
+      "promptId": "2026-07-04-p2p-protocol-07-merkle-chunk-integrity:checklist",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/028-2026-07-04-p2p-protocol-07-merkle-chunk-integrity-checklist.txt",
+      "generationId": "codex-imagegen-p2p-protocol-28",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-checklist.webp",
+      "sha256": "918d45ffc045d87182f5e0105c1f74dee3c96c2e12d00170d4e77e01cfed8b2a"
+    }
+  ]
+}

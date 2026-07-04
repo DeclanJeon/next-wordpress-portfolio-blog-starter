@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "backend": "Codex imagegen / Imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagegen-imagen-raster",
+  "generatedAt": "2026-07-04T13:52:09.505270+00:00",
+  "goalId": "p2p-protocol-followup",
+  "slug": "2026-07-04-p2p-protocol-05-p2p-security-trust-boundary",
+  "promptId": "2026-07-04-p2p-protocol-05-p2p-security-trust-boundary:body-image-set",
+  "generationId": "codex-imagegen-p2p-protocol-2026-07-04-p2p-protocol-05-p2p-security-trust-boundary",
+  "finalAssetPaths": [
+    "/tistory/body-images/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary-cover.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary-flow.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary-failure.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary-checklist.webp"
+  ],
+  "contentImagePaths": [
+    "/tistory/body-images/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary-flow.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary-failure.webp",
+    "/tistory/body-images/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary-checklist.webp"
+  ],
+  "assets": [
+    {
+      "slotId": "cover",
+      "requestIndex": 17,
+      "promptId": "2026-07-04-p2p-protocol-05-p2p-security-trust-boundary:cover",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/017-2026-07-04-p2p-protocol-05-p2p-security-trust-boundary-cover.txt",
+      "generationId": "codex-imagegen-p2p-protocol-17",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary-cover.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary-cover.webp",
+      "sha256": "ba56daffb94af923818d86d563b52d1017d7f78ab00252c678dbf86a1edfa7f3"
+    },
+    {
+      "slotId": "flow",
+      "requestIndex": 18,
+      "promptId": "2026-07-04-p2p-protocol-05-p2p-security-trust-boundary:flow",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/018-2026-07-04-p2p-protocol-05-p2p-security-trust-boundary-flow.txt",
+      "generationId": "codex-imagegen-p2p-protocol-18",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary-flow.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary-flow.webp",
+      "sha256": "ed3d4a1a47764744c0fdabe846accb8007db212625df3817044348e69a841506"
+    },
+    {
+      "slotId": "failure",
+      "requestIndex": 19,
+      "promptId": "2026-07-04-p2p-protocol-05-p2p-security-trust-boundary:failure",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/019-2026-07-04-p2p-protocol-05-p2p-security-trust-boundary-failure.txt",
+      "generationId": "codex-imagegen-p2p-protocol-19",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary-failure.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary-failure.webp",
+      "sha256": "f8cfda7b6eef9c2cfefc7bc26b3dfe11d75a9baf90d37de1a275183a6b28eb28"
+    },
+    {
+      "slotId": "checklist",
+      "requestIndex": 20,
+      "promptId": "2026-07-04-p2p-protocol-05-p2p-security-trust-boundary:checklist",
+      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/020-2026-07-04-p2p-protocol-05-p2p-security-trust-boundary-checklist.txt",
+      "generationId": "codex-imagegen-p2p-protocol-20",
+      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary-checklist.webp",
+      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary/2026-07-04-p2p-protocol-05-p2p-security-trust-boundary-checklist.webp",
+      "sha256": "1a268344ff1ea672d7ea9b16c417fdc81094cbc9c44a18a990e8dc655f6bf650"
+    }
+  ]
+}
