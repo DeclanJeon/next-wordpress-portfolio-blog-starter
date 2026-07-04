@@ -104,13 +104,22 @@ const checks: Check[] = [
       const projectHtml = await fetchText("/writing/projects")
       assertIncludes(projectHtml, "CollectionPage", "projects schema")
       assertIncludes(projectHtml, "/writing/projects/dev-retrospective/document-automation", "project detail link")
+      assertIncludes(projectHtml, "/writing/projects/study-note/realtime-network", "study-note detail link")
 
       const seriesHtml = await fetchText("/writing/series/ponswarp-origin-story")
       assertIncludes(titleOf(seriesHtml), "PonsWarp Origin Story", "series title")
       assertIncludes(seriesHtml, "CollectionPage", "series schema")
       assertIncludes(seriesHtml, "/writing/2026-06-29-ponswarp-00-file-transfer-broke-in-ponslink", "series first article")
+
+      const realtimeSeriesHtml = await fetchText("/writing/series/realtime-network-deep-dive")
+      assertIncludes(titleOf(realtimeSeriesHtml), "실시간 네트워크 딥다이브", "realtime series title")
+      assertIncludes(realtimeSeriesHtml, "CollectionPage", "realtime series schema")
+      assertIncludes(realtimeSeriesHtml, "/writing/2026-07-04-realtime-network-01-p2p-is-not-serverless", "realtime series first article")
+      assertIncludes(realtimeSeriesHtml, "/writing/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer", "realtime series last article")
+
       assertNotIncludes(projectHtml, "https://lab.ponslink.com", "projects stale canonical host")
       assertNotIncludes(seriesHtml, "https://lab.ponslink.com", "series stale canonical host")
+      assertNotIncludes(realtimeSeriesHtml, "https://lab.ponslink.com", "realtime series stale canonical host")
     },
   },
   {
@@ -121,6 +130,9 @@ const checks: Check[] = [
       assertIncludes(xml, "https://blog.ponslink.com/writing/projects", "sitemap projects")
       assertIncludes(xml, "https://blog.ponslink.com/writing/series/ponswarp-origin-story", "sitemap PonsWarp series")
       assertIncludes(xml, "https://blog.ponslink.com/writing/2026-06-29-ponswarp-00-file-transfer-broke-in-ponslink", "sitemap PonsWarp article")
+      assertIncludes(xml, "https://blog.ponslink.com/writing/series/realtime-network-deep-dive", "sitemap realtime series")
+      assertIncludes(xml, "https://blog.ponslink.com/writing/2026-07-04-realtime-network-01-p2p-is-not-serverless", "sitemap realtime first article")
+      assertIncludes(xml, "https://blog.ponslink.com/writing/2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer", "sitemap realtime last article")
       assertNotIncludes(xml, "https://lab.ponslink.com", "sitemap stale canonical host")
     },
   },

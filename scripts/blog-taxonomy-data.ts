@@ -24,7 +24,7 @@ export type PublishedPost = {
   readonly tags: string
 }
 
-export type ProjectKey = "ponslink" | "ponswarp" | "document-automation" | "domain-ai" | "local-tools" | "essay" | "operation-note" | "release-note"
+export type ProjectKey = "ponslink" | "ponswarp" | "document-automation" | "domain-ai" | "local-tools" | "essay" | "operation-note" | "release-note" | "study-note"
 
 export type MappingResult = {
   readonly primarySlug: string
@@ -40,6 +40,8 @@ export const TAXONOMY_SEEDS: readonly TaxonomySeed[] = [
   { slug: "dev-retrospective/local-tools", name: "Local Tools", kind: "project", parentSlug: "dev-retrospective", description: "ClickCap, Flucto, CaptureBrain 등 로컬 도구", sortOrder: 50 },
   { slug: "operation-note", name: "운영 노트", kind: "category", parentSlug: null, description: "배포, SEO, 블로그 운영, 서버 운영 기록", sortOrder: 20 },
   { slug: "operation-note/blog-ops", name: "Blog Ops", kind: "project", parentSlug: "operation-note", description: "Next.js/WordPress형 블로그 운영 기록", sortOrder: 10 },
+  { slug: "study-note", name: "공부 노트", kind: "category", parentSlug: null, description: "직접 만든 제품을 이해하기 위해 정리한 네트워크, 브라우저, 시스템 설계 공부 기록", sortOrder: 25 },
+  { slug: "study-note/realtime-network", name: "실시간 네트워크 딥다이브", kind: "project", parentSlug: "study-note", description: "P2P, Mesh, SFU, MCU, WebRTC, DataChannel, NAT traversal을 공부하며 실시간 제품 설계 판단으로 연결한 기록", sortOrder: 10 },
   { slug: "essay", name: "에세이", kind: "category", parentSlug: null, description: "제품과 직접 연결되지 않는 생각 글", sortOrder: 30 },
   { slug: "release-note", name: "릴리즈 노트", kind: "category", parentSlug: null, description: "배포 변화와 기능 출시 기록", sortOrder: 40 },
   { slug: "dev-retrospective/ponslink/origin", name: "Origin", kind: "topic", parentSlug: "dev-retrospective/ponslink", description: "왜 만들었는지, room-first, 링크 기반 연결", sortOrder: 10 },
@@ -55,6 +57,31 @@ export const TAXONOMY_SEEDS: readonly TaxonomySeed[] = [
   { slug: "dev-retrospective/ponswarp/operation", name: "Operations", kind: "topic", parentSlug: "dev-retrospective/ponswarp", description: "Cloud Drop, 권한, 결제, 링크 만료", sortOrder: 50 },
   { slug: "dev-retrospective/ponswarp/metrics", name: "Metrics", kind: "topic", parentSlug: "dev-retrospective/ponswarp", description: "파일 크기, 메모리, 실패/복구, before/after", sortOrder: 60 },
 ]
+const REALTIME_NETWORK_DEEP_DIVE_POST_SLUGS = [
+  "2026-07-04-realtime-network-01-p2p-is-not-serverless",
+  "2026-07-04-realtime-network-02-direct-connection-meaning",
+  "2026-07-04-realtime-network-03-p2p-strengths-and-limits",
+  "2026-07-04-realtime-network-04-why-p2p-needs-signaling",
+  "2026-07-04-realtime-network-05-mesh-gets-heavy-with-people",
+  "2026-07-04-realtime-network-06-full-partial-mesh-star",
+  "2026-07-04-realtime-network-07-p2p-mesh-breaks-video-call",
+  "2026-07-04-realtime-network-08-mesh-cost-by-connection-formula",
+  "2026-07-04-realtime-network-09-p2p-mesh-sfu-mcu-comparison",
+  "2026-07-04-realtime-network-10-sfu-selective-forwarding",
+  "2026-07-04-realtime-network-11-why-sfu-scales-better-than-mesh",
+  "2026-07-04-realtime-network-12-simulcast-svc-near-sfu",
+  "2026-07-04-realtime-network-13-why-mcu-is-expensive-but-useful",
+  "2026-07-04-realtime-network-14-sfu-and-mcu-are-choices",
+  "2026-07-04-realtime-network-15-why-webrtc-connection-is-hard",
+  "2026-07-04-realtime-network-16-stun-turn-ice-without-confusion",
+  "2026-07-04-realtime-network-17-why-nat-traversal-fails",
+  "2026-07-04-realtime-network-18-why-turn-costs-money-in-p2p",
+  "2026-07-04-realtime-network-19-datachannel-is-not-file-api",
+  "2026-07-04-realtime-network-20-ordered-vs-unordered-datachannel",
+  "2026-07-04-realtime-network-21-reliable-vs-partially-reliable",
+  "2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer",
+] as const
+
 
 export const SERIES_SEEDS: readonly SeriesSeed[] = [
   {
@@ -154,5 +181,13 @@ export const SERIES_SEEDS: readonly SeriesSeed[] = [
       "2026-06-29-ponswarp-06b-rust-wasm-memory-survival",
       "2026-06-29-ponswarp-02b-desktop-testing-fatigue",
     ],
+  },
+  {
+    slug: "realtime-network-deep-dive",
+    title: "실시간 네트워크 딥다이브: P2P부터 SFU, MCU까지",
+    projectSlug: "study-note/realtime-network",
+    description: "P2P, Mesh, SFU, MCU, WebRTC 연결 이론, DataChannel 파일 전송을 10,000자급 공부 노트로 정리한 실시간 네트워크 딥다이브.",
+    sortOrder: 5,
+    postSlugs: REALTIME_NETWORK_DEEP_DIVE_POST_SLUGS,
   },
 ]

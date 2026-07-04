@@ -10,6 +10,7 @@ function hasToken(value: string, tokens: readonly string[]): boolean {
 
 function projectForPost(post: PublishedPost): ProjectKey {
   const text = `${post.slug} ${post.title} ${post.category} ${post.tags}`
+  if (post.category === "공부 노트" || /^2026-07-04-realtime-network-/.test(post.slug) || hasToken(text, ["공부 노트"])) return "study-note"
   if (post.title.startsWith("[PonsLink]") || /^\d{4}-\d{2}-\d{2}-ponslink-/.test(post.slug)) return "ponslink"
   if (post.title.startsWith("[PonsWarp]") || /^\d{4}-\d{2}-\d{2}-ponswarp-/.test(post.slug)) return "ponswarp"
   if (hasToken(text, ["Document Automation", "DocuFlow", "PDF마스터", "PDF Master", "문서 자동화", "HWP", "OCR"])) return "document-automation"
@@ -54,6 +55,7 @@ function mapPost(post: PublishedPost): MappingResult {
       : []
     return { primarySlug: ponswarpPrimary(post), secondarySlugs }
   }
+  if (project === "study-note") return { primarySlug: "study-note/realtime-network", secondarySlugs: [] }
   if (project === "document-automation") return { primarySlug: "dev-retrospective/document-automation", secondarySlugs: [] }
   if (project === "domain-ai") return { primarySlug: "dev-retrospective/domain-ai", secondarySlugs: [] }
   if (project === "essay") return { primarySlug: "essay", secondarySlugs: [] }

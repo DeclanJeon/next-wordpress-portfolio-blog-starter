@@ -15,6 +15,10 @@ type PageProps = {
 function formatDate(value: string): string {
   return new Intl.DateTimeFormat("ko-KR", { year: "numeric", month: "short", day: "numeric" }).format(new Date(value))
 }
+function seriesProjectHref(projectSlug: string): string {
+  return taxonomyHref(projectSlug.includes("/") ? projectSlug : `dev-retrospective/${projectSlug}`)
+}
+
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
@@ -59,8 +63,8 @@ export default async function WritingSeriesPage({ params }: PageProps) {
             Writing archive
           </Link>
           <div className="flex items-center gap-4 text-sm">
-            <Link href={taxonomyHref(`dev-retrospective/${series.projectSlug}`)} className="text-muted-foreground transition-colors hover:text-foreground">
-              Project archive
+            <Link href={seriesProjectHref(series.projectSlug)} className="text-muted-foreground transition-colors hover:text-foreground">
+              Collection archive
             </Link>
             <Link href="/work" className="text-clay hover:underline">
               Work
