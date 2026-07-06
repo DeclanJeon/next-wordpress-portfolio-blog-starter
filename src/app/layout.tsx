@@ -20,6 +20,8 @@ import {
   siteJsonLd,
 } from "@/lib/seo";
 
+const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "ca-pub-6181820059897519";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -103,6 +105,7 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
   },
   other: {
+    "google-adsense-account": ADSENSE_CLIENT,
     "ai-content-declaration": "human-authored developer portfolio and technical blog with implementation evidence",
     "answer-engine-summary": SITE_DESCRIPTION,
     "content-language": "ko-KR",
@@ -125,6 +128,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" suppressHydrationWarning>
+      <head>
+        <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`} crossOrigin="anonymous" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} font-sans antialiased bg-background text-foreground`}
       >
