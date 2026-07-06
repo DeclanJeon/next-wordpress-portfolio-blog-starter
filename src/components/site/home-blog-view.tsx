@@ -52,7 +52,7 @@ export function HomeBlogView() {
                 GitHub
                 <ArrowUpRight className="h-3.5 w-3.5" />
               </a>
-              <a href="mailto:syas0301@gmail.com" className="inline-flex items-center gap-1 transition-colors hover:text-foreground">
+              <a href="https://ponslink.com/public-desk/declan" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 transition-colors hover:text-foreground">
                 연락
                 <Mail className="h-3.5 w-3.5" />
               </a>

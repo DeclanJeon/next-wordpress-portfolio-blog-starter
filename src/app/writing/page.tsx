@@ -109,7 +109,7 @@ export default async function WritingPage({ searchParams }: PageProps) {
             <a href="https://github.com/DeclanJeon" target="_blank" rel="noopener noreferrer" className="text-muted-foreground transition-colors hover:text-foreground">
               GitHub
             </a>
-            <a href="mailto:syas0301@gmail.com" className="text-muted-foreground transition-colors hover:text-foreground">
+            <a href="https://ponslink.com/public-desk/declan" target="_blank" rel="noopener noreferrer" className="text-muted-foreground transition-colors hover:text-foreground">
               연락
             </a>
             <Link href="/writing/projects" className="text-clay hover:underline">

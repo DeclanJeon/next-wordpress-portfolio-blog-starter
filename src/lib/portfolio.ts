@@ -269,6 +269,6 @@ export const writingCaseStudies = [
 export const evidenceItems = [
   "운영 중인 URL과 화면: PonsLink, PonsWarp, DocuFlow, Ruminate",
   "코드를 열어볼 수 있는 곳: PonsWarp, ClickCap, flucto, page-production-skills",
-  "연락과 공개 흔적: GitHub, email, blog, Threads",
+  "연락과 공개 흔적: GitHub, public desk, blog, Threads",
   "긴 글은 보조 서랍에 두고 필요한 판단만 앞에 연결한다",
 ]

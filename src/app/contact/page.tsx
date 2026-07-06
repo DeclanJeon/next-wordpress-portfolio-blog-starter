@@ -11,10 +11,10 @@ export const metadata: Metadata = pageMetadata({
 
 const contactLinks = [
   {
-    label: "Email",
-    value: "syas0301@gmail.com",
-    href: "mailto:syas0301@gmail.com",
-    description: "같이 만들거나 고칠 흐름이 있으면 이메일이 가장 빠르다.",
+    label: "Contact",
+    value: "ponslink.com/public-desk/declan",
+    href: "https://ponslink.com/public-desk/declan",
+    description: "작업 맥락은 공개 데스크로 보내는 편이 가장 빠르다.",
   },
   {
     label: "GitHub",
@@ -63,10 +63,10 @@ export default function ContactPage() {
           </div>
           <aside className="rounded-3xl border border-border bg-background/75 p-5 shadow-sm">
             <p className="label-tracked-sm text-muted-foreground">가장 빠른 길</p>
-            <a href="mailto:syas0301@gmail.com" className="mt-4 flex items-center justify-between gap-4 rounded-2xl bg-foreground px-4 py-3 text-sm text-background transition-transform hover:-translate-y-0.5">
+            <a href="https://ponslink.com/public-desk/declan" target="_blank" rel="noopener noreferrer" className="mt-4 flex items-center justify-between gap-4 rounded-2xl bg-foreground px-4 py-3 text-sm text-background transition-transform hover:-translate-y-0.5">
               <span className="inline-flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                메일 보내기
+                연락 보내기
               </span>
               <ArrowUpRight className="h-4 w-4" />
             </a>

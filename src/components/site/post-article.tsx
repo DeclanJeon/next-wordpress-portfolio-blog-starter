@@ -172,7 +172,7 @@ export function PostArticle({
             <a href="https://github.com/DeclanJeon" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground">
               GitHub
             </a>
-            <a href="mailto:syas0301@gmail.com" className="transition-colors hover:text-foreground">
+            <a href="https://ponslink.com/public-desk/declan" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground">
               연락
             </a>
             <Link href="/work" className="inline-flex items-center gap-1 transition-colors hover:text-foreground">

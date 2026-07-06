@@ -87,7 +87,7 @@ function WorkArchive({ compact = false }: { compact?: boolean }) {
               <a href="https://github.com/DeclanJeon" target="_blank" rel="noopener noreferrer" className="hover:text-foreground hover:underline">
                 GitHub
               </a>
-              <a href="mailto:syas0301@gmail.com" className="hover:text-foreground hover:underline">
+              <a href="https://ponslink.com/public-desk/declan" target="_blank" rel="noopener noreferrer" className="hover:text-foreground hover:underline">
                 연락
               </a>
             </div>
