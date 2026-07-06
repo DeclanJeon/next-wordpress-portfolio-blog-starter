@@ -1,0 +1,11 @@
+{
+  "backend": "codex imagegen",
+  "model": "gpt5.5",
+  "sourceType": "codex-imagen-raster",
+  "promptId": "g001-positive-fixture",
+  "sourceAssetPath": "/home/declan/.codex/generated_images/session/test.png",
+  "finalAssetPaths": [
+    "/tistory/body-images/g001-provenance-regex-test/test.webp"
+  ],
+  "prompt": "Do not use SVG, canvas, HTML, Python, or code-rendered fallbacks."
+}
