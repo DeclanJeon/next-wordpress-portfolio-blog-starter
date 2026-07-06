@@ -44,9 +44,14 @@ export default async function WritingProjectsPage() {
             <ArrowLeft className="h-4 w-4" />
             PonsLink / PonsWarp archive
           </Link>
-          <Link href="/work" className="text-sm text-clay hover:underline">
-            Work
-          </Link>
+          <div className="flex items-center gap-4 text-sm">
+            <Link href="/writing/projects/study-note" className="text-muted-foreground transition-colors hover:text-foreground">
+              Study
+            </Link>
+            <Link href="/work" className="text-clay hover:underline">
+              Work
+            </Link>
+          </div>
         </nav>
       </header>
 

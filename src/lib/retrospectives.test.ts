@@ -19,9 +19,9 @@ const FIRST_BATCH_BY_PROJECT = {
     "2026-06-29-main-docuflow-01-tools-to-flow",
   ],
   "ruminate-fatemirror": [
+    "2026-07-06-navid-fatemirror-failed-prototype",
     "2026-06-29-main-fatemirror-01-mirror-not-fortune",
     "2026-06-29-main-ruminate-02-classic-text-as-question",
-    "2026-06-29-main-ruminate-01-ai-should-not-answer-too-fast",
   ],
 } as const
 

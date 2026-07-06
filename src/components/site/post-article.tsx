@@ -136,10 +136,15 @@ export function PostArticle({
             <ArrowLeft className="h-4 w-4" />
             {backLabel}
           </Link>
-          <Link href="/work" className="inline-flex items-center gap-1 transition-colors hover:text-foreground">
-            Selected work
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link href="/writing/projects/study-note" className="transition-colors hover:text-foreground">
+              Study
+            </Link>
+            <Link href="/work" className="inline-flex items-center gap-1 transition-colors hover:text-foreground">
+              Selected work
+              <ArrowUpRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
         </footer>
       </article>
 

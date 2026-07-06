@@ -101,6 +101,9 @@ export default async function WritingPage({ searchParams }: PageProps) {
             <Link href="/writing/projects" className="text-muted-foreground transition-colors hover:text-foreground">
               Project pages
             </Link>
+            <Link href="/writing/projects/study-note" className="text-muted-foreground transition-colors hover:text-foreground">
+              Study
+            </Link>
             <Link href="/work" className="text-clay hover:underline">
               Work
             </Link>

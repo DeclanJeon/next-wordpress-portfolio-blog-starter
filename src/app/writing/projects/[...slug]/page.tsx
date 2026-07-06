@@ -99,6 +99,9 @@ export default async function WritingProjectDetailPage({ params }: PageProps) {
             <Link href="/writing" className="text-muted-foreground transition-colors hover:text-foreground">
               PonsLink / PonsWarp
             </Link>
+            <Link href="/writing/projects/study-note" className="text-muted-foreground transition-colors hover:text-foreground">
+              Study
+            </Link>
             <Link href="/work" className="text-clay hover:underline">
               Work
             </Link>

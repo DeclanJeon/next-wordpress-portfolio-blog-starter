@@ -35,6 +35,9 @@ export function HomeHeader({
           <Link href="/writing" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
             Writing
           </Link>
+          <Link href="/writing/projects/study-note" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            Study
+          </Link>
           {view !== "blog" ? (
             <button onClick={onBlog} className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground">
               <ArrowLeft className="h-4 w-4" />
