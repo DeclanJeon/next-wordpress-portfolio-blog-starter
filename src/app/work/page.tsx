@@ -27,12 +27,12 @@ export default function WorkPage() {
       <section className="mx-auto max-w-6xl px-5 pb-12 pt-16 md:px-8 md:pb-16 md:pt-24">
         <span className="label-tracked text-muted-foreground">S&nbsp;e&nbsp;l&nbsp;e&nbsp;c&nbsp;t&nbsp;e&nbsp;d&nbsp;&nbsp;w&nbsp;o&nbsp;r&nbsp;k</span>
         <h1 className="mt-6 max-w-4xl font-serif-display text-5xl leading-[0.95] tracking-tight md:text-7xl">
-          Systems I designed,
+          Systems I designed,{" "}
           <br />
           <span className="italic text-clay">built, and keep operating.</span>
         </h1>
         <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-          운영 URL, GitHub proof, screenshot, 현재 상태를 함께 보여주는 서비스 아카이브다.
+          먼저 PonsLink와 PonsWarp의 live URL, GitHub proof, screenshot, 회고 글을 확인하고 나머지 작업은 보조 archive로 본다.
         </p>
       </section>
       <PortfolioShowcase mode="work" />

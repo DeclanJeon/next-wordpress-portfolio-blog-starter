@@ -200,11 +200,11 @@ export default async function WritingPostPage({ params }: PageProps) {
             Writing archive
           </Link>
           <div className="flex items-center gap-4">
-            <Link href="/writing/projects/study-note" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-              Study
-            </Link>
             <Link href="/work" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
               Work
+            </Link>
+            <Link href="/writing/projects" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+              Archive
             </Link>
             <ThemeToggle />
           </div>

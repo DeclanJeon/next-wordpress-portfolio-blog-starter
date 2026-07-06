@@ -8,7 +8,9 @@ import { getPostIdsForTaxonomySlug, getTaxonomyNode, getTaxonomyPath, isCoreWrit
 import { db } from "@/lib/db"
 import { collectionPageJsonLd, jsonLd, pageMetadata } from "@/lib/seo"
 import { WritingArchiveList } from "@/components/site/writing-archive-list"
+import { CollectionReadingGuidePanel } from "@/components/site/collection-reading-guide"
 import { monthFormatter, type ArchivePost, type TimelineGroup } from "@/components/site/writing-archive-utils"
+import { getCollectionReadingGuide } from "@/lib/selected-writing"
 
 export const dynamic = "force-dynamic"
 
@@ -63,6 +65,7 @@ export default async function WritingProjectDetailPage({ params }: PageProps) {
   const decoratedPosts = await decorateArchivePosts(postRecords)
   const seriesByPost = await getArchiveSeriesMetadataForPosts(decoratedPosts.map((post) => post.id))
   const posts = decoratedPosts.map((post) => ({ ...post, ...seriesByPost.get(post.id) }))
+  const readingGuide = getCollectionReadingGuide(path, posts)
   const projectJsonLd = collectionPageJsonLd({
     name: `${node.name} 글 모음`,
     description: node.description || `${node.name}에 속한 글 모음.`,
@@ -97,10 +100,7 @@ export default async function WritingProjectDetailPage({ params }: PageProps) {
           </Link>
           <div className="flex items-center gap-4 text-sm">
             <Link href="/writing" className="text-muted-foreground transition-colors hover:text-foreground">
-              PonsLink / PonsWarp
-            </Link>
-            <Link href="/writing/projects/study-note" className="text-muted-foreground transition-colors hover:text-foreground">
-              Study
+              Selected Writing
             </Link>
             <Link href="/work" className="text-clay hover:underline">
               Work
@@ -124,6 +124,7 @@ export default async function WritingProjectDetailPage({ params }: PageProps) {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 pb-16 md:px-8">
+        <CollectionReadingGuidePanel guide={readingGuide} />
         <WritingArchiveList posts={posts} timelineGroups={[...timelineGroupsFor(posts)]} view="board" />
       </section>
     </main>

@@ -28,7 +28,7 @@ function SignatureSystems() {
           <div>
             <SectionLabel>S&nbsp;y&nbsp;s&nbsp;t&nbsp;e&nbsp;m&nbsp;s</SectionLabel>
             <h2 className="mt-4 font-serif-display text-4xl leading-none md:text-5xl">
-              불편을 운영 가능한 작은 시스템으로.
+              반복되는 마찰을 작게 설계한 제품으로.
             </h2>
           </div>
           <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2">
@@ -72,16 +72,26 @@ function WorkArchive({ compact = false }: { compact?: boolean }) {
           <div>
             <SectionLabel>W&nbsp;o&nbsp;r&nbsp;k</SectionLabel>
             <h2 className="mt-4 max-w-3xl font-serif-display text-4xl leading-none md:text-6xl">
-              PonsLink and PonsWarp are the main line.
+              PonsLink와 PonsWarp가 대표 포트폴리오다.
             </h2>
             <p className="mt-5 max-w-2xl text-muted-foreground">
-              메인은 연결을 세션으로 바꾸는 PonsLink, 파일을 직접 전송으로 바꾸는 PonsWarp다. 나머지 작업은 이 두 축을 설명하는 번외 프로젝트로 묶어 둔다.
+              먼저 운영 중인 두 제품에서 문제, 결정, 증거를 확인한다. 문서 자동화·도메인 AI·제작 도구는 같은 판단 방식을 보조하는 번외 작업으로 둔다.
             </p>
           </div>
-          <a className="inline-flex items-center gap-1 text-sm text-clay hover:underline" href="/work">
-            전체 work route
-            <ArrowUpRight className="h-4 w-4" />
-          </a>
+          <div className="flex flex-col items-start gap-2 md:items-end">
+            <a className="inline-flex items-center gap-1 text-sm text-clay hover:underline" href="/work">
+              전체 작업 보기
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
+            <div className="flex flex-wrap gap-3 text-xs text-muted-foreground">
+              <a href="https://github.com/DeclanJeon" target="_blank" rel="noopener noreferrer" className="hover:text-foreground hover:underline">
+                GitHub
+              </a>
+              <a href="mailto:syas0301@gmail.com" className="hover:text-foreground hover:underline">
+                Contact
+              </a>
+            </div>
+          </div>
         </div>
 
         {!compact ? (
@@ -107,10 +117,10 @@ function WorkArchive({ compact = false }: { compact?: boolean }) {
           <div className="mt-8">
             <div className="flex items-end justify-between gap-4">
               <div>
-                <p className="label-tracked-sm text-clay">Main projects</p>
-                <h3 className="mt-2 font-serif-display text-3xl leading-tight">대표로 밀고 있는 두 제품</h3>
+                <p className="label-tracked-sm text-clay">Main products</p>
+                <h3 className="mt-2 font-serif-display text-3xl leading-tight">먼저 보면 되는 두 작업</h3>
               </div>
-              <span className="text-xs text-muted-foreground">PonsLink → PonsWarp</span>
+              <span className="text-xs text-muted-foreground">Live · Repo · Retrospective</span>
             </div>
             <div className="mt-5 grid gap-5 lg:grid-cols-2">
               {primaryProjects.map((project) => (
@@ -162,10 +172,10 @@ function WritingGateway({ compact = false }: { compact?: boolean }) {
         <div>
           <SectionLabel>W&nbsp;r&nbsp;i&nbsp;t&nbsp;i&nbsp;n&nbsp;g</SectionLabel>
           <h2 className="mt-4 font-serif-display text-4xl leading-none md:text-5xl">
-            글 목록을 서비스 설계 노트로 연결한다.
+            글은 작업 증거로만 필요한 만큼 보여준다.
           </h2>
           <p className="mt-5 text-muted-foreground">
-            메인 writing 연결은 PonsLink와 PonsWarp 회고만 보여준다. 그 외 번외 프로젝트 글은 프로젝트별 글 페이지에서 분리해 탐색한다.
+            메인 writing은 PonsLink와 PonsWarp의 판단 근거를 보여주는 글로 좁힌다. 긴 archive는 프로젝트별 페이지에서 필요한 사람만 이어서 읽는다.
           </p>
           <a href="/writing" className="mt-5 inline-flex items-center gap-1 text-sm text-clay hover:underline">
             writing route 보기

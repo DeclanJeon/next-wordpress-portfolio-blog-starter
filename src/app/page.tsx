@@ -143,7 +143,7 @@ export default function Home() {
 
   return (
     <div className="relative flex min-h-screen flex-col bg-background paper-grain">
-      <HomeHeader view={view} user={user} onBlog={() => setView("blog")} onLogin={() => setView("login")} onMyPosts={() => setView("my-posts")} />
+      <HomeHeader view={view} user={user} onBlog={() => setView("blog")} onMyPosts={() => setView("my-posts")} />
       <main className="flex-1">
         <AnimatePresence mode="wait">
           {view === "blog" ? <HomeBlogView key="blog" /> : null}
@@ -166,7 +166,7 @@ export default function Home() {
         </AnimatePresence>
       </main>
       <HomeFooter />
-      <WriterFab user={user} onWrite={() => setView("write")} onMyPosts={() => { loadMyPosts(); setView("my-posts") }} onLogin={() => setView("login")} onLogout={handleLogout} />
+      <WriterFab user={user} onWrite={() => setView("write")} onMyPosts={() => { loadMyPosts(); setView("my-posts") }} onLogout={handleLogout} />
     </div>
   )
 }

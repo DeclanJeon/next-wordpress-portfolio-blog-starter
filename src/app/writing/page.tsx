@@ -7,8 +7,10 @@ import { WritingArchiveList } from "@/components/site/writing-archive-list"
 import { TaxonomyTreeFilter } from "@/components/site/taxonomy-tree-filter"
 import { TagShowMoreButton } from "@/components/site/tag-show-more-button"
 import { getArchiveData } from "@/lib/writing-archive-data"
+import { SelectedWritingSection } from "@/components/site/selected-writing-section"
 import { archiveFilterCanonicalHref, normalizeArchiveFilter } from "@/lib/archive-filter"
 import { coreWritingProjectSlugs, isCoreWritingProjectSlug, projectWritingHref } from "@/lib/blog-taxonomy"
+import { getSelectedWritingGroups } from "@/lib/selected-writing"
 import {
   archiveHref,
   archiveViews,
@@ -56,7 +58,10 @@ export default async function WritingPage({ searchParams }: PageProps) {
   const filter = normalizeArchiveFilter({ category, taxonomy, tag, q })
   if (filter.taxonomy && !isCoreWritingProjectSlug(filter.taxonomy)) redirect(projectWritingHref(filter.taxonomy))
   const viewLabel = archiveViews.find((option) => option.id === view)?.label ?? "Board"
-  const { posts, tags, totalPublished, taxonomyTree, taxonomyPath } = await getArchiveData(filter, { rootSlugs: coreWritingProjectSlugs })
+  const [{ posts, tags, totalPublished, taxonomyTree, taxonomyPath }, selectedGroups] = await Promise.all([
+    getArchiveData(filter, { rootSlugs: coreWritingProjectSlugs }),
+    getSelectedWritingGroups(),
+  ])
   const archiveJsonLd = collectionPageJsonLd({
     name: "PonsLink / PonsWarp 글 아카이브",
     description: "PonsLink와 PonsWarp를 만들며 남긴 WebRTC, 직접 파일 전송, 세션 운영, 제품 회고 중심의 한국어 기술 글 모음.",
@@ -98,14 +103,17 @@ export default async function WritingPage({ searchParams }: PageProps) {
             Portfolio Blog
           </Link>
           <div className="flex items-center gap-4 text-sm">
-            <Link href="/writing/projects" className="text-muted-foreground transition-colors hover:text-foreground">
-              Project pages
-            </Link>
-            <Link href="/writing/projects/study-note" className="text-muted-foreground transition-colors hover:text-foreground">
-              Study
-            </Link>
-            <Link href="/work" className="text-clay hover:underline">
+            <Link href="/work" className="text-muted-foreground transition-colors hover:text-foreground">
               Work
+            </Link>
+            <a href="https://github.com/DeclanJeon" target="_blank" rel="noopener noreferrer" className="text-muted-foreground transition-colors hover:text-foreground">
+              GitHub
+            </a>
+            <a href="mailto:syas0301@gmail.com" className="text-muted-foreground transition-colors hover:text-foreground">
+              Contact
+            </a>
+            <Link href="/writing/projects" className="text-clay hover:underline">
+              Archive
             </Link>
           </div>
         </nav>
@@ -116,13 +124,12 @@ export default async function WritingPage({ searchParams }: PageProps) {
           <div>
             <span className="label-tracked text-muted-foreground">P o n s L i n k  /  P o n s W a r p</span>
             <h1 className="mt-6 max-w-5xl font-serif-display text-5xl leading-[0.95] tracking-tight md:text-7xl">
-              연결과 전송을
+              연결과 전송을{" "}
               <br />
               <span className="italic text-clay">계속 고친 기록.</span>
             </h1>
             <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-              이 메인 아카이브에는 PonsLink와 PonsWarp를 만들며 남긴 핵심 회고만 남겼습니다. 문서 자동화, 도메인 AI, 로컬 도구 같은 다른 글은
-              별도 프로젝트 페이지에서 맥락별로 볼 수 있습니다.
+              PonsLink와 PonsWarp를 만들며 남긴 핵심 회고를 먼저 묶었다. 처음 보는 사람은 아래 대표 글에서 제품 판단을 확인하고, 전체 기록은 archive에서 이어 읽으면 된다.
             </p>
           </div>
           <div className="rounded-3xl border border-border bg-background/75 p-5 text-sm text-muted-foreground shadow-sm">
@@ -135,11 +142,13 @@ export default async function WritingPage({ searchParams }: PageProps) {
               <p>운영하며 고칩니다.</p>
             </div>
             <Link href="/writing/projects" className="inline-flex text-clay hover:underline">
-              다른 프로젝트 글 보기
+              전체 archive 보기
             </Link>
           </div>
         </div>
       </section>
+
+      {!hasFilter ? <SelectedWritingSection groups={selectedGroups} /> : null}
 
       <section className="border-y border-border/70 bg-background/70">
         <div className="mx-auto grid max-w-6xl gap-6 px-5 py-6 md:px-8">

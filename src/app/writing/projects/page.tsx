@@ -5,8 +5,8 @@ import { getWritingProjectHubs } from "@/lib/blog-taxonomy"
 import { collectionPageJsonLd, jsonLd, pageMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = pageMetadata({
-  title: "글 모음",
-  description: "PonsLink와 PonsWarp 외의 공부 노트, 문서 자동화, 도메인 AI, 로컬 도구, 운영 노트를 주제별로 모은 글 아카이브.",
+  title: "기술 노트와 운영 기록 아카이브",
+  description: "대표 글 뒤에 남겨 둔 공부 노트, 문서 자동화, 도메인 AI, 운영 기록을 주제별로 따라 읽는 보조 아카이브.",
   path: "/writing/projects",
 })
 
@@ -16,8 +16,8 @@ export default async function WritingProjectsPage() {
   const projects = await getWritingProjectHubs()
   const total = projects.reduce((sum, project) => sum + project.count, 0)
   const projectsJsonLd = collectionPageJsonLd({
-    name: "글 모음",
-    description: "PonsLink와 PonsWarp 외의 공부 노트, 문서 자동화, 도메인 AI, 로컬 도구, 운영 노트를 주제별로 모은 글 아카이브.",
+    name: "기술 노트와 운영 기록 아카이브",
+    description: "대표 글 뒤에 남겨 둔 공부 노트, 문서 자동화, 도메인 AI, 운영 기록을 주제별로 따라 읽는 보조 아카이브.",
     path: "/writing/projects",
     breadcrumbs: [
       { name: "Writing", href: "/writing" },
@@ -45,27 +45,30 @@ export default async function WritingProjectsPage() {
             PonsLink / PonsWarp archive
           </Link>
           <div className="flex items-center gap-4 text-sm">
-            <Link href="/writing/projects/study-note" className="text-muted-foreground transition-colors hover:text-foreground">
-              Study
-            </Link>
-            <Link href="/work" className="text-clay hover:underline">
+            <Link href="/work" className="text-muted-foreground transition-colors hover:text-foreground">
               Work
+            </Link>
+            <Link href="/writing" className="text-clay hover:underline">
+              Selected Writing
             </Link>
           </div>
         </nav>
       </header>
 
       <section className="mx-auto max-w-6xl px-5 pb-10 pt-16 md:px-8 md:pb-14 md:pt-24">
-        <span className="label-tracked text-muted-foreground">C o l l e c t i o n  P a g e s</span>
+        <span className="label-tracked text-muted-foreground">A r c h i v e  M a p</span>
         <h1 className="mt-6 max-w-5xl font-serif-display text-5xl leading-[0.95] tracking-tight md:text-7xl">
-          핵심 블로그에서 분리한
+          대표 글 뒤에 남겨 둔{" "}
           <br />
-          <span className="italic text-clay">주제별 글 모음.</span>
+          <span className="italic text-clay">기술 노트와 운영 기록.</span>
         </h1>
         <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-          메인 글 목록은 PonsLink와 PonsWarp에 집중하고, 공부 노트·문서 자동화·도메인 AI·로컬 도구·운영 노트는 여기서 주제 단위로 따로 읽도록 분리했습니다.
-          흐름이 다른 글을 한 목록에 섞지 않기 위한 컬렉션 페이지입니다.
+          처음 보는 사람은 Work와 Selected Writing에서 시작하면 된다. 이 페이지는 특정 기술, 프로젝트 배경, 운영 기록을 더 깊게 따라가고 싶을 때 쓰는 보조 archive다.
         </p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link href="/work" className="rounded-full bg-foreground px-4 py-2 text-sm text-background transition-transform hover:-translate-y-0.5">Work 보기</Link>
+          <Link href="/writing" className="rounded-full border border-border px-4 py-2 text-sm text-foreground transition-colors hover:border-foreground/40">대표 글 보기</Link>
+        </div>
         <p className="mt-5 text-sm text-muted-foreground">{projects.length}개 모음 · {total}편의 글</p>
       </section>
 

@@ -76,9 +76,9 @@ export function ProductRetrospectiveLive({
         <div>
           <p className="label-tracked-sm text-muted-foreground">Retrospective</p>
           {data?.series ? (
-            <a href={data.series.href} className="mt-1 inline-flex text-[0.68rem] text-clay hover:underline">
+            <p className="mt-1 text-[0.68rem] text-clay">
               {data.series.label} · {data.series.title}
-            </a>
+            </p>
           ) : null}
           {statusMessage ? (
             <p className="mt-1 text-[0.68rem] leading-relaxed text-muted-foreground">
@@ -87,7 +87,7 @@ export function ProductRetrospectiveLive({
           ) : null}
         </div>
         <a href={archiveHref} className="shrink-0 text-xs text-clay hover:underline">
-          전체 {total}편
+          근거 기록 {total}편
         </a>
       </div>
 

@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import { ArrowUpRight, Mail } from "lucide-react"
 import { motion } from "framer-motion"
 import { PortfolioShowcase } from "@/components/site/portfolio-showcase"
 import { Reveal } from "@/components/site/reveal"
@@ -27,24 +28,38 @@ export function HomeBlogView() {
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="mt-6 font-serif-display text-5xl leading-[0.95] tracking-tight md:text-7xl">
-              마찰을 흐름으로
+              마찰을 흐름으로{" "}
               <br />
               <span className="italic text-clay">바꾸는 개발자.</span>
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-              개발 포트폴리오와 기술 블로그를 한 화면에 묶었습니다. PonsLink와 PonsWarp의 제품 선택, WebRTC 직접 전송 실험, 운영 실패와 수정 과정을 글과 작업물로 함께 정리합니다.
+              PonsLink는 만남 뒤 요청을 세션으로 잇고, PonsWarp는 큰 파일을 서버 보관 없이 직접 전송하게 만든다. 이 블로그는 기능 소개보다 문제, 선택, 실패 복구, 운영 증거를 먼저 보여준다.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#work" className="rounded-full bg-foreground px-5 py-2.5 text-sm text-background transition-transform hover:-translate-y-0.5">
-                만든 서비스 보기
+                대표 작업 보기
               </a>
               <Link href="/writing" className="rounded-full border border-border px-5 py-2.5 text-sm text-muted-foreground transition-colors hover:border-foreground/40 hover:text-foreground">
-                작업 기록 읽기
+                설계 기록 읽기
               </Link>
+            </div>
+            <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground">
+              <a href="https://github.com/DeclanJeon" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 transition-colors hover:text-foreground">
+                GitHub
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </a>
+              <a href="mailto:syas0301@gmail.com" className="inline-flex items-center gap-1 transition-colors hover:text-foreground">
+                Contact
+                <Mail className="h-3.5 w-3.5" />
+              </a>
+              <a href="https://ponslink.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 transition-colors hover:text-foreground">
+                PonsLink live
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </a>
             </div>
           </Reveal>
         </div>

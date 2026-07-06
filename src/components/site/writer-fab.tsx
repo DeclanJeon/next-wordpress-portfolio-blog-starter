@@ -9,7 +9,6 @@ interface WriterFabProps {
   user: User | null
   onWrite: () => void
   onMyPosts: () => void
-  onLogin: () => void
   onLogout: () => void
 }
 
@@ -17,15 +16,15 @@ export function WriterFab({
   user,
   onWrite,
   onMyPosts,
-  onLogin,
   onLogout,
 }: WriterFabProps) {
   const [open, setOpen] = React.useState(false)
 
+  if (!user) return null
   return (
     <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3 md:bottom-7 md:right-7">
       <AnimatePresence>
-        {open && user && (
+        {open && (
           <motion.div
             initial={{ opacity: 0, y: 10, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -68,18 +67,12 @@ export function WriterFab({
       </AnimatePresence>
 
       <button
-        onClick={() => {
-          if (!user) {
-            onLogin()
-          } else {
-            setOpen((v) => !v)
-          }
-        }}
-        aria-label={user ? "Writer menu" : "Writer login"}
+        onClick={() => setOpen((v) => !v)}
+        aria-label="Writer menu"
         className="group inline-flex h-14 w-14 items-center justify-center rounded-full bg-foreground text-background shadow-xl transition-transform hover:scale-105 active:scale-95"
       >
         <AnimatePresence mode="wait" initial={false}>
-          {user && open ? (
+          {open ? (
             <motion.span
               key="x"
               initial={{ rotate: -90, opacity: 0 }}
@@ -89,7 +82,7 @@ export function WriterFab({
             >
               <X className="h-6 w-6" />
             </motion.span>
-          ) : user ? (
+          ) : (
             <motion.span
               key="pen"
               initial={{ rotate: 90, opacity: 0 }}
@@ -98,22 +91,6 @@ export function WriterFab({
               transition={{ duration: 0.15 }}
             >
               <PenLine className="h-6 w-6" />
-            </motion.span>
-          ) : (
-            <motion.span
-              key="login"
-              initial={{ rotate: 90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: -90, opacity: 0 }}
-              transition={{ duration: 0.15 }}
-              className="flex flex-col items-center"
-            >
-              <span className="text-[9px] font-medium leading-none tracking-wide">
-                WRITER
-              </span>
-              <span className="text-[9px] leading-none tracking-wide opacity-70">
-                LOGIN
-              </span>
             </motion.span>
           )}
         </AnimatePresence>

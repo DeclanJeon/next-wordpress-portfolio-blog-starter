@@ -26,6 +26,7 @@ export interface PortfolioProject {
   liveUrl?: string
   repoUrl?: string
   screenshot?: string
+  caseStudyPath?: string
   proofNotes: string
   featured?: boolean
   retrospectiveLinks?: Array<{
@@ -108,6 +109,7 @@ export const portfolioProjects: PortfolioProject[] = [
     liveUrl: "https://ponslink.com",
     screenshot: "/portfolio/ponslink.png",
     proofNotes: "운영 URL과 PonsLink 활동 문서로 확인한 대표 서비스.",
+    caseStudyPath: "/work/ponslink",
     retrospectiveLinks: ponslinkRetrospectiveLinks,
     featured: true,
   },
@@ -129,6 +131,7 @@ export const portfolioProjects: PortfolioProject[] = [
     repoUrl: "https://github.com/DeclanJeon/PonsWarp",
     screenshot: "/portfolio/warp.png",
     proofNotes: "운영 URL과 PonsWarp 회고 글 12편으로 확인한 WebRTC 파일 전송 서비스.",
+    caseStudyPath: "/work/ponswarp",
     featured: true,
     retrospectiveLinks: ponswarpRetrospectiveLinks,
   },
@@ -264,8 +267,8 @@ export const writingCaseStudies = [
 ]
 
 export const evidenceItems = [
-  "Live URL screenshots preserved under /portfolio/*.png",
-  "GitHub proof: ClickCap, flucto, page-production-skills, agentdock",
-  "WordPress writing archive remains connected through the post grid",
-  "Revalidate/REST delay is called out instead of hidden",
+  "Live product URLs and screenshots: PonsLink, PonsWarp, DocuFlow, Ruminate",
+  "GitHub proof: PonsWarp, ClickCap, flucto, page-production-skills",
+  "Public profile links: GitHub, email, blog, Threads",
+  "Writing archive stays secondary and links back to product decisions",
 ]

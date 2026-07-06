@@ -28,6 +28,8 @@ function tagList(tags: string) {
     .filter(Boolean)
 }
 
+
+
 export function PostArticle({
   post,
   navigation,
@@ -35,6 +37,12 @@ export function PostArticle({
   backLabel = "Writing archive",
 }: PostArticleProps) {
   const tags = tagList(post.tags)
+  const headings = [...post.content.matchAll(/^##\s+(.+)$/gm)]
+    .map((match) => match[1]?.replace(/[#*_`]/g, "").trim())
+    .filter((heading): heading is string => Boolean(heading))
+    .slice(0, 6)
+  const showReadingGuide = post.content.length >= 5000 || post.readingTime >= 7
+
 
   return (
     <div className="mx-auto grid w-full max-w-[88rem] grid-cols-1 px-5 py-12 md:px-8 md:py-16 xl:grid-cols-[12rem_minmax(0,48rem)_16rem] xl:items-start xl:gap-12">
@@ -113,6 +121,30 @@ export function PostArticle({
           ) : null}
         </header>
 
+          {showReadingGuide ? (
+            <aside className="mt-8 rounded-2xl border border-border bg-muted/30 p-5">
+              <p className="label-tracked-sm text-clay">첫 30초 읽기 안내</p>
+              <div className="mt-4 grid gap-4 text-sm leading-relaxed text-muted-foreground md:grid-cols-[1.1fr_0.9fr]">
+                <div>
+                  <p className="font-medium text-foreground">이 글의 질문</p>
+                  <p className="mt-2">{post.excerpt}</p>
+                </div>
+                <div>
+                  <p className="font-medium text-foreground">읽는 법</p>
+                  {headings.length > 0 ? (
+                    <ul className="mt-2 space-y-1">
+                      {headings.map((heading) => (
+                        <li key={heading}>• {heading}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="mt-2">문제 제기, 구조 설명, 실패 경계, 돌아보는 판단을 차례로 확인한다.</p>
+                  )}
+                </div>
+              </div>
+            </aside>
+          ) : null}
+
         {post.featuredImage ? (
           <figure className="mt-10 overflow-hidden rounded-lg border border-border bg-muted">
             <img
@@ -136,10 +168,13 @@ export function PostArticle({
             <ArrowLeft className="h-4 w-4" />
             {backLabel}
           </Link>
-          <div className="flex items-center gap-4">
-            <Link href="/writing/projects/study-note" className="transition-colors hover:text-foreground">
-              Study
-            </Link>
+          <div className="flex flex-wrap items-center gap-4">
+            <a href="https://github.com/DeclanJeon" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground">
+              GitHub
+            </a>
+            <a href="mailto:syas0301@gmail.com" className="transition-colors hover:text-foreground">
+              Contact
+            </a>
             <Link href="/work" className="inline-flex items-center gap-1 transition-colors hover:text-foreground">
               Selected work
               <ArrowUpRight className="h-3.5 w-3.5" />

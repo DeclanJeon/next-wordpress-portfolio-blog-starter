@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { ArrowUpRight, ExternalLink } from "lucide-react"
 import { ProductRetrospectiveLive } from "@/components/site/product-retrospective-live"
 import type { PortfolioProject } from "@/lib/portfolio"
@@ -66,6 +67,9 @@ export function ProjectCard({ project, compact = false }: ProjectCardProps) {
           <span className="text-border">·</span>
           <span>{project.year}</span>
         </div>
+        <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+          Role · {project.role}
+        </p>
         <h3 className="mt-3 font-serif-display text-2xl leading-tight md:text-3xl">
           {project.title}
         </h3>
@@ -93,16 +97,22 @@ export function ProjectCard({ project, compact = false }: ProjectCardProps) {
         </div>
 
         <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-          {project.proofNotes}
+          Evidence · {project.proofNotes}
         </p>
 
         <ProductRetrospectiveLive
           project={project.slug}
-          limit={compact ? 3 : 8}
+          limit={3}
           fallbackItems={project.retrospectiveLinks ?? []}
           archiveHref={RETROSPECTIVE_ARCHIVE_HREFS[project.slug]}
         />
 
+        {project.caseStudyPath ? (
+          <Link href={project.caseStudyPath} className="mt-4 inline-flex items-center gap-1 text-sm text-clay hover:underline">
+            Case study
+            <ArrowUpRight className="h-3.5 w-3.5" />
+          </Link>
+        ) : null}
         <div className="mt-auto flex flex-wrap items-center gap-3 pt-5 text-sm">
           {project.liveUrl && (
             <a className="inline-flex items-center gap-1 text-clay hover:underline" href={project.liveUrl} target="_blank" rel="noopener noreferrer">
