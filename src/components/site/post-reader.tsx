@@ -141,7 +141,7 @@ export function PostReader({ post, onClose }: PostReaderProps) {
                   onClick={onClose}
                   className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  Back to index
+                  목록으로
                   <ArrowUpRight className="h-3.5 w-3.5 rotate-90" />
                 </button>
               </div>

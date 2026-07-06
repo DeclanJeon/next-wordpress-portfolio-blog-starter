@@ -68,7 +68,7 @@ export function ProjectCard({ project, compact = false }: ProjectCardProps) {
           <span>{project.year}</span>
         </div>
         <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-          Role · {project.role}
+          만든 쪽 · {project.role}
         </p>
         <h3 className="mt-3 font-serif-display text-2xl leading-tight md:text-3xl">
           {project.title}
@@ -79,11 +79,11 @@ export function ProjectCard({ project, compact = false }: ProjectCardProps) {
 
         <div className={`mt-5 grid gap-4 border-y border-border py-4 text-sm ${compact ? "" : "md:grid-cols-2"}`}>
           <div>
-            <p className="label-tracked-sm text-muted-foreground">Problem</p>
+            <p className="label-tracked-sm text-muted-foreground">걸렸던 부분</p>
             <p className={`mt-2 leading-relaxed ${compact ? "line-clamp-2" : ""}`}>{project.problem}</p>
           </div>
           <div>
-            <p className="label-tracked-sm text-muted-foreground">Decision</p>
+            <p className="label-tracked-sm text-muted-foreground">그래서 한 선택</p>
             <p className={`mt-2 leading-relaxed ${compact ? "line-clamp-2" : ""}`}>{project.decision}</p>
           </div>
         </div>
@@ -97,7 +97,7 @@ export function ProjectCard({ project, compact = false }: ProjectCardProps) {
         </div>
 
         <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-          Evidence · {project.proofNotes}
+          남은 흔적 · {project.proofNotes}
         </p>
 
         <ProductRetrospectiveLive
@@ -109,20 +109,20 @@ export function ProjectCard({ project, compact = false }: ProjectCardProps) {
 
         {project.caseStudyPath ? (
           <Link href={project.caseStudyPath} className="mt-4 inline-flex items-center gap-1 text-sm text-clay hover:underline">
-            Case study
+            더 열어보기
             <ArrowUpRight className="h-3.5 w-3.5" />
           </Link>
         ) : null}
         <div className="mt-auto flex flex-wrap items-center gap-3 pt-5 text-sm">
           {project.liveUrl && (
             <a className="inline-flex items-center gap-1 text-clay hover:underline" href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-              Live
+              열어보기
               <ExternalLink className="h-3.5 w-3.5" />
             </a>
           )}
           {project.repoUrl && (
             <a className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground hover:underline" href={project.repoUrl} target="_blank" rel="noopener noreferrer">
-              Repo
+              GitHub
               <ExternalLink className="h-3.5 w-3.5" />
             </a>
           )}

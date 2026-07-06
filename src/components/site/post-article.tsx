@@ -173,10 +173,10 @@ export function PostArticle({
               GitHub
             </a>
             <a href="mailto:syas0301@gmail.com" className="transition-colors hover:text-foreground">
-              Contact
+              연락
             </a>
             <Link href="/work" className="inline-flex items-center gap-1 transition-colors hover:text-foreground">
-              Selected work
+              작업 보기
               <ArrowUpRight className="h-3.5 w-3.5" />
             </Link>
           </div>

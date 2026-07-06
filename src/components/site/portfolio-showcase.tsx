@@ -28,17 +28,17 @@ function SignatureSystems() {
           <div>
             <SectionLabel>S&nbsp;y&nbsp;s&nbsp;t&nbsp;e&nbsp;m&nbsp;s</SectionLabel>
             <h2 className="mt-4 font-serif-display text-4xl leading-none md:text-5xl">
-              반복되는 마찰을 작게 설계한 제품으로.
+              반복해서 걸리는 부분을 조금씩 줄였다.
             </h2>
           </div>
           <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2">
             {signatureSystems.map((item) => (
               <a key={item.title} href={`#${item.projectSlug}`} className="group bg-background p-5 transition-colors hover:bg-muted/60 md:p-6">
-                <span className="label-tracked-sm text-clay">Signature</span>
+                <span className="label-tracked-sm text-clay">자주 돌아간 작업</span>
                 <h3 className="mt-3 font-serif-display text-2xl">{item.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
                 <span className="mt-4 inline-flex items-center gap-1 text-xs text-foreground">
-                  해당 케이스 보기
+                  자세히 열어보기
                   <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </span>
               </a>
@@ -72,15 +72,15 @@ function WorkArchive({ compact = false }: { compact?: boolean }) {
           <div>
             <SectionLabel>W&nbsp;o&nbsp;r&nbsp;k</SectionLabel>
             <h2 className="mt-4 max-w-3xl font-serif-display text-4xl leading-none md:text-6xl">
-              PonsLink와 PonsWarp가 대표 포트폴리오다.
+              요즘 가장 오래 붙잡은 두 흐름.
             </h2>
             <p className="mt-5 max-w-2xl text-muted-foreground">
-              먼저 운영 중인 두 제품에서 문제, 결정, 증거를 확인한다. 문서 자동화·도메인 AI·제작 도구는 같은 판단 방식을 보조하는 번외 작업으로 둔다.
+              PonsLink와 PonsWarp를 앞에 둔다. 다만 “대표작”이라고 치켜세우기보다, 만들면서 반복해서 고친 연결·전송 문제를 먼저 보여준다. 다른 작업은 같은 손버릇이 남은 옆 기록으로 둔다.
             </p>
           </div>
           <div className="flex flex-col items-start gap-2 md:items-end">
             <a className="inline-flex items-center gap-1 text-sm text-clay hover:underline" href="/work">
-              전체 작업 보기
+              작업 더 보기
               <ArrowUpRight className="h-4 w-4" />
             </a>
             <div className="flex flex-wrap gap-3 text-xs text-muted-foreground">
@@ -88,7 +88,7 @@ function WorkArchive({ compact = false }: { compact?: boolean }) {
                 GitHub
               </a>
               <a href="mailto:syas0301@gmail.com" className="hover:text-foreground hover:underline">
-                Contact
+                연락
               </a>
             </div>
           </div>
@@ -117,10 +117,10 @@ function WorkArchive({ compact = false }: { compact?: boolean }) {
           <div className="mt-8">
             <div className="flex items-end justify-between gap-4">
               <div>
-                <p className="label-tracked-sm text-clay">Main products</p>
-                <h3 className="mt-2 font-serif-display text-3xl leading-tight">먼저 보면 되는 두 작업</h3>
+                <p className="label-tracked-sm text-clay">먼저 꺼내는 두 작업</p>
+                <h3 className="mt-2 font-serif-display text-3xl leading-tight">PonsLink / PonsWarp</h3>
               </div>
-              <span className="text-xs text-muted-foreground">Live · Repo · Retrospective</span>
+              <span className="text-xs text-muted-foreground">Live · GitHub · 쓴 글</span>
             </div>
             <div className="mt-5 grid gap-5 lg:grid-cols-2">
               {primaryProjects.map((project) => (
@@ -136,11 +136,11 @@ function WorkArchive({ compact = false }: { compact?: boolean }) {
           <div className="mt-10 border-t border-border pt-8">
             <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
               <div>
-                <p className="label-tracked-sm text-muted-foreground">Bonus archive</p>
-                <h3 className="mt-2 font-serif-display text-3xl leading-tight">번외 프로젝트</h3>
+                <p className="label-tracked-sm text-muted-foreground">옆 기록</p>
+                <h3 className="mt-2 font-serif-display text-3xl leading-tight">작게 해본 것들</h3>
               </div>
               <p className="max-w-xl text-sm leading-relaxed text-muted-foreground">
-                문서 자동화, 도메인 AI, 제작 도구, 에이전트 작업 시스템은 메인 서사를 보조하는 확장 실험으로 보여준다.
+                문서 자동화, 도메인 AI, 제작 도구, 에이전트 작업 시스템은 “이런 것도 했다”보다 같은 문제 감각이 어디로 번졌는지 보는 용도다.
               </p>
             </div>
             <div className="mt-5 grid gap-5 lg:grid-cols-2">
@@ -172,13 +172,13 @@ function WritingGateway({ compact = false }: { compact?: boolean }) {
         <div>
           <SectionLabel>W&nbsp;r&nbsp;i&nbsp;t&nbsp;i&nbsp;n&nbsp;g</SectionLabel>
           <h2 className="mt-4 font-serif-display text-4xl leading-none md:text-5xl">
-            글은 작업 증거로만 필요한 만큼 보여준다.
+            글은 필요한 사람에게만 오래 열리면 된다.
           </h2>
           <p className="mt-5 text-muted-foreground">
-            메인 writing은 PonsLink와 PonsWarp의 판단 근거를 보여주는 글로 좁힌다. 긴 archive는 프로젝트별 페이지에서 필요한 사람만 이어서 읽는다.
+            메인 목록은 처음 온 사람이 길을 잃지 않을 정도로만 둔다. 긴 글은 프로젝트별 서랍에 두고, 제목·요약·읽는 순서를 붙여 필요한 글만 골라 읽게 한다.
           </p>
           <a href="/writing" className="mt-5 inline-flex items-center gap-1 text-sm text-clay hover:underline">
-            writing route 보기
+            먼저 볼 글 열기
             <ArrowUpRight className="h-4 w-4" />
           </a>
         </div>
@@ -188,7 +188,7 @@ function WritingGateway({ compact = false }: { compact?: boolean }) {
               <span className="font-serif-display text-3xl text-clay/70">{String(index + 1).padStart(2, "0")}</span>
               <div>
                 <h3 className="font-medium leading-snug">{title}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">서비스 설계 · 운영 노트 · 회고 카테고리 후보</p>
+                <p className="mt-1 text-sm text-muted-foreground">만든 이유 · 고친 흔적 · 나중에 바꿀 점</p>
               </div>
             </div>
           ))}
@@ -202,7 +202,7 @@ function EvidenceStrip() {
   return (
     <section className="border-t border-border" id="evidence">
       <div className="mx-auto max-w-6xl px-5 py-12 md:px-8">
-        <SectionLabel>E&nbsp;v&nbsp;i&nbsp;d&nbsp;e&nbsp;n&nbsp;c&nbsp;e</SectionLabel>
+        <SectionLabel>T&nbsp;r&nbsp;a&nbsp;c&nbsp;e&nbsp;s</SectionLabel>
         <div className="mt-5 grid gap-px overflow-hidden rounded-xl border border-border bg-border md:grid-cols-4">
           {evidenceItems.map((item) => (
             <div key={item} className="bg-background p-4 text-sm leading-relaxed text-muted-foreground">

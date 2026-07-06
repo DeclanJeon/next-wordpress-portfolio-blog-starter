@@ -98,17 +98,17 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "P2P/Realtime",
     status: "Live",
     year: "2026",
-    role: "Product design · Production systems",
+    role: "Product flow · Realtime boundary",
     tier: "primary",
     accent: "#c46a32",
     summary:
-      "명함 교환 뒤 끊어지는 연결을 용건, 일정, 수락, 세션으로 이어지는 웹 기반 요청 흐름으로 다시 설계한 서비스.",
+      "명함을 주고받은 뒤 애매하게 끊기는 다음 행동을 요청, 일정, 수락, 세션으로 나눠 본 서비스.",
     problem: "오프라인 네트워킹 이후 연락은 부담스럽고, 맥락 없는 DM은 서로의 시간을 낭비한다.",
-    decision: "QR/link 진입, 요청 내용 수집, 수락/거절, 일정 조율, 세션룸을 하나의 흐름으로 묶었다.",
+    decision: "QR/link 진입, 요청 내용 수집, 수락/거절, 일정 조율, 세션룸을 한 흐름으로 묶었다.",
     stack: ["Next.js", "Session workflow", "Scheduling", "Request intake"],
     liveUrl: "https://ponslink.com",
     screenshot: "/portfolio/ponslink.png",
-    proofNotes: "운영 URL과 PonsLink 활동 문서로 확인한 대표 서비스.",
+    proofNotes: "운영 URL과 PonsLink 회고 글로 흐름을 열어볼 수 있다.",
     caseStudyPath: "/work/ponslink",
     retrospectiveLinks: ponslinkRetrospectiveLinks,
     featured: true,
@@ -123,14 +123,14 @@ export const portfolioProjects: PortfolioProject[] = [
     tier: "primary",
     accent: "#5f78c8",
     summary:
-      "민감하거나 큰 파일을 서버에 오래 보관하지 않고 브라우저 간 직접 전송하기 위한 WebRTC 기반 파일 전송 실험.",
+      "민감하거나 큰 파일을 서버에 오래 맡기지 않고 브라우저 사이로 직접 보내보려 한 파일 전송 작업.",
     problem: "큰 파일 전송은 클라우드 업로드, 권한 설정, 삭제 확인 부담을 만든다.",
     decision: "WebRTC, OPFS, chunking, backpressure 중심으로 서버 저장 의존도를 낮추는 구조를 실험했다.",
     stack: ["WebRTC", "OPFS", "Chunking", "Backpressure"],
     liveUrl: "https://warp.ponslink.com",
     repoUrl: "https://github.com/DeclanJeon/PonsWarp",
     screenshot: "/portfolio/warp.png",
-    proofNotes: "운영 URL과 PonsWarp 회고 글 12편으로 확인한 WebRTC 파일 전송 서비스.",
+    proofNotes: "운영 URL, 공개 GitHub, PonsWarp 회고 글을 같이 열어볼 수 있다.",
     caseStudyPath: "/work/ponswarp",
     featured: true,
     retrospectiveLinks: ponswarpRetrospectiveLinks,
@@ -151,7 +151,7 @@ export const portfolioProjects: PortfolioProject[] = [
     stack: ["PDF", "OCR", "HWP workflow", "Privacy masking"],
     liveUrl: "https://docuflow.ponslink.com",
     screenshot: "/portfolio/docuflow.png",
-    proofNotes: "DocuFlow와 PDF마스터 운영 화면 캡처로 확인.",
+    proofNotes: "DocuFlow와 PDF마스터 운영 화면으로 확인했다.",
     featured: true,
   },
   {
@@ -170,7 +170,7 @@ export const portfolioProjects: PortfolioProject[] = [
     stack: ["RAG", "Interpretive UX", "Domain rules", "Korean copy"],
     liveUrl: "https://ruminate.ponslink.com",
     screenshot: "/portfolio/ruminate.png",
-    proofNotes: "Ruminate와 FateMirror 운영 화면 및 프로필 문서의 도메인 AI 활동으로 확인.",
+    proofNotes: "Ruminate와 FateMirror 운영 화면에서 도메인 AI 흐름을 확인했다.",
     featured: true,
   },
   {
@@ -207,7 +207,7 @@ export const portfolioProjects: PortfolioProject[] = [
     stack: ["Transcript", "Markdown", "Timestamps", "faster-whisper"],
     liveUrl: "https://y2md.ponslink.com",
     screenshot: "/portfolio/y2md.png",
-    proofNotes: "운영 URL 캡처와 MediaScribe 활동 문서로 확인.",
+    proofNotes: "운영 URL 화면과 MediaScribe 작업 기록으로 확인했다.",
   },
   {
     slug: "creator-local-tools",
@@ -224,7 +224,7 @@ export const portfolioProjects: PortfolioProject[] = [
     decision: "Electron, Chrome extension, local processing을 용도별로 나눠 빠르게 실행되는 보조 도구로 만들었다.",
     stack: ["Electron", "Chrome extension", "OCR", "Local workflow"],
     repoUrl: "https://github.com/DeclanJeon/flucto",
-    proofNotes: "flucto와 ClickCap GitHub README에서 기능 범위 확인.",
+    proofNotes: "flucto와 ClickCap GitHub README에서 범위를 확인했다.",
   },
   {
     slug: "agent-work-systems",
@@ -241,34 +241,34 @@ export const portfolioProjects: PortfolioProject[] = [
     decision: "page brief pipeline, tmux workrooms, trace/review 흐름으로 작업 증거와 품질 게이트를 남긴다.",
     stack: ["Agent skills", "tmux", "Evidence gates", "QA workflow"],
     repoUrl: "https://github.com/DeclanJeon/page-production-skills",
-    proofNotes: "page-production-skills와 agentdock GitHub README로 확인.",
+    proofNotes: "page-production-skills와 AgentDock GitHub README에서 범위를 확인했다.",
   },
 ]
 
 export const signatureSystems = [
   {
-    title: "연결을 세션으로",
-    body: "PonsLink는 만남 이후 흐릿해지는 연락을 요청·일정·수락·세션으로 바꾼다.",
+    title: "만남 뒤 흐려지는 연락",
+    body: "PonsLink는 처음 만난 사람 사이의 어색한 다음 행동을 요청·일정·수락·세션으로 나눠 본 작업이다.",
     projectSlug: "ponslink",
   },
   {
-    title: "파일을 직접 전송으로",
-    body: "PonsWarp는 서버 저장 대신 브라우저 간 전송과 로컬 저장 전략을 실험한다.",
+    title: "서버에 오래 맡기지 않는 파일",
+    body: "PonsWarp는 큰 파일을 브라우저 사이로 직접 보내고, 끊겼을 때의 상태까지 제품 흐름 안에 넣어보는 작업이다.",
     projectSlug: "ponswarp",
   },
 ]
 
 export const writingCaseStudies = [
-  "PonsLink: 오프라인 네트워킹을 세션 데스크로 바꾼 이유",
-  "PonsWarp: 대용량 파일 전송에서 서버 저장을 줄이는 방식",
-  "번외 / PDF마스터와 DocuFlow: 한국 문서 업무를 한 흐름으로 묶기",
-  "번외 / Ruminate와 명경: 도메인 언어가 AI UX를 바꾸는 지점",
-  "번외 / YouTube-to-MD: 영상 자료를 다시 쓸 수 있는 문서로 바꾸기",
+  "PonsLink: 처음 만난 뒤 무엇을 남길지 정리한 글",
+  "PonsWarp: 큰 파일을 서버에 오래 맡기지 않으려 한 글",
+  "문서 자동화: 한국 문서 업무를 한 흐름으로 묶어 본 기록",
+  "도메인 AI: 사주·묵상처럼 말이 까다로운 영역을 다룬 기록",
+  "YouTube-to-MD: 영상 자료를 다시 쓸 수 있는 문서로 바꾼 기록",
 ]
 
 export const evidenceItems = [
-  "Live product URLs and screenshots: PonsLink, PonsWarp, DocuFlow, Ruminate",
-  "GitHub proof: PonsWarp, ClickCap, flucto, page-production-skills",
-  "Public profile links: GitHub, email, blog, Threads",
-  "Writing archive stays secondary and links back to product decisions",
+  "운영 중인 URL과 화면: PonsLink, PonsWarp, DocuFlow, Ruminate",
+  "코드를 열어볼 수 있는 곳: PonsWarp, ClickCap, flucto, page-production-skills",
+  "연락과 공개 흔적: GitHub, email, blog, Threads",
+  "긴 글은 보조 서랍에 두고 필요한 판단만 앞에 연결한다",
 ]

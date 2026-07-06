@@ -11,10 +11,10 @@ export function SelectedWritingSection({ groups }: { readonly groups: readonly S
       <div className="mb-8 max-w-3xl">
         <span className="label-tracked text-muted-foreground">S e l e c t e d&nbsp;&nbsp;w r i t i n g</span>
         <h2 id="selected-writing-title" className="mt-4 font-serif-display text-4xl leading-tight tracking-tight md:text-5xl">
-          처음 보는 사람에게 먼저 보여줄 글.
+          길을 잃지 않게 먼저 꺼낸 글.
         </h2>
         <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-          전체 글을 시간순으로 훑기 전에, 서비스 개발자로서의 문제 정의와 기술 판단을 바로 확인할 수 있는 글만 묶었다.
+          전체 글은 많다. 그래서 처음 읽는 사람에게 필요한 몇 편만 앞에 세웠다. 판단의 출발점, 실패한 지점, 다시 고친 이유가 보이는 글들이다.
         </p>
       </div>
 

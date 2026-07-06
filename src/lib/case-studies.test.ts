@@ -13,8 +13,8 @@ afterAll(() => {
 
 describe("getPortfolioCaseStudy", () => {
   it("resolves the two published case studies and rejects unknown slugs", () => {
-    expect(getPortfolioCaseStudy("ponslink")?.title).toBe("PonsLink case study")
-    expect(getPortfolioCaseStudy("ponswarp")?.title).toBe("PonsWarp case study")
+    expect(getPortfolioCaseStudy("ponslink")?.title).toBe("PonsLink를 만들며 남은 것")
+    expect(getPortfolioCaseStudy("ponswarp")?.title).toBe("PonsWarp를 만들며 남은 것")
     expect(getPortfolioCaseStudy("missing-project")).toBeNull()
   })
 })

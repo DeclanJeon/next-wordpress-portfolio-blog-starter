@@ -125,3 +125,10 @@ Mixed, but border-first: use borders and muted tonal shifts as the default; rese
 | Default border | `border border-border` | Cards, article media, archive panels |
 | Soft panel | `bg-muted/40`, `bg-background/75` | Headers, filters, hover rows |
 | Paper texture | `.paper-grain` | Page background atmosphere |
+
+## 8. Copy voice
+
+- Treat the site as a work notebook, not a sales deck. Prefer “만들고 고친 흐름”, “남은 흔적”, “열어볼 곳” over “대표 포트폴리오”, “proof”, “case study”, or “evidence” unless the section is explicitly about verification.
+- PonsLink and PonsWarp may stay first in the hierarchy, but copy should not over-declare them as the whole identity. They are the clearest current threads, not a trophy wall.
+- Korean body copy should sound written by the maker: concrete, slightly conversational, and willing to say what is still unfinished. Avoid stiff labels like `Problem / Decision / Evidence` when a natural label can carry the same meaning.
+- Contact/resume surfaces must not invent absent artifacts. If a resume file is unavailable, link to work, writing, GitHub, and email instead.

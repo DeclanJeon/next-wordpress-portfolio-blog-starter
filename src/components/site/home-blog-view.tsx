@@ -6,8 +6,8 @@ import { PortfolioShowcase } from "@/components/site/portfolio-showcase"
 import { Reveal } from "@/components/site/reveal"
 
 const heroWorkMap = [
-  { label: "PonsLink", projects: "연결을 세션으로 바꾸는 요청 흐름" },
-  { label: "PonsWarp", projects: "서버 저장 없이 직접 전송하는 파일 흐름" },
+  { label: "PonsLink", projects: "만남 뒤 어색하게 끊기는 연락을 다시 붙잡는 쪽" },
+  { label: "PonsWarp", projects: "파일을 서버에 맡기지 않고 보내보려는 쪽" },
 ] as const
 
 export function HomeBlogView() {
@@ -23,28 +23,28 @@ export function HomeBlogView() {
         <div>
           <Reveal>
             <span className="label-tracked text-muted-foreground">
-              P&nbsp;o&nbsp;r&nbsp;t&nbsp;f&nbsp;o&nbsp;l&nbsp;i&nbsp;o&nbsp;&nbsp;B&nbsp;l&nbsp;o&nbsp;g
+              W&nbsp;o&nbsp;r&nbsp;k&nbsp;&nbsp;n&nbsp;o&nbsp;t&nbsp;e&nbsp;s
             </span>
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="mt-6 font-serif-display text-5xl leading-[0.95] tracking-tight md:text-7xl">
-              마찰을 흐름으로{" "}
+              작은 불편을 오래{" "}
               <br />
-              <span className="italic text-clay">바꾸는 개발자.</span>
+              <span className="italic text-clay">만져보는 사람.</span>
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-              PonsLink는 만남 뒤 요청을 세션으로 잇고, PonsWarp는 큰 파일을 서버 보관 없이 직접 전송하게 만든다. 이 블로그는 기능 소개보다 문제, 선택, 실패 복구, 운영 증거를 먼저 보여준다.
+              뭔가 불편하면 일단 작은 화면으로 옮겨 본다. 사람을 다시 만나게 하는 흐름, 큰 파일을 덜 찝찝하게 보내는 흐름, 문서 일을 조금 덜 귀찮게 만드는 흐름을 만들고 고쳤다.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#work" className="rounded-full bg-foreground px-5 py-2.5 text-sm text-background transition-transform hover:-translate-y-0.5">
-                대표 작업 보기
+                작업들 보기
               </a>
               <Link href="/writing" className="rounded-full border border-border px-5 py-2.5 text-sm text-muted-foreground transition-colors hover:border-foreground/40 hover:text-foreground">
-                설계 기록 읽기
+                글로 남긴 시행착오
               </Link>
             </div>
             <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground">
@@ -53,11 +53,11 @@ export function HomeBlogView() {
                 <ArrowUpRight className="h-3.5 w-3.5" />
               </a>
               <a href="mailto:syas0301@gmail.com" className="inline-flex items-center gap-1 transition-colors hover:text-foreground">
-                Contact
+                연락
                 <Mail className="h-3.5 w-3.5" />
               </a>
               <a href="https://ponslink.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 transition-colors hover:text-foreground">
-                PonsLink live
+                PonsLink
                 <ArrowUpRight className="h-3.5 w-3.5" />
               </a>
             </div>
@@ -78,7 +78,7 @@ export function HomeBlogView() {
               />
             </div>
             <div className="relative mt-4 rounded-[1.25rem] border border-border/70 bg-background/75 p-4">
-              <p className="label-tracked-sm text-muted-foreground">작업 지도</p>
+              <p className="label-tracked-sm text-muted-foreground">요즘 만지는 것</p>
               <div className="mt-4 grid gap-3 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
                 {heroWorkMap.map((item) => (
                   <div key={item.label} className="rounded-2xl border border-border/70 bg-card/80 p-3">
@@ -99,10 +99,10 @@ export function HomeBlogView() {
           <div>
             <span className="label-tracked-sm text-muted-foreground">Writing archive</span>
             <h2 className="mt-4 max-w-3xl font-serif-display text-3xl leading-tight md:text-5xl">
-              글 목록은 메인이 아니라 archive에서 탐색한다.
+              글은 전시장이 아니라 작업대에 가깝다.
             </h2>
             <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
-              `/writing`은 PonsLink와 PonsWarp 중심의 핵심 기록으로 좁히고, 나머지 글은 `/writing/projects`에서 프로젝트별로 탐색한다.
+              처음 온 사람에게 필요한 글만 앞에 두고, 나머지는 주제별 서랍으로 넘겼다. 다 읽으라는 뜻이 아니라 필요한 흔적을 찾기 쉽게 해둔 것이다.
             </p>
           </div>
           <div className="flex flex-col gap-2 md:self-end">
@@ -110,13 +110,13 @@ export function HomeBlogView() {
               href="/writing"
               className="inline-flex h-11 items-center justify-center rounded-full bg-foreground px-5 text-sm text-background transition-transform hover:-translate-y-0.5"
             >
-              핵심 글 보러가기
+              먼저 볼 글
             </Link>
             <Link
               href="/writing/projects"
               className="inline-flex h-11 items-center justify-center rounded-full border border-border px-5 text-sm text-muted-foreground transition-colors hover:border-foreground/40 hover:text-foreground"
             >
-              프로젝트별 글 보기
+              글 서랍 열기
             </Link>
           </div>
         </div>

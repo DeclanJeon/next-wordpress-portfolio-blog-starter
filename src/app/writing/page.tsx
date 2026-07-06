@@ -21,8 +21,8 @@ import {
 } from "@/components/site/writing-archive-utils"
 
 export const metadata: Metadata = pageMetadata({
-  title: "PonsLink / PonsWarp 글 아카이브",
-  description: "PonsLink와 PonsWarp를 만들며 남긴 WebRTC, 직접 파일 전송, 세션 운영, 제품 회고 중심의 한국어 기술 글 모음.",
+  title: "연결과 전송을 고치며 쓴 글",
+  description: "PonsLink와 PonsWarp를 만들며 남긴 WebRTC, 직접 파일 전송, 세션 운영, 제품 회고 글을 처음 읽기 쉬운 순서로 묶은 한국어 작업 노트.",
   path: "/writing",
 })
 
@@ -63,8 +63,8 @@ export default async function WritingPage({ searchParams }: PageProps) {
     getSelectedWritingGroups(),
   ])
   const archiveJsonLd = collectionPageJsonLd({
-    name: "PonsLink / PonsWarp 글 아카이브",
-    description: "PonsLink와 PonsWarp를 만들며 남긴 WebRTC, 직접 파일 전송, 세션 운영, 제품 회고 중심의 한국어 기술 글 모음.",
+    name: "연결과 전송을 고치며 쓴 글",
+    description: "PonsLink와 PonsWarp를 만들며 남긴 WebRTC, 직접 파일 전송, 세션 운영, 제품 회고 글을 처음 읽기 쉬운 순서로 묶은 한국어 작업 노트.",
     path: "/writing",
     breadcrumbs: [{ name: "Writing", href: "/writing" }],
     items: posts.slice(0, 30).map((post) => ({
@@ -100,20 +100,20 @@ export default async function WritingPage({ searchParams }: PageProps) {
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
           <Link href="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground">
             <ArrowLeft className="h-4 w-4" />
-            Portfolio Blog
+            작업노트
           </Link>
           <div className="flex items-center gap-4 text-sm">
             <Link href="/work" className="text-muted-foreground transition-colors hover:text-foreground">
-              Work
+              작업
             </Link>
             <a href="https://github.com/DeclanJeon" target="_blank" rel="noopener noreferrer" className="text-muted-foreground transition-colors hover:text-foreground">
               GitHub
             </a>
             <a href="mailto:syas0301@gmail.com" className="text-muted-foreground transition-colors hover:text-foreground">
-              Contact
+              연락
             </a>
             <Link href="/writing/projects" className="text-clay hover:underline">
-              Archive
+              글 서랍
             </Link>
           </div>
         </nav>
@@ -122,27 +122,27 @@ export default async function WritingPage({ searchParams }: PageProps) {
       <section className="mx-auto max-w-6xl px-5 pb-10 pt-16 md:px-8 md:pb-14 md:pt-24">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-end">
           <div>
-            <span className="label-tracked text-muted-foreground">P o n s L i n k  /  P o n s W a r p</span>
+            <span className="label-tracked text-muted-foreground">W r i t i n g&nbsp;&nbsp;n o t e s</span>
             <h1 className="mt-6 max-w-5xl font-serif-display text-5xl leading-[0.95] tracking-tight md:text-7xl">
               연결과 전송을{" "}
               <br />
-              <span className="italic text-clay">계속 고친 기록.</span>
+              <span className="italic text-clay">고치며 쓴 글.</span>
             </h1>
             <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-              PonsLink와 PonsWarp를 만들며 남긴 핵심 회고를 먼저 묶었다. 처음 보는 사람은 아래 대표 글에서 제품 판단을 확인하고, 전체 기록은 archive에서 이어 읽으면 된다.
+              PonsLink와 PonsWarp 글을 앞에 묶었다. 처음 온 사람은 아래 몇 편만 읽어도 흐름을 따라갈 수 있고, 더 긴 기록은 주제별 서랍에서 꺼내 보면 된다.
             </p>
           </div>
           <div className="rounded-3xl border border-border bg-background/75 p-5 text-sm text-muted-foreground shadow-sm">
             <p className="label-tracked-sm text-muted-foreground">작업 노트</p>
             <p className="mt-3 font-serif-display text-4xl leading-none text-foreground">{totalPublished}</p>
-            <p className="mt-1">PonsLink / PonsWarp 기록</p>
+            <p className="mt-1">연결·전송을 고친 기록</p>
             <div className="mt-6 space-y-3 border-t border-border pt-4">
-              <p>문제를 발견하고</p>
-              <p>흐름을 설계하고</p>
-              <p>운영하며 고칩니다.</p>
+              <p>불편했던 장면을 적고</p>
+              <p>작게 만든 뒤</p>
+              <p>운영하면서 다시 고친다.</p>
             </div>
             <Link href="/writing/projects" className="inline-flex text-clay hover:underline">
-              전체 archive 보기
+              글 서랍 전체 보기
             </Link>
           </div>
         </div>

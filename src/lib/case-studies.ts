@@ -34,10 +34,10 @@ const ponswarp = portfolioProjects.find((project) => project.slug === "ponswarp"
 export const portfolioCaseStudies = [
   {
     slug: "ponslink",
-    title: "PonsLink case study",
-    kicker: "Connection workflow",
+    title: "PonsLink를 만들며 남은 것",
+    kicker: "만남 뒤 연락이 끊기는 순간",
     summary:
-      "오프라인 만남 뒤 흐릿해지는 연락을 요청, 수락, 일정, 세션으로 이어지는 운영 가능한 웹 흐름으로 다시 설계한 작업.",
+      "오프라인에서 만난 뒤 흐려지는 연락을 요청, 수락, 일정, 세션으로 천천히 이어보려 한 작업이다.",
     projectProblem:
       ponslink?.problem ?? "오프라인 네트워킹 이후 연락은 부담스럽고, 맥락 없는 DM은 서로의 시간을 낭비한다.",
     constraints: [
@@ -47,16 +47,16 @@ export const portfolioCaseStudies = [
     ],
     architecture: [
       {
-        title: "Request first",
-        body: "QR/link로 들어온 방문자는 먼저 용건을 남기고, 소유자는 요청을 보고 수락·보류·거절을 판단한다.",
+        title: "요청부터 받기",
+        body: "QR/link로 들어온 방문자는 먼저 용건을 남긴다. 소유자는 그 요청을 보고 수락·보류·거절을 고른다.",
       },
       {
-        title: "Session desk",
-        body: "수락된 요청만 일정과 세션룸으로 이어지게 하여 무작위 DM이 아니라 합의된 만남으로 전환한다.",
+        title: "수락된 것만 방으로",
+        body: "수락된 요청만 일정과 세션룸으로 이어지게 했다. 무작위 DM이 아니라 합의된 만남으로 남기기 위해서다.",
       },
       {
-        title: "Realtime boundary",
-        body: "WebRTC와 실시간 메시지는 제품의 첫 문장이 아니라, 수락 이후 필요한 실행 경로로 배치한다.",
+        title: "실시간은 맨 앞에 두지 않기",
+        body: "WebRTC와 실시간 메시지는 첫 문장이 아니다. 수락 이후 정말 필요해졌을 때 나오는 실행 경로로 뒀다.",
       },
     ],
     decisions: [
@@ -69,8 +69,8 @@ export const portfolioCaseStudies = [
         body: "좋은 요청만 통과시키는 구조가 아니라 보류와 거절까지 제품 상태로 인정해 사용자 부담을 줄인다.",
       },
       {
-        title: "Archive를 증거로 연결",
-        body: "제품 설명만 두지 않고 회고, 알고리즘 노트, 운영 판단을 연결해 왜 이런 경계가 생겼는지 확인하게 한다.",
+        title: "쓴 글을 이유로 연결",
+        body: "제품 설명만 두면 말이 너무 빠르다. 회고, 알고리즘 노트, 운영 판단을 붙여 왜 이런 경계가 생겼는지 따라가게 했다.",
       },
     ],
     rejected: [
@@ -112,10 +112,10 @@ export const portfolioCaseStudies = [
   },
   {
     slug: "ponswarp",
-    title: "PonsWarp case study",
-    kicker: "Browser direct file transfer",
+    title: "PonsWarp를 만들며 남은 것",
+    kicker: "파일을 서버에 오래 맡기지 않는 쪽",
     summary:
-      "큰 파일을 서버에 오래 보관하지 않고 브라우저 간 직접 전송하려는 WebRTC 기반 파일 전송 흐름을 설계한 작업.",
+      "큰 파일을 서버에 오래 보관하지 않고 브라우저 사이로 직접 보내보려 한 WebRTC 기반 파일 전송 작업이다.",
     projectProblem:
       ponswarp?.problem ?? "큰 파일 전송은 클라우드 업로드, 권한 설정, 삭제 확인 부담을 만든다.",
     constraints: [
@@ -125,16 +125,16 @@ export const portfolioCaseStudies = [
     ],
     architecture: [
       {
-        title: "No long-term server ownership",
-        body: "서버가 파일을 오래 보관하는 구조를 기본값으로 두지 않고, 연결·권한·상태만 다루는 쪽으로 책임을 줄인다.",
+        title: "서버가 오래 갖지 않기",
+        body: "서버가 파일을 오래 보관하는 구조를 기본값으로 두지 않았다. 연결, 권한, 상태만 다루는 쪽으로 책임을 줄였다.",
       },
       {
-        title: "Chunked transfer",
-        body: "파일을 한 번에 밀어 넣지 않고 조각, 진행률, 재시도 단위로 나눠 브라우저가 버틸 수 있는 흐름으로 만든다.",
+        title: "파일을 조각으로 다루기",
+        body: "파일을 한 번에 밀어 넣지 않고 조각, 진행률, 재시도 단위로 나눴다. 브라우저가 버틸 수 있는 흐름이 먼저였다.",
       },
       {
-        title: "Backpressure and local safety net",
-        body: "bufferedAmount, OPFS, partial file 처리를 함께 보며 빠른 전송보다 살아남는 전송을 우선한다.",
+        title: "빠른 전송보다 살아남는 전송",
+        body: "bufferedAmount, OPFS, partial file 처리를 함께 봤다. 속도보다 끊겼을 때 사용자가 판단할 수 있는 상태가 더 중요했다.",
       },
     ],
     decisions: [
@@ -147,8 +147,8 @@ export const portfolioCaseStudies = [
         body: "직접 연결 실패, relay 비용, interrupted transfer를 정상 제품 경로의 일부로 보고 recovery 흐름을 남긴다.",
       },
       {
-        title: "Repo proof와 writing proof를 같이 둠",
-        body: "PonsWarp는 공개 GitHub repo가 있어 구현 proof를, 회고 글은 판단 proof를 보완한다.",
+        title: "GitHub와 쓴 글을 같이 둠",
+        body: "PonsWarp는 공개 GitHub repo가 있어 구현 흔적을 볼 수 있다. 회고 글은 그때 왜 그런 선택을 했는지 보완한다.",
       },
     ],
     rejected: [

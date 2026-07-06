@@ -13,7 +13,7 @@ export function CollectionReadingGuidePanel({ guide }: { readonly guide: Collect
           <div>
             <p className="label-tracked-sm text-clay">{guide.kicker}</p>
             <h2 id="collection-reading-guide-title" className="mt-3 font-serif-display text-3xl leading-tight md:text-4xl">
-              전체 목록 전에 읽을 길.
+              처음엔 이 순서가 덜 헤맨다.
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{guide.description}</p>
           </div>

@@ -60,21 +60,21 @@ export default async function WritingSeriesPage({ params }: PageProps) {
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
           <Link href="/writing" className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground">
             <ArrowLeft className="h-4 w-4" />
-            Writing archive
+            글 목록
           </Link>
           <div className="flex items-center gap-4 text-sm">
             <Link href={seriesProjectHref(series.projectSlug)} className="text-muted-foreground transition-colors hover:text-foreground">
-              Collection archive
+              글 서랍
             </Link>
             <Link href="/work" className="text-clay hover:underline">
-              Work
+              작업
             </Link>
           </div>
         </nav>
       </header>
 
       <section className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
-        <p className="label-tracked-sm text-muted-foreground">Start here series</p>
+        <p className="label-tracked-sm text-muted-foreground">먼저 읽을 묶음</p>
         <h1 className="mt-5 font-serif-display text-5xl leading-tight md:text-7xl">{series.title}</h1>
         <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted-foreground">{series.description}</p>
         <p className="mt-4 text-sm text-muted-foreground">총 {series.posts.length}편 · 서사순 정렬</p>

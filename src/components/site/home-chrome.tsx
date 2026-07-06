@@ -23,21 +23,18 @@ export function HomeHeader({
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-background">
             <span className="font-serif-display text-lg italic">p</span>
           </span>
-          <span className="font-serif-display text-xl tracking-tight">Portfolio Blog</span>
+          <span className="font-serif-display text-xl tracking-tight">Declan's work notes</span>
         </button>
 
         <div className="flex items-center gap-2 md:gap-4">
           <Link href="/work" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            Work
+            작업
           </Link>
           <Link href="/writing" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            Writing
+            생각 정리
           </Link>
-          <Link href="/writing/projects" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            Archive
-          </Link>
-          <Link href="/contact" className="text-sm text-clay transition-colors hover:text-foreground">
-            Contact
+          <Link href="/contact" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            연락
           </Link>
           {view !== "blog" ? (
             <button onClick={onBlog} className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground">
@@ -61,8 +58,8 @@ export function HomeFooter() {
   return (
     <footer className="border-t border-border">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-5 py-8 text-xs text-muted-foreground md:flex-row md:px-8">
-        <span>© {new Date().getFullYear()} Portfolio Blog. Work and writing.</span>
-        <span className="label-tracked-sm">Portfolio · Blog</span>
+        <span>© {new Date().getFullYear()} Declan Jeon. Work notes, not a brochure.</span>
+        <span className="label-tracked-sm">Build · Break · Write</span>
       </div>
     </footer>
   )

@@ -42,7 +42,7 @@ export function ProjectReader({ project, onClose }: ProjectReaderProps) {
           transition={{ duration: 0.25 }}
         >
           <button
-            aria-label="Close case study"
+            aria-label="자세히 본 기록 닫기"
             onClick={onClose}
             className="absolute inset-0 bg-stone-950/50 backdrop-blur-sm"
           />
@@ -123,20 +123,20 @@ export function ProjectReader({ project, onClose }: ProjectReaderProps) {
                   rel="noopener noreferrer"
                   className="mt-10 inline-flex items-center gap-1.5 text-sm text-clay hover:underline"
                 >
-                  Visit project
+                  작업 열기
                   <ArrowUpRight className="h-3.5 w-3.5" />
                 </a>
               )}
 
               <div className="mt-16 flex items-center justify-between border-t border-border pt-6">
                 <span className="label-tracked-sm text-muted-foreground">
-                  Case study
+                  자세히 본 기록
                 </span>
                 <button
                   onClick={onClose}
                   className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  Back to index
+                  목록으로
                   <ArrowUpRight className="h-3.5 w-3.5 rotate-90" />
                 </button>
               </div>

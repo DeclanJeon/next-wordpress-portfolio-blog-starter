@@ -16,10 +16,10 @@ function envList(name: string, fallback: readonly string[]): readonly string[] {
 }
 
 export const SITE_URL = "https://blog.ponslink.com"
-export const SITE_NAME = "Portfolio Blog"
-export const SITE_TITLE = "Portfolio Blog — PonsLink / PonsWarp 작업 기록"
+export const SITE_NAME = "Declan's work notes"
+export const SITE_TITLE = "Declan's work notes — 연결과 전송을 고친 기록"
 export const SITE_DESCRIPTION =
-  "Declan Jeon의 개발 포트폴리오이자 기술 블로그. PonsLink와 PonsWarp를 중심으로 WebRTC, 브라우저 직접 파일 전송, 제품 운영 회고를 정리합니다."
+  "Declan Jeon의 작업 노트. PonsLink와 PonsWarp를 중심으로 WebRTC, 브라우저 직접 파일 전송, 제품 운영 회고를 정리합니다."
 export const SITE_LOCALE = env("NEXT_PUBLIC_SITE_LOCALE", "ko_KR")
 export const SITE_AUTHOR = env("NEXT_PUBLIC_SITE_AUTHOR", "Declan Jeon")
 export const ORGANIZATION_NAME = "Declan Jeon Portfolio"

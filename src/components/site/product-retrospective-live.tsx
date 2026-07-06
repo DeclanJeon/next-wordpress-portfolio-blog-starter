@@ -74,7 +74,7 @@ export function ProductRetrospectiveLive({
     <div className="mt-4 rounded-lg border border-border bg-muted/20 p-4" aria-live="polite">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <p className="label-tracked-sm text-muted-foreground">Retrospective</p>
+          <p className="label-tracked-sm text-muted-foreground">쓴 기록</p>
           {data?.series ? (
             <p className="mt-1 text-[0.68rem] text-clay">
               {data.series.label} · {data.series.title}

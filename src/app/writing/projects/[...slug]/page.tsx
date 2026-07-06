@@ -96,14 +96,14 @@ export default async function WritingProjectDetailPage({ params }: PageProps) {
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
           <Link href="/writing/projects" className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground">
             <ArrowLeft className="h-4 w-4" />
-            Collection pages
+            글 서랍
           </Link>
           <div className="flex items-center gap-4 text-sm">
             <Link href="/writing" className="text-muted-foreground transition-colors hover:text-foreground">
-              Selected Writing
+              먼저 볼 글
             </Link>
             <Link href="/work" className="text-clay hover:underline">
-              Work
+              작업
             </Link>
           </div>
         </nav>
