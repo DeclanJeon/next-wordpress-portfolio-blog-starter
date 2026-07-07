@@ -42,6 +42,7 @@ export const TAXONOMY_SEEDS: readonly TaxonomySeed[] = [
   { slug: "operation-note/blog-ops", name: "Blog Ops", kind: "project", parentSlug: "operation-note", description: "Next.js/WordPress형 블로그 운영 기록", sortOrder: 10 },
   { slug: "study-note", name: "공부 노트", kind: "category", parentSlug: null, description: "직접 만든 제품을 이해하기 위해 정리한 네트워크, 브라우저, 시스템 설계 공부 기록", sortOrder: 25 },
   { slug: "study-note/realtime-network", name: "실시간 네트워크 딥다이브", kind: "project", parentSlug: "study-note", description: "P2P, Mesh, SFU, MCU, WebRTC, DataChannel, NAT traversal을 공부하며 실시간 제품 설계 판단으로 연결한 기록", sortOrder: 10 },
+  { slug: "study-note/software-design-docs", name: "설계문서 공부 노트", kind: "project", parentSlug: "study-note", description: "PRD, SRS, SDD, ADR, API Spec, Runbook처럼 개발 설계문서를 결정 층위별로 정리한 공부 기록", sortOrder: 30 },
   { slug: "essay", name: "에세이", kind: "category", parentSlug: null, description: "제품과 직접 연결되지 않는 생각 글", sortOrder: 30 },
   { slug: "release-note", name: "릴리즈 노트", kind: "category", parentSlug: null, description: "배포 변화와 기능 출시 기록", sortOrder: 40 },
   { slug: "dev-retrospective/ponslink/origin", name: "Origin", kind: "topic", parentSlug: "dev-retrospective/ponslink", description: "왜 만들었는지, room-first, 링크 기반 연결", sortOrder: 10 },

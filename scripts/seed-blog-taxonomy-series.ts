@@ -55,7 +55,12 @@ function mapPost(post: PublishedPost): MappingResult {
       : []
     return { primarySlug: ponswarpPrimary(post), secondarySlugs }
   }
-  if (project === "study-note") return { primarySlug: "study-note/realtime-network", secondarySlugs: [] }
+  if (project === "study-note") {
+    if (hasToken(`${post.slug} ${post.title} ${post.tags}`, ["software-design-documents", "설계문서", "PRD", "SRS", "SDD", "ADR", "Runbook"])) {
+      return { primarySlug: "study-note/software-design-docs", secondarySlugs: [] }
+    }
+    return { primarySlug: "study-note/realtime-network", secondarySlugs: [] }
+  }
   if (project === "document-automation") return { primarySlug: "dev-retrospective/document-automation", secondarySlugs: [] }
   if (project === "domain-ai") return { primarySlug: "dev-retrospective/domain-ai", secondarySlugs: [] }
   if (project === "essay") return { primarySlug: "essay", secondarySlugs: [] }

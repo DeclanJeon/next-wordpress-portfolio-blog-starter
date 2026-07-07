@@ -206,6 +206,23 @@ export const collectionReadingGuides: Record<string, CollectionReadingGuideConfi
       },
     ],
   },
+  "study-note/software-design-docs": {
+    kicker: "Reading path",
+    description: "문서 약어를 외우기보다 제품 판단, 요구사항, 설계, 결정, 계약, 운영의 층위로 나눠 읽는다.",
+    startHere: [
+      {
+        slug: "2026-07-07-software-design-documents-map",
+        reason: "PRD부터 Runbook까지 개발 설계문서를 결정 층위별 지도로 정리한다.",
+      },
+    ],
+    paths: [
+      {
+        title: "문서 층위 먼저 잡기",
+        description: "문서 이름보다 각 문서가 답하는 질문을 먼저 본다.",
+        slugs: ["2026-07-07-software-design-documents-map"],
+      },
+    ],
+  },
   "dev-retrospective/document-automation": {
     kicker: "Start here",
     description: "문서 자동화 글은 기능보다 민감 문서가 어디서 처리되는지 보여주는 경계가 핵심이다.",
