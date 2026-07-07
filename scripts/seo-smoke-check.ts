@@ -23,7 +23,7 @@ function withCacheBust(path: string): string {
 async function fetchText(path: string): Promise<string> {
   const response = await fetch(withCacheBust(path), {
     headers: {
-      "user-agent": "Portfolio Blog SEO smoke check (+https://blog.ponslink.com)",
+      "user-agent": "Declan's work notes SEO smoke check (+https://blog.ponslink.com)",
       accept: "text/html,application/xml,text/plain;q=0.9,*/*;q=0.8",
     },
   })
@@ -51,14 +51,14 @@ function titleOf(html: string): string {
 
 const checks: Check[] = [
   {
-    name: "home metadata presents Portfolio Blog brand",
+    name: "home metadata presents Declan's work notes brand",
     async run() {
       const html = await fetchText("/")
       const title = titleOf(html)
-      assertIncludes(title, "Portfolio Blog", "home title brand")
-      assertIncludes(title, "PonsLink / PonsWarp", "home title topics")
-      assertIncludes(html, "개발 포트폴리오이자 기술 블로그", "home description brand")
-      assertIncludes(html, "Portfolio Blog", "home visible brand")
+      assertIncludes(title, "Declan&#x27;s work notes", "home title brand")
+      assertIncludes(title, "연결과 전송을 고친 기록", "home title promise")
+      assertIncludes(html, "Declan Jeon의 작업 노트", "home description brand")
+      assertIncludes(html, "Declan's work notes", "home visible brand")
       assertIncludes(html, "PonsWarp", "home body")
       assertIncludes(html, "WebRTC", "home body")
       assertIncludes(html, "href=\"/writing\"", "home writing link")
@@ -77,8 +77,8 @@ const checks: Check[] = [
     name: "writing archive exposes structured index",
     async run() {
       const html = await fetchText("/writing")
-      assertIncludes(titleOf(html), "Portfolio Blog", "writing title brand")
-      assertIncludes(titleOf(html), "PonsLink / PonsWarp 글 아카이브", "writing title")
+      assertIncludes(titleOf(html), "Declan&#x27;s work notes", "writing title brand")
+      assertIncludes(titleOf(html), "연결과 전송을 고치며 쓴 글", "writing title")
       assertIncludes(html, "application/ld+json", "writing JSON-LD")
       assertIncludes(html, "CollectionPage", "writing collection schema")
       assertIncludes(html, "BlogPosting", "writing list schema")
