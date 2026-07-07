@@ -83,6 +83,16 @@ const REALTIME_NETWORK_DEEP_DIVE_POST_SLUGS = [
   "2026-07-04-realtime-network-22-bufferedamount-backpressure-file-transfer",
 ] as const
 
+const SOFTWARE_DESIGN_DOC_POST_SLUGS = [
+  "2026-07-07-software-design-documents-map",
+  "2026-07-07-software-design-documents-product-docs",
+  "2026-07-07-software-design-documents-requirements",
+  "2026-07-07-software-design-documents-architecture",
+  "2026-07-07-software-design-documents-decisions",
+  "2026-07-07-software-design-documents-operations",
+] as const
+
+
 
 export const SERIES_SEEDS: readonly SeriesSeed[] = [
   {
@@ -190,5 +200,13 @@ export const SERIES_SEEDS: readonly SeriesSeed[] = [
     description: "P2P, Mesh, SFU, MCU, WebRTC 연결 이론, DataChannel 파일 전송을 10,000자급 공부 노트로 정리한 실시간 네트워크 딥다이브.",
     sortOrder: 5,
     postSlugs: REALTIME_NETWORK_DEEP_DIVE_POST_SLUGS,
+  },
+  {
+    slug: "software-design-docs-reading-path",
+    title: "설계문서 공부 노트 읽는 순서",
+    projectSlug: "study-note/software-design-docs",
+    description: "PRD에서 SRS, SDD, ADR, API Spec, Runbook까지 문서 층위를 나눠 읽는 순서.",
+    sortOrder: 80,
+    postSlugs: SOFTWARE_DESIGN_DOC_POST_SLUGS,
   },
 ]

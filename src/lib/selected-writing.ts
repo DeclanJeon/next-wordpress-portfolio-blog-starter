@@ -212,14 +212,39 @@ export const collectionReadingGuides: Record<string, CollectionReadingGuideConfi
     startHere: [
       {
         slug: "2026-07-07-software-design-documents-map",
-        reason: "PRD부터 Runbook까지 개발 설계문서를 결정 층위별 지도로 정리한다.",
+        reason: "전체 문서 지도를 먼저 보고 필요한 문서군으로 내려간다.",
+      },
+      {
+        slug: "2026-07-07-software-design-documents-requirements",
+        reason: "흐릿한 요구를 테스트 가능한 기준으로 바꾸는 감각을 잡는다.",
+      },
+      {
+        slug: "2026-07-07-software-design-documents-decisions",
+        reason: "결정 이유를 짧게 남기는 문서가 왜 필요한지 본다.",
       },
     ],
     paths: [
       {
-        title: "문서 층위 먼저 잡기",
-        description: "문서 이름보다 각 문서가 답하는 질문을 먼저 본다.",
-        slugs: ["2026-07-07-software-design-documents-map"],
+        title: "제품과 요구사항부터 잡기",
+        description: "왜 만들고 무엇을 만족해야 하는지 먼저 분리한다.",
+        slugs: [
+          "2026-07-07-software-design-documents-map",
+          "2026-07-07-software-design-documents-product-docs",
+          "2026-07-07-software-design-documents-requirements",
+        ],
+      },
+      {
+        title: "구조와 결정 남기기",
+        description: "설계 대안과 선택 이유를 나중의 개발자가 읽을 수 있게 남긴다.",
+        slugs: [
+          "2026-07-07-software-design-documents-architecture",
+          "2026-07-07-software-design-documents-decisions",
+        ],
+      },
+      {
+        title: "계약과 운영까지 연결하기",
+        description: "API 계약, 보안 경계, Runbook, SLO, Postmortem으로 배포 뒤를 본다.",
+        slugs: ["2026-07-07-software-design-documents-operations"],
       },
     ],
   },
