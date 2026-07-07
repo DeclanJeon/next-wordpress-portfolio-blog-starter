@@ -54,10 +54,15 @@ function EmptyArchive({ view }: { view: ArchiveView }) {
 }
 
 function BoardArchive({ posts }: { posts: ArchivePost[] }) {
+  const seriesLabel = posts[0]?.seriesLabel
+  const usesSeriesOrder =
+    Boolean(seriesLabel) &&
+    posts.every((post) => post.seriesLabel === seriesLabel && post.seriesPosition && post.seriesTotal === posts.length)
+
   return (
     <div className="overflow-hidden rounded-2xl border border-border bg-background">
       <div className="hidden grid-cols-[4rem_6rem_7rem_1fr_9rem_5rem] border-b border-border bg-muted/40 px-5 py-3 text-xs text-muted-foreground md:grid">
-        <span className="text-right">번호</span>
+        <span className="text-right">{usesSeriesOrder ? "순서" : "번호"}</span>
         <span>이미지</span>
         <span>분류</span>
         <span>제목</span>
@@ -65,9 +70,11 @@ function BoardArchive({ posts }: { posts: ArchivePost[] }) {
         <span className="text-right">읽기</span>
       </div>
       <div className="divide-y divide-border">
-        {posts.map((post, index) => (
+        {posts.map((post, index) => {
+          const displayNumber = usesSeriesOrder && post.seriesPosition ? post.seriesPosition : posts.length - index
+          return (
           <Link key={post.id} href={`/writing/${post.slug}`} className="group grid gap-3 px-5 py-4 transition-colors hover:bg-muted/40 md:grid-cols-[4rem_6rem_7rem_1fr_9rem_5rem] md:items-center">
-            <span className="font-mono text-xs text-muted-foreground md:text-right" aria-label={`게시글 번호 ${posts.length - index}`}>{String(posts.length - index).padStart(3, "0")}</span>
+            <span className="font-mono text-xs text-muted-foreground md:text-right" aria-label={`${usesSeriesOrder ? "읽기 순서" : "게시글 번호"} ${displayNumber}`}>{String(displayNumber).padStart(3, "0")}</span>
             <ArchiveThumbnail post={post} className="hidden h-16 w-24 md:block md:h-12 md:w-20" />
             <span className="hidden label-tracked-sm text-muted-foreground md:block">{post.taxonomyLabel}</span>
             <span>
@@ -84,8 +91,9 @@ function BoardArchive({ posts }: { posts: ArchivePost[] }) {
               {formatReadingTime(post.readingTime)}
               <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </span>
-          </Link>
-        ))}
+            </Link>
+          )
+        })}
       </div>
     </div>
   )

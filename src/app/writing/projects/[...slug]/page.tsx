@@ -57,6 +57,13 @@ export default async function WritingProjectDetailPage({ params }: PageProps) {
   ])
   if (!node) notFound()
 
+  const taxonomyMappings = await db.postTaxonomy.findMany({
+    where: { role: "primary", postId: { in: [...postIds] } },
+    orderBy: [{ node: { sortOrder: "asc" } }, { sortOrder: "asc" }],
+    select: { postId: true },
+  })
+  const taxonomyOrderByPostId = new Map(taxonomyMappings.map((mapping, index) => [mapping.postId, index]))
+
   const postRecords = await db.post.findMany({
     where: { status: "published", id: { in: [...postIds] } },
     orderBy: [{ publishedAt: "desc" }, { id: "desc" }],
@@ -64,7 +71,15 @@ export default async function WritingProjectDetailPage({ params }: PageProps) {
   })
   const decoratedPosts = await decorateArchivePosts(postRecords)
   const seriesByPost = await getArchiveSeriesMetadataForPosts(decoratedPosts.map((post) => post.id))
-  const posts = decoratedPosts.map((post) => ({ ...post, ...seriesByPost.get(post.id) }))
+  const posts = decoratedPosts
+    .map((post) => ({ ...post, ...seriesByPost.get(post.id) }))
+    .sort((a, b) => {
+      const seriesOrderA = a.seriesPosition ?? Number.MAX_SAFE_INTEGER
+      const seriesOrderB = b.seriesPosition ?? Number.MAX_SAFE_INTEGER
+      const taxonomyOrderA = taxonomyOrderByPostId.get(a.id) ?? Number.MAX_SAFE_INTEGER
+      const taxonomyOrderB = taxonomyOrderByPostId.get(b.id) ?? Number.MAX_SAFE_INTEGER
+      return seriesOrderA - seriesOrderB || taxonomyOrderA - taxonomyOrderB || b.publishedAt.getTime() - a.publishedAt.getTime() || b.id.localeCompare(a.id)
+    })
   const readingGuide = getCollectionReadingGuide(path, posts)
   const projectJsonLd = collectionPageJsonLd({
     name: `${node.name} 글 모음`,
