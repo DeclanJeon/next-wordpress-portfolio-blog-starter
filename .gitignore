@@ -64,5 +64,5 @@ output/
 test
 prompt
 
-# generated or local-only skills
-/skills/
+# local-only skill scratch (track v2/skills production contracts)
+# /skills/
