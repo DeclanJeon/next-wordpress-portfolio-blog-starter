@@ -30,7 +30,6 @@ ssh "$REMOTE" "mkdir -p '$REMOTE_RELEASE'"
 # Sync standalone layout used by current production releases
 if [[ -d .next/standalone ]]; then
   rsync -az --delete \
-    --exclude node_modules \
     .next/standalone/ "$REMOTE:$REMOTE_RELEASE/"
   # static + public required next to standalone
   mkdir -p .next/standalone/.next
