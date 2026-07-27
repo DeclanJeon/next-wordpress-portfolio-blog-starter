@@ -1,97 +1,97 @@
 {
-  "schemaVersion": 1,
-  "backend": "Codex imagegen / Imagen",
+  "backend": "codex-imagen",
   "model": "gpt-5.5",
-  "sourceType": "codex-imagegen-imagen-raster",
-  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
-  "goalId": "G003",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
   "slug": "2026-07-04-realtime-network-15-why-webrtc-connection-is-hard",
-  "promptId": "2026-07-04-realtime-network-15-why-webrtc-connection-is-hard:body-image-set",
-  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-15-why-webrtc-connection-is-hard",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-ponslink-02-webrtc-first-hell-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-ponslink-02-webrtc-first-hell-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-18-ponslink-deep-dive-06-webrtc-mesh-cover-imagegen.png"
+  ],
   "finalAssetPaths": [
-    "/tistory/body-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-checklist.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-failure.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-flow.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-matrix.webp"
+    "tistory/body-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/01-problem-moment.png",
+    "tistory/body-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/02-failure-signal.png",
+    "tistory/body-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/03-boundary-change.png"
   ],
-  "contentImagePaths": [
-    "/tistory/body-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-flow.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-matrix.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-failure.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-checklist.webp"
-  ],
-  "assets": [
-    {
-      "slotId": "flow",
-      "requestIndex": 57,
-      "promptId": "2026-07-04-realtime-network-15-why-webrtc-connection-is-hard:flow",
-      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/057-2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-flow.txt",
-      "generationId": "019f2ca5-720e-75d2-a7a4-161abe478cd5",
-      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2ca5-720e-75d2-a7a4-161abe478cd5/ig_08d9777b5fe5cc1e016a48dea5bb28819198c7b5fde7d392eb.png",
-      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-flow.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-flow.webp",
-      "sha256": "7be2f5a0088797d29581c26a6fd8626c6562a9f7a30200655dec179f281b09bf",
-      "width": 1672,
-      "height": 941,
-      "stddev64": [
-        41.5,
-        39.005,
-        33.837
-      ]
+  "generatedAt": "2026-07-17T14:00:02.766283+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[WebRTC 딥다이브] WebRTC 연결은 왜 그냥 열리지 않을까",
+      "promptHash": "bb70665a298c537e",
+      "finalPath": "/tistory/body-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.797282+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:53.594996+00:00"
     },
-    {
-      "slotId": "matrix",
-      "requestIndex": 58,
-      "promptId": "2026-07-04-realtime-network-15-why-webrtc-connection-is-hard:matrix",
-      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/058-2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-matrix.txt",
-      "generationId": "019f2ca6-9c34-7a42-8648-7554e6f88f71",
-      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2ca6-9c34-7a42-8648-7554e6f88f71/ig_0169bc251aaa8757016a48def873848199b4b0f176d606e96a.png",
-      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-matrix.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-matrix.webp",
-      "sha256": "12b193300f114368d5cadacad54812ec0b7cf10ad6a16b09d425672fd2186833",
-      "width": 1672,
-      "height": 941,
-      "stddev64": [
-        26.141,
-        29.188,
-        31.359
-      ]
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[WebRTC 딥다이브] WebRTC 연결은 왜 그냥 열리지 않을까",
+      "promptHash": "00139df1c6ced9a2",
+      "finalPath": "/tistory/body-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.799218+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:53.595026+00:00"
     },
-    {
-      "slotId": "failure",
-      "requestIndex": 59,
-      "promptId": "2026-07-04-realtime-network-15-why-webrtc-connection-is-hard:failure",
-      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/059-2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-failure.txt",
-      "generationId": "019f2ca6-b681-7e71-be84-35a163e72548",
-      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2ca6-b681-7e71-be84-35a163e72548/ig_06b2e82313aa83b4016a48def7e22c81918379d7e56a2bbe63.png",
-      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-failure.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-failure.webp",
-      "sha256": "d1d3ffaffab19a025327dde2723d2c4df74f21336a798e81dbe55d3f650555f8",
-      "width": 1672,
-      "height": 941,
-      "stddev64": [
-        35.449,
-        34.962,
-        32.014
-      ]
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[WebRTC 딥다이브] WebRTC 연결은 왜 그냥 열리지 않을까",
+      "promptHash": "57fb416489496113",
+      "finalPath": "/tistory/body-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.799754+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:53.594938+00:00"
     },
-    {
-      "slotId": "checklist",
-      "requestIndex": 60,
-      "promptId": "2026-07-04-realtime-network-15-why-webrtc-connection-is-hard:checklist",
-      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/060-2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-checklist.txt",
-      "generationId": "019f2ca7-e083-7131-9f19-6de18396541f",
-      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2ca7-e083-7131-9f19-6de18396541f/ig_014f0e3bb2f7e33f016a48df52bd508191885c8e8f99c0b55f.png",
-      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-checklist.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard-checklist.webp",
-      "sha256": "37fd4532d5f52fc4c21cca2e3517a3453b27129d04495eef518694856ab15524",
-      "width": 1672,
-      "height": 941,
-      "stddev64": [
-        34.986,
-        32.201,
-        28.577
-      ]
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-07-04-realtime-network-15-why-webrtc-connection-is-hard/cover.webp",
+      "quality": 70
     }
-  ]
+  },
+  "updatedAt": "2026-07-17T17:07:53.595174+00:00"
 }

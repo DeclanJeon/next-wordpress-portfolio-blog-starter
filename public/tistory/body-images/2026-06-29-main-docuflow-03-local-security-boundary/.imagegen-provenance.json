@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-29-main-docuflow-03-local-security-boundary",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-main-docuflow-03-local-security-boundary-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-main-docuflow-03-local-security-boundary-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/story-handdrawn/2026-06-29-main-docuflow-03-local-security-boundary-cover.png"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-29-main-docuflow-03-local-security-boundary/01-problem-moment.png",
+    "tistory/body-images/2026-06-29-main-docuflow-03-local-security-boundary/02-failure-signal.png",
+    "tistory/body-images/2026-06-29-main-docuflow-03-local-security-boundary/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:48.633075+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[DocuFlow] 민감한 문서는 어디서 처리되는지가 먼저 보여야 했다",
+      "promptHash": "e5c2d26636660a2b",
+      "finalPath": "/tistory/body-images/2026-06-29-main-docuflow-03-local-security-boundary/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.592882+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:42.523689+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[DocuFlow] 민감한 문서는 어디서 처리되는지가 먼저 보여야 했다",
+      "promptHash": "003b88e4adb93c7a",
+      "finalPath": "/tistory/body-images/2026-06-29-main-docuflow-03-local-security-boundary/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.593332+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:42.523789+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[DocuFlow] 민감한 문서는 어디서 처리되는지가 먼저 보여야 했다",
+      "promptHash": "16d6c7f96d2ea7f9",
+      "finalPath": "/tistory/body-images/2026-06-29-main-docuflow-03-local-security-boundary/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:12:05.877816+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 55.7,
+        "bytes": 3103371,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:42.523830+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-29-main-docuflow-03-local-security-boundary/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:42.523858+00:00"
+}

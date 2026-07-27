@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-29-ponswarp-05-zip64-streaming",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-ponswarp-05-zip64-streaming-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-ponswarp-05-zip64-streaming-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/ponswarp/mini-series/2026-06-29-ponswarp-05-zip64-streaming.png"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-29-ponswarp-05-zip64-streaming/01-problem-moment.png",
+    "tistory/body-images/2026-06-29-ponswarp-05-zip64-streaming/02-failure-signal.png",
+    "tistory/body-images/2026-06-29-ponswarp-05-zip64-streaming/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:43.150812+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] ZIP64가 필요해진 순간",
+      "promptHash": "16d7e8bf55ffb795",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-05-zip64-streaming/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.614716+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:46.508825+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] ZIP64가 필요해진 순간",
+      "promptHash": "a7a526dbf58e5921",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-05-zip64-streaming/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.615084+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:46.508954+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] ZIP64가 필요해진 순간",
+      "promptHash": "a00bec9611729185",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-05-zip64-streaming/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.615407+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:46.508900+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-05-zip64-streaming/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:46.508977+00:00"
+}

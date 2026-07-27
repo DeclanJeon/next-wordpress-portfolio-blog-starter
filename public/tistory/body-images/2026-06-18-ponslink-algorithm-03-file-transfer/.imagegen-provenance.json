@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-18-ponslink-algorithm-03-file-transfer",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] P2P 파일 전송에 작은 TCP가 필요했던 이유",
+      "promptHash": "fa5aec7cfeae411a",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-03-file-transfer/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:36:04.726417+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:45.060382+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] P2P 파일 전송에 작은 TCP가 필요했던 이유",
+      "promptHash": "883ffd78e0720212",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-03-file-transfer/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:26:40.918158+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 143.8,
+        "bytes": 2594356,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:45.060418+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] P2P 파일 전송에 작은 TCP가 필요했던 이유",
+      "promptHash": "c3433899181ab4fa",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-03-file-transfer/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T15:24:39.199297+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 55.1,
+        "bytes": 2456281,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:45.060324+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-03-file-transfer/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:45.060491+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-18-ponslink-algorithm-03-file-transfer/01-problem-moment.png",
+    "tistory/body-images/2026-06-18-ponslink-algorithm-03-file-transfer/02-failure-signal.png",
+    "tistory/body-images/2026-06-18-ponslink-algorithm-03-file-transfer/03-boundary-change.png"
+  ]
+}

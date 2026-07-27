@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-18-ponslink-algorithm-07-ponscast-backpressure",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] DataChannel 재생을 버티게 하는 백프레셔와 지터 버퍼",
+      "promptHash": "5ff59e14aac9828b",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-07-ponscast-backpressure/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.718968+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:08:01.279218+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] DataChannel 재생을 버티게 하는 백프레셔와 지터 버퍼",
+      "promptHash": "1d8754118de1e19f",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-07-ponscast-backpressure/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:36:04.720262+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:08:01.279282+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] DataChannel 재생을 버티게 하는 백프레셔와 지터 버퍼",
+      "promptHash": "948c4f10986db462",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-07-ponscast-backpressure/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:22:38.041157+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 142.4,
+        "bytes": 2837220,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:08:01.279311+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-07-ponscast-backpressure/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:08:01.279339+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-18-ponslink-algorithm-07-ponscast-backpressure/01-problem-moment.png",
+    "tistory/body-images/2026-06-18-ponslink-algorithm-07-ponscast-backpressure/02-failure-signal.png",
+    "tistory/body-images/2026-06-18-ponslink-algorithm-07-ponscast-backpressure/03-boundary-change.png"
+  ]
+}

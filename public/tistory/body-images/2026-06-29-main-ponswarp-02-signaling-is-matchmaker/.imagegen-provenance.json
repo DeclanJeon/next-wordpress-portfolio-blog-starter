@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-29-main-ponswarp-02-signaling-is-matchmaker",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] Signaling 서버는 파일 운반자가 아니라 소개자였다",
+      "promptHash": "8868b608f8ce82e1",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ponswarp-02-signaling-is-matchmaker/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:36:04.685307+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:44.080316+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] Signaling 서버는 파일 운반자가 아니라 소개자였다",
+      "promptHash": "1b42eee1220f8709",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ponswarp-02-signaling-is-matchmaker/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T15:13:33.575376+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 70.4,
+        "bytes": 2886907,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:44.080242+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] Signaling 서버는 파일 운반자가 아니라 소개자였다",
+      "promptHash": "a2f446f4b2438a86",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ponswarp-02-signaling-is-matchmaker/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:14:07.180905+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 61.6,
+        "bytes": 2414326,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:44.080357+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ponswarp-02-signaling-is-matchmaker/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:44.080386+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-29-main-ponswarp-02-signaling-is-matchmaker/01-problem-moment.png",
+    "tistory/body-images/2026-06-29-main-ponswarp-02-signaling-is-matchmaker/02-failure-signal.png",
+    "tistory/body-images/2026-06-29-main-ponswarp-02-signaling-is-matchmaker/03-boundary-change.png"
+  ]
+}

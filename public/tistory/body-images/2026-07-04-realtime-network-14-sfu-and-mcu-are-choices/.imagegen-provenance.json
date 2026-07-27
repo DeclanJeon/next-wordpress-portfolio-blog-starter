@@ -1,97 +1,97 @@
 {
-  "schemaVersion": 1,
-  "backend": "Codex imagegen / Imagen",
+  "backend": "codex-imagen",
   "model": "gpt-5.5",
-  "sourceType": "codex-imagegen-imagen-raster",
-  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
-  "goalId": "G003",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
   "slug": "2026-07-04-realtime-network-14-sfu-and-mcu-are-choices",
-  "promptId": "2026-07-04-realtime-network-14-sfu-and-mcu-are-choices:body-image-set",
-  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-14-sfu-and-mcu-are-choices",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-02-mesh-sfu-mcu-topology-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-06-realtime-product-patterns-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-18-ponslink-algorithm-02-realtime-queue-cover-imagegen.png"
+  ],
   "finalAssetPaths": [
-    "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-checklist.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-failure.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-flow.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-matrix.webp"
+    "tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/01-problem-moment.png",
+    "tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/02-failure-signal.png",
+    "tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/03-boundary-change.png"
   ],
-  "contentImagePaths": [
-    "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-flow.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-matrix.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-failure.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-checklist.webp"
-  ],
-  "assets": [
-    {
-      "slotId": "flow",
-      "requestIndex": 53,
-      "promptId": "2026-07-04-realtime-network-14-sfu-and-mcu-are-choices:flow",
-      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/053-2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-flow.txt",
-      "generationId": "019f2ca2-3b2c-7f53-ad2d-e031cddd3604",
-      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2ca2-3b2c-7f53-ad2d-e031cddd3604/ig_06c99331f9985526016a48ddd456808191882f3bfcf52394cc.png",
-      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-flow.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-flow.webp",
-      "sha256": "0acfc83a9ade4a96bb76911ed1ba7df5dda2b24139a7d067252158ecaf6d923e",
-      "width": 1672,
-      "height": 941,
-      "stddev64": [
-        41.492,
-        40.518,
-        36.475
-      ]
+  "generatedAt": "2026-07-17T14:00:02.449999+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[SFU vs MCU] SFU와 MCU는 경쟁 관계가 아니라 선택지다",
+      "promptHash": "724f2023bd70ced9",
+      "finalPath": "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T15:41:22.908637+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 57.5,
+        "bytes": 2473531,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:45.980674+00:00"
     },
-    {
-      "slotId": "matrix",
-      "requestIndex": 54,
-      "promptId": "2026-07-04-realtime-network-14-sfu-and-mcu-are-choices:matrix",
-      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/054-2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-matrix.txt",
-      "generationId": "019f2ca2-555a-7812-9155-800f44d4e190",
-      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2ca2-555a-7812-9155-800f44d4e190/ig_0eeec26d9081313b016a48dde6a6b08191b70af4cc07d00ad3.png",
-      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-matrix.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-matrix.webp",
-      "sha256": "2732259012ff08e5ea2b75ed876b978c64f273547434bc0078a0d44cd0441673",
-      "width": 1672,
-      "height": 941,
-      "stddev64": [
-        42.057,
-        41.59,
-        39.112
-      ]
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[SFU vs MCU] SFU와 MCU는 경쟁 관계가 아니라 선택지다",
+      "promptHash": "b995f0b16bb06b5a",
+      "finalPath": "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.800679+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:45.980705+00:00"
     },
-    {
-      "slotId": "failure",
-      "requestIndex": 55,
-      "promptId": "2026-07-04-realtime-network-14-sfu-and-mcu-are-choices:failure",
-      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/055-2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-failure.txt",
-      "generationId": "019f2ca3-9cb9-75c3-9adb-0b3235af8975",
-      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2ca3-9cb9-75c3-9adb-0b3235af8975/ig_0976a5ceb761e985016a48de4108e8819196d4345d282c30ba.png",
-      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-failure.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-failure.webp",
-      "sha256": "66956f0704b099768fddcc906d506331258833799297fc07186cf13d7343e4b6",
-      "width": 1672,
-      "height": 941,
-      "stddev64": [
-        41.764,
-        41.377,
-        40.689
-      ]
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[SFU vs MCU] SFU와 MCU는 경쟁 관계가 아니라 선택지다",
+      "promptHash": "077d7943f0915af6",
+      "finalPath": "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.777658+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:45.980603+00:00"
     },
-    {
-      "slotId": "checklist",
-      "requestIndex": 56,
-      "promptId": "2026-07-04-realtime-network-14-sfu-and-mcu-are-choices:checklist",
-      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/056-2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-checklist.txt",
-      "generationId": "019f2ca3-ad54-70b3-a3e4-6f7afd24a9a0",
-      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2ca3-ad54-70b3-a3e4-6f7afd24a9a0/ig_0df304a9a7259aa8016a48de45061c81918ae55e6c70862572.png",
-      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-checklist.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices-checklist.webp",
-      "sha256": "fc98ca27f9445d573c800bd6b0295ceec2869ceea7741f9e0baf0285ee3bf22e",
-      "width": 1672,
-      "height": 941,
-      "stddev64": [
-        49.369,
-        48.711,
-        46.094
-      ]
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-07-04-realtime-network-14-sfu-and-mcu-are-choices/cover.webp",
+      "quality": 70
     }
-  ]
+  },
+  "updatedAt": "2026-07-17T17:07:45.980733+00:00"
 }

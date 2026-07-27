@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-29-ponswarp-07-incomplete-transfer-recovery",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] 끊긴 전송에서 partial file을 남기지 않기로 했다",
+      "promptHash": "38fef946837c4092",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-07-incomplete-transfer-recovery/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.610093+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:58.248000+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] 끊긴 전송에서 partial file을 남기지 않기로 했다",
+      "promptHash": "6bf87bd95ea53cb1",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-07-incomplete-transfer-recovery/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.690417+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:58.247725+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] 끊긴 전송에서 partial file을 남기지 않기로 했다",
+      "promptHash": "d351658f5c5f0ad6",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-07-incomplete-transfer-recovery/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:36:04.690954+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:58.247950+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-07-incomplete-transfer-recovery/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:58.248038+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-29-ponswarp-07-incomplete-transfer-recovery/01-problem-moment.png",
+    "tistory/body-images/2026-06-29-ponswarp-07-incomplete-transfer-recovery/02-failure-signal.png",
+    "tistory/body-images/2026-06-29-ponswarp-07-incomplete-transfer-recovery/03-boundary-change.png"
+  ]
+}

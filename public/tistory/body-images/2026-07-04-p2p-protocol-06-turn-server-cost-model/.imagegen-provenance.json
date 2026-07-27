@@ -1,64 +1,97 @@
 {
-  "schemaVersion": 1,
-  "backend": "Codex imagegen / Imagen",
+  "backend": "codex-imagen",
   "model": "gpt-5.5",
-  "sourceType": "codex-imagegen-imagen-raster",
-  "generatedAt": "2026-07-04T13:52:09.507144+00:00",
-  "goalId": "p2p-protocol-followup",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
   "slug": "2026-07-04-p2p-protocol-06-turn-server-cost-model",
-  "promptId": "2026-07-04-p2p-protocol-06-turn-server-cost-model:body-image-set",
-  "generationId": "codex-imagegen-p2p-protocol-2026-07-04-p2p-protocol-06-turn-server-cost-model",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-05-signaling-stun-turn-ice-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-01-client-server-vs-peer-to-peer-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-18-ponslink-algorithm-06-ponscast-protocol-cover-imagegen.png"
+  ],
   "finalAssetPaths": [
-    "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-cover.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-flow.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-failure.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-checklist.webp"
+    "tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/01-problem-moment.png",
+    "tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/02-failure-signal.png",
+    "tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/03-boundary-change.png"
   ],
-  "contentImagePaths": [
-    "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-flow.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-failure.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-checklist.webp"
-  ],
-  "assets": [
-    {
-      "slotId": "cover",
-      "requestIndex": 21,
-      "promptId": "2026-07-04-p2p-protocol-06-turn-server-cost-model:cover",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/021-2026-07-04-p2p-protocol-06-turn-server-cost-model-cover.txt",
-      "generationId": "codex-imagegen-p2p-protocol-21",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-cover.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-cover.webp",
-      "sha256": "48afb6d6ef118f857eb59ffe52a93b4a70222235d84bcc1157e80eea4a431727"
+  "generatedAt": "2026-07-17T14:00:05.370008+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[TURN 운영] TURN 서버 비용은 어떻게 계산해야 할까",
+      "promptHash": "9368aaf2ee5697f0",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.767967+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:38.977982+00:00"
     },
-    {
-      "slotId": "flow",
-      "requestIndex": 22,
-      "promptId": "2026-07-04-p2p-protocol-06-turn-server-cost-model:flow",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/022-2026-07-04-p2p-protocol-06-turn-server-cost-model-flow.txt",
-      "generationId": "codex-imagegen-p2p-protocol-22",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-flow.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-flow.webp",
-      "sha256": "6fa1678b418cda5f3fb7e7af24d908963cb48e9d5471e57aa398baa056f43292"
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[TURN 운영] TURN 서버 비용은 어떻게 계산해야 할까",
+      "promptHash": "72b957339713642c",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.768522+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:38.978040+00:00"
     },
-    {
-      "slotId": "failure",
-      "requestIndex": 23,
-      "promptId": "2026-07-04-p2p-protocol-06-turn-server-cost-model:failure",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/023-2026-07-04-p2p-protocol-06-turn-server-cost-model-failure.txt",
-      "generationId": "codex-imagegen-p2p-protocol-23",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-failure.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-failure.webp",
-      "sha256": "d5b3f0ae493c2e47b37e18efd3d97b79b678f4e0db71e1d9d405126d4d14afc2"
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[TURN 운영] TURN 서버 비용은 어떻게 계산해야 할까",
+      "promptHash": "6ffc9991487ebb5f",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.772851+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:38.978069+00:00"
     },
-    {
-      "slotId": "checklist",
-      "requestIndex": 24,
-      "promptId": "2026-07-04-p2p-protocol-06-turn-server-cost-model:checklist",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/024-2026-07-04-p2p-protocol-06-turn-server-cost-model-checklist.txt",
-      "generationId": "codex-imagegen-p2p-protocol-24",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-checklist.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/2026-07-04-p2p-protocol-06-turn-server-cost-model-checklist.webp",
-      "sha256": "3133154ad0ff00cb020013ee822a33b6d6b5acd06779a24d5029b19ec5b603d0"
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-06-turn-server-cost-model/cover.webp",
+      "quality": 70
     }
-  ]
+  },
+  "updatedAt": "2026-07-17T17:07:38.978096+00:00"
 }

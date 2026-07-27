@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-16-ponslink-07b-good-room-not-enough",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-ponslink-07b-good-room-not-enough-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-ponslink-07b-good-room-not-enough-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-main-ponslink-01-room-not-call-cover-imagegen.png"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-16-ponslink-07b-good-room-not-enough/01-problem-moment.png",
+    "tistory/body-images/2026-06-16-ponslink-07b-good-room-not-enough/02-failure-signal.png",
+    "tistory/body-images/2026-06-16-ponslink-07b-good-room-not-enough/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:53.214454+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 좋은 방만으로는 실제 약속이 굴러가지 않았다",
+      "promptHash": "2a80aea59c0becb9",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-07b-good-room-not-enough/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.725943+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:37.272319+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 좋은 방만으로는 실제 약속이 굴러가지 않았다",
+      "promptHash": "ba48d873c7f96c43",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-07b-good-room-not-enough/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.726707+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:37.272414+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 좋은 방만으로는 실제 약속이 굴러가지 않았다",
+      "promptHash": "ea48daf899873ba0",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-07b-good-room-not-enough/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.727272+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:37.272386+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-07b-good-room-not-enough/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:37.272467+00:00"
+}

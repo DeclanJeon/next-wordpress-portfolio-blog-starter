@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-29-main-fatemirror-01-mirror-not-fortune",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[명경] 운세가 아니라 자기 해석의 거울로 만들고 싶었다",
+      "promptHash": "3d2eb96703306fd5",
+      "finalPath": "/tistory/body-images/2026-06-29-main-fatemirror-01-mirror-not-fortune/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:11:02.096928+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 54.2,
+        "bytes": 2470264,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:46.732233+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[명경] 운세가 아니라 자기 해석의 거울로 만들고 싶었다",
+      "promptHash": "478154f2907da66a",
+      "finalPath": "/tistory/body-images/2026-06-29-main-fatemirror-01-mirror-not-fortune/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.678295+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:46.732144+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[명경] 운세가 아니라 자기 해석의 거울로 만들고 싶었다",
+      "promptHash": "1ea99df375b6a1d4",
+      "finalPath": "/tistory/body-images/2026-06-29-main-fatemirror-01-mirror-not-fortune/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T15:11:11.087104+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 63.2,
+        "bytes": 2651017,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:46.732204+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-29-main-fatemirror-01-mirror-not-fortune/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:46.732260+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-29-main-fatemirror-01-mirror-not-fortune/01-problem-moment.png",
+    "tistory/body-images/2026-06-29-main-fatemirror-01-mirror-not-fortune/02-failure-signal.png",
+    "tistory/body-images/2026-06-29-main-fatemirror-01-mirror-not-fortune/03-boundary-change.png"
+  ]
+}

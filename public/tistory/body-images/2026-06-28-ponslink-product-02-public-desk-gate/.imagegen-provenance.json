@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-28-ponslink-product-02-public-desk-gate",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] Public Desk는 문의 폼이 아니라 첫 번째 운영 게이트다",
+      "promptHash": "fb79a0e55ed30777",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-02-public-desk-gate/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.653785+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:52.037708+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] Public Desk는 문의 폼이 아니라 첫 번째 운영 게이트다",
+      "promptHash": "e4b45a0503db7ba0",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-02-public-desk-gate/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.712285+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:52.037660+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] Public Desk는 문의 폼이 아니라 첫 번째 운영 게이트다",
+      "promptHash": "c5b7e320339ffc17",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-02-public-desk-gate/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:36:04.714663+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:52.037730+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-02-public-desk-gate/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:52.037810+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-28-ponslink-product-02-public-desk-gate/01-problem-moment.png",
+    "tistory/body-images/2026-06-28-ponslink-product-02-public-desk-gate/02-failure-signal.png",
+    "tistory/body-images/2026-06-28-ponslink-product-02-public-desk-gate/03-boundary-change.png"
+  ]
+}

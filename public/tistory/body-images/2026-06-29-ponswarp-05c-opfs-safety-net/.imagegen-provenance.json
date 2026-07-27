@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-29-ponswarp-05c-opfs-safety-net",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-ponswarp-05c-opfs-safety-net-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-ponswarp-05c-opfs-safety-net-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-ponslink-11-ponswarp-split-cover-imagegen.png"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-29-ponswarp-05c-opfs-safety-net/01-problem-moment.png",
+    "tistory/body-images/2026-06-29-ponswarp-05c-opfs-safety-net/02-failure-signal.png",
+    "tistory/body-images/2026-06-29-ponswarp-05c-opfs-safety-net/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:58.324419+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] OPFS는 만능키가 아니라 마지막 안전망이었다",
+      "promptHash": "5eba612bb4d5082e",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-05c-opfs-safety-net/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.611591+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:47.233516+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] OPFS는 만능키가 아니라 마지막 안전망이었다",
+      "promptHash": "39f61412abf059be",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-05c-opfs-safety-net/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.612209+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:47.233596+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] OPFS는 만능키가 아니라 마지막 안전망이었다",
+      "promptHash": "9c29f152f27d04a0",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-05c-opfs-safety-net/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.613884+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:47.233625+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-05c-opfs-safety-net/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:47.233649+00:00"
+}

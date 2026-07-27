@@ -1,64 +1,97 @@
 {
-  "schemaVersion": 1,
-  "backend": "Codex imagegen / Imagen",
+  "backend": "codex-imagen",
   "model": "gpt-5.5",
-  "sourceType": "codex-imagegen-imagen-raster",
-  "generatedAt": "2026-07-04T13:52:09.499070+00:00",
-  "goalId": "p2p-protocol-followup",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
   "slug": "2026-07-04-p2p-protocol-02-libp2p-stack-boundaries",
-  "promptId": "2026-07-04-p2p-protocol-02-libp2p-stack-boundaries:body-image-set",
-  "generationId": "codex-imagegen-p2p-protocol-2026-07-04-p2p-protocol-02-libp2p-stack-boundaries",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-00-grid-computing-first-step-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-01-client-server-vs-peer-to-peer-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-02-mesh-sfu-mcu-topology-cover.png"
+  ],
   "finalAssetPaths": [
-    "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-cover.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-flow.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-failure.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-checklist.webp"
+    "tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/01-problem-moment.png",
+    "tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/02-failure-signal.png",
+    "tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/03-boundary-change.png"
   ],
-  "contentImagePaths": [
-    "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-flow.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-failure.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-checklist.webp"
-  ],
-  "assets": [
-    {
-      "slotId": "cover",
-      "requestIndex": 5,
-      "promptId": "2026-07-04-p2p-protocol-02-libp2p-stack-boundaries:cover",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/005-2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-cover.txt",
-      "generationId": "codex-imagegen-p2p-protocol-5",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-cover.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-cover.webp",
-      "sha256": "b4a84173346aceb981875725eb66921aa29c77183eda0ef2d67b8f9f47484461"
+  "generatedAt": "2026-07-17T14:00:04.773032+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 프로토콜] libp2p는 라이브러리보다 경계 묶음에 가깝다",
+      "promptHash": "476f3759a0b968f9",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.779663+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:49.818709+00:00"
     },
-    {
-      "slotId": "flow",
-      "requestIndex": 6,
-      "promptId": "2026-07-04-p2p-protocol-02-libp2p-stack-boundaries:flow",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/006-2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-flow.txt",
-      "generationId": "codex-imagegen-p2p-protocol-6",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-flow.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-flow.webp",
-      "sha256": "3351e8efbb0e4ede9764c9b1b2c6349c1f22bc1d3bf89310b7bf2407de287160"
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 프로토콜] libp2p는 라이브러리보다 경계 묶음에 가깝다",
+      "promptHash": "bf7607f5303e743e",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.780363+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:49.818819+00:00"
     },
-    {
-      "slotId": "failure",
-      "requestIndex": 7,
-      "promptId": "2026-07-04-p2p-protocol-02-libp2p-stack-boundaries:failure",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/007-2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-failure.txt",
-      "generationId": "codex-imagegen-p2p-protocol-7",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-failure.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-failure.webp",
-      "sha256": "f7bfe71075423977736efc6714b92e1ed7e6c24417686038f4192120e309ba9a"
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 프로토콜] libp2p는 라이브러리보다 경계 묶음에 가깝다",
+      "promptHash": "ec4a5dee67482785",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.782728+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:49.818789+00:00"
     },
-    {
-      "slotId": "checklist",
-      "requestIndex": 8,
-      "promptId": "2026-07-04-p2p-protocol-02-libp2p-stack-boundaries:checklist",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/008-2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-checklist.txt",
-      "generationId": "codex-imagegen-p2p-protocol-8",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-checklist.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries-checklist.webp",
-      "sha256": "8891fcd91452af60e6abc32d479f9bb69a33ee5a4c10456e8cfa29e8eb195c26"
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-02-libp2p-stack-boundaries/cover.webp",
+      "quality": 70
     }
-  ]
+  },
+  "updatedAt": "2026-07-17T17:07:49.818846+00:00"
 }

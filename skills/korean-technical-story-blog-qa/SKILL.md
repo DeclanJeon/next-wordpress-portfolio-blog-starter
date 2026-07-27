@@ -22,14 +22,17 @@ v2/skills/korean-technical-story-section-illustrator/SKILL.md
 
 ## Goal
 
-Ensure the article package is publishable under the house workflow:
+Use the reference article as a prose-quality benchmark, not a rigid shell. QA must reject machine-like repetition, generic H2 sequences, broken joins, padding, and unsupported claims while allowing a complete short note to remain short.
 
-- Korean technical storytelling article body is 5,000+ Korean characters.
+Ensure the article package is publishable under the house workflow:
+- A chosen article archetype fits the source; section count, image count, and paragraph rhythm are justified by that archetype rather than a fixed template.
+
+- Korean technical storytelling body follows the canonical reference spine; prefer 1,200–3,500 hangul, no 5,000 floor.
 - Structure follows a TechBlogPosts / IT요즘-like readable flow.
 - Opening starts with a concrete problem scene, not a textbook definition.
 - Article uses one clear archetype, especially As-Is / Pain / To-Be for architecture or pipeline stories.
 - Sections contain real product/technical substance.
-- Image slots and diagram slots are present where the article needs them.
+- Image slots and diagram slots are present where the article needs them, not where a count requires them.
 - Every image slot maps to one section moment.
 - Every architecture/data-flow diagram slot has a diagram brief and one main message.
 - Generated raster images use latest Codex `imagegen` / gpt5.5 path; override, downgrade, or substitute backends are not acceptable for publication assets.
@@ -65,7 +68,10 @@ Must be fixed before the draft can be considered publishable.
 
 Examples:
 
-- article body is under 5,000 Korean characters
+- article uses poem/line-break poster cadence instead of retrospective prose
+- article missing final `## 마치며` (except explicit short-note waiver)
+- article reuses banned template H2s (`현장에서 먼저 터진 증상`, `한 줄`, …)
+- article body is padded to hit a character floor (especially any 5,000 target)
 - topic/claim is generic SEO content, not technical storytelling
 - opening starts with a definition instead of a concrete problem scene
 - missing image/diagram slots when the post clearly needs them
@@ -85,7 +91,7 @@ Should be fixed in the same QA repair pass.
 
 Examples:
 
-- article has fewer than 5 clear `##` sections or more than 7 without reason
+- article uses an incomplete section set for its chosen archetype, or adds sections only to inflate length
 - sections are summaries without concrete failure, trade-off, or consequence
 - image prompt tries to summarize the whole article
 - diagram prompt has 10+ major visual nodes or too many labels
@@ -137,11 +143,14 @@ Record available evidence:
 Verify:
 
 - body is Korean unless requested otherwise
-- body character count is 5,000+
+- body is not length-padded; soft thin only if judgment incomplete
+- final section is `## 마치며` with a changed judgment
+- H2s are topic-specific and not a shared series template signature
+- opening is 2–4 prose paragraphs before the first image/H2 when the chosen archetype calls for an opening
 - title is concrete, not vague
-- opening shows a problem scene within the first 2-4 paragraphs
+- opening shows a problem scene within the first 2-4 paragraphs when the chosen archetype is retrospective
 - article uses one primary archetype
-- 5-7 `##` sections unless justified
+- section count is the smallest complete set for that archetype
 - headings are descriptive
 - ending states a changed judgment
 - no fake metrics, fake dates, or ungrounded claims
@@ -274,12 +283,13 @@ When QA finds failures and the user asked for correction, repair in this order.
 
 ### Repair 1. Body length and structure
 
-If under 5,000 characters:
+If under ~1,200 hangul and the judgment is incomplete:
 
 - expand with concrete scenes, trade-offs, failure modes, and operational consequences
-- do not pad with generic definitions
+- do not pad with generic definitions, boundary tables, or title echoes
+- never target 5,000 characters as a floor
 - preserve the chosen archetype
-- target 5,500-6,800 characters after repair
+- add only source-grounded material that introduces a new scene, constraint, trade-off, failure mode, or operating consequence; never target a numeric length
 If body length was achieved through padding:
 - delete repeated recap loops and generic benefit lists
 - replace filler with concrete scenes, constraints, trade-offs, failure modes, or operational consequences
@@ -315,7 +325,7 @@ If a claim is unsupported:
 
 If image slots are missing or wrong:
 
-- add 3-5 slots at section boundaries
+- add only the image/diagram slots the article needs; do not add a slot to meet a numeric target
 - split whole-story image prompts into section-specific prompts
 - produce companion illustrator variables for each slot
 - regenerate prompt text with the companion template
@@ -377,7 +387,7 @@ Status: PASS | PASS_WITH_NOTES | FAIL
 
 | 항목 | 결과 | 메모 |
 | --- | --- | --- |
-| 본문 5,000자 이상 | PASS/FAIL | ... |
+| 본문 구조(도입·주제H2·마치며) + 패딩 없음 | PASS/FAIL | ... |
 | 글 구조 | PASS/FAIL | ... |
 | 이미지 슬롯 | PASS/FAIL | ... |
 | 다이어그램 슬롯 | PASS/FAIL | ... |
@@ -397,8 +407,10 @@ Status: PASS | PASS_WITH_NOTES | FAIL
 
 ## 최종 확인
 
-- [ ] 본문 5,000자 이상
-- [ ] 5-7개 섹션
+- [ ] 본문이 한 주장을 한 번만 말함 (길이 하한 없음)
+- [ ] P0 슬롭 헤딩/필드블록/제목 메아리 루프 없음
+- [ ] 동일 문장 exact duplicate 3회 미만
+- [ ] smallest complete section set, natural paragraph cadence
 - [ ] 이미지/다이어그램 슬롯 정상
 - [ ] 프롬프트 부록 정상
 - [ ] 생성 이미지 백엔드/파일 검증 정상
@@ -413,7 +425,7 @@ If repairs were applied, include the final repaired article or file path. If no 
 `PASS` requires:
 
 - no BLOCKER or MAJOR issues
-- article body 5,000+ characters
+- no length floor; body must be free of template padding and exact-line loops
 - image/diagram plan complete for the article type
 - all provided/generated assets valid
 - Codex `imagegen` / gpt5.5 requirement satisfied when generation occurred
@@ -428,12 +440,32 @@ If repairs were applied, include the final repaired article or file path. If no 
 
 In addition to draft QA, published posts on blog.ponslink.com fail QA when:
 
-- Korean body character count `< 5000`
+- P0 slop headings/phrases present (`이 판단이 제품 문장으로…`, `현장 기준으로 다시 고정…`, `이 원칙을 「…」에 대입하면`, field-block loops)
+- same non-trivial line repeated 3+ times
+- bare title wrapped in `「…」` more than twice in body
 - fewer than 2 body markdown images (cover is separate)
 - any referenced image path missing on disk
 - any two body images are byte-identical
 - final public references are non-WebP when a WebP path is expected
 - title hangul-token overlap with body is `< 0.3` without an explicit series-index exception
 - deploy left `/tistory/...` returning HTML 404
+- Korean body character count is a **soft note only** when `< 800` — never fail solely to force padding up to 5000
 
 Use `v2/skills/pons-blog-production/SKILL.md` for the full audit → repair → deploy → Drive backup loop.
+
+## Canonical structure QA (reference post)
+
+Reference: `2026-06-16-ponslink-01-why-i-came-back-to-connection`.
+
+| Check | Fail if |
+| --- | --- |
+| opening_prose | first block is image-only, meta (`이 글은`), or poem short-line stack |
+| h2_topic | any banned template H2 or identical ordered H2 signature as a sibling |
+| closing | last H2 is not exactly `마치며` |
+| cadence | >45% of non-heading lines are ≤22 hangul on a long post |
+| length_pad | boundary-table / title-echo / checklist loops used to inflate kc |
+| images | body images <2 on a full retrospective (cover separate) |
+
+Banned template H2 substrings/prefixes must match the writer skill list.
+Structure score ≥1 is a publish blocker for full retrospectives.
+

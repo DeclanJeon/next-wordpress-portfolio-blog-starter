@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-16-p2p-02-mesh-sfu-mcu-topology",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P] Mesh, SFU, MCU는 연결을 어디서 합칠지의 선택이다",
+      "promptHash": "f6ad489953f2e2a2",
+      "finalPath": "/tistory/body-images/2026-06-16-p2p-02-mesh-sfu-mcu-topology/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T15:26:51.663950+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 57.3,
+        "bytes": 2556232,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:49.658992+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P] Mesh, SFU, MCU는 연결을 어디서 합칠지의 선택이다",
+      "promptHash": "cf29727536cf62df",
+      "finalPath": "/tistory/body-images/2026-06-16-p2p-02-mesh-sfu-mcu-topology/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T15:27:38.101784+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 57.2,
+        "bytes": 2530070,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:49.659048+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P] Mesh, SFU, MCU는 연결을 어디서 합칠지의 선택이다",
+      "promptHash": "e6322473f482ea25",
+      "finalPath": "/tistory/body-images/2026-06-16-p2p-02-mesh-sfu-mcu-topology/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:29:24.238693+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 156.0,
+        "bytes": 2823477,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:49.659074+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-16-p2p-02-mesh-sfu-mcu-topology/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:49.659099+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-16-p2p-02-mesh-sfu-mcu-topology/01-problem-moment.png",
+    "tistory/body-images/2026-06-16-p2p-02-mesh-sfu-mcu-topology/02-failure-signal.png",
+    "tistory/body-images/2026-06-16-p2p-02-mesh-sfu-mcu-topology/03-boundary-change.png"
+  ]
+}

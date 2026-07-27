@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-07-07-software-design-documents-product-docs",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "제품 판단 문서: PRD는 구현 지시서가 아니다",
+      "promptHash": "f23adfc1fb2f42b6",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-product-docs/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:27:56.265925+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 87.7,
+        "bytes": 2314247,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:50.414492+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "제품 판단 문서: PRD는 구현 지시서가 아니다",
+      "promptHash": "11db3c68dbb0963f",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-product-docs/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:28:47.591490+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 51.3,
+        "bytes": 2276349,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:50.414579+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "제품 판단 문서: PRD는 구현 지시서가 아니다",
+      "promptHash": "aed6320d1a9b56ec",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-product-docs/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:29.930015+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 54.4,
+        "bytes": 2473874,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:50.414619+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-product-docs/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:50.414647+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-07-07-software-design-documents-product-docs/01-problem-moment.png",
+    "tistory/body-images/2026-07-07-software-design-documents-product-docs/02-failure-signal.png",
+    "tistory/body-images/2026-07-07-software-design-documents-product-docs/03-boundary-change.png"
+  ]
+}

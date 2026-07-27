@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-29-ponswarp-05b-browser-memory-2gb",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-ponswarp-05b-browser-memory-2gb-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-ponswarp-05b-browser-memory-2gb-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-ponswarp-01-browser-direct-transfer-cover-imagegen.png"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-29-ponswarp-05b-browser-memory-2gb/01-problem-moment.png",
+    "tistory/body-images/2026-06-29-ponswarp-05b-browser-memory-2gb/02-failure-signal.png",
+    "tistory/body-images/2026-06-29-ponswarp-05b-browser-memory-2gb/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:57.744515+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] 2GB를 넘기자 브라우저 메모리가 먼저 무너졌다",
+      "promptHash": "be8beb076ed39fdc",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-05b-browser-memory-2gb/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.613036+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:48.590060+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] 2GB를 넘기자 브라우저 메모리가 먼저 무너졌다",
+      "promptHash": "f235e63070834667",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-05b-browser-memory-2gb/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.614060+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:48.590137+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] 2GB를 넘기자 브라우저 메모리가 먼저 무너졌다",
+      "promptHash": "72935b3842e1ff8f",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-05b-browser-memory-2gb/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.615204+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:48.590168+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-05b-browser-memory-2gb/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:48.590196+00:00"
+}

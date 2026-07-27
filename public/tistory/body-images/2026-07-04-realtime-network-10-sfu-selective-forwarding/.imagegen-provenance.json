@@ -1,97 +1,97 @@
 {
-  "schemaVersion": 1,
-  "backend": "Codex imagegen / Imagen",
+  "backend": "codex-imagen",
   "model": "gpt-5.5",
-  "sourceType": "codex-imagegen-imagen-raster",
-  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
-  "goalId": "G003",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
   "slug": "2026-07-04-realtime-network-10-sfu-selective-forwarding",
-  "promptId": "2026-07-04-realtime-network-10-sfu-selective-forwarding:body-image-set",
-  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-10-sfu-selective-forwarding",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-02-mesh-sfu-mcu-topology-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-06-realtime-product-patterns-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-18-ponslink-algorithm-02-realtime-queue-cover-imagegen.png"
+  ],
   "finalAssetPaths": [
-    "/tistory/body-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/2026-07-04-realtime-network-10-sfu-selective-forwarding-checklist.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/2026-07-04-realtime-network-10-sfu-selective-forwarding-failure.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/2026-07-04-realtime-network-10-sfu-selective-forwarding-flow.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/2026-07-04-realtime-network-10-sfu-selective-forwarding-matrix.webp"
+    "tistory/body-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/01-problem-moment.png",
+    "tistory/body-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/02-failure-signal.png",
+    "tistory/body-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/03-boundary-change.png"
   ],
-  "contentImagePaths": [
-    "/tistory/body-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/2026-07-04-realtime-network-10-sfu-selective-forwarding-flow.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/2026-07-04-realtime-network-10-sfu-selective-forwarding-matrix.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/2026-07-04-realtime-network-10-sfu-selective-forwarding-failure.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/2026-07-04-realtime-network-10-sfu-selective-forwarding-checklist.webp"
-  ],
-  "assets": [
-    {
-      "slotId": "flow",
-      "requestIndex": 37,
-      "promptId": "2026-07-04-realtime-network-10-sfu-selective-forwarding:flow",
-      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/037-2026-07-04-realtime-network-10-sfu-selective-forwarding-flow.txt",
-      "generationId": "019f2c92-67c4-7ef1-99f8-513a1d63baf7",
-      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c92-67c4-7ef1-99f8-513a1d63baf7/ig_0074f0b7df1ed8b6016a48d9d02c4c81919fbf120c0fd7c27e.png",
-      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/2026-07-04-realtime-network-10-sfu-selective-forwarding-flow.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/2026-07-04-realtime-network-10-sfu-selective-forwarding-flow.webp",
-      "sha256": "6e191c73d67a00b96a8822c0ec399ddf69f2b4c64c61a5fecd4eb3746d136b4f",
-      "width": 1672,
-      "height": 941,
-      "stddev64": [
-        30.493,
-        28.176,
-        24.511
-      ]
+  "generatedAt": "2026-07-17T14:00:02.177321+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[SFU 딥다이브] SFU는 영상을 섞지 않고 중계한다",
+      "promptHash": "179230d977bd4384",
+      "finalPath": "/tistory/body-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.806610+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:32.165708+00:00"
     },
-    {
-      "slotId": "matrix",
-      "requestIndex": 38,
-      "promptId": "2026-07-04-realtime-network-10-sfu-selective-forwarding:matrix",
-      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/038-2026-07-04-realtime-network-10-sfu-selective-forwarding-matrix.txt",
-      "generationId": "019f2c93-771e-73c0-9f7f-f83f6603a200",
-      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c93-771e-73c0-9f7f-f83f6603a200/ig_0c0f5ee738ddd75f016a48da15541881919a180aa20849e22f.png",
-      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/2026-07-04-realtime-network-10-sfu-selective-forwarding-matrix.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/2026-07-04-realtime-network-10-sfu-selective-forwarding-matrix.webp",
-      "sha256": "1003aabd05d96e528418b84ea4434600a7c956826f12733527be40a7929034b3",
-      "width": 1672,
-      "height": 941,
-      "stddev64": [
-        52.992,
-        52.359,
-        50.202
-      ]
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[SFU 딥다이브] SFU는 영상을 섞지 않고 중계한다",
+      "promptHash": "2fe75553a29557fb",
+      "finalPath": "/tistory/body-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T15:42:21.103183+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 58.2,
+        "bytes": 2390640,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:32.165804+00:00"
     },
-    {
-      "slotId": "failure",
-      "requestIndex": 39,
-      "promptId": "2026-07-04-realtime-network-10-sfu-selective-forwarding:failure",
-      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/039-2026-07-04-realtime-network-10-sfu-selective-forwarding-failure.txt",
-      "generationId": "019f2c94-ee79-7ba1-a38d-7dc87f5af16a",
-      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c94-ee79-7ba1-a38d-7dc87f5af16a/ig_0086650595dd42bc016a48da76dc48819aa0758c669e5c5c98.png",
-      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/2026-07-04-realtime-network-10-sfu-selective-forwarding-failure.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/2026-07-04-realtime-network-10-sfu-selective-forwarding-failure.webp",
-      "sha256": "71971603f76cb11d2a64a405ade040cb137b7fc7df52cd10b912e0b97595902c",
-      "width": 1672,
-      "height": 941,
-      "stddev64": [
-        31.265,
-        28.415,
-        22.356
-      ]
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[SFU 딥다이브] SFU는 영상을 섞지 않고 중계한다",
+      "promptHash": "d648010ff8a2adca",
+      "finalPath": "/tistory/body-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.809427+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:32.165835+00:00"
     },
-    {
-      "slotId": "checklist",
-      "requestIndex": 40,
-      "promptId": "2026-07-04-realtime-network-10-sfu-selective-forwarding:checklist",
-      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/040-2026-07-04-realtime-network-10-sfu-selective-forwarding-checklist.txt",
-      "generationId": "019f2c95-d6e7-7831-9e16-4313a505f0f7",
-      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c95-d6e7-7831-9e16-4313a505f0f7/ig_00d773df61d8bec5016a48daa845008191a37febe58cfa5f8e.png",
-      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/2026-07-04-realtime-network-10-sfu-selective-forwarding-checklist.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/2026-07-04-realtime-network-10-sfu-selective-forwarding-checklist.webp",
-      "sha256": "5cd93571579f6aed300338b81e613fc67251cae706df3f1761917000f491e813",
-      "width": 1672,
-      "height": 941,
-      "stddev64": [
-        53.487,
-        52.592,
-        47.124
-      ]
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-07-04-realtime-network-10-sfu-selective-forwarding/cover.webp",
+      "quality": 70
     }
-  ]
+  },
+  "updatedAt": "2026-07-17T17:07:32.165856+00:00"
 }

@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-07-07-software-design-documents-operations",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-07-07-software-design-documents-operations-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-07-07-software-design-documents-architecture-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-07-07-software-design-documents-decisions-cover.png"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-07-07-software-design-documents-operations/01-problem-moment.png",
+    "tistory/body-images/2026-07-07-software-design-documents-operations/02-failure-signal.png",
+    "tistory/body-images/2026-07-07-software-design-documents-operations/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T14:00:05.960386+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "계약과 운영 문서: API Spec부터 Runbook, SLO, Postmortem까지",
+      "promptHash": "ee20320dd89a9d25",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-operations/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.589134+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:41.860976+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "계약과 운영 문서: API Spec부터 Runbook, SLO, Postmortem까지",
+      "promptHash": "49c394851a56594e",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-operations/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:44:51.310841+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 56.8,
+        "bytes": 2709799,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:41.861136+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "계약과 운영 문서: API Spec부터 Runbook, SLO, Postmortem까지",
+      "promptHash": "3535cf1d03bec074",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-operations/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:44:34.771726+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 55.8,
+        "bytes": 2242950,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:41.861040+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-operations/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:41.861185+00:00"
+}

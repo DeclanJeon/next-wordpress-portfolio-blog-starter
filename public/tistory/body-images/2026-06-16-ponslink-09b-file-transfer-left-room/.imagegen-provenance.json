@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-16-ponslink-09b-file-transfer-left-room",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 파일 전송은 결국 방 밖으로 독립해야 했다",
+      "promptHash": "840ff4837347ddfa",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-09b-file-transfer-left-room/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.737452+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:31.148017+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 파일 전송은 결국 방 밖으로 독립해야 했다",
+      "promptHash": "2b9ac2fe0caa2e66",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-09b-file-transfer-left-room/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:36:04.738473+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:31.148136+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 파일 전송은 결국 방 밖으로 독립해야 했다",
+      "promptHash": "ad3f502dce74de05",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-09b-file-transfer-left-room/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T15:29:34.786295+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 58.7,
+        "bytes": 2490111,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:31.148093+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-09b-file-transfer-left-room/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:31.148165+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-16-ponslink-09b-file-transfer-left-room/01-problem-moment.png",
+    "tistory/body-images/2026-06-16-ponslink-09b-file-transfer-left-room/02-failure-signal.png",
+    "tistory/body-images/2026-06-16-ponslink-09b-file-transfer-left-room/03-boundary-change.png"
+  ]
+}

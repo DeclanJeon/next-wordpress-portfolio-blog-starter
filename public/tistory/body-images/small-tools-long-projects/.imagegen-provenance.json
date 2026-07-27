@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "small-tools-long-projects",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/small-tools-long-projects-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/small-tools-long-projects-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/story-handdrawn/small-tools-long-projects-cover.png"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/small-tools-long-projects/01-problem-moment.png",
+    "tistory/body-images/small-tools-long-projects/02-failure-signal.png",
+    "tistory/body-images/small-tools-long-projects/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:16.338774+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "작은 도구가 긴 프로젝트를 버티게 했다",
+      "promptHash": "8d68bcf2972bd49b",
+      "finalPath": "/tistory/body-images/small-tools-long-projects/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.750452+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:44.755562+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "작은 도구가 긴 프로젝트를 버티게 했다",
+      "promptHash": "a430c5b61bbd1ece",
+      "finalPath": "/tistory/body-images/small-tools-long-projects/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.753996+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:44.755620+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "작은 도구가 긴 프로젝트를 버티게 했다",
+      "promptHash": "4da5b4aa20e321a8",
+      "finalPath": "/tistory/body-images/small-tools-long-projects/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:34:56.895456+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 57.2,
+        "bytes": 2659477,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:44.755658+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/small-tools-long-projects/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:44.755679+00:00"
+}

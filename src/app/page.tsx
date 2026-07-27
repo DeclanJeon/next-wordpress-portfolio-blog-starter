@@ -7,7 +7,7 @@ import { useAuth } from "@/lib/auth-store"
 import { useToast } from "@/hooks/use-toast"
 import { useConfirm } from "@/components/site/confirm-dialog"
 import { HomeBlogView } from "@/components/site/home-blog-view"
-import { HomeFooter, HomeHeader, type HomeView } from "@/components/site/home-chrome"
+import { HomeHeader, type HomeView } from "@/components/site/home-chrome"
 import { LoginView } from "@/components/site/home-login-view"
 import { MyPostsView } from "@/components/site/home-my-posts-view"
 import { PostEditor, type PostFormData } from "@/components/site/post-editor"
@@ -165,7 +165,6 @@ export default function Home() {
           {view === "my-posts" ? <MyPostsView key="my-posts" user={user} posts={myPosts} onLoad={loadMyPosts} onEdit={(post) => { setEditPost(post); setView("edit") }} onTrash={handleTrash} onWrite={() => setView("write")} /> : null}
         </AnimatePresence>
       </main>
-      <HomeFooter />
       <WriterFab user={user} onWrite={() => setView("write")} onMyPosts={() => { loadMyPosts(); setView("my-posts") }} onLogout={handleLogout} />
     </div>
   )

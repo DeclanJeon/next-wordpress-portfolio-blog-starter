@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-28-ponslink-product-17-admin-otp-ops",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 관리자 OTP 대시보드는 운영 책임을 화면으로 옮기는 일이었다",
+      "promptHash": "33130af794e04f17",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-17-admin-otp-ops/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.702370+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:56.637832+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 관리자 OTP 대시보드는 운영 책임을 화면으로 옮기는 일이었다",
+      "promptHash": "f38e2235068258b6",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-17-admin-otp-ops/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:36:04.702809+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:56.637901+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 관리자 OTP 대시보드는 운영 책임을 화면으로 옮기는 일이었다",
+      "promptHash": "c0b51f99c748ea71",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-17-admin-otp-ops/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:36:04.703331+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:56.637934+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-17-admin-otp-ops/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:56.637961+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-28-ponslink-product-17-admin-otp-ops/01-problem-moment.png",
+    "tistory/body-images/2026-06-28-ponslink-product-17-admin-otp-ops/02-failure-signal.png",
+    "tistory/body-images/2026-06-28-ponslink-product-17-admin-otp-ops/03-boundary-change.png"
+  ]
+}

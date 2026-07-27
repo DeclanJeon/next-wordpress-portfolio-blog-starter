@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-29-ponswarp-09-browser-download-strategy",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-ponswarp-09-browser-download-strategy-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-ponswarp-09-browser-download-strategy-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/ponswarp/expansion-series/2026-06-29-ponswarp-09-browser-download-strategy.png"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-29-ponswarp-09-browser-download-strategy/01-problem-moment.png",
+    "tistory/body-images/2026-06-29-ponswarp-09-browser-download-strategy/02-failure-signal.png",
+    "tistory/body-images/2026-06-29-ponswarp-09-browser-download-strategy/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:44.339754+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] 브라우저마다 파일 저장 방식이 다르게 깨졌다",
+      "promptHash": "79405c6f60edcbd7",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-09-browser-download-strategy/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.605836+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:54.073027+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] 브라우저마다 파일 저장 방식이 다르게 깨졌다",
+      "promptHash": "a0c0824ec31c2997",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-09-browser-download-strategy/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.606309+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:54.073145+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] 브라우저마다 파일 저장 방식이 다르게 깨졌다",
+      "promptHash": "2b4ab63bef5f5e51",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-09-browser-download-strategy/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:36:04.689921+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:54.073111+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-09-browser-download-strategy/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:54.073176+00:00"
+}

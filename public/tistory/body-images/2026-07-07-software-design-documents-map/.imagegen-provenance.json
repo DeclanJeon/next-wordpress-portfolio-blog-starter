@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-07-07-software-design-documents-map",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "개발 설계문서 지도: 문서 이름보다 질문을 먼저 본다",
+      "promptHash": "0e397cf21c954f48",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-map/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:35:38.418573+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 136.8,
+        "bytes": 2581091,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:33.724771+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "개발 설계문서 지도: 문서 이름보다 질문을 먼저 본다",
+      "promptHash": "0ba32c87e6d5f0c7",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-map/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:32:22.307797+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 53.9,
+        "bytes": 2520060,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:33.724646+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "개발 설계문서 지도: 문서 이름보다 질문을 먼저 본다",
+      "promptHash": "17b103bd5dd43a05",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-map/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:33:21.617550+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 59.3,
+        "bytes": 2365399,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:33.724708+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-map/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:33.724806+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-07-07-software-design-documents-map/01-problem-moment.png",
+    "tistory/body-images/2026-07-07-software-design-documents-map/02-failure-signal.png",
+    "tistory/body-images/2026-07-07-software-design-documents-map/03-boundary-change.png"
+  ]
+}

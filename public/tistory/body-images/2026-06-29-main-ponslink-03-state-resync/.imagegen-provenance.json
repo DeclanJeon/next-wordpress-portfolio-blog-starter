@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-29-main-ponslink-03-state-resync",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 실시간 방에서 상태가 어긋나는 순간을 먼저 봐야 했다",
+      "promptHash": "8873fbb576cc126e",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ponslink-03-state-resync/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.684412+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:36.257079+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 실시간 방에서 상태가 어긋나는 순간을 먼저 봐야 했다",
+      "promptHash": "2abc3b27d5a4a682",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ponslink-03-state-resync/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:36:04.685000+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:36.257136+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 실시간 방에서 상태가 어긋나는 순간을 먼저 봐야 했다",
+      "promptHash": "cc4e636a449fcc07",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ponslink-03-state-resync/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:14:21.916488+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 67.5,
+        "bytes": 2666253,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:36.257178+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ponslink-03-state-resync/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:36.257207+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-29-main-ponslink-03-state-resync/01-problem-moment.png",
+    "tistory/body-images/2026-06-29-main-ponslink-03-state-resync/02-failure-signal.png",
+    "tistory/body-images/2026-06-29-main-ponslink-03-state-resync/03-boundary-change.png"
+  ]
+}

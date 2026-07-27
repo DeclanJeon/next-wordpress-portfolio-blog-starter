@@ -77,14 +77,17 @@ For every `status='published'` post compute:
 
 | Signal | Blocker if |
 | --- | --- |
-| `kc` Korean chars in body | `< 5000` |
-| `h2` count | `< 5` or generic-only headings |
-| markdown image count | `< 2` body images (cover separate) |
+| `slop` template padding | P0 헤딩/필드블록/제목메아리 루프 1회라도 |
+| `exact_dup` | 동일 비트리비얼 문장 3회+ |
+| `title_echo` | 제목 전체 `「…」` 본문 3회 초과 |
+| `h2` count | blocker only when the chosen archetype is incomplete or sections were added as padding |
+| markdown image count | fewer than 2 body images only when the article genuinely needs visual support |
 | missing files | any featured/body path 404 on disk |
 | body hash dups | any two body images same MD5 |
 | cover==body hash | cover equals a body image |
 | title weak | <30% of title hangul tokens appear in body |
 | meta open | body starts with `이 글은` / `이번 글에서는` / `오늘은` |
+| `kc` Korean chars | advisory only; never a length floor and never a reason to pad |
 
 Write JSON receipt to:
 
@@ -97,26 +100,53 @@ v2/tmp/blog-audit-<YYYY-MM-DD>.json
 Sort by score:
 
 ```text
-missing(+5) + short(+5) + body_dup(+4) + few_img(+3) + title_weak(+2) + few_h2(+2) + meta_open(+2)
+missing(+5) + slop(+5) + exact_dup(+4) + body_dup(+4) + few_img(+3) + title_echo(+3) + title_weak(+2) + few_h2(+2) + meta_open(+2)
 ```
 
 Process in batches of 5–15. Never claim “all posts fixed” until audit residual is zero or explicitly deferred with reasons.
+**Never pad length with repeated principles, boundary tables, or title-echo loops.**
+
 
 ### 3. REPAIR BODY
 
+#### Editorial article contract
+
+Use `2026-06-16-ponslink-01-why-i-came-back-to-connection` as a prose benchmark, not a rigid template:
+
+1. Opening scene or observation before solution when the chosen genre needs one
+2. The smallest complete set of topic-specific sections
+3. Final `## 마치며` for retrospective posts unless the user explicitly chooses another form
+4. Continuous retrospective prose; no poem one-liners, generated bridge paragraphs, or repeated recap blocks
+5. Prefer 1,200–3,500 hangul when the source supports it; no character floor and no padding
+6. Preserve existing WebP paths; use only as many distinct body slots as the story earns
+
+Structure audit signals (publish blockers when residual >0 on full retrospectives):
+`no_closing`, `template_h2`, `poem`, `thin_open`, `shared_h2_signature`.
+
+Repair script: `scripts/reshape-to-ref-structure.py` (plus series beat rewrites when substance is hollow).
+
+
 Use `korean-technical-story-blog-writer` contracts:
 
-- 5,500–7,500 Korean chars target (floor 5,000)
-- concrete problem opening
-- 5–7 descriptive `##` sections
-- judgment-change ending
-- im-not-ai / humanize pass
+- **No Korean-character floor.** Prefer 1,200–3,500 chars of real substance when the source supports it; shorter is fine if the judgment is complete.
+- concrete problem opening when the genre calls for a retrospective, short paragraphs, one claim said once
+- smallest complete set of descriptive `##` sections for the chosen archetype
+- judgment-change ending without template recap blocks
+- strip P0 slop first (`scripts/strip-blog-slop-padding.py`), then rewrite thin cores only when the judgment is incomplete, then optional `im-not-ai` / humanize pass for diction only
+
+Banned body patterns (instant fail):
+
+- `이 판단이 제품 문장으로 남는 방식`
+- `경계 표` / `운영 체크리스트` / `현장 기준으로 다시 고정하는 원칙` / `다음에 다시 만질 때` as filler sections
+- `이 원칙을 「제목」에 대입하면…` loops
+- GENERIC_BEATS / FIELD_BLOCKS length padding
 
 Title repair rules:
 
 - Keep series tag `[PonsLink]` / `[PonsWarp]` when present.
 - Bare title must name the actual tension in the body.
 - If title is generic (`개발기`, `정리`, `회고`) rewrite to decision-shaped title.
+
 
 ### 4. REPAIR IMAGES
 
@@ -233,22 +263,24 @@ v2/tmp/blog-production-ledger.jsonl
 
 Fields: `timestamp`, `batch`, `slugs`, `actions`, `audit_before`, `audit_after`, `deployed`, `backed_up`.
 
-## Batch policy for 147-post repair
+## Batch policy for readability repair
 
-Current known production shape (2026-07-18 remote audit):
+Current direction (2026-07-19):
 
-- ~145 posts under 5,000 Korean chars
-- ~111 posts with byte-duplicate body images
-- cover paths present after public-assets restore
+- Length is not a quality proxy. 5,000-char padding is **forbidden**.
+- Strip template slop first, then tier cores (T0 keep / T1 humanize / T2 partial rewrite / T3 full rewrite).
+- Image uniqueness and WebP paths remain blockers.
 
 Recommended order:
 
-1. Image dedupe / regenerate (visual blocker, high user-visible impact)
-2. Title mismatches
-3. Structure + length expansion by series (PonsLink → PonsWarp → realtime-network → other)
-4. Drive backup snapshot after each major batch
+1. Deterministic slop strip (`scripts/strip-blog-slop-padding.py`)
+2. Image dedupe / regenerate when needed
+3. Thin-core / unreadable cores rewritten by series
+4. im-not-ai diction pass after structure is clean
+5. Drive backup snapshot after each major batch
 
-Do not expand all 147 in one unreviewed dump. Keep series voice distinct; repeated identical `##` sequences across siblings are a QA failure.
+Do not expand all 147 with identical `##` sequences. Repeated identical sections across siblings are a QA failure.
+
 
 ## Scripts
 
@@ -256,6 +288,7 @@ Prefer repo scripts when present:
 
 ```text
 v2/scripts/audit-blog-production.py
+v2/scripts/strip-blog-slop-padding.py
 v2/scripts/repair-body-image-dedupe.py
 ```
 

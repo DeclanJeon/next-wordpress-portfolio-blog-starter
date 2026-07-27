@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-18-ponslink-deep-dive-06-webrtc-mesh",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-18-ponslink-deep-dive-06-webrtc-mesh-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-18-ponslink-deep-dive-06-webrtc-mesh-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/ponslink/imagegen-v2/2026-06-18-ponslink-deep-dive-06-webrtc-mesh.webp"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-18-ponslink-deep-dive-06-webrtc-mesh/01-problem-moment.png",
+    "tistory/body-images/2026-06-18-ponslink-deep-dive-06-webrtc-mesh/02-failure-signal.png",
+    "tistory/body-images/2026-06-18-ponslink-deep-dive-06-webrtc-mesh/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:25.484151+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] Mesh 연결은 단순해 보여도 순서가 제품 품질을 만든다",
+      "promptHash": "690690efecb2a6fb",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-06-webrtc-mesh/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.667703+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:50.694780+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] Mesh 연결은 단순해 보여도 순서가 제품 품질을 만든다",
+      "promptHash": "1a3b2ce4bdab2ce5",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-06-webrtc-mesh/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:23:19.414052+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 174.4,
+        "bytes": 2437698,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:50.694875+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] Mesh 연결은 단순해 보여도 순서가 제품 품질을 만든다",
+      "promptHash": "716b596d347e0932",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-06-webrtc-mesh/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.669225+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:50.694846+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-06-webrtc-mesh/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:50.694902+00:00"
+}

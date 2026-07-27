@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-18-ponslink-algorithm-02-realtime-queue",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-18-ponslink-algorithm-02-realtime-queue-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-18-ponslink-algorithm-02-realtime-queue-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/ponslink/imagegen-v2/2026-06-18-ponslink-algorithm-02-realtime-queue.webp"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-18-ponslink-algorithm-02-realtime-queue/01-problem-moment.png",
+    "tistory/body-images/2026-06-18-ponslink-algorithm-02-realtime-queue/02-failure-signal.png",
+    "tistory/body-images/2026-06-18-ponslink-algorithm-02-realtime-queue/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:27.755518+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 실시간 메시지는 모두 같은 줄에 서면 안 된다",
+      "promptHash": "b38722e0f40e7528",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-02-realtime-queue/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.688964+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:56.050677+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 실시간 메시지는 모두 같은 줄에 서면 안 된다",
+      "promptHash": "6842fe594ae5e908",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-02-realtime-queue/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.690421+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:56.050790+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 실시간 메시지는 모두 같은 줄에 서면 안 된다",
+      "promptHash": "289d098ca0d9fa94",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-02-realtime-queue/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:36:04.727424+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:56.050826+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-02-realtime-queue/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:56.050855+00:00"
+}

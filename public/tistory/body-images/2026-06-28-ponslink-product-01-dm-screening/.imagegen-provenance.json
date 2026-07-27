@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-28-ponslink-product-01-dm-screening",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] DM 상담 요청을 바로 예약으로 보내지 않기로 한 이유",
+      "promptHash": "4f483f4feedfbee9",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-01-dm-screening/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.655584+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:51.775340+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] DM 상담 요청을 바로 예약으로 보내지 않기로 한 이유",
+      "promptHash": "ac9adefd71635229",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-01-dm-screening/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.713348+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:51.775240+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] DM 상담 요청을 바로 예약으로 보내지 않기로 한 이유",
+      "promptHash": "2b3b77dad54e382c",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-01-dm-screening/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:36:04.713880+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:51.775308+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-01-dm-screening/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:51.775372+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-28-ponslink-product-01-dm-screening/01-problem-moment.png",
+    "tistory/body-images/2026-06-28-ponslink-product-01-dm-screening/02-failure-signal.png",
+    "tistory/body-images/2026-06-28-ponslink-product-01-dm-screening/03-boundary-change.png"
+  ]
+}

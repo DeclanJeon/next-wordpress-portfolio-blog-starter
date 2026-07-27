@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-18-ponslink-deep-dive-09-payment-access",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 결제 버튼보다 어려운 것은 입장 권한이다",
+      "promptHash": "8432d3fd79aa6b1e",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-09-payment-access/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:20:25.010380+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 59.3,
+        "bytes": 2916630,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:08:00.093955+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 결제 버튼보다 어려운 것은 입장 권한이다",
+      "promptHash": "a2a138a659412360",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-09-payment-access/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T15:19:25.728193+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 63.5,
+        "bytes": 2385811,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:08:00.093732+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 결제 버튼보다 어려운 것은 입장 권한이다",
+      "promptHash": "8ff83eed87ecea61",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-09-payment-access/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T15:20:15.605989+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 62.6,
+        "bytes": 2522654,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:08:00.093919+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-09-payment-access/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:08:00.093985+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-18-ponslink-deep-dive-09-payment-access/01-problem-moment.png",
+    "tistory/body-images/2026-06-18-ponslink-deep-dive-09-payment-access/02-failure-signal.png",
+    "tistory/body-images/2026-06-18-ponslink-deep-dive-09-payment-access/03-boundary-change.png"
+  ]
+}

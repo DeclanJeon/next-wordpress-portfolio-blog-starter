@@ -54,13 +54,3 @@ export function HomeHeader({
   )
 }
 
-export function HomeFooter() {
-  return (
-    <footer className="border-t border-border">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-5 py-8 text-xs text-muted-foreground md:flex-row md:px-8">
-        <span>© {new Date().getFullYear()} Declan Jeon. Work notes, not a brochure.</span>
-        <span className="label-tracked-sm">Build · Break · Write</span>
-      </div>
-    </footer>
-  )
-}

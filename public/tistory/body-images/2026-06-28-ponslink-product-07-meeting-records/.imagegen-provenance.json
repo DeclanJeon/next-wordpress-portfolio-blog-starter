@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-28-ponslink-product-07-meeting-records",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] Meeting Records는 회의록이 아니라 요청 맥락의 연장이다",
+      "promptHash": "b90f6ebcf199d5f0",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-07-meeting-records/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.710058+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:51.235329+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] Meeting Records는 회의록이 아니라 요청 맥락의 연장이다",
+      "promptHash": "5098778bf52c0910",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-07-meeting-records/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T15:18:17.182330+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 68.7,
+        "bytes": 2485748,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:51.235397+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] Meeting Records는 회의록이 아니라 요청 맥락의 연장이다",
+      "promptHash": "5aba5a47fe3fae1e",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-07-meeting-records/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:18:22.274007+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 59.3,
+        "bytes": 2921869,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:51.235455+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-07-meeting-records/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:51.235488+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-28-ponslink-product-07-meeting-records/01-problem-moment.png",
+    "tistory/body-images/2026-06-28-ponslink-product-07-meeting-records/02-failure-signal.png",
+    "tistory/body-images/2026-06-28-ponslink-product-07-meeting-records/03-boundary-change.png"
+  ]
+}

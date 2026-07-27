@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-18-ponslink-deep-dive-02-entry-runtime",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-18-ponslink-deep-dive-02-entry-runtime-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-18-ponslink-deep-dive-02-entry-runtime-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/ponslink/imagegen-v2/2026-06-18-ponslink-deep-dive-02-entry-runtime.webp"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-18-ponslink-deep-dive-02-entry-runtime/01-problem-moment.png",
+    "tistory/body-images/2026-06-18-ponslink-deep-dive-02-entry-runtime/02-failure-signal.png",
+    "tistory/body-images/2026-06-18-ponslink-deep-dive-02-entry-runtime/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:23.905391+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 입장 버튼 뒤에는 어떤 조건들이 숨어 있을까",
+      "promptHash": "d93735cc0a352b76",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-02-entry-runtime/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.687197+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:36.922981+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 입장 버튼 뒤에는 어떤 조건들이 숨어 있을까",
+      "promptHash": "7bf8e70085bace5a",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-02-entry-runtime/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.687943+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:36.923028+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 입장 버튼 뒤에는 어떤 조건들이 숨어 있을까",
+      "promptHash": "248985ee7b307582",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-02-entry-runtime/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.689248+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:36.923048+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-02-entry-runtime/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:36.923068+00:00"
+}

@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-16-ponslink-01-why-i-came-back-to-connection",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 한 번 놓친 연결에서 PonsLink가 시작된 이유",
+      "promptHash": "878187e0fc8a0b73",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-01-why-i-came-back-to-connection/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:36:04.750513+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:31.844172+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 한 번 놓친 연결에서 PonsLink가 시작된 이유",
+      "promptHash": "93627ce07ff34a2c",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-01-why-i-came-back-to-connection/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:32:47.879839+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 54.9,
+        "bytes": 2694056,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:31.844219+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 한 번 놓친 연결에서 PonsLink가 시작된 이유",
+      "promptHash": "84b93f016b002b69",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-01-why-i-came-back-to-connection/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T15:33:48.442794+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 137.2,
+        "bytes": 2471060,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:31.844098+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-01-why-i-came-back-to-connection/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:31.844248+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-16-ponslink-01-why-i-came-back-to-connection/01-problem-moment.png",
+    "tistory/body-images/2026-06-16-ponslink-01-why-i-came-back-to-connection/02-failure-signal.png",
+    "tistory/body-images/2026-06-16-ponslink-01-why-i-came-back-to-connection/03-boundary-change.png"
+  ]
+}

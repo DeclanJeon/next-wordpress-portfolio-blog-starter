@@ -1,64 +1,97 @@
 {
-  "schemaVersion": 1,
-  "backend": "Codex imagegen / Imagen",
+  "backend": "codex-imagen",
   "model": "gpt-5.5",
-  "sourceType": "codex-imagegen-imagen-raster",
-  "generatedAt": "2026-07-04T13:52:09.502949+00:00",
-  "goalId": "p2p-protocol-followup",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
   "slug": "2026-07-04-p2p-protocol-04-crdt-p2p-collaboration",
-  "promptId": "2026-07-04-p2p-protocol-04-crdt-p2p-collaboration:body-image-set",
-  "generationId": "codex-imagegen-p2p-protocol-2026-07-04-p2p-protocol-04-crdt-p2p-collaboration",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-00-grid-computing-first-step-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-01-client-server-vs-peer-to-peer-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-02-mesh-sfu-mcu-topology-cover.png"
+  ],
   "finalAssetPaths": [
-    "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-cover.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-flow.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-failure.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-checklist.webp"
+    "tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/01-problem-moment.png",
+    "tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/02-failure-signal.png",
+    "tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/03-boundary-change.png"
   ],
-  "contentImagePaths": [
-    "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-flow.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-failure.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-checklist.webp"
-  ],
-  "assets": [
-    {
-      "slotId": "cover",
-      "requestIndex": 13,
-      "promptId": "2026-07-04-p2p-protocol-04-crdt-p2p-collaboration:cover",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/013-2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-cover.txt",
-      "generationId": "codex-imagegen-p2p-protocol-13",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-cover.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-cover.webp",
-      "sha256": "1004e0d4199467ba56b29e25176e857a6d6511ed63761c945d37c9bb86a81de0"
+  "generatedAt": "2026-07-17T14:00:05.109890+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 프로토콜] CRDT와 P2P 협업은 왜 같이 이야기될까",
+      "promptHash": "59249aab65cfa750",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.775449+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:54.994246+00:00"
     },
-    {
-      "slotId": "flow",
-      "requestIndex": 14,
-      "promptId": "2026-07-04-p2p-protocol-04-crdt-p2p-collaboration:flow",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/014-2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-flow.txt",
-      "generationId": "codex-imagegen-p2p-protocol-14",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-flow.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-flow.webp",
-      "sha256": "7bbf18065ef08a8ab28bc22df471e16b518c8cfd19e6ef62a7695c83eb25b972"
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 프로토콜] CRDT와 P2P 협업은 왜 같이 이야기될까",
+      "promptHash": "4a832ab3642b039e",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.776409+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:54.994307+00:00"
     },
-    {
-      "slotId": "failure",
-      "requestIndex": 15,
-      "promptId": "2026-07-04-p2p-protocol-04-crdt-p2p-collaboration:failure",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/015-2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-failure.txt",
-      "generationId": "codex-imagegen-p2p-protocol-15",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-failure.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-failure.webp",
-      "sha256": "2c3ca434573862d447f03353eafe6154eb2bb996b84f6f3435208f1d6e51a822"
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 프로토콜] CRDT와 P2P 협업은 왜 같이 이야기될까",
+      "promptHash": "93909c4390ba6bad",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.777125+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:54.994357+00:00"
     },
-    {
-      "slotId": "checklist",
-      "requestIndex": 16,
-      "promptId": "2026-07-04-p2p-protocol-04-crdt-p2p-collaboration:checklist",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/016-2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-checklist.txt",
-      "generationId": "codex-imagegen-p2p-protocol-16",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-checklist.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration-checklist.webp",
-      "sha256": "0fe234873e7b3ca4627863714fc4ce63a0ffc3ce165a14a96043ea2f6ddf44f9"
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-04-crdt-p2p-collaboration/cover.webp",
+      "quality": 70
     }
-  ]
+  },
+  "updatedAt": "2026-07-17T17:07:54.994393+00:00"
 }

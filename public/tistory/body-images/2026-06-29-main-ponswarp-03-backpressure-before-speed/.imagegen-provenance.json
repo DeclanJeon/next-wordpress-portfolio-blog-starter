@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-29-main-ponswarp-03-backpressure-before-speed",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-main-ponswarp-03-backpressure-before-speed-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-main-ponswarp-03-backpressure-before-speed-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/story-handdrawn/2026-06-29-main-ponswarp-03-backpressure-before-speed-cover.png"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-29-main-ponswarp-03-backpressure-before-speed/01-problem-moment.png",
+    "tistory/body-images/2026-06-29-main-ponswarp-03-backpressure-before-speed/02-failure-signal.png",
+    "tistory/body-images/2026-06-29-main-ponswarp-03-backpressure-before-speed/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:47.725479+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] 대용량 전송에서는 속도보다 흐름 제어가 먼저였다",
+      "promptHash": "5268952790bfa028",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ponswarp-03-backpressure-before-speed/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.595824+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:43.078648+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] 대용량 전송에서는 속도보다 흐름 제어가 먼저였다",
+      "promptHash": "e6e88a6dd73769ff",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ponswarp-03-backpressure-before-speed/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:13:14.399559+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 62.8,
+        "bytes": 2467947,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:43.078699+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] 대용량 전송에서는 속도보다 흐름 제어가 먼저였다",
+      "promptHash": "7a5912363dddfd35",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ponswarp-03-backpressure-before-speed/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.681903+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:43.078587+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ponswarp-03-backpressure-before-speed/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:43.078729+00:00"
+}

@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-16-ponslink-09-no-go",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-ponslink-00-link-only-room-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-ponslink-00-link-only-room-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-ponslink-01-why-i-came-back-to-connection-cover-imagegen.png"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-16-ponslink-09-no-go/01-problem-moment.png",
+    "tistory/body-images/2026-06-16-ponslink-09-no-go/02-failure-signal.png",
+    "tistory/body-images/2026-06-16-ponslink-09-no-go/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:21.373318+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 파일 전송은 부가 기능이 아니라 제품의 균형 문제였다",
+      "promptHash": "81bce4129dc15586",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-09-no-go/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.724268+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:34.004976+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 파일 전송은 부가 기능이 아니라 제품의 균형 문제였다",
+      "promptHash": "4dc3af79f70e71b9",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-09-no-go/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.724817+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:34.005004+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 파일 전송은 부가 기능이 아니라 제품의 균형 문제였다",
+      "promptHash": "b41f14a0e28ee2c2",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-09-no-go/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.738704+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:34.004918+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-09-no-go/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:34.005030+00:00"
+}

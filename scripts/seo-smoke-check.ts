@@ -13,6 +13,8 @@ for (let index = 2; index < process.argv.length; index += 1) {
 }
 
 const baseUrl = (args.get("base") || "https://blog.ponslink.com").replace(/\/$/, "")
+const expectedGaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || ""
+const expectedAdsenseClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT?.trim() || ""
 const cacheBust = `seo-smoke=${Date.now()}`
 
 function withCacheBust(path: string): string {
@@ -123,10 +125,49 @@ const checks: Check[] = [
     },
   },
   {
+    name: "privacy policy exposes required disclosures",
+    async run() {
+      const html = await fetchText("/privacy")
+      assertIncludes(titleOf(html), "개인정보처리방침", "privacy title")
+      for (const phrase of [
+        "Google Analytics 4(GA4)",
+        "쿠키 및 분석 데이터",
+        "AdSense 광고 쿠키",
+        "제3자 서비스 제공자",
+        "맞춤 광고 및 분석 선택 해제",
+        "개인정보 보관 및 삭제",
+        "PonsLink Public Desk",
+        "https://adssettings.google.com/authenticated",
+        "https://tools.google.com/dlpage/gaoptout",
+        "Cloudflare Insights beacon",
+        "운영자의 글 작성·관리 기능",
+      ]) {
+        assertIncludes(html, phrase, `privacy disclosure: ${phrase}`)
+      }
+      if (expectedGaMeasurementId) {
+        assertIncludes(html, expectedGaMeasurementId, "privacy GA measurement ID")
+        assertIncludes(html, "Google Analytics 4(GA4)", "privacy GA enabled disclosure")
+      } else {
+        assertIncludes(html, "GA4 측정 ID가 설정되어 있지 않아", "privacy GA disabled disclosure")
+        assertNotIncludes(html, "googletagmanager.com/gtag/js", "privacy GA disabled script")
+      }
+      if (expectedAdsenseClient) {
+        assertIncludes(html, expectedAdsenseClient, "privacy AdSense client")
+      } else {
+        assertNotIncludes(html, "adsbygoogle.js", "privacy AdSense disabled script")
+      }
+      assertIncludes(html, "rel=\"canonical\" href=\"https://blog.ponslink.com/privacy\"", "privacy canonical")
+    },
+  },
+  {
     name: "sitemap includes core discovery routes",
     async run() {
       const xml = await fetchText("/sitemap.xml")
       assertIncludes(xml, "https://blog.ponslink.com/writing", "sitemap writing")
+      assertIncludes(xml, "https://blog.ponslink.com/work/ponslink", "sitemap PonsLink case study")
+      assertIncludes(xml, "https://blog.ponslink.com/work/ponswarp", "sitemap PonsWarp case study")
+      assertIncludes(xml, "https://blog.ponslink.com/privacy", "sitemap privacy")
+      assertIncludes(xml, "https://blog.ponslink.com/contact", "sitemap contact")
       assertIncludes(xml, "https://blog.ponslink.com/writing/projects", "sitemap projects")
       assertIncludes(xml, "https://blog.ponslink.com/writing/series/ponswarp-origin-story", "sitemap PonsWarp series")
       assertIncludes(xml, "https://blog.ponslink.com/writing/2026-06-29-ponswarp-00-file-transfer-broke-in-ponslink", "sitemap PonsWarp article")

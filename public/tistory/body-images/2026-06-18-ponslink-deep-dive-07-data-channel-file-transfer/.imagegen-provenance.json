@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-18-ponslink-deep-dive-07-data-channel-file-transfer",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] DataChannel 하나에 모든 메시지를 태우면 왜 위험할까",
+      "promptHash": "d137defc05bdf28e",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-07-data-channel-file-transfer/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.666387+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:47.506418+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] DataChannel 하나에 모든 메시지를 태우면 왜 위험할까",
+      "promptHash": "a0c908617d6d2100",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-07-data-channel-file-transfer/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.717974+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:47.506329+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] DataChannel 하나에 모든 메시지를 태우면 왜 위험할까",
+      "promptHash": "903d58492cc2ff70",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-07-data-channel-file-transfer/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:36:04.718384+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:47.506389+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-07-data-channel-file-transfer/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:47.506464+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-18-ponslink-deep-dive-07-data-channel-file-transfer/01-problem-moment.png",
+    "tistory/body-images/2026-06-18-ponslink-deep-dive-07-data-channel-file-transfer/02-failure-signal.png",
+    "tistory/body-images/2026-06-18-ponslink-deep-dive-07-data-channel-file-transfer/03-boundary-change.png"
+  ]
+}

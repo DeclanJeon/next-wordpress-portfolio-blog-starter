@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-29-main-ponslink-02-mesh-limits",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-main-ponslink-02-mesh-limits-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-main-ponslink-02-mesh-limits-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/story-handdrawn/2026-06-29-main-ponslink-02-mesh-limits-cover.png"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-29-main-ponslink-02-mesh-limits/01-problem-moment.png",
+    "tistory/body-images/2026-06-29-main-ponslink-02-mesh-limits/02-failure-signal.png",
+    "tistory/body-images/2026-06-29-main-ponslink-02-mesh-limits/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:45.938072+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] WebRTC Mesh는 단순했지만 한계도 빨리 드러났다",
+      "promptHash": "42b6ac32beedad8f",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ponslink-02-mesh-limits/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.600023+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:35.601665+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] WebRTC Mesh는 단순했지만 한계도 빨리 드러났다",
+      "promptHash": "0c0dc6f5d14814a1",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ponslink-02-mesh-limits/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:14:41.284547+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 67.7,
+        "bytes": 2649439,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:35.601793+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] WebRTC Mesh는 단순했지만 한계도 빨리 드러났다",
+      "promptHash": "ca31f28d5872ec0c",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ponslink-02-mesh-limits/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:36:04.686330+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:35.601720+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ponslink-02-mesh-limits/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:35.601823+00:00"
+}

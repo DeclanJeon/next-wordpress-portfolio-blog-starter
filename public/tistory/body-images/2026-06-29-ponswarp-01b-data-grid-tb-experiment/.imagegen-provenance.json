@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-29-ponswarp-01b-data-grid-tb-experiment",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-ponswarp-01b-data-grid-tb-experiment-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-ponswarp-01b-data-grid-tb-experiment-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-ponslink-11-ponswarp-split-cover-imagegen.png"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-29-ponswarp-01b-data-grid-tb-experiment/01-problem-moment.png",
+    "tistory/body-images/2026-06-29-ponswarp-01b-data-grid-tb-experiment/02-failure-signal.png",
+    "tistory/body-images/2026-06-29-ponswarp-01b-data-grid-tb-experiment/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:55.562395+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] TB급 전송을 꿈꾸자 데이터 그리드가 필요해졌다",
+      "promptHash": "8fb294c31aa19af6",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-01b-data-grid-tb-experiment/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.622135+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:42.258887+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] TB급 전송을 꿈꾸자 데이터 그리드가 필요해졌다",
+      "promptHash": "7a0b1c18da131885",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-01b-data-grid-tb-experiment/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.622798+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:42.258828+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] TB급 전송을 꿈꾸자 데이터 그리드가 필요해졌다",
+      "promptHash": "9ad04080f5ce7080",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-01b-data-grid-tb-experiment/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.624421+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:42.258919+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-01b-data-grid-tb-experiment/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:42.258947+00:00"
+}

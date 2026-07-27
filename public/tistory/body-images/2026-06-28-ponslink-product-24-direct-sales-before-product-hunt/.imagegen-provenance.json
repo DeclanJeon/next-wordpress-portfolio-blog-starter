@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-28-ponslink-product-24-direct-sales-before-product-hunt",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] Product Hunt보다 먼저 직접 판매를 봐야 한다고 판단했다",
+      "promptHash": "31a85e56218ca199",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-24-direct-sales-before-product-hunt/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.696855+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:55.271176+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] Product Hunt보다 먼저 직접 판매를 봐야 한다고 판단했다",
+      "promptHash": "362759ebb5c682ef",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-24-direct-sales-before-product-hunt/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:36:04.697480+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:55.271255+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] Product Hunt보다 먼저 직접 판매를 봐야 한다고 판단했다",
+      "promptHash": "558145b2201075d2",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-24-direct-sales-before-product-hunt/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:36:04.698468+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:55.271305+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-24-direct-sales-before-product-hunt/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:55.271336+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-28-ponslink-product-24-direct-sales-before-product-hunt/01-problem-moment.png",
+    "tistory/body-images/2026-06-28-ponslink-product-24-direct-sales-before-product-hunt/02-failure-signal.png",
+    "tistory/body-images/2026-06-28-ponslink-product-24-direct-sales-before-product-hunt/03-boundary-change.png"
+  ]
+}

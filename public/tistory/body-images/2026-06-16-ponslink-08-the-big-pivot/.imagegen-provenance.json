@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-16-ponslink-08-the-big-pivot",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 다시 P2P로 돌아오며 PonsLink의 중심이 선명해졌다",
+      "promptHash": "013a3b375cbcbdff",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-08-the-big-pivot/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.725796+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:42.795550+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 다시 P2P로 돌아오며 PonsLink의 중심이 선명해졌다",
+      "promptHash": "9e1ae924ce195149",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-08-the-big-pivot/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.739205+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:42.795468+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 다시 P2P로 돌아오며 PonsLink의 중심이 선명해졌다",
+      "promptHash": "f5f4591d59c89a1d",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-08-the-big-pivot/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:30:28.813385+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 64.6,
+        "bytes": 3049132,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:42.795592+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-08-the-big-pivot/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:42.795657+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-16-ponslink-08-the-big-pivot/01-problem-moment.png",
+    "tistory/body-images/2026-06-16-ponslink-08-the-big-pivot/02-failure-signal.png",
+    "tistory/body-images/2026-06-16-ponslink-08-the-big-pivot/03-boundary-change.png"
+  ]
+}

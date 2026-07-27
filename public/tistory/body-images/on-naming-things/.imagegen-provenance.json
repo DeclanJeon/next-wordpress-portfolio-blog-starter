@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "on-naming-things",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "이름은 약속이라서 함부로 붙이면 안 된다",
+      "promptHash": "096f0f5a29909ef6",
+      "finalPath": "/tistory/body-images/on-naming-things/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:36:04.758431+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:45.220149+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "이름은 약속이라서 함부로 붙이면 안 된다",
+      "promptHash": "db235e00e7af2e25",
+      "finalPath": "/tistory/body-images/on-naming-things/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T15:35:39.526408+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 51.4,
+        "bytes": 2458141,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:45.220095+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "이름은 약속이라서 함부로 붙이면 안 된다",
+      "promptHash": "902e221444934c3f",
+      "finalPath": "/tistory/body-images/on-naming-things/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:35:51.713610+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 54.8,
+        "bytes": 2261993,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:45.220179+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/on-naming-things/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:45.220206+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/on-naming-things/01-problem-moment.png",
+    "tistory/body-images/on-naming-things/02-failure-signal.png",
+    "tistory/body-images/on-naming-things/03-boundary-change.png"
+  ]
+}

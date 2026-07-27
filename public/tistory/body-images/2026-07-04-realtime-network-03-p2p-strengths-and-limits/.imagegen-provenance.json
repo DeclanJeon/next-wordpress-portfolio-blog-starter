@@ -1,97 +1,97 @@
 {
-  "schemaVersion": 1,
-  "backend": "Codex imagegen / Imagen",
+  "backend": "codex-imagen",
   "model": "gpt-5.5",
-  "sourceType": "codex-imagegen-imagen-raster",
-  "generatedAt": "2026-07-04T10:59:52.052794+00:00",
-  "goalId": "G003",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
   "slug": "2026-07-04-realtime-network-03-p2p-strengths-and-limits",
-  "promptId": "2026-07-04-realtime-network-03-p2p-strengths-and-limits:body-image-set",
-  "generationId": "codex-imagegen-g003-2026-07-04-realtime-network-03-p2p-strengths-and-limits",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-06-realtime-product-patterns-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-00-grid-computing-first-step-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-01-client-server-vs-peer-to-peer-cover.png"
+  ],
   "finalAssetPaths": [
-    "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-checklist.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-failure.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-flow.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-matrix.webp"
+    "tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/01-problem-moment.png",
+    "tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/02-failure-signal.png",
+    "tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/03-boundary-change.png"
   ],
-  "contentImagePaths": [
-    "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-flow.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-matrix.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-failure.webp",
-    "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-checklist.webp"
-  ],
-  "assets": [
-    {
-      "slotId": "flow",
-      "requestIndex": 9,
-      "promptId": "2026-07-04-realtime-network-03-p2p-strengths-and-limits:flow",
-      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/009-2026-07-04-realtime-network-03-p2p-strengths-and-limits-flow.txt",
-      "generationId": "019f2c7b-a3ab-73a0-85b0-8b81045a8240",
-      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c7b-a3ab-73a0-85b0-8b81045a8240/ig_0e441ff7e1a16efe016a48d4027b208191b82a730e8d25a853.png",
-      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-flow.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-flow.webp",
-      "sha256": "069a1b8f78086ea7ed5cb71da32e1ad3408fbb5f8c1ab0b7e32efef3d2c3c61b",
-      "width": 1672,
-      "height": 941,
-      "stddev64": [
-        37.954,
-        34.314,
-        29.29
-      ]
+  "generatedAt": "2026-07-17T14:00:01.014926+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 딥다이브] P2P가 강한 경우와 약한 경우",
+      "promptHash": "607dbf0ff9aea45e",
+      "finalPath": "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T15:43:26.152740+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 53.6,
+        "bytes": 2308698,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:32.529059+00:00"
     },
-    {
-      "slotId": "matrix",
-      "requestIndex": 10,
-      "promptId": "2026-07-04-realtime-network-03-p2p-strengths-and-limits:matrix",
-      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/010-2026-07-04-realtime-network-03-p2p-strengths-and-limits-matrix.txt",
-      "generationId": "019f2c7c-675d-7951-b17f-e0e67c6650d3",
-      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c7c-675d-7951-b17f-e0e67c6650d3/ig_032070a85e555480016a48d425a4f88191a6c880a5984d7155.png",
-      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-matrix.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-matrix.webp",
-      "sha256": "80b4f89e36a7fb8b935a6d3b9be35ca6812ff5714ac81af5580b5074b1a882f7",
-      "width": 1672,
-      "height": 941,
-      "stddev64": [
-        59.078,
-        58.741,
-        57.199
-      ]
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 딥다이브] P2P가 강한 경우와 약한 경우",
+      "promptHash": "473eea1af2fdb0bc",
+      "finalPath": "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.818339+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:32.529116+00:00"
     },
-    {
-      "slotId": "failure",
-      "requestIndex": 11,
-      "promptId": "2026-07-04-realtime-network-03-p2p-strengths-and-limits:failure",
-      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/011-2026-07-04-realtime-network-03-p2p-strengths-and-limits-failure.txt",
-      "generationId": "019f2c7d-2d96-7dd3-beff-3a674c6400f8",
-      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c7d-2d96-7dd3-beff-3a674c6400f8/ig_0957f21c23c715b5016a48d452ecb081919754d3c3ada8cf53.png",
-      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-failure.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-failure.webp",
-      "sha256": "1b43f70a7dbe4b3352eb33bdc890f1a0a70fdab17249fab6ce465ffa671c0bcb",
-      "width": 1672,
-      "height": 941,
-      "stddev64": [
-        54.38,
-        55.282,
-        55.407
-      ]
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 딥다이브] P2P가 강한 경우와 약한 경우",
+      "promptHash": "c38412c1311345a7",
+      "finalPath": "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.819549+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:32.529159+00:00"
     },
-    {
-      "slotId": "checklist",
-      "requestIndex": 12,
-      "promptId": "2026-07-04-realtime-network-03-p2p-strengths-and-limits:checklist",
-      "promptPath": "tmp/realtime-network-g002/imagegen-batch/prompts/012-2026-07-04-realtime-network-03-p2p-strengths-and-limits-checklist.txt",
-      "generationId": "019f2c7d-d385-78e2-8a3b-0a0bb5d4cd01",
-      "sourceAssetPath": "/home/declan/.codex/generated_images/019f2c7d-d385-78e2-8a3b-0a0bb5d4cd01/ig_0c804a134d896ca9016a48d47cb33c81918c8e029326e69fd9.png",
-      "stagingAssetPath": "tmp/realtime-network-g002/generated-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-checklist.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/2026-07-04-realtime-network-03-p2p-strengths-and-limits-checklist.webp",
-      "sha256": "72dd077e05180d9434da88d6f72e7c262832b60b589ef190355e8542c33f9dae",
-      "width": 1672,
-      "height": 941,
-      "stddev64": [
-        54.779,
-        57.365,
-        56.878
-      ]
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-07-04-realtime-network-03-p2p-strengths-and-limits/cover.webp",
+      "quality": 70
     }
-  ]
+  },
+  "updatedAt": "2026-07-17T17:07:32.529183+00:00"
 }

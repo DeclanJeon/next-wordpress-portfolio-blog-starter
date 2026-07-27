@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-07-07-software-design-documents-decisions",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-07-07-software-design-documents-decisions-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-07-07-software-design-documents-architecture-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-07-07-software-design-documents-map-cover.png"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-07-07-software-design-documents-decisions/01-problem-moment.png",
+    "tistory/body-images/2026-07-07-software-design-documents-decisions/02-failure-signal.png",
+    "tistory/body-images/2026-07-07-software-design-documents-decisions/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T14:00:05.957435+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "결정 기록 문서: ADR과 RFC는 왜 나중의 개발자를 살리는가",
+      "promptHash": "b32427983fffc0b4",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-decisions/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:43:38.933717+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 49.8,
+        "bytes": 2421805,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:31.635201+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "결정 기록 문서: ADR과 RFC는 왜 나중의 개발자를 살리는가",
+      "promptHash": "3855e2d8f0e0eda5",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-decisions/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:42:49.144449+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 54.1,
+        "bytes": 2416413,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:31.635125+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "결정 기록 문서: ADR과 RFC는 왜 나중의 개발자를 살리는가",
+      "promptHash": "0c1be555aab3e601",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-decisions/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:43:54.462099+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 59.0,
+        "bytes": 2840704,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:31.635246+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-decisions/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:31.635277+00:00"
+}

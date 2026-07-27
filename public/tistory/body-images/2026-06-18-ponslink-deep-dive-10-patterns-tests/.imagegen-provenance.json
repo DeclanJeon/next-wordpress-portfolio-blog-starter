@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-18-ponslink-deep-dive-10-patterns-tests",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 결국 남은 것은 제품을 버티게 한 작은 경계들",
+      "promptHash": "acbcc09d247de9b5",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-10-patterns-tests/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.655705+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:39.727808+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 결국 남은 것은 제품을 버티게 한 작은 경계들",
+      "promptHash": "69862567f8054942",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-10-patterns-tests/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.656894+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:39.727843+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 결국 남은 것은 제품을 버티게 한 작은 경계들",
+      "promptHash": "560df061cf86c90c",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-10-patterns-tests/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.715143+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:39.727697+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-10-patterns-tests/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:39.727867+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-18-ponslink-deep-dive-10-patterns-tests/01-problem-moment.png",
+    "tistory/body-images/2026-06-18-ponslink-deep-dive-10-patterns-tests/02-failure-signal.png",
+    "tistory/body-images/2026-06-18-ponslink-deep-dive-10-patterns-tests/03-boundary-change.png"
+  ]
+}

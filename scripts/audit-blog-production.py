@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit published blog posts for structure, title fit, and image health."""
+"""Audit published blog posts for structure, title fit, slop, and image health."""
 
 from __future__ import annotations
 
@@ -16,6 +16,17 @@ MD_IMG = re.compile(r"!\[([^\]]*)\]\((/tistory/[^)\s]+)\)")
 H2 = re.compile(r"^##\s+(.+)$", re.M)
 META_OPEN = re.compile(r"^(이 글은|이번 글에서는|오늘은|이번 시리즈)")
 HANGUL = re.compile(r"[\uac00-\ud7a3]")
+SLOP_H2 = re.compile(
+    r"^##\s+(이 판단이 제품 문장으로 남는 방식|경계 표를? 다시 고정하기|경계 표|"
+    r"운영·학습 체크리스트|운영 체크리스트|현장 기준으로 다시 고정하는 원칙|"
+    r"다음에 다시 만질 때|추가 고정 문장)\s*$",
+    re.M,
+)
+SLOP_PHRASE = re.compile(
+    r"이 원칙을 「.+」에 대입하면|같은 문장을 다음 회고에서도 그대로 꺼낼 수 있어야 한다|"
+    r"실무에서는 이 기준이 화면 카피|사용자 문장을 먼저 적고 내부 이름을 나중에|"
+    r"현장에서는 같은 원칙을 다른 시간대"
+)
 
 
 def kchars(text: str) -> int:
@@ -32,11 +43,15 @@ def score(row: dict) -> int:
     s = 0
     if row["missing"]:
         s += 5
-    if row["short"]:
+    if row["slop"]:
         s += 5
+    if row["exact_dup"]:
+        s += 4
     if row["body_dup"]:
         s += 4
     if row["few_img"]:
+        s += 3
+    if row["title_echo"]:
         s += 3
     if row["title_weak"]:
         s += 2
@@ -46,6 +61,8 @@ def score(row: dict) -> int:
         s += 2
     if row["cover_body_dup"]:
         s += 3
+    if row["thin"]:
+        s += 1  # soft signal only — not a length floor
     return s
 
 
@@ -87,6 +104,19 @@ def audit(db_path: Path, public_root: Path) -> list[dict]:
         ratio = (hit / len(words)) if words else 1.0
         title_weak = len(words) >= 2 and ratio < 0.3
         first = content.lstrip()[:100]
+        lines = [
+            ln.strip()
+            for ln in content.splitlines()
+            if ln.strip()
+            and not ln.strip().startswith("#")
+            and not ln.strip().startswith("|")
+            and not ln.strip().startswith("!")
+            and kchars(ln) > 20
+        ]
+        line_counts = Counter(lines)
+        exact_dup = any(n >= 3 for n in line_counts.values())
+        title_echo_n = content.count(f"「{bare}」") if bare else 0
+        slop = bool(SLOP_H2.search(content) or SLOP_PHRASE.search(content))
         row = {
             "slug": slug,
             "title": title,
@@ -103,8 +133,12 @@ def audit(db_path: Path, public_root: Path) -> list[dict]:
             "title_weak": title_weak,
             "title_hit_ratio": round(ratio, 3),
             "meta_open": bool(META_OPEN.search(first)),
-            "short": kc < 5000,
-            "few_h2": len(h2) < 5,
+            "slop": slop,
+            "exact_dup": exact_dup,
+            "title_echo": title_echo_n > 2,
+            "title_echo_n": title_echo_n,
+            "thin": kc < 800,
+            "few_h2": len(h2) < 3,
             "few_img": len(md_paths) < 2,
             "no_fi": not bool(fi),
         }
@@ -116,7 +150,9 @@ def audit(db_path: Path, public_root: Path) -> list[dict]:
 
 def summarize(rows: list[dict]) -> dict:
     keys = [
-        "short",
+        "slop",
+        "exact_dup",
+        "title_echo",
         "few_h2",
         "few_img",
         "body_dup",
@@ -124,6 +160,7 @@ def summarize(rows: list[dict]) -> dict:
         "title_weak",
         "meta_open",
         "no_fi",
+        "thin",
     ]
     summary = {k: sum(1 for r in rows if r[k]) for k in keys}
     summary["published"] = len(rows)

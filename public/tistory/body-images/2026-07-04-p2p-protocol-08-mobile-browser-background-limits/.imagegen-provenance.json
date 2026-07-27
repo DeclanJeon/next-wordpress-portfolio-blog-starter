@@ -1,64 +1,97 @@
 {
-  "schemaVersion": 1,
-  "backend": "Codex imagegen / Imagen",
+  "backend": "codex-imagen",
   "model": "gpt-5.5",
-  "sourceType": "codex-imagegen-imagen-raster",
-  "generatedAt": "2026-07-04T13:52:09.511523+00:00",
-  "goalId": "p2p-protocol-followup",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
   "slug": "2026-07-04-p2p-protocol-08-mobile-browser-background-limits",
-  "promptId": "2026-07-04-p2p-protocol-08-mobile-browser-background-limits:body-image-set",
-  "generationId": "codex-imagegen-p2p-protocol-2026-07-04-p2p-protocol-08-mobile-browser-background-limits",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-ponswarp-08-mobile-background-resume-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-ponswarp-08-mobile-background-resume-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/ponswarp/expansion-series/2026-06-29-ponswarp-08-mobile-background-resume.png"
+  ],
   "finalAssetPaths": [
-    "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-cover.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-flow.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-failure.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-checklist.webp"
+    "tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/01-problem-moment.png",
+    "tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/02-failure-signal.png",
+    "tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/03-boundary-change.png"
   ],
-  "contentImagePaths": [
-    "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-flow.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-failure.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-checklist.webp"
-  ],
-  "assets": [
-    {
-      "slotId": "cover",
-      "requestIndex": 29,
-      "promptId": "2026-07-04-p2p-protocol-08-mobile-browser-background-limits:cover",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/029-2026-07-04-p2p-protocol-08-mobile-browser-background-limits-cover.txt",
-      "generationId": "codex-imagegen-p2p-protocol-29",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-cover.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-cover.webp",
-      "sha256": "42bf60794bfb08137314e42a4db03096ce84282c7d4f0cffba620c11ea07e08f"
+  "generatedAt": "2026-07-17T14:00:05.651975+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 브라우저] 모바일과 백그라운드는 왜 P2P 전송을 흔들까",
+      "promptHash": "8efcc604d3a52b6d",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.763341+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:37.596062+00:00"
     },
-    {
-      "slotId": "flow",
-      "requestIndex": 30,
-      "promptId": "2026-07-04-p2p-protocol-08-mobile-browser-background-limits:flow",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/030-2026-07-04-p2p-protocol-08-mobile-browser-background-limits-flow.txt",
-      "generationId": "codex-imagegen-p2p-protocol-30",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-flow.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-flow.webp",
-      "sha256": "5032ae6dc21f4c3e178779fd08dc8e54fd9c5617a1a802f5154d5f9e62deb8fc"
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 브라우저] 모바일과 백그라운드는 왜 P2P 전송을 흔들까",
+      "promptHash": "50579886c8091272",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.766105+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:37.596173+00:00"
     },
-    {
-      "slotId": "failure",
-      "requestIndex": 31,
-      "promptId": "2026-07-04-p2p-protocol-08-mobile-browser-background-limits:failure",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/031-2026-07-04-p2p-protocol-08-mobile-browser-background-limits-failure.txt",
-      "generationId": "codex-imagegen-p2p-protocol-31",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-failure.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-failure.webp",
-      "sha256": "412dd7fa072a0e7f8c558d9488565c835a868fbc97dc34f46b7f5a598fc6c707"
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 브라우저] 모바일과 백그라운드는 왜 P2P 전송을 흔들까",
+      "promptHash": "aa65e5cba694c40a",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:36:04.758650+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:37.596315+00:00"
     },
-    {
-      "slotId": "checklist",
-      "requestIndex": 32,
-      "promptId": "2026-07-04-p2p-protocol-08-mobile-browser-background-limits:checklist",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/032-2026-07-04-p2p-protocol-08-mobile-browser-background-limits-checklist.txt",
-      "generationId": "codex-imagegen-p2p-protocol-32",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-checklist.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/2026-07-04-p2p-protocol-08-mobile-browser-background-limits-checklist.webp",
-      "sha256": "07912c42f84052905dfec30468f3b09267a234d50d79c0330571052ae4b3001a"
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-08-mobile-browser-background-limits/cover.webp",
+      "quality": 70
     }
-  ]
+  },
+  "updatedAt": "2026-07-17T17:07:37.596359+00:00"
 }

@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-07-07-software-design-documents-requirements",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "요구사항 문서: “빠르게”를 검증 가능한 문장으로 바꾸기",
+      "promptHash": "b6f07e9b1878dea1",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-requirements/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:38:49.644822+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 55.8,
+        "bytes": 2467251,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:56.810240+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "요구사항 문서: “빠르게”를 검증 가능한 문장으로 바꾸기",
+      "promptHash": "400402e120090dc0",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-requirements/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:38:50.690252+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 56.8,
+        "bytes": 2485573,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:56.810351+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "요구사항 문서: “빠르게”를 검증 가능한 문장으로 바꾸기",
+      "promptHash": "07fc8531bdda2868",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-requirements/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:42:55.507876+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 142.9,
+        "bytes": 2177255,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:56.810307+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-requirements/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:56.810376+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-07-07-software-design-documents-requirements/01-problem-moment.png",
+    "tistory/body-images/2026-07-07-software-design-documents-requirements/02-failure-signal.png",
+    "tistory/body-images/2026-07-07-software-design-documents-requirements/03-boundary-change.png"
+  ]
+}

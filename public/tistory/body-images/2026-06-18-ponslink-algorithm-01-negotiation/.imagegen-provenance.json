@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-18-ponslink-algorithm-01-negotiation",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-18-ponslink-algorithm-01-negotiation-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-18-ponslink-algorithm-01-negotiation-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/ponslink/imagegen-v2/2026-06-18-ponslink-algorithm-01-negotiation.webp"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-18-ponslink-algorithm-01-negotiation/01-problem-moment.png",
+    "tistory/body-images/2026-06-18-ponslink-algorithm-01-negotiation/02-failure-signal.png",
+    "tistory/body-images/2026-06-18-ponslink-algorithm-01-negotiation/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:27.359421+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] WebRTC offer 충돌을 피하는 상태 머신 설계",
+      "promptHash": "824311e1141a5b2b",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-01-negotiation/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.693839+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:49.269855+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] WebRTC offer 충돌을 피하는 상태 머신 설계",
+      "promptHash": "8d155709f2f40126",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-01-negotiation/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.695244+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:49.269914+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] WebRTC offer 충돌을 피하는 상태 머신 설계",
+      "promptHash": "7d4ee87c6c9e0e76",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-01-negotiation/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:25:51.629636+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 72.4,
+        "bytes": 2757381,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:49.269942+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-01-negotiation/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:49.269968+00:00"
+}

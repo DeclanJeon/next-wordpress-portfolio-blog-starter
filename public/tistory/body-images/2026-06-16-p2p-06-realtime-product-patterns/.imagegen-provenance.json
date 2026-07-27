@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-16-p2p-06-realtime-product-patterns",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-06-realtime-product-patterns-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-ponslink-01b-room-before-product-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-ponslink-01b-room-before-product-cover-imagegen.webp"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-16-p2p-06-realtime-product-patterns/01-problem-moment.png",
+    "tistory/body-images/2026-06-16-p2p-06-realtime-product-patterns/02-failure-signal.png",
+    "tistory/body-images/2026-06-16-p2p-06-realtime-product-patterns/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T14:00:00.497427+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[패턴] 실시간 제품은 상태 머신, 역압, 멱등성으로 버틴다",
+      "promptHash": "5a98c8ebbc6645ec",
+      "finalPath": "/tistory/body-images/2026-06-16-p2p-06-realtime-product-patterns/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T15:26:48.219312+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 56.6,
+        "bytes": 2220606,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:33.149711+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[패턴] 실시간 제품은 상태 머신, 역압, 멱등성으로 버틴다",
+      "promptHash": "6ced0b6ba6951c9b",
+      "finalPath": "/tistory/body-images/2026-06-16-p2p-06-realtime-product-patterns/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.698108+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:33.149836+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[패턴] 실시간 제품은 상태 머신, 역압, 멱등성으로 버틴다",
+      "promptHash": "5f66a6a485b046cf",
+      "finalPath": "/tistory/body-images/2026-06-16-p2p-06-realtime-product-patterns/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:36:04.729970+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:33.149808+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-16-p2p-06-realtime-product-patterns/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:33.149857+00:00"
+}

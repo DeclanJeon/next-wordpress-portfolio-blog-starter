@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "bridges-between-disciplines",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "서로 다른 분야를 건너다 보면 제품의 빈틈이 보인다",
+      "promptHash": "6f56e9ee571de284",
+      "finalPath": "/tistory/body-images/bridges-between-disciplines/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:36:04.752910+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:40.602207+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "서로 다른 분야를 건너다 보면 제품의 빈틈이 보인다",
+      "promptHash": "daf8045a7838a903",
+      "finalPath": "/tistory/body-images/bridges-between-disciplines/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:34:48.082504+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 59.6,
+        "bytes": 2445942,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:40.602235+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "서로 다른 분야를 건너다 보면 제품의 빈틈이 보인다",
+      "promptHash": "6f3e622a6457ab87",
+      "finalPath": "/tistory/body-images/bridges-between-disciplines/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T15:33:50.411933+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 61.4,
+        "bytes": 2303643,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:40.602150+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/bridges-between-disciplines/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:40.602262+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/bridges-between-disciplines/01-problem-moment.png",
+    "tistory/body-images/bridges-between-disciplines/02-failure-signal.png",
+    "tistory/body-images/bridges-between-disciplines/03-boundary-change.png"
+  ]
+}

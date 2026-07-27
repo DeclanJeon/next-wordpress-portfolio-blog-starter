@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-18-ponslink-algorithm-10-ponscast-tradeoff",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] PonsCast가 화면 공유 대신 DataChannel을 택한 이유",
+      "promptHash": "2609de705bbced2d",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-10-ponscast-tradeoff/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.657089+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:41.530416+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] PonsCast가 화면 공유 대신 DataChannel을 택한 이유",
+      "promptHash": "97427c0ac943b912",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-10-ponscast-tradeoff/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:19:27.138366+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 70.0,
+        "bytes": 2984113,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:41.530461+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] PonsCast가 화면 공유 대신 DataChannel을 택한 이유",
+      "promptHash": "0dad2333429b6faa",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-10-ponscast-tradeoff/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.715331+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:41.530327+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-10-ponscast-tradeoff/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:41.530490+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-18-ponslink-algorithm-10-ponscast-tradeoff/01-problem-moment.png",
+    "tistory/body-images/2026-06-18-ponslink-algorithm-10-ponscast-tradeoff/02-failure-signal.png",
+    "tistory/body-images/2026-06-18-ponslink-algorithm-10-ponscast-tradeoff/03-boundary-change.png"
+  ]
+}

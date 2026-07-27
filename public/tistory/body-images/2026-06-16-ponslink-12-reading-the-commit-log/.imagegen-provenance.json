@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-16-ponslink-12-reading-the-commit-log",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-ponslink-12-reading-the-commit-log-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-ponslink-12-reading-the-commit-log-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/ponslink/imagegen-v2/2026-06-16-ponslink-12-reading-the-commit-log.webp"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-16-ponslink-12-reading-the-commit-log/01-problem-moment.png",
+    "tistory/body-images/2026-06-16-ponslink-12-reading-the-commit-log/02-failure-signal.png",
+    "tistory/body-images/2026-06-16-ponslink-12-reading-the-commit-log/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:22.650962+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 작업 기록을 따라가니 아직 진행형인 이유가 보였다",
+      "promptHash": "b5845777b2b6ee9f",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-12-reading-the-commit-log/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.707900+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:57.818442+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 작업 기록을 따라가니 아직 진행형인 이유가 보였다",
+      "promptHash": "3c3ca4884dd7a893",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-12-reading-the-commit-log/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:36:04.733002+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:57.818496+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 작업 기록을 따라가니 아직 진행형인 이유가 보였다",
+      "promptHash": "c15bdd30eaa68d51",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-12-reading-the-commit-log/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:27:49.259997+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 57.6,
+        "bytes": 2802821,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:57.818523+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-12-reading-the-commit-log/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:57.818548+00:00"
+}

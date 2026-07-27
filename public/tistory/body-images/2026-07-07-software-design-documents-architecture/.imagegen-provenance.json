@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-07-07-software-design-documents-architecture",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-07-07-software-design-documents-architecture-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-07-07-software-design-documents-decisions-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-07-07-software-design-documents-map-cover.png"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-07-07-software-design-documents-architecture/01-problem-moment.png",
+    "tistory/body-images/2026-07-07-software-design-documents-architecture/02-failure-signal.png",
+    "tistory/body-images/2026-07-07-software-design-documents-architecture/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T14:00:05.955303+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "구조 설계 문서: SDD와 Architecture Doc은 박스 그림이 아니다",
+      "promptHash": "4d429df21a98c3c9",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-architecture/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:39:40.917322+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 51.3,
+        "bytes": 2278026,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:35.750834+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "구조 설계 문서: SDD와 Architecture Doc은 박스 그림이 아니다",
+      "promptHash": "40285ecf88edc0f0",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-architecture/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:39:47.437833+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 56.7,
+        "bytes": 2362425,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:35.750891+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "구조 설계 문서: SDD와 Architecture Doc은 박스 그림이 아니다",
+      "promptHash": "7fea2d19ff315e67",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-architecture/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:41:55.082581+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 82.5,
+        "bytes": 2432516,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:35.750919+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-07-07-software-design-documents-architecture/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:35.750945+00:00"
+}

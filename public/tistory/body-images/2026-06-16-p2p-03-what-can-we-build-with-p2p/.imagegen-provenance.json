@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-16-p2p-03-what-can-we-build-with-p2p",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P] 피어 투 피어로 실제 무엇을 만들 수 있는가",
+      "promptHash": "9e922738279e01aa",
+      "finalPath": "/tistory/body-images/2026-06-16-p2p-03-what-can-we-build-with-p2p/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.703870+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:41.673472+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P] 피어 투 피어로 실제 무엇을 만들 수 있는가",
+      "promptHash": "33ceaf9003db3518",
+      "finalPath": "/tistory/body-images/2026-06-16-p2p-03-what-can-we-build-with-p2p/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.731077+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:41.673364+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P] 피어 투 피어로 실제 무엇을 만들 수 있는가",
+      "promptHash": "31003a9dfc0819ca",
+      "finalPath": "/tistory/body-images/2026-06-16-p2p-03-what-can-we-build-with-p2p/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:36:04.731633+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:41.673516+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-16-p2p-03-what-can-we-build-with-p2p/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:41.673539+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-16-p2p-03-what-can-we-build-with-p2p/01-problem-moment.png",
+    "tistory/body-images/2026-06-16-p2p-03-what-can-we-build-with-p2p/02-failure-signal.png",
+    "tistory/body-images/2026-06-16-p2p-03-what-can-we-build-with-p2p/03-boundary-change.png"
+  ]
+}

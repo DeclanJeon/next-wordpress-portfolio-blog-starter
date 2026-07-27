@@ -1,64 +1,97 @@
 {
-  "schemaVersion": 1,
-  "backend": "Codex imagegen / Imagen",
+  "backend": "codex-imagen",
   "model": "gpt-5.5",
-  "sourceType": "codex-imagegen-imagen-raster",
-  "generatedAt": "2026-07-04T13:52:09.500960+00:00",
-  "goalId": "p2p-protocol-followup",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
   "slug": "2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc",
-  "promptId": "2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc:body-image-set",
-  "generationId": "codex-imagegen-p2p-protocol-2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-ponslink-02-webrtc-first-hell-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-ponslink-02-webrtc-first-hell-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-18-ponslink-deep-dive-06-webrtc-mesh-cover-imagegen.png"
+  ],
   "finalAssetPaths": [
-    "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-cover.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-flow.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-failure.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-checklist.webp"
+    "tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/01-problem-moment.png",
+    "tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/02-failure-signal.png",
+    "tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/03-boundary-change.png"
   ],
-  "contentImagePaths": [
-    "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-flow.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-failure.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-checklist.webp"
-  ],
-  "assets": [
-    {
-      "slotId": "cover",
-      "requestIndex": 9,
-      "promptId": "2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc:cover",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/009-2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-cover.txt",
-      "generationId": "codex-imagegen-p2p-protocol-9",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-cover.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-cover.webp",
-      "sha256": "9563aa185af0c106b88cc2abbf7971371ffa7ffe29e963e57857e10221b70f89"
+  "generatedAt": "2026-07-17T14:00:05.106291+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 프로토콜] WebTransport와 QUIC은 WebRTC를 대체할까",
+      "promptHash": "f420a3208da8b908",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.777359+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:52.689820+00:00"
     },
-    {
-      "slotId": "flow",
-      "requestIndex": 10,
-      "promptId": "2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc:flow",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/010-2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-flow.txt",
-      "generationId": "codex-imagegen-p2p-protocol-10",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-flow.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-flow.webp",
-      "sha256": "a8b1798c3d09183f7b49f5b769d844ff153bcaf45acab4a313c94a8ea6f546ee"
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 프로토콜] WebTransport와 QUIC은 WebRTC를 대체할까",
+      "promptHash": "43f7828f6cad43a6",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:36:04.761326+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:52.689841+00:00"
     },
-    {
-      "slotId": "failure",
-      "requestIndex": 11,
-      "promptId": "2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc:failure",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/011-2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-failure.txt",
-      "generationId": "codex-imagegen-p2p-protocol-11",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-failure.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-failure.webp",
-      "sha256": "709aa9be762b9c2cca7e8dfbd58104eb3238d9038eda1215c8af07c14fb9ea2b"
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 프로토콜] WebTransport와 QUIC은 WebRTC를 대체할까",
+      "promptHash": "f4331dd0582df24d",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.761813+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:52.689769+00:00"
     },
-    {
-      "slotId": "checklist",
-      "requestIndex": 12,
-      "promptId": "2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc:checklist",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/012-2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-checklist.txt",
-      "generationId": "codex-imagegen-p2p-protocol-12",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-checklist.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc-checklist.webp",
-      "sha256": "cd1f057f6752bbffe15a72e5538aadf90c9743c4a6b86a3e34441d18d5cdaa1c"
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-03-webtransport-quic-vs-webrtc/cover.webp",
+      "quality": 70
     }
-  ]
+  },
+  "updatedAt": "2026-07-17T17:07:52.689859+00:00"
 }

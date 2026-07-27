@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-18-ponslink-algorithm-05-request-state",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-18-ponslink-algorithm-05-request-state-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-18-ponslink-algorithm-05-request-state-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/ponslink/imagegen-v2/2026-06-18-ponslink-algorithm-05-request-state.webp"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-18-ponslink-algorithm-05-request-state/01-problem-moment.png",
+    "tistory/body-images/2026-06-18-ponslink-algorithm-05-request-state/02-failure-signal.png",
+    "tistory/body-images/2026-06-18-ponslink-algorithm-05-request-state/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:28.955530+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 여러 내부 상태를 하나의 사용자 문장으로 접기",
+      "promptHash": "0f9bfd2caf952fd8",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-05-request-state/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.674527+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:43.567218+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 여러 내부 상태를 하나의 사용자 문장으로 접기",
+      "promptHash": "1fcfee57d2bdd118",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-05-request-state/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.675525+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:43.567274+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 여러 내부 상태를 하나의 사용자 문장으로 접기",
+      "promptHash": "85422542e2016afc",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-05-request-state/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:23:44.085764+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 58.7,
+        "bytes": 2541902,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:43.567303+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-algorithm-05-request-state/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:43.567329+00:00"
+}

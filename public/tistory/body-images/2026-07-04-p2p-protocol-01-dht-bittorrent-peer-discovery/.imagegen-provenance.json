@@ -1,64 +1,97 @@
 {
-  "schemaVersion": 1,
-  "backend": "Codex imagegen / Imagen",
+  "backend": "codex-imagen",
   "model": "gpt-5.5",
-  "sourceType": "codex-imagegen-imagen-raster",
-  "generatedAt": "2026-07-04T13:52:09.497190+00:00",
-  "goalId": "p2p-protocol-followup",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
   "slug": "2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery",
-  "promptId": "2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery:body-image-set",
-  "generationId": "codex-imagegen-p2p-protocol-2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-01-client-server-vs-peer-to-peer-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-00-grid-computing-first-step-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-02-mesh-sfu-mcu-topology-cover.png"
+  ],
   "finalAssetPaths": [
-    "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-cover.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-flow.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-failure.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-checklist.webp"
+    "tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/01-problem-moment.png",
+    "tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/02-failure-signal.png",
+    "tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/03-boundary-change.png"
   ],
-  "contentImagePaths": [
-    "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-flow.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-failure.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-checklist.webp"
-  ],
-  "assets": [
-    {
-      "slotId": "cover",
-      "requestIndex": 1,
-      "promptId": "2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery:cover",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/001-2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-cover.txt",
-      "generationId": "codex-imagegen-p2p-protocol-1",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-cover.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-cover.webp",
-      "sha256": "b6265badcd4c4b3baa2916fb50cf399f19a9046fe432812c41980078d9f95375"
+  "generatedAt": "2026-07-17T14:00:04.769051+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 프로토콜] DHT와 BitTorrent식 peer discovery를 다시 보기",
+      "promptHash": "131858b1456f8caf",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.780164+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:39.457025+00:00"
     },
-    {
-      "slotId": "flow",
-      "requestIndex": 2,
-      "promptId": "2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery:flow",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/002-2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-flow.txt",
-      "generationId": "codex-imagegen-p2p-protocol-2",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-flow.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-flow.webp",
-      "sha256": "db582a878ff1fc38a5a86ead32a97e926371ab75bcd849a308e21837e4accb31"
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 프로토콜] DHT와 BitTorrent식 peer discovery를 다시 보기",
+      "promptHash": "b55160f2d5f6587f",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.780830+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:39.457098+00:00"
     },
-    {
-      "slotId": "failure",
-      "requestIndex": 3,
-      "promptId": "2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery:failure",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/003-2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-failure.txt",
-      "generationId": "codex-imagegen-p2p-protocol-3",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-failure.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-failure.webp",
-      "sha256": "2d59b4fd98c988f5e504ef4b89536c379c87449de403eb0bbc4205efb570d8b8"
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 프로토콜] DHT와 BitTorrent식 peer discovery를 다시 보기",
+      "promptHash": "2ac80c8edb1e0664",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.783305+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:39.457129+00:00"
     },
-    {
-      "slotId": "checklist",
-      "requestIndex": 4,
-      "promptId": "2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery:checklist",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/004-2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-checklist.txt",
-      "generationId": "codex-imagegen-p2p-protocol-4",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-checklist.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery-checklist.webp",
-      "sha256": "2e80b2999bfd9c5e053e623f2774b6055dbf427f9b376eb58a9425035320f6ab"
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-01-dht-bittorrent-peer-discovery/cover.webp",
+      "quality": 70
     }
-  ]
+  },
+  "updatedAt": "2026-07-17T17:07:39.457155+00:00"
 }

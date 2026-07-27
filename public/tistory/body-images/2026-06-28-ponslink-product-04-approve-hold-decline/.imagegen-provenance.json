@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-28-ponslink-product-04-approve-hold-decline",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-28-ponslink-product-04-approve-hold-decline-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-28-ponslink-product-04-approve-hold-decline-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/ponslink/product-series/2026-06-28-ponslink-product-04-approve-hold-decline.webp"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-28-ponslink-product-04-approve-hold-decline/01-problem-moment.png",
+    "tistory/body-images/2026-06-28-ponslink-product-04-approve-hold-decline/02-failure-signal.png",
+    "tistory/body-images/2026-06-28-ponslink-product-04-approve-hold-decline/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:32.597887+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 좋은 요청, 보류할 요청, 거절할 요청은 문장 몇 줄에서 갈렸다",
+      "promptHash": "1c296150c7d01843",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-04-approve-hold-decline/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.650145+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:08:01.989919+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 좋은 요청, 보류할 요청, 거절할 요청은 문장 몇 줄에서 갈렸다",
+      "promptHash": "f222b1440523a074",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-04-approve-hold-decline/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.651083+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:08:01.989982+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 좋은 요청, 보류할 요청, 거절할 요청은 문장 몇 줄에서 갈렸다",
+      "promptHash": "a84f9557f3a53d66",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-04-approve-hold-decline/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.651533+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:08:01.990014+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-28-ponslink-product-04-approve-hold-decline/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:08:01.990044+00:00"
+}

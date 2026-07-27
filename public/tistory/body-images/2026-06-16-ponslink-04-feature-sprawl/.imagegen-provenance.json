@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-16-ponslink-04-feature-sprawl",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 말만으로 부족한 순간, 기능은 계속 늘어났다",
+      "promptHash": "1f35c7cde6f81bb7",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-04-feature-sprawl/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.737333+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:53.355025+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 말만으로 부족한 순간, 기능은 계속 늘어났다",
+      "promptHash": "ed528bcef8c67ac3",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-04-feature-sprawl/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.745758+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:53.354940+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 말만으로 부족한 순간, 기능은 계속 늘어났다",
+      "promptHash": "fa5dc2b9b28fd310",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-04-feature-sprawl/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:30:54.301350+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 53.7,
+        "bytes": 2516506,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:53.355068+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-16-ponslink-04-feature-sprawl/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:53.355103+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-16-ponslink-04-feature-sprawl/01-problem-moment.png",
+    "tistory/body-images/2026-06-16-ponslink-04-feature-sprawl/02-failure-signal.png",
+    "tistory/body-images/2026-06-16-ponslink-04-feature-sprawl/03-boundary-change.png"
+  ]
+}

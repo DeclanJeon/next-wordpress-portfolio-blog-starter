@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-29-ponswarp-10-pipeline-limits-before-speed",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-ponswarp-10-pipeline-limits-before-speed-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-ponswarp-10-pipeline-limits-before-speed-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/ponswarp/expansion-series/2026-06-29-ponswarp-10-pipeline-limits-before-speed.png"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-29-ponswarp-10-pipeline-limits-before-speed/01-problem-moment.png",
+    "tistory/body-images/2026-06-29-ponswarp-10-pipeline-limits-before-speed/02-failure-signal.png",
+    "tistory/body-images/2026-06-29-ponswarp-10-pipeline-limits-before-speed/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:44.626682+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] 속도를 올리기 전에 파이프라인의 한계를 먼저 정했다",
+      "promptHash": "3df1db86eb3f2751",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-10-pipeline-limits-before-speed/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.604486+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:59.904809+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] 속도를 올리기 전에 파이프라인의 한계를 먼저 정했다",
+      "promptHash": "7ce7ee6a6635b403",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-10-pipeline-limits-before-speed/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.604980+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:59.904892+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsWarp] 속도를 올리기 전에 파이프라인의 한계를 먼저 정했다",
+      "promptHash": "c44d01e5152088f1",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-10-pipeline-limits-before-speed/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.606048+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:59.904933+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-29-ponswarp-10-pipeline-limits-before-speed/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:59.904965+00:00"
+}

@@ -1,10 +1,10 @@
 ---
 name: korean-technical-story-blog-writer
 description: >-
-  Write long-form Korean technical storytelling blog articles in a readable IT요즘-like
-  structure, with 5,000+ Korean characters, im-not-ai/humanize-korean naturalness
-  checks, inline section illustrations, architecture diagram prompts, and Codex
-  imagegen/gpt5.5 generation requirements.
+  Write Korean technical storytelling blog articles in a readable IT요즘-like
+  structure, with natural human cadence (im-not-ai/humanize-korean), inline
+  section illustrations, architecture diagram prompts, and Codex
+  imagegen/gpt5.5 generation requirements. No fixed character floor.
 ---
 
 # Korean Technical Story Blog Writer
@@ -21,16 +21,18 @@ v2/skills/korean-technical-story-section-illustrator/SKILL.md
 
 Create a polished Korean technical storytelling blog post that is:
 
-- at least 5,000 Korean characters in the article body
-- readable in a TechBlogPosts / IT요즘-style flow
+- readable in a TechBlogPosts / IT요즘-style flow (natural human cadence first)
 - grounded in concrete product or engineering experience
-- structured with clear headings and short paragraphs
+- structured with clear headings and short paragraphs that breathe
+- long enough to carry one judgment, short enough that nothing is repeated
 - supported by 3-5 inline image or diagram slots
 - paired with section-specific illustration prompts and architecture diagram prompts
 - constrained to latest Codex `imagegen` / gpt5.5 for generated raster assets
 - checked through an `im-not-ai` / `humanize-korean` pass before final QA
 
-Target length: **5,500-7,500 Korean characters**. This buffer prevents accidentally falling below 5,000 after editing.
+**Length is not a goal.** Typical healthy range is **1,200–3,500 Korean characters**.
+Under 800 may be too thin unless the piece is intentionally a short note.
+Never pad with repeated principles, boundary tables, checklists, or title echoes to hit a number.
 
 ## Reference Style
 
@@ -45,12 +47,15 @@ Use the observed Korean tech-blog patterns from TechBlogPosts-style articles and
 - The ending summarizes what changed in the author's judgment.
 
 Do not copy or imitate any specific external article. Use the structure only as a writing pattern.
+**Variation is a requirement.** The reference is a prose-quality benchmark, not a reusable heading sequence. Choose the article's actual center of gravity—scene, failed assumption, mechanism, product decision, or operating consequence—and let that determine the length, sections, image rhythm, and ending. Adjacent posts must not sound interchangeable.
 
 ## Non-Negotiable Rules
 
 - Write in Korean unless the user explicitly requests another language.
-- The final article body must be 5,000+ Korean characters.
+- Prefer one concrete scene + one changed boundary + one remaining cost. Say each once.
+Prefer one concrete scene + one changed boundary + one remaining cost when the source supports them. Do not force all three into a short note.
 - Do not write a generic SEO article.
+- Do not use length-padding templates (`이 판단이 제품 문장으로…`, `현장 기준으로 다시 고정하는 원칙`, title-echo loops).
 - Do not write a documentation page disguised as a blog post.
 - Do not invent metrics, incidents, architecture details, user numbers, or dates.
 - If source evidence is missing, write from clearly stated product reasoning instead of fake facts.
@@ -109,6 +114,7 @@ Use for retrospective/product-build stories.
 ### B. 기술 개념 설명형
 
 Use when the post mainly explains one concept through experience.
+Use it only when the concept—not a product retrospective—is the article's real center. Do not turn every post into this shape.
 
 ```markdown
 # 제목
@@ -185,6 +191,78 @@ domain context → current pipeline → structural limits → architecture chang
 
 Use it when the article's diagram should explain architecture grammar, not just mood.
 
+
+## Canonical Reference Structure (blog.ponslink.com)
+
+**Canonical live reference (use as a prose benchmark, not a rigid shell):**
+
+```text
+https://blog.ponslink.com/writing/2026-06-16-ponslink-01-why-i-came-back-to-connection
+slug: 2026-06-16-ponslink-01-why-i-came-back-to-connection
+```
+
+Published retrospective/product/engineering posts should meet the reference's readability and honesty. They do not have to share its H2 count, image rhythm, paragraph count, or closing wording.
+
+### Reference shape
+
+```markdown
+# 제목
+
+도입: concrete scene, observation, or question
+
+[the smallest set of body sections that carries the article]
+
+## 마치며
+Changed judgment, remaining cost, or open question. State it once.
+```
+
+The reference post demonstrates continuous retrospective prose: context before solution, a visible failed assumption, a concrete decision, and a changed judgment. Keep only the beats the source supports.
+
+### Hard rules for this reference
+
+1. **Opening is prose, not an image and not a poem.** First non-empty block must be paragraphs, not `![` and not a single-sentence line stack.
+2. **Section count is contextual.** Use 1–3 body sections for a short note, 2–5 for a concept explanation, and 3–6 for a full retrospective. A complete short post is preferable to padded structure.
+3. **H2 must be topic-specific.** Forbidden shared template headings (exact or prefix):
+   - `한 줄`
+   - `현장에서 먼저 터진 증상`
+   - `그럴듯해 보였던 첫 설계`
+   - `로그가 말해 준 반례`
+   - `책임을 옮긴 경계선`
+   - `운영에서 고정한 규칙`
+   - `운영·학습 체크리스트` / `운영 체크리스트`
+   - `이 판단이 제품 문장으로 남는 방식`
+   - `현장 기준으로 다시 고정하는 원칙`
+   - `다음에 다시 만질 때`
+   - `기준을 유지하는 방법` / `설계를 문장으로 검증하는 법`
+   - bare `개요` / `구현` / `문제점` / `결론`
+4. **Series uniqueness:** adjacent posts must not share the same ordered H2 signature.
+5. **Closing:** last section heading is exactly `## 마치며`. Ending states the changed judgment once; do not paste repeated closing paragraphs.
+6. **Cadence:** continuous retrospective prose. No poster-style one-line stanzas. Most paragraphs are 2–4 Korean sentences.
+7. **Length:** prefer **1,200–3,500 Korean characters** of real substance. Under 800 is a soft thin note only. **Never** pad to any floor (especially not 5,000).
+8. **Images:** use only the number of body WebP assets the story earns, normally 2–3. Preserve existing paths when rewriting; never force a third image or duplicate a source asset.
+9. **Lists/tables:** only for trade-offs, step responsibilities, or before/after. Not as section fillers.
+10. **Voice:** first-person build story when applicable. No meta openings (`이 글은`, `이번 글에서는`, `오늘은`).
+
+### Archetype A default headings (examples only — rewrite per topic)
+
+Do **not** copy these strings into every post. Derive H2 from the post's actual tension:
+
+```text
+문제 장면 / 첫 유혹 / 한계가 드러난 지점 / 경계를 옮긴 결정 / 불변조건 / 마치며
+```
+
+Reference post example (do not reuse on other slugs):
+
+```text
+연결은 됐는데 일이 끝나지 않았다
+서버에 모든 것을 맡기려던 유혹
+브라우저 한계가 드러난 지점
+방을 제품의 중심에서 한 칸 옆으로 옮기다
+구현에서 남긴 불변조건
+마치며
+```
+
+
 ## Preferred Article Structure
 
 For this portfolio/blog project, default to the 실무 경험 공유형 unless another archetype clearly fits better. If the topic is a pipeline, architecture migration, bottleneck removal, fan-out, partitioning, push/pull separation, or event-driven redesign, default to the As-Is / Pain / To-Be 아키텍처 개선형.
@@ -231,26 +309,23 @@ Opening requirements:
 
 ### 3. Body Sections
 
-Use 5-7 `##` sections. Each section should have:
+Use the smallest set of topic-specific body sections that carries the decision. A section needs a concrete detail or observation; it does not need a fixed paragraph count. Merge sections when they repeat the same evidence. Split only when the decision, failure mode, or operating consequence is genuinely different.
+Skip any step that the source does not support. Do not invent a missing beat just to make the outline look complete.
 
-- a clear heading
-- 3-7 short paragraphs
-- one concrete product/technical detail
-- one sentence explaining why the detail mattered
+Possible rhythm, not a required sequence:
 
-Recommended section rhythm:
+1. Context or scene
+2. First assumption or question
+3. Failure signal or counterexample
+4. Design/architecture change
+5. Technical or operational consequence
+6. Ending: changed judgment
 
-1. Context: what was being built
-2. First assumption: why the early answer looked plausible
-3. Failure: where the assumption broke
-4. Boundary change: what responsibility moved
-5. Technical core: how the mechanism works
-6. Operational lesson: what must be watched or constrained
-7. Ending: how the author's judgment changed
+Skip any step that the source does not support. Do not invent a missing beat just to make the outline look complete.
 
 ### 4. Inline Image Slots
 
-Insert 3-5 image placeholders in the article draft. Each slot must be tied to one section.
+Insert only the image or diagram placeholders that clarify the article. Two strong slots are better than three repeated slots; a text-only note may have none.
 
 Use this placeholder format:
 
@@ -302,9 +377,9 @@ Good ending shape:
 ```
 
 Avoid:
-
 - `앞으로도 더 좋은 서비스를 만들겠습니다.`
 - `기술은 계속 발전하고 있습니다.`
+- `다음에 같은 실패가 오면 ...` and other reusable series closings
 - generic lesson lists that could fit any project
 
 ## Writing Style Rules
@@ -393,25 +468,9 @@ Do not use tables as filler.
 
 ## Character Count Policy
 
-The article body must exceed 5,000 Korean characters.
+There is **no** Korean-character floor. Prefer 1,200–3,500 hangul of real substance when the source supports it; a shorter finished note is correct when the judgment is complete. Never pad.
 
-Count only the article content, excluding:
-
-- frontmatter
-- image prompt appendix
-- image plan table
-- metadata notes
-
-Recommended targets:
-
-| Draft phase | Target |
-| --- | ---: |
-| first draft | 6,200-7,500 chars |
-| edited final | 5,500-6,800 chars |
-| minimum acceptable | 5,000+ chars |
-
-If the draft is under 5,000 characters, expand by adding concrete scenes, trade-offs, failure modes, and operational consequences. Do not pad with generic explanation.
-If expansion repeats a previous H2 pattern, recap, or benefit list, stop and add real material instead: a user-visible symptom, a design constraint, a before/after responsibility boundary, a failure mode, or an operational consequence.
+If the draft feels thin, first ask whether the missing substance is a real scene, trade-off, failure mode, or operating consequence. Add only material supported by the source. If expansion would repeat the same claim, stop and label the piece as a short note internally; do not add generic H2s, boundary tables, recap loops, or a standard closing.
 
 ## Technical Article Diagram Planner
 
@@ -829,7 +888,7 @@ Return this structure when drafting a post:
 ````markdown
 # [제목]
 
-[5,000+자 본문. Include IMAGE_SLOT and DIAGRAM_SLOT comments where images or diagrams should go.]
+[1,200–3,500자 본문 권장(바닥 없음). Include IMAGE_SLOT and DIAGRAM_SLOT comments where images or diagrams should go.]
 
 ---
 
@@ -885,13 +944,14 @@ If the user asks for direct DB/content insertion, do not modify data until the a
 
 Before finalizing:
 
-- [ ] Article body is 5,000+ Korean characters.
-- [ ] The opening starts with a concrete problem scene.
-- [ ] The post has 5-7 clear `##` sections.
+- [ ] Article follows canonical reference spine (opening prose → topic H2s → `## 마치며`).
+- [ ] Body prefers 1,200–3,500 hangul; no 5,000 floor; no padding.
+- [ ] The opening starts with a concrete problem scene (2–4 prose paragraphs).
+- [ ] The post has the smallest complete set of topic-specific sections for its archetype; no fixed H2 count
 - [ ] Every section has product/technical substance.
 - [ ] The post avoids generic textbook definitions.
 - [ ] The ending states a changed judgment.
-- [ ] There are 3-5 image slots.
+- [ ] The article has the smallest complete set of image/diagram slots; no image is added only to satisfy a count
 - [ ] Each image slot maps to one section, not the whole article.
 - [ ] Companion illustrator variables are provided for each slot.
 - [ ] Image prompts forbid multi-panel storyboard composition.
@@ -914,9 +974,9 @@ Fix: rewrite the opening around a concrete failure, decision, or pressure.
 
 ### Draft is too short
 
-Cause: outline was filled with summaries instead of scenes.
+Cause: the judgment is incomplete, not merely because the Korean character count is low.
 
-Fix: expand each main section with one concrete observation, one trade-off, and one consequence.
+Fix: add one source-grounded scene, trade-off, failure mode, or operational consequence only when it introduces new information. Otherwise keep the shorter post and remove any empty section.
 
 ### Draft becomes generic SEO content
 
@@ -961,6 +1021,6 @@ Production specifics:
 - Final on-disk layout: `public/tistory/body-images/<slug>/{cover,01-problem-moment,02-failure-signal,03-boundary-change}.webp`
 - `Post.featuredImage` must be the cover WebP path, not a PNG and not a core-story alias when the post is normalized.
 - Body markdown must embed distinct body WebP files; never re-use one file for multiple slots.
-- Target body length for published posts is still 5,000+ Korean characters.
+- Body length has **no 5,000-char floor**. Strip slop first (`scripts/strip-blog-slop-padding.py`); rewrite thin cores; humanize diction last.
 - After mutation: local DB first, then remote DB + rsync public + restart only when deploying.
 - Google Drive (`rclone gdrive:`) is backup only, never a runtime image source.

@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-16-p2p-04-grid-computing-from-p2p",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P] 그리드 컴퓨팅은 남는 자원을 작업 단위로 묶는 일이다",
+      "promptHash": "18eceead4389740c",
+      "finalPath": "/tistory/body-images/2026-06-16-p2p-04-grid-computing-from-p2p/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.701586+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:48.131927+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P] 그리드 컴퓨팅은 남는 자원을 작업 단위로 묶는 일이다",
+      "promptHash": "90945dee22f6daee",
+      "finalPath": "/tistory/body-images/2026-06-16-p2p-04-grid-computing-from-p2p/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.704011+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:48.131970+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P] 그리드 컴퓨팅은 남는 자원을 작업 단위로 묶는 일이다",
+      "promptHash": "d0457093a34814e2",
+      "finalPath": "/tistory/body-images/2026-06-16-p2p-04-grid-computing-from-p2p/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.730771+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:48.131869+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-16-p2p-04-grid-computing-from-p2p/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:48.132000+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-16-p2p-04-grid-computing-from-p2p/01-problem-moment.png",
+    "tistory/body-images/2026-06-16-p2p-04-grid-computing-from-p2p/02-failure-signal.png",
+    "tistory/body-images/2026-06-16-p2p-04-grid-computing-from-p2p/03-boundary-change.png"
+  ]
+}

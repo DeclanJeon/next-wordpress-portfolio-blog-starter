@@ -1,64 +1,97 @@
 {
-  "schemaVersion": 1,
-  "backend": "Codex imagegen / Imagen",
+  "backend": "codex-imagen",
   "model": "gpt-5.5",
-  "sourceType": "codex-imagegen-imagen-raster",
-  "generatedAt": "2026-07-04T13:52:09.509430+00:00",
-  "goalId": "p2p-protocol-followup",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
   "slug": "2026-07-04-p2p-protocol-07-merkle-chunk-integrity",
-  "promptId": "2026-07-04-p2p-protocol-07-merkle-chunk-integrity:body-image-set",
-  "generationId": "codex-imagegen-p2p-protocol-2026-07-04-p2p-protocol-07-merkle-chunk-integrity",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-00-grid-computing-first-step-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-01-client-server-vs-peer-to-peer-cover.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-16-p2p-02-mesh-sfu-mcu-topology-cover.png"
+  ],
   "finalAssetPaths": [
-    "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-cover.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-flow.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-failure.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-checklist.webp"
+    "tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/01-problem-moment.png",
+    "tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/02-failure-signal.png",
+    "tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/03-boundary-change.png"
   ],
-  "contentImagePaths": [
-    "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-flow.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-failure.webp",
-    "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-checklist.webp"
-  ],
-  "assets": [
-    {
-      "slotId": "cover",
-      "requestIndex": 25,
-      "promptId": "2026-07-04-p2p-protocol-07-merkle-chunk-integrity:cover",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/025-2026-07-04-p2p-protocol-07-merkle-chunk-integrity-cover.txt",
-      "generationId": "codex-imagegen-p2p-protocol-25",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-cover.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-cover.webp",
-      "sha256": "c77d6d3f45a7312a3de3b2fb663742790d9887bf63ffba07167d00f80a1d1f5d"
+  "generatedAt": "2026-07-17T14:00:05.373800+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 파일 무결성] chunk hash와 Merkle tree는 왜 필요할까",
+      "promptHash": "ecab6761b633ad30",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.766660+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:55.754934+00:00"
     },
-    {
-      "slotId": "flow",
-      "requestIndex": 26,
-      "promptId": "2026-07-04-p2p-protocol-07-merkle-chunk-integrity:flow",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/026-2026-07-04-p2p-protocol-07-merkle-chunk-integrity-flow.txt",
-      "generationId": "codex-imagegen-p2p-protocol-26",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-flow.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-flow.webp",
-      "sha256": "ada356951fe0bc473c18707f4be52ed84678de758fc014641ce5bc2c5ae151f6"
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 파일 무결성] chunk hash와 Merkle tree는 왜 필요할까",
+      "promptHash": "a29d1af3d019f035",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.767676+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:55.754979+00:00"
     },
-    {
-      "slotId": "failure",
-      "requestIndex": 27,
-      "promptId": "2026-07-04-p2p-protocol-07-merkle-chunk-integrity:failure",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/027-2026-07-04-p2p-protocol-07-merkle-chunk-integrity-failure.txt",
-      "generationId": "codex-imagegen-p2p-protocol-27",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-failure.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-failure.webp",
-      "sha256": "069fe10c9a366fbd81612f8d40bf62211e05214626f25c82b99cb45d8aac6c42"
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[P2P 파일 무결성] chunk hash와 Merkle tree는 왜 필요할까",
+      "promptHash": "f9b5619cb7d27a25",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T14:29:58.769349+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:55.755008+00:00"
     },
-    {
-      "slotId": "checklist",
-      "requestIndex": 28,
-      "promptId": "2026-07-04-p2p-protocol-07-merkle-chunk-integrity:checklist",
-      "promptPath": "tmp/p2p-protocol-g001/imagegen-batch/prompts/028-2026-07-04-p2p-protocol-07-merkle-chunk-integrity-checklist.txt",
-      "generationId": "codex-imagegen-p2p-protocol-28",
-      "stagingAssetPath": "tmp/p2p-protocol-g001/generated-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-checklist.webp",
-      "finalAssetPath": "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/2026-07-04-p2p-protocol-07-merkle-chunk-integrity-checklist.webp",
-      "sha256": "918d45ffc045d87182f5e0105c1f74dee3c96c2e12d00170d4e77e01cfed8b2a"
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-07-04-p2p-protocol-07-merkle-chunk-integrity/cover.webp",
+      "quality": 70
     }
-  ]
+  },
+  "updatedAt": "2026-07-17T17:07:55.755027+00:00"
 }

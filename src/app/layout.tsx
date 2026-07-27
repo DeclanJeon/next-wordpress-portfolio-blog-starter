@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import Script from "next/script";
+import Link from "next/link";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ConfirmProvider } from "@/components/site/confirm-dialog";
 import {
+  ADSENSE_CLIENT,
   DEFAULT_OG_IMAGE,
   DEFAULT_TWITTER_IMAGE,
+  GA_MEASUREMENT_ID,
+  PROFILE_IMAGE,
   SITE_AUTHOR,
   SITE_DESCRIPTION,
   SITE_LOCALE,
   SITE_NAME,
-  PROFILE_IMAGE,
   SITE_TITLE,
   SITE_TOPICS,
   SITE_URL,
@@ -19,8 +23,6 @@ import {
   jsonLd,
   siteJsonLd,
 } from "@/lib/seo";
-
-const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "ca-pub-6181820059897519";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -105,7 +107,7 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
   },
   other: {
-    "google-adsense-account": ADSENSE_CLIENT,
+    ...(ADSENSE_CLIENT ? { "google-adsense-account": ADSENSE_CLIENT } : {}),
     "ai-content-declaration": "human-authored developer portfolio and technical blog with implementation evidence",
     "answer-engine-summary": SITE_DESCRIPTION,
     "content-language": "ko-KR",
@@ -129,7 +131,25 @@ export default function RootLayout({
   return (
     <html lang="ko" suppressHydrationWarning>
       <head>
-        <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`} crossOrigin="anonymous" />
+        {ADSENSE_CLIENT ? (
+          <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`} crossOrigin="anonymous" />
+        ) : null}
+        {GA_MEASUREMENT_ID ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){window.dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_MEASUREMENT_ID}');
+              `}
+            </Script>
+          </>
+        ) : null}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} font-sans antialiased bg-background text-foreground`}
@@ -146,6 +166,19 @@ export default function RootLayout({
         >
           <ConfirmProvider>
             {children}
+            <footer className="border-t border-border/70 bg-background">
+              <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-6 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+                <p>© {new Date().getFullYear()} {SITE_AUTHOR}. All rights reserved.</p>
+                <nav className="flex flex-wrap gap-x-4 gap-y-2" aria-label="정책 및 연락처">
+                  <Link className="transition-colors hover:text-foreground" href="/privacy">
+                    개인정보처리방침
+                  </Link>
+                  <Link className="transition-colors hover:text-foreground" href="/contact">
+                    문의처
+                  </Link>
+                </nav>
+              </div>
+            </footer>
             <Toaster />
           </ConfirmProvider>
         </ThemeProvider>

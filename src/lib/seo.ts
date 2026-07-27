@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 
 function env(name: string, fallback: string): string {
-  const value = process.env[name]
-  return value && value.trim().length > 0 ? value : fallback
+  const value = process.env[name]?.trim()
+  return value && value.length > 0 ? value : fallback
 }
 
 function envList(name: string, fallback: readonly string[]): readonly string[] {
@@ -15,13 +15,28 @@ function envList(name: string, fallback: readonly string[]): readonly string[] {
   return entries.length > 0 ? entries : fallback
 }
 
-export const SITE_URL = "https://blog.ponslink.com"
-export const SITE_NAME = "Declan's work notes"
-export const SITE_TITLE = "Declan's work notes — 연결과 전송을 고친 기록"
+function resolveSiteUrl(): string {
+  const raw = env("NEXT_PUBLIC_SITE_URL", "https://blog.ponslink.com").replace(/\/$/, "")
+  // Never bake localhost into production sitemap/canonical even if build env is wrong.
+  if (!raw || /localhost|127\.0\.0\.1/i.test(raw)) {
+    return "https://blog.ponslink.com"
+  }
+  return raw
+}
+
+export const SITE_URL = resolveSiteUrl()
+export const SITE_NAME = env("NEXT_PUBLIC_SITE_NAME", "Declan's work notes")
+export const SITE_TITLE = env("NEXT_PUBLIC_SITE_TITLE", "Declan's work notes — 연결과 전송을 고친 기록")
 export const SITE_DESCRIPTION =
-  "Declan Jeon의 작업 노트. PonsLink와 PonsWarp를 중심으로 WebRTC, 브라우저 직접 파일 전송, 제품 운영 회고를 정리합니다."
+  env(
+    "NEXT_PUBLIC_SITE_DESCRIPTION",
+    "Declan Jeon의 작업 노트. PonsLink와 PonsWarp를 중심으로 WebRTC, 브라우저 직접 파일 전송, 제품 운영 회고를 정리합니다.",
+  )
 export const SITE_LOCALE = env("NEXT_PUBLIC_SITE_LOCALE", "ko_KR")
 export const SITE_AUTHOR = env("NEXT_PUBLIC_SITE_AUTHOR", "Declan Jeon")
+/** Default AdSense publisher for blog.ponslink.com review surface. Set empty to disable. */
+export const ADSENSE_CLIENT = env("NEXT_PUBLIC_ADSENSE_CLIENT", "ca-pub-6181820059897519")
+export const GA_MEASUREMENT_ID = env("NEXT_PUBLIC_GA_MEASUREMENT_ID", "")
 export const ORGANIZATION_NAME = "Declan Jeon Portfolio"
 export const SITE_SAME_AS = envList("NEXT_PUBLIC_SITE_SAME_AS", [])
 export const SITE_TOPICS = [

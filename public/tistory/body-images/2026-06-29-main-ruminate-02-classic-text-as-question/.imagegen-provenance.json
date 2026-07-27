@@ -1,0 +1,97 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "limitation": "Agent runtime has ChatGPT auth without exportable OPENAI_API_KEY and no built-in image_gen tool; publication-grade Codex imagegen regeneration is still required when key is available.",
+  "slug": "2026-06-29-main-ruminate-02-classic-text-as-question",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-main-ruminate-02-classic-text-as-question-cover-imagegen.png",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/core-story/imagegen-covers/2026-06-29-main-ruminate-02-classic-text-as-question-cover-imagegen.webp",
+    "/home/declan/Documents/Develop/blog_portpolio/frontend/public/tistory/story-handdrawn/2026-06-29-main-ruminate-02-classic-text-as-question-cover.png"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-29-main-ruminate-02-classic-text-as-question/01-problem-moment.png",
+    "tistory/body-images/2026-06-29-main-ruminate-02-classic-text-as-question/02-failure-signal.png",
+    "tistory/body-images/2026-06-29-main-ruminate-02-classic-text-as-question/03-boundary-change.png"
+  ],
+  "generatedAt": "2026-07-17T13:59:49.239370+00:00",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "authMode": "chatgpt-oauth",
+  "assets": {
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[Ruminate] 고전 문장은 답이 아니라 질문으로 쓰여야 했다",
+      "promptHash": "3764b269098f7cd8",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ruminate-02-classic-text-as-question/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:29:58.591326+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:45.824935+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[Ruminate] 고전 문장은 답이 아니라 질문으로 쓰여야 했다",
+      "promptHash": "548aa9dc77b31905",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ruminate-02-classic-text-as-question/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:11:10.218456+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 62.3,
+        "bytes": 2364543,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:45.825018+00:00"
+    },
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[Ruminate] 고전 문장은 답이 아니라 질문으로 쓰여야 했다",
+      "promptHash": "5e27f05ca99fd2b9",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ruminate-02-classic-text-as-question/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:36:04.678998+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:45.824987+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-29-main-ruminate-02-classic-text-as-question/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:45.825045+00:00"
+}

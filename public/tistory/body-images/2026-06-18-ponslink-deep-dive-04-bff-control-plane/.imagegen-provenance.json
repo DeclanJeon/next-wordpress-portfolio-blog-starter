@@ -1,0 +1,90 @@
+{
+  "backend": "codex-imagen",
+  "model": "gpt-5.5",
+  "sourceType": "codex-imagen-oauth-raster-webp",
+  "authMode": "chatgpt-oauth",
+  "slug": "2026-06-18-ponslink-deep-dive-04-bff-control-plane",
+  "skill": "blog-skills/11-section-illustrator + apps/codex-imagen",
+  "assets": {
+    "02-failure-signal": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 서버가 미디어를 나르지 않을 때 남는 책임",
+      "promptHash": "56d06a3bc15fca96",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-04-bff-control-plane/02-failure-signal.webp",
+      "generatedAt": "2026-07-17T14:29:58.676422+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:34.515181+00:00"
+    },
+    "03-boundary-change": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 서버가 미디어를 나르지 않을 때 남는 책임",
+      "promptHash": "6b0cbe76a8851052",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-04-bff-control-plane/03-boundary-change.webp",
+      "generatedAt": "2026-07-17T15:24:17.116577+00:00",
+      "result": {
+        "ok": true,
+        "seconds": 57.7,
+        "bytes": 2486278,
+        "skipped": null
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:34.515214+00:00"
+    },
+    "01-problem-moment": {
+      "backend": "codex-imagen",
+      "provider": "openai-codex",
+      "auth": "oauth-chatgpt",
+      "model": "gpt-5.5",
+      "endpoint": "https://chatgpt.com/backend-api/codex/responses",
+      "tool": "image_generation",
+      "sourceType": "codex-imagen-oauth-raster-webp",
+      "cli": "/home/declan/apps/codex-imagen/scripts/codex-imagen.mjs",
+      "title": "[PonsLink] 서버가 미디어를 나르지 않을 때 남는 책임",
+      "promptHash": "fbe10dd7c84ee77b",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-04-bff-control-plane/01-problem-moment.webp",
+      "generatedAt": "2026-07-17T14:36:04.723602+00:00",
+      "result": {
+        "ok": true,
+        "seconds": null,
+        "bytes": null,
+        "skipped": true
+      },
+      "format": "webp",
+      "quality": 72,
+      "convertedAt": "2026-07-17T17:07:34.515135+00:00"
+    },
+    "cover": {
+      "format": "webp",
+      "finalPath": "/tistory/body-images/2026-06-18-ponslink-deep-dive-04-bff-control-plane/cover.webp",
+      "quality": 70
+    }
+  },
+  "updatedAt": "2026-07-17T17:07:34.515234+00:00",
+  "finalAssetPaths": [
+    "tistory/body-images/2026-06-18-ponslink-deep-dive-04-bff-control-plane/01-problem-moment.png",
+    "tistory/body-images/2026-06-18-ponslink-deep-dive-04-bff-control-plane/02-failure-signal.png",
+    "tistory/body-images/2026-06-18-ponslink-deep-dive-04-bff-control-plane/03-boundary-change.png"
+  ]
+}
