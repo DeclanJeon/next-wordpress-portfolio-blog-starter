@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-07-28T09:47:56Z",
+  "sourceType": "codex-imagen-oauth-raster-webp-remix",
+  "limitation": "No live imagegen tool/OPENAI key in agent runtime; curated distinct existing imagegen WebP scenes remixed into slug-local body slots for readability.",
+  "slug": "2026-07-28-ponswarp-what-we-measure-before-traffic",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/Project/portfolio/v2/public/tistory/body-images/2026-06-29-ponswarp-05b-browser-memory-2gb/cover.webp",
+    "/home/declan/Documents/Develop/Project/portfolio/v2/public/tistory/body-images/2026-06-29-ponswarp-05b-browser-memory-2gb/image-01-small-file-assumption-breaks.webp",
+    "/home/declan/Documents/Develop/Project/portfolio/v2/public/tistory/body-images/2026-06-29-ponswarp-10-pipeline-limits-before-speed/01-problem-moment.webp",
+    "/home/declan/Documents/Develop/Project/portfolio/v2/public/tistory/body-images/2026-06-29-ponswarp-05b-browser-memory-2gb/diagram-01-memory-to-offset-boundary.webp",
+    "/home/declan/Documents/Develop/Project/portfolio/v2/public/tistory/body-images/2026-06-28-ponslink-product-17-admin-otp-ops/image-01-admin-dashboard-as-state-map.webp"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-07-28-ponswarp-what-we-measure-before-traffic/cover.webp",
+    "tistory/body-images/2026-07-28-ponswarp-what-we-measure-before-traffic/01-problem-moment.webp",
+    "tistory/body-images/2026-07-28-ponswarp-what-we-measure-before-traffic/02-failure-signal.webp",
+    "tistory/body-images/2026-07-28-ponswarp-what-we-measure-before-traffic/03-boundary-change.webp",
+    "tistory/body-images/2026-07-28-ponswarp-what-we-measure-before-traffic/04-measure-board.webp"
+  ],
+  "slotRoles": [
+    "cover.webp",
+    "01-problem-moment.webp",
+    "02-failure-signal.webp",
+    "03-boundary-change.webp",
+    "04-measure-board.webp"
+  ]
+}

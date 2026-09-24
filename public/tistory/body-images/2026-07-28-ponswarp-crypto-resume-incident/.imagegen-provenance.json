@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-07-28T09:47:56Z",
+  "sourceType": "codex-imagen-oauth-raster-webp-remix",
+  "limitation": "No live imagegen tool/OPENAI key in agent runtime; curated distinct existing imagegen WebP scenes remixed into slug-local body slots for readability.",
+  "slug": "2026-07-28-ponswarp-crypto-resume-incident",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/Project/portfolio/v2/public/tistory/body-images/2026-06-29-ponswarp-07-incomplete-transfer-recovery/cover.webp",
+    "/home/declan/Documents/Develop/Project/portfolio/v2/public/tistory/body-images/2026-06-29-ponswarp-12b-flow-that-survives-failure/01-problem-moment.webp",
+    "/home/declan/Documents/Develop/Project/portfolio/v2/public/tistory/body-images/2026-06-29-ponswarp-06b-rust-wasm-memory-survival/image-02-resume-needs-record-not-speed.webp",
+    "/home/declan/Documents/Develop/Project/portfolio/v2/public/tistory/body-images/2026-06-29-ponswarp-07-incomplete-transfer-recovery/diagram-02-offset-not-final-file.webp",
+    "/home/declan/Documents/Develop/Project/portfolio/v2/public/tistory/body-images/2026-06-29-ponswarp-08-mobile-background-resume/diagram-01-mobile-resume-boundary.webp"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-07-28-ponswarp-crypto-resume-incident/cover.webp",
+    "tistory/body-images/2026-07-28-ponswarp-crypto-resume-incident/01-problem-moment.webp",
+    "tistory/body-images/2026-07-28-ponswarp-crypto-resume-incident/02-failure-signal.webp",
+    "tistory/body-images/2026-07-28-ponswarp-crypto-resume-incident/03-boundary-change.webp",
+    "tistory/body-images/2026-07-28-ponswarp-crypto-resume-incident/04-recovery-gate.webp"
+  ],
+  "slotRoles": [
+    "cover.webp",
+    "01-problem-moment.webp",
+    "02-failure-signal.webp",
+    "03-boundary-change.webp",
+    "04-recovery-gate.webp"
+  ]
+}

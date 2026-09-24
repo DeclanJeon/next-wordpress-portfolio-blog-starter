@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-07-28T09:47:56Z",
+  "sourceType": "codex-imagen-oauth-raster-webp-remix",
+  "limitation": "No live imagegen tool/OPENAI key in agent runtime; curated distinct existing imagegen WebP scenes remixed into slug-local body slots for readability.",
+  "slug": "2026-07-28-ponswarp-transfer-success-is-not-start",
+  "sourceAssetPaths": [
+    "/home/declan/Documents/Develop/Project/portfolio/v2/public/tistory/body-images/2026-06-29-ponswarp-04-backpressure-protects-transfer/cover.webp",
+    "/home/declan/Documents/Develop/Project/portfolio/v2/public/tistory/body-images/2026-06-18-ponslink-algorithm-03-file-transfer/image-01-big-file-on-small-room-table.webp",
+    "/home/declan/Documents/Develop/Project/portfolio/v2/public/tistory/body-images/2026-06-29-ponswarp-12b-flow-that-survives-failure/diagram-01-success-path-vs-failure-path.webp",
+    "/home/declan/Documents/Develop/Project/portfolio/v2/public/tistory/body-images/2026-06-29-ponswarp-04-backpressure-protects-transfer/image-03-stable-transfer-operating-rule.webp",
+    "/home/declan/Documents/Develop/Project/portfolio/v2/public/tistory/body-images/2026-06-18-ponslink-algorithm-07-ponscast-backpressure/image-03-operating-gauge.webp"
+  ],
+  "finalAssetPaths": [
+    "tistory/body-images/2026-07-28-ponswarp-transfer-success-is-not-start/cover.webp",
+    "tistory/body-images/2026-07-28-ponswarp-transfer-success-is-not-start/01-problem-moment.webp",
+    "tistory/body-images/2026-07-28-ponswarp-transfer-success-is-not-start/02-failure-signal.webp",
+    "tistory/body-images/2026-07-28-ponswarp-transfer-success-is-not-start/03-boundary-change.webp",
+    "tistory/body-images/2026-07-28-ponswarp-transfer-success-is-not-start/04-count-correctly.webp"
+  ],
+  "slotRoles": [
+    "cover.webp",
+    "01-problem-moment.webp",
+    "02-failure-signal.webp",
+    "03-boundary-change.webp",
+    "04-count-correctly.webp"
+  ]
+}

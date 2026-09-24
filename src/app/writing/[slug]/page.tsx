@@ -84,7 +84,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: post.title,
     description: post.excerpt,
     alternates: { canonical: url },
-    authors: [{ name: post.authorName || SITE_AUTHOR }],
+    authors: [{ name: SITE_AUTHOR }],
     keywords: [post.category, ...tags].filter(Boolean),
     openGraph: {
       title: post.title,
@@ -95,7 +95,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: "article",
       publishedTime: post.publishedAt.toISOString(),
       modifiedTime: post.updatedAt.toISOString(),
-      authors: [post.authorName || SITE_AUTHOR],
+      authors: [SITE_AUTHOR],
       section: post.category,
       tags: [...tags],
       images: [
@@ -148,7 +148,7 @@ export default async function WritingPostPage({ params }: PageProps) {
         isPartOf: { "@id": `${SITE_URL}/writing#blog` },
         author: {
           "@type": "Person",
-          name: page.post.authorName || SITE_AUTHOR,
+          name: SITE_AUTHOR,
           url: SITE_URL,
         },
         publisher: {
